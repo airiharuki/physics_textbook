@@ -71,4 +71,4 @@ Two passes are needed for the table of contents and page references to resolve c
 
 ## License
 
-All rights reserved. This content is developed under the Cambodian Ministry of Education, Youth and Sport (MOEYS) curriculum. No part of this repository may be reproduced, distributed, or used without permission.
+All rights reserved. Copyright (c) 2026 Sovannreach Makara, on behalf of the Cambodian Ministry of Education, Youth and Sport (MOEYS). No part of this repository may be reproduced, distributed, or used without permission.
