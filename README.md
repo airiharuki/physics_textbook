@@ -68,3 +68,7 @@ Two passes are needed for the table of contents and page references to resolve c
 - Page numbers, section numbers, and all in-text figures use Khmer numerals (e.g. ២០២៦, not 2026).
 - `\usetikzlibrary{arrows.meta}` is loaded globally, so `[>=Stealth]` and similar arrow styles work in any diagram without extra setup per chapter.
 - Custom colors used across chapters (`bacpink`, `bacpurple`, `khmerred`, `wavered`, `waveblue`, `wavepurple`, etc.) are all defined once in `preamble.tex` — add new ones there rather than per-chapter so they stay available everywhere.
+
+## License
+
+All rights reserved. This content is developed under the Cambodian Ministry of Education, Youth and Sport (MOEYS) curriculum. No part of this repository may be reproduced, distributed, or used without permission.
