@@ -74,3 +74,4 @@ Two passes are needed for the table of contents and page references to resolve c
 Copyright (c) 2026 Sovannreach Makara, on behalf of the Cambodian Ministry of Education, Youth and Sport (MOEYS). All rights reserved.
 
 LaTeX source, fonts, and assets in this repository may not be reproduced or modified without permission. Compiled PDF outputs may be freely distributed for non-commercial educational purposes, provided no modifications are made and this copyright notice is retained.
+
