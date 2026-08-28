@@ -1,0 +1,686 @@
+\sloppy
+\khmerlesson{មេរៀនទី១៖ ទ្រឹស្តីសុីនេទិចនៃឧស្ម័ន}
+\tanbgdivider
+	
+	
+	% ─── 1. Kinetic Theory Postulates ────────────────────────────
+	\khmertopic{១. ទ្រឹស្តីសុីនេទិចនៃឧស្ម័ន}
+	\khmerbody $\diamond$ \textbf{ពំនោលទ្រឹស្តីសុីនេទិចនៃឧស្ម័ន៖}
+	\begin{itemize}[leftmargin=2.5cm]
+		\item គេចាត់ទុកម៉ូលេគុលនីមួយៗជាចំណុចរូបធាតុ
+		\item ម៉ូលេគុលឧស្ម័នមានចលនាឥតឈប់ឈរ
+		\item ទង្កិចរវាងម៉ូលេគុល និងម៉ូលេគុល ហើយម៉ូលេគុលនិងធុងចាត់ទុកជាទង្គិចខ្ទាត
+		\item សន្មតនៅចន្លោះពេលទង្គិចម៉ូលេគុលមានចលនាត្រង់ស្មើ
+		\item តម្លៃមធ្យមនៃថាមពលសុីនេទិចរបស់ម៉ូលេគុលអាស្រ័យនិងសុីតុណ្ហភាព។
+	\end{itemize}
+	
+	% ─── 2. Pressure Derivation ──────────────────────────────────
+
+	\khmertopic{២. សម្ពាធក្នុងទ្រឹស្តីសុីនេទិចនៃឧស្ម័ន}
+	
+	\noindent
+	\begin{minipage}[t]{0.55\textwidth}
+		\vspace{0pt}
+		\setlength{\parindent}{0pt}
+		\noindent ឧបមាថាម៉ូលេគុលនីមួយៗមានម៉ាស $m_0$ ផ្លាស់ទីក្នុងធុងរាងគូបដែលមានជ្រុង $L$ និងមាឌ $V = L^3$។
+		យើងសន្មតថាម៉ូលេគុលមួយផ្លាស់ទីតាមទិសដៅអ័ក្ស $Ox$ ទៅបុកនឹងផ្ទៃធុង $X$៖
+		
+		\begin{itemize}[leftmargin=0.5cm]
+			\item បរិមាណចលនាមុនទង្គិច៖ $\vec{P}_1 = m_0\vec{v}_x$
+			\item បរិមាណចលនាក្រោយទង្គិច៖ $\vec{P}_2 = -m_0\vec{v}_x$
+			\item បម្រែបម្រួលបរិមាណចលនា៖ $\Delta \vec{P} = -2m_0\vec{v}_x$
+			\item ដោយប្រើ $|\Delta P| = 2m_0 v_x$
+		\end{itemize}
+	\end{minipage}%
+	\hfill
+	\begin{minipage}[t]{0.42\textwidth}
+		\vspace{0pt}
+		\centering
+		\begin{tikzpicture}[>=Stealth, scale=0.85]
+			\coordinate (O) at (0,0,0); \coordinate (A) at (3,0,0);
+			\coordinate (B) at (3,3,0); \coordinate (C) at (0,3,0);
+			\coordinate (D) at (0,0,3); \coordinate (E) at (3,0,3);
+			\coordinate (F) at (3,3,3); \coordinate (G) at (0,3,3);
+			\draw[dashed] (O) -- (A); \draw[dashed] (O) -- (C); \draw[dashed] (O) -- (D);
+			\draw (A) -- (B) -- (C); \draw (D) -- (E) -- (F) -- (G) -- cycle;
+			\draw (A) -- (E); \draw (B) -- (F); \draw (C) -- (G);
+			\draw[->] (A) -- (4.2,0,0) node[right] {$x$};
+			\draw[->] (D) -- (0,0,4.2) node[below left] {$y$};
+			\draw[->] (C) -- (0,3.8,0) node[above] {$z$};
+			\filldraw[blue] (1,1.5,1.5) circle (3pt) node[above left] {\small$(m_0)$};
+			\draw[->, thick, blue] (1,1.5,1.5) -- (2.5,1.5,1.5) node[midway, above] {$\vec{v}_x$};
+			\node[right] at (3.1,1.5,1.5) {\small ផ្ទៃ $x$};
+		\end{tikzpicture}
+		\captionof*{figure}{\small \textbf{ចលនាម៉ូលេគុលឧស្ម័ន}}
+	\end{minipage}
+	
+	\noindent កម្លាំងដែលម៉ូលេគុលមានអំពើលើផ្ទៃ$x$:
+	\begin{equation}
+		F = \frac{|\Delta P|}{\Delta t} = \frac{2m_0 v_x}{\dfrac{2L}{v_x}} = \frac{m_0 v_x^2}{L}
+	\end{equation}
+	
+	\noindent សម្រាប់ម៉ូលេគុល $N$ ដែលមានល្បឿនខុសៗគ្នា $v_1, v_2, \ldots, v_N$ សម្ពាធសរុបលើផ្ទៃ $A = L^2$ គឺ៖
+	\begin{equation}
+		F = \frac{m_0}{L}\left(v_{x,1}^2 + \cdots + v_{x,N}^2\right)
+		\quad \Rightarrow \quad
+		P = \frac{F}{A} = \frac{m_0(v_{x,1}^2+\cdots+v_{x,N}^2)}{L^3} = \frac{Nm_0(v_x^2)_{av}}{V}
+	\end{equation}
+	
+	\noindent ដោយសារចលនាម៉ូលេគុលមាន ៣ វិមាត្រ ($Ox, Oy, Oz$) នោះ $(v^2)_{av} = (v_x^2)_{av}+(v_y^2)_{av}+(v_z^2)_{av} = 3(v_x^2)_{av}$៖
+	\begin{equation}
+		P = \frac{1}{3}\frac{{\englishfont N}}{V}m_0(v^2)_{av}
+	\end{equation}
+	
+	\noindent ដើម្បីបង្ហាញទំនាក់ទំនងជាមួយថាមពលស៊ីនេទិចមធ្យម $K_{av} = \frac{1}{2}m_0(v^2)_{av}$:
+	
+	\quickformula{$\displaystyle P = \frac{2}{3}\left(\frac{{\englishfont N}}{V}\right)K_{av}$}
+	
+	\noindent សមីការនេះបញ្ជាក់ថា៖ \par
+	\textbf{សម្ពាធនៃឧស្ម័នសមាមាត្រនឹងចំនួនម៉ូលេគុលក្នុងមួយឯកតាមាឌ និងតម្លៃមធ្យមនៃថាមពលស៊ីនេទិចរបស់វា}។
+	
+	% ─── 3. Temperature & Ideal Gas ──────────────────────────────
+	\vspace{0.4cm}
+
+	\khmertopic{៣. ថាមពលស៊ីនេទិច និងសីតុណ្ហភាព}
+	
+	\khmersubtopic{៣.១. សមីការឧស្ម័នបរិសុទ្ធ}
+	
+	\noindent ទំនាក់ទំនងរវាងសម្ពាធ $P$, មាឌ $V$, ចំនួនម៉ូលេគុល $N$ និងសីតុណ្ហភាព $T$:
+	\begin{itemize}[leftmargin=1cm]
+		\item $P \propto N$ (V, T ថេរ)
+		\item $P \propto T$ (V, N ថេរ)
+		\item $P \propto \dfrac{1}{V}$ (N, T ថេរ)
+	\end{itemize}
+	
+	\noindent ដូចនេះ $P \propto \dfrac{NT}{V}$, ហើយបើ $k_B$ ជាថេររបស់ {\englishfont Boltzmann}:
+	
+	\begin{equation}
+		\boxed{PV = Nk_BT}
+	\end{equation}
+	
+	\noindent បើ $N_A$ ជាចំនួនអាវ៉ូកាដ្រូ និង $n$ ជាចំនួនម៉ូល ($N = nN_A$):
+	\begin{equation}
+		\boxed{PV = nRT}
+	\end{equation}
+	
+	\noindent ដែល $R = k_B N_A = 8.31\text{ J/mol{\englishfont K}}$ ជាថេរសកល, $k_B = 1.38\times10^{-23}\text{ J/K}$
+	
+	% ─── 3.2 Kinetic Energy & Temperature ────────────────────────
+	\khmersubtopic{៣.២. ថាមពលស៊ីនេទិច និងសីតុណ្ហភាព}
+	
+	\noindent ពី $PV = \dfrac{2}{3}NK_{av}$ និង $PV = Nk_BT$ ដោយប្រៀបធៀប:
+	\begin{equation}
+		\boxed{K_{av} = \frac{3}{2}k_BT}
+	\end{equation}
+	
+	\noindent ថាមពលស៊ីនេទិចសរុបនៃ $N$ ម៉ូលេគុល:
+	\begin{equation}
+		\boxed{K = NK_{av} = \frac{3}{2}Nk_BT = \frac{3}{2}nRT}
+	\end{equation}
+	
+	\noindent ដោយ:
+	\begin{itemize}
+		\item $k_B = 1.38\times10^{-23}$ {\englishfont J/K}
+		\item $T$ គិតជា {\englishfont K} (កែលវិន)
+		\item $R = 8.31$ {\englishfont J/(mol$\cdot$K)}
+		\item $K$ គិតជា {\englishfont J (Joules)}
+	\end{itemize}
+	
+	% ─── 3.3 RMS Speed ───────────────────────────────────────────
+	\khmersubtopic{៣.៣. ប្ញស​ការេ​នៃ​មធ្យម​ល្បឿន​ការេ $v_{rms}$ របស់ម៉ូលេគុល}
+	
+	\noindent ពី $K_{av} = \dfrac{3}{2}k_BT = \dfrac{1}{2}m_0(v^2)_{av}$ យើងបាន:
+	\begin{equation}
+		v_{rms} = \sqrt{(v^2)_{av}} = \sqrt{\frac{3k_BT}{m_0}}
+	\end{equation}
+	
+	\noindent ដោយ $m_0 = \dfrac{M}{N_A}$ ជួសចូល:
+	\begin{equation}
+		\boxed{v_{rms} = \sqrt{\frac{3RT}{M}}}
+	\end{equation}
+	
+	\noindent ដែល $R=8.31$ {\englishfont J/(mol$\cdot$K)}, $T$ គិតជា {\englishfont K}, $M$ គិតជា {\englishfont kg/mol}, $v_{rms}$ គិតជា {\englishfont m/s}
+	
+	\tanbgdivider
+	\newpage
+	
+	\begin{center}
+		\khmerlesson{មេរៀនទី២៖ ច្បាប់ទី១ ទែម៉ូឌីណាមិច}
+	\end{center}
+	
+	\vspace{0.5cm}
+	
+	\khmertopic{១. ប្រព័ន្ធទែម៉ូឌីណាមិច}
+	
+	\khmersubtopic{១.១. ប្រព័ន្ធ (System)}
+	\begin{itemize}
+		\item \textbf{ប្រព័ន្ធ} គឺជាវត្ថុ ឬសំណុំវត្ថុដែលយើងលើកមកសិក្សាធៀបនឹងវត្ថុដទៃទៀត (មជ្ឈដ្ឋានក្រៅ)។ ឧទាហរណ៍៖ ប្រព័ន្ធឧស្ម័នដែលមានមជ្ឈដ្ឋានក្រៅជាពីស្តុង និងស៊ីឡាំង។
+	\end{itemize}
+	
+	\khmersubtopic{១.២.ភាពនៃប្រព័ន្ធ}
+	\begin{itemize}
+		\item \textbf{ភាពនៃប្រព័ន្ធ} ជាសំណុំលេខដែលវាស់ទំហំរូបវិទ្យារបស់ប្រព័ន្ធ។ នៅខណៈណាមួយ ឧស្ម័នអាចមានអថេរប្រព័ន្ធដូចជា៖ ចំនួនម៉ូល ($n$), ម៉ាស ($m$), សីតុណ្ហភាព ($T$), មាឌ ($V$), និងសម្ពាធ ($P$)។
+	\end{itemize}
+	
+	\khmersubtopic{១.៣. បម្លែងទែម៉ូឌីណាមិច}
+	\begin{itemize}
+		\item \textbf{បម្លែងទែម៉ូឌីណាមិច} គឺកាលណាវាផ្លាស់ប្តូរភាព ដោយប្តូរតែកម្មន្ត និងកម្ដៅជាមួយមជ្ឈដ្ឋានក្រៅតែប៉ុណ្ណោះ។
+	\end{itemize}
+	
+	\khmersubtopic{១.៤. ប្រព័ន្ធទែម៉ូឌីណាមិច}
+	\begin{itemize}
+		\item \textbf{ប្រព័ន្ធទែម៉ូឌីណាមិច} គឺជាប្រព័ន្ធដែលទទួលបម្លែងទែម៉ូឌីណាមិច អាចចេញពីភាពដើមមួយទៅភាពស្រេចមួយ តាមដំណើរប្រព្រឹត្តខុសៗគ្នា។ (ឧទាហរណ៍៖ ការបម្លែងពីទឹក ទៅជាចំហាយទឹក)
+	\end{itemize}
+	
+	\vspace{0.5cm}
+	\khmertopic{២. កម្មន្តបំពេញក្នុងពេលបម្រែបម្រួលមាឌ}
+	
+	$\diamond$ \textbf{រំឭកកម្មន្តបង្កើតដោយកម្លាំងថេរ}
+	\begin{itemize}
+		\item កម្មន្ត ($W$) ជាផលគុណរវាងកម្លាំងក្នុងទិសដៅបម្លាស់ទី និងទំហំនៃបម្លាស់ទីនោះ។ រូបមន្ត៖ $W = F \cdot d \cos\theta$
+		\item បើ $W > 0$ គេហៅថា កម្មន្តចលករ។
+		\item បើ $W < 0$ គេហៅថា កម្មន្តទប់។
+	\end{itemize}
+	
+\khmersubtopic{២.១. ករណីសម្ពាធថេរ (លំនាំអ៊ីសូបារ)}
+\begin{itemize}
+	\item ក្នុងលំនាំអ៊ីសូបារ សម្ពាធរបស់ប្រព័ន្ធមិនប្រែប្រួលទេ ($P = \text{ថេរ}$)។
+	\item កម្មន្តបំពេញដោយឧស្ម័ន គឺស្មើនឹងផ្ទៃក្រឡាក្រោមបន្ទាត់ក្រាប (P-V)៖
+\end{itemize}
+
+% --- P-V Graph for Constant Pressure (Isobaric) ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.2]
+		% Axes
+		\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+		\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+		
+		% Coordinates for the states
+		\coordinate (V1) at (1.5,0);
+		\coordinate (V2) at (4.5,0);
+		\coordinate (P) at (0,2.5);
+		\coordinate (State1) at (1.5,2.5);
+		\coordinate (State2) at (4.5,2.5);
+		
+		% Shaded Area (The Rectangle)
+		\fill[khmerred!10] (V1) -- (State1) -- (State2) -- (V2) -- cycle;
+		
+		% Graph Line with arrow indicating direction
+		\draw[thick, khmerred, ->] (State1) -- (3, 2.5); 
+		\draw[thick, khmerred] (3, 2.5) -- (State2);
+		
+		% Dashed lines connecting to axes
+		\draw[dashed] (State1) -- (V1) node[below] {$V_1$};
+		\draw[dashed] (State2) -- (V2) node[below] {$V_2$};
+		\draw[dashed] (State1) -- (P) node[left] {$P$};
+		
+		% Points
+		\filldraw[black] (State1) circle (2pt) node[above] {១};
+		\filldraw[black] (State2) circle (2pt) node[above] {២};
+		
+		% Label for the Area (Work)
+		\node[khmerred] at (3, 1.25) {\large $W = \text{ផ្ទៃក្រឡា}$};
+	\end{tikzpicture}
+\end{center}
+
+\khmersubtopic{សម្រាយបញ្ជាក់រូបមន្តតាមអាំងតេក្រាល៖}
+\begin{itemize}
+	\item តាមនិយមន័យទូទៅ កម្មន្ត $W$ ជាអាំងតេក្រាលនៃសម្ពាធធៀបនឹងមាឌ៖
+	\begin{equation*}
+		W = \int_{V_1}^{V_2} P \, dV
+	\end{equation*}
+	\item ដោយសារសម្ពាធ $P$ ជាចំនួនថេរ (មិនប្រែប្រួលតាម $V$) យើងអាចទាញវាចេញក្រៅសញ្ញាអាំងតេក្រាលបាន៖
+	\begin{equation*}
+		W = P \int_{V_1}^{V_2} dV
+	\end{equation*}
+	\item គណនាអាំងតេក្រាលនៃ $dV$ យើងបាន $V$ រួចជំនួសគោលកម្រិតពី $V_1$ ទៅ $V_2$៖
+	\begin{equation*}
+		W = P \Big[ V \Big]_{V_1}^{V_2} = P(V_2 - V_1)
+	\end{equation*}
+\end{itemize}
+
+\textbf{សន្និដ្ឋាន៖}
+តាមលក្ខណៈធរណីមាត្រ ក្រាបនេះមានរាងជា \textbf{ចតុកោណកែង} ដែលមានបណ្តោយ $\Delta V = V_2 - V_1$ និងទទឹង $P$។ ដូចនេះ កម្មន្តកំណត់ដោយរូបមន្ត៖
+\begin{equation}
+	W = P \Delta V = P(V_2-V1)
+\end{equation}
+\begin{itemize}
+	\item $W$ ជាកម្មន្តគិតជាស៊ូល (J)
+	\item $P$ ជាសម្ពាធគិតជាប៉ាស្កាល់ (Pa)
+	\item $\Delta V$ ជាបម្រែបម្រួលមាឌគិតជាម៉ែត្រគូប ($\text{m}^3$)
+\end{itemize}
+
+\khmersubtopic{២.២. ករណីសម្ពាធប្រែប្រួលស្មើ}
+\begin{itemize}
+	\item កម្មន្តបំពេញដោយឧស្ម័នស្មើនឹងផ្ទៃក្រោមក្រាប (P-V)៖
+\end{itemize}
+
+% --- P-V Graph for Uniform Pressure Change ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.2]
+		% Axes
+		\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+		\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+		
+		% Coordinates for the states
+		\coordinate (V1) at (1.5,0);
+		\coordinate (V2) at (4.5,0);
+		\coordinate (P1) at (0,3);
+		\coordinate (P2) at (0,1.5);
+		\coordinate (State1) at (1.5,3);
+		\coordinate (State2) at (4.5,1.5);
+		
+		% Shaded Area (The Trapezoid)
+		\fill[khmerred!10] (V1) -- (State1) -- (State2) -- (V2) -- cycle;
+		
+		% Graph Line with arrow indicating direction
+		\draw[thick, khmerred, ->] (State1) -- (3, 2.25); 
+		\draw[thick, khmerred] (3, 2.25) -- (State2);
+		
+		% Dashed lines connecting to axes
+		\draw[dashed] (State1) -- (V1) node[below] {$V_1$};
+		\draw[dashed] (State2) -- (V2) node[below] {$V_2$};
+		\draw[dashed] (State1) -- (P1) node[left] {$P_1$};
+		\draw[dashed] (State2) -- (P2) node[left] {$P_2$};
+		
+		% Points
+		\filldraw[black] (State1) circle (2pt) node[above right] {១};
+		\filldraw[black] (State2) circle (2pt) node[above right] {២};
+		
+		% Label for the Area (Work)
+		\node[khmerred] at (3, 0.8) {\large $W = \text{ផ្ទៃក្រឡា}$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{សម្រាយបញ្ជាក់រូបមន្ត៖}
+\begin{itemize}
+	\item តាមនិយមន័យ កម្មន្ត $W$ គឺជាផ្ទៃក្រឡាស្ថិតនៅក្រោមបន្ទាត់ក្រាបពីភាព ១ ទៅភាព ២។
+	\item ក្នុងករណីនេះ ក្រាបមានរាងជា \textbf{ចតុកោណព្នាយ} ដែលមាន៖
+	\begin{itemize}
+		\item ជ្រុងស្រប (បាតតូច និងបាតធំ) គឺ $P_1$ និង $P_2$
+		\item កម្ពស់របស់ចតុកោណព្នាយ គឺបម្រែបម្រួលមាឌ $\Delta V = V_2 - V_1$
+	\end{itemize}
+	\item តាមរូបមន្តផ្ទៃក្រឡាចតុកោណព្នាយ៖ $\text{ផ្ទៃ} = \frac{\text{បាតធំ} + \text{បាតតូច}}{2} \times \text{កម្ពស់}$ ឬ $A = \frac{a+b}{2}\times h$
+	\item ដូចនេះ យើងទាញបានកម្មន្ត៖
+\end{itemize}
+\begin{equation}
+	W = \frac{P_1 + P_2}{2} (V_2 - V_1) = P_{av}(V_2-V_1) = P_{av} \times \Delta V
+\end{equation}
+\begin{itemize}
+	\item $W$ ជាកម្មន្តគិតជាស៊ូល (J)
+	\item $P_1$ និង $P_2$ ជាសម្ពាធគិតជាប៉ាស្កាល់ (Pa)
+	\item $V_1$ និង $V_2$ ជាមាឌគិតជាម៉ែត្រគូប ($\text{m}^3$)
+\end{itemize}
+	
+\khmersubtopic{២.៣. ករណីសីតុណ្ហភាពថេរ (លំនាំអ៊ីសូទែម)}
+\begin{itemize}
+	\item ក្នុងលំនាំអ៊ីសូទែម សីតុណ្ហភាពរបស់ប្រព័ន្ធមិនប្រែប្រួលទេ ($T = \text{ថេរ}$)។
+	\item តាមសមីការឧស្ម័នបរិសុទ្ធ $PV = nRT \implies P = \frac{nRT}{V}$។
+	\item ក្រាបមានរាងជាខ្សែអុីពែបូល (Hyperbola) ហើយកម្មន្តគឺស្មើនឹងផ្ទៃក្រឡាក្រោមខ្សែនេះ៖
+\end{itemize}
+
+% --- P-V Graph for Isothermal (Curve) ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.2]
+		% Axes
+		\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+		\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+		
+		% Coordinates for the states
+		\coordinate (V1) at (1,0);
+		\coordinate (V2) at (4,0);
+		\coordinate (P1) at (0,3);
+		\coordinate (P2) at (0,0.75);
+		\coordinate (State1) at (1,3);
+		\coordinate (State2) at (4,0.75);
+		
+		% Shaded Area (Area under hyperbola curve)
+		\fill[khmerred!10] (1,0) -- (1,3) plot[domain=1:4, samples=50] (\x, {3/\x}) -- (4,0) -- cycle;
+		
+		% Graph Line (Hyperbola) with arrow
+		\draw[thick, khmerred, ->] (1,3) plot[domain=1:2.5, samples=50] (\x, {3/\x});
+		\draw[thick, khmerred] (2.5,1.2) plot[domain=2.5:4, samples=50] (\x, {3/\x});
+		
+		% Dashed lines connecting to axes
+		\draw[dashed] (State1) -- (V1) node[below] {$V_1$};
+		\draw[dashed] (State2) -- (V2) node[below] {$V_2$};
+		\draw[dashed] (State1) -- (P1) node[left] {$P_1$};
+		\draw[dashed] (State2) -- (P2) node[left] {$P_2$};
+		
+		% Points
+		\filldraw[black] (State1) circle (2pt) node[above right] {១};
+		\filldraw[black] (State2) circle (2pt) node[above right] {២};
+		
+		% Label for the Area (Work)
+		\node[khmerred] at (2.5, 0.5) {\large $W = \text{ផ្ទៃក្រឡា}$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{សម្រាយបញ្ជាក់រូបមន្តតាមអាំងតេក្រាល៖}
+\begin{itemize}
+	\item តាមនិយមន័យកម្មន្ត $W = \int_{V_1}^{V_2} P \, dV$
+	\item ជំនួស $P = \frac{nRT}{V}$ ទៅក្នុងសមីការអាំងតេក្រាល យើងបាន៖
+	\begin{equation*}
+		W = \int_{V_1}^{V_2} \frac{nRT}{V} \, dV
+	\end{equation*}
+	\item ដោយសារ $n, R,$ និង $T$ ជាចំនួនថេរ យើងអាចទាញវាចេញក្រៅអាំងតេក្រាល៖
+	\begin{equation*}
+		W = nRT \int_{V_1}^{V_2} \frac{1}{V} \, dV
+	\end{equation*}
+	\item តាមរូបមន្តគណិតវិទ្យា $\int \frac{1}{x} \, dx = \ln|x|$ យើងទាញបាន៖
+	\begin{equation*}
+		W = nRT \Big[ \ln V \Big]_{V_1}^{V_2}
+	\end{equation*}
+	\item ជំនួសគោលកម្រិតចូល និងប្រើលក្ខណៈឡូការីត $\ln a - \ln b = \ln\left(\frac{a}{b}\right)$៖
+	\begin{equation*}
+		W = nRT (\ln V_2 - \ln V_1) = nRT \ln\left(\frac{V_2}{V_1}\right)
+	\end{equation*}
+\end{itemize}
+
+\textbf{សន្និដ្ឋានរូបមន្ត៖}
+\begin{equation}
+	W = nRT \ln\left(\frac{V_2}{V_1}\right)
+\end{equation}
+\begin{itemize}
+	\item $W$ ជាកម្មន្តគិតជាស៊ូល (J)
+	\item $n$ ជាចំនួនម៉ូលគិតជាម៉ូល (mol)
+	\item $R = 8.31 \text{ J/(mol}\cdot\text{K)}$ ជាថេរឧស្ម័ន
+	\item $T$ ជាសីតុណ្ហភាពគិតជាកែលវិន (K)
+	\item $V_1$ និង $V_2$ ជាមាឌគិតជាម៉ែត្រគូប ($\text{m}^3$)
+\end{itemize}
+\textbf{ទំនាក់ទំនងទម្រង់ផ្សេងទៀត (តាមច្បាប់ប៊យ-ម៉ារ្យ៉ត)៖}
+\begin{itemize}
+	\item ដោយសារសីតុណ្ហភាពថេរ ($T = \text{ថេរ}$) តាមច្បាប់ប៊យ-ម៉ារ្យុ៉ត (Boyle-Mariotte's Law) យើងមាន៖
+	\begin{equation*}
+		P_1 V_1 = P_2 V_2 \implies \frac{V_2}{V_1} = \frac{P_1}{P_2}
+	\end{equation*}
+	\item ម្យ៉ាងទៀត តាមសមីការឧស្ម័នបរិសុទ្ធយើងដឹងថា $nRT = P_1 V_1 = P_2 V_2$ ។
+	\item ដូចនេះ យើងអាចសរសេររូបមន្តកម្មន្តជាទម្រង់ផ្សេងៗទៀតបានដូចជា៖
+\end{itemize}
+\begin{equation}
+	W = nRT \ln\left(\frac{P_1}{P_2}\right) = P_1 V_1 \ln\left(\frac{V_2}{V_1}\right) = P_1 V_1 \ln\left(\frac{P_1}{P_2}\right)
+\end{equation}
+	
+\khmersubtopic{២.៤. ករណីមាឌថេរ (លំនាំអ៊ីសូករ)}
+\begin{itemize}
+	\item ក្នុងលំនាំអ៊ីសូករ មាឌរបស់ប្រព័ន្ធមិនប្រែប្រួលទេ ($V = \text{ថេរ}$ នាំឲ្យ $\Delta V = 0$)។
+	\item ក្រាបមានរាងជាបន្ទាត់ឈរ ហើយផ្ទៃក្រឡាក្រោមក្រាបស្មើនឹងសូន្យ៖
+\end{itemize}
+
+% --- P-V Graph for Constant Volume (Isochoric) ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.2]
+		% Axes
+		\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+		\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+		
+		% Coordinates for the states
+		\coordinate (V) at (2.5,0);
+		\coordinate (P1) at (0,1);
+		\coordinate (P2) at (0,3);
+		\coordinate (State1) at (2.5,1);
+		\coordinate (State2) at (2.5,3);
+		
+		% Graph Line (Vertical) with arrow
+		\draw[thick, khmerred, ->] (State1) -- (2.5, 2); 
+		\draw[thick, khmerred] (2.5, 2) -- (State2);
+		
+		% Dashed lines connecting to axes
+		\draw[dashed] (State1) -- (V) node[below] {$V$};
+		\draw[dashed] (State1) -- (P1) node[left] {$P_1$};
+		\draw[dashed] (State2) -- (P2) node[left] {$P_2$};
+		
+		% Points
+		\filldraw[black] (State1) circle (2pt) node[right] {១};
+		\filldraw[black] (State2) circle (2pt) node[right] {២};
+		
+		% Label for Work
+		\node[khmerred] at (4.5, 2) {\large $W = 0 \text{ J}$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{សម្រាយបញ្ជាក់រូបមន្តតាមអាំងតេក្រាល៖}
+\begin{itemize}
+	\item តាមនិយមន័យកម្មន្ត $W = \int_{V_1}^{V_2} P \, dV$
+	\item ដោយសារមាឌមិនប្រែប្រួល ($V_1 = V_2 = V$) នាំឲ្យបម្រែបម្រួលមាឌ $dV = 0$ (ឬ $\Delta V = 0$)។
+	\item ជំនួសចូលក្នុងអាំងតេក្រាល យើងបាន៖
+	\begin{equation*}
+		W = \int_{V}^{V} P \cdot 0 = 0 \text{ J}
+	\end{equation*}
+	\item ឬគិតតាមផ្ទៃក្រឡាធរណីមាត្រ៖ ដោយសារក្រាបជាបន្ទាត់ឈរ វាគ្មានប្រវែងទទឹងទេ ដូច្នេះវាគ្មានផ្ទៃក្រឡាធៀបនឹងអ័ក្សមាឌឡើយ ($\text{ផ្ទៃ} = 0$)។
+\end{itemize}
+
+\textbf{សន្និដ្ឋានរូបមន្ត៖}
+\begin{equation}
+	\Delta V = 0 \implies W = 0 \text{ J}
+\end{equation}
+
+	\vspace{0.5cm}
+\khmertopic{៣. ច្បាប់ទី១ ទែម៉ូឌីណាមិច}
+
+\textbf{ពោលច្បាប់ទី១ ទែម៉ូឌីណាមិច៖} ក្នុងលំនាំទែម៉ូឌីណាមិច កម្ដៅស្រូបដោយប្រព័ន្ធស្មើនឹងផលបូកនៃកម្មន្តដែលបង្កើតឡើងដោយប្រព័ន្ធ និងបម្រែបម្រួលថាមពលក្នុងនៃប្រព័ន្ធ។
+\begin{equation}
+	Q = \Delta U + W \quad \text{ឬ} \quad \Delta U = Q - W
+\end{equation}
+
+\textbf{សញ្ញានៃទំហំទែម៉ូឌីណាមិច៖}
+\begin{itemize}
+	\item បើកម្ដៅស្រូបដោយប្រព័ន្ធ នោះ $Q > 0$។ បើកម្ដៅបញ្ចេញដោយប្រព័ន្ធ នោះ $Q < 0$។
+	\item បើកម្មន្តធ្វើដោយប្រព័ន្ធ នោះ $W > 0$។ បើកម្មន្តទទួលដោយប្រព័ន្ធ នោះ $W < 0$។
+	\item បើថាមពលក្នុងកើន នោះ $\Delta U > 0$។ បើថាមពលក្នុងថយ នោះ $\Delta U < 0$។
+\end{itemize}
+
+% --- Summary Table for Thermodynamic Signs ---
+\vspace{0.3cm}
+\begin{center}
+	\renewcommand{\arraystretch}{1.5} % ធ្វើឱ្យប្រឡោះតារាងទូលាយបន្តិចងាយស្រួលអាន
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textcolor{brownheader}{\textbf{ទំហំរូបវិទ្យា}} & \textcolor{brownheader}{\textbf{តម្លៃវិជ្ជមាន ($> 0 \text{ } \text{ឬ } (+)$)}} & \textcolor{brownheader}{\textbf{តម្លៃអវិជ្ជមាន ($< 0 \text{ }\text{​ឬ }(-)$)}} \\
+		\hline
+		កម្ដៅ ($Q$) & ប្រព័ន្ធស្រូបកម្ដៅ & ប្រព័ន្ធបញ្ចេញកម្ដៅ \\
+		\hline
+		កម្មន្ត ($W$) & ប្រព័ន្ធធ្វើ (ឬបំពេញ) កម្មន្ត & ប្រព័ន្ធទទួលកម្មន្ត \\
+		\hline
+		ថាមពលក្នុង ($\Delta U$) & ថាមពលក្នុងកើនឡើង & ថាមពលក្នុងថយចុះ \\
+		\hline
+	\end{tabular}
+\end{center}
+\vspace{0.3cm}
+	
+	\vspace{0.5cm}
+	\khmertopic{៤. គោលការណ៍សមមូល (ករណីបម្លែងបិទ ឬស៊ិច)}
+
+\textbf{និយមន័យ៖} បម្លែងបិទ (ឬស៊ិច) គឺជាបម្លែងទែម៉ូឌីណាមិចដែលប្រព័ន្ធចេញពីភាពដើមមួយ ឆ្លងកាត់ភាពផ្សេងៗ រួចត្រឡប់មកភាពដើមវិញ (ភាពដើម និងភាពស្រេចត្រួតស៊ីគ្នា)។
+
+% --- Simple State-Transition Graph for Closed Cycle ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.5]
+		% State points (Circles)
+		\node[draw=black, circle, thick, minimum size=0.9cm, fill=khmerred!10] (State1) at (0,0) {\large ១};
+		\node[draw=black, circle, thick, minimum size=0.9cm, fill=khmerred!10] (State2) at (4,0) {\large ២};
+		
+		% Path A (Upper curve, 1 -> 2)
+		\draw[->, thick, khmerred] (State1) to[bend left=50] node[above=0.1cm] {ផ្លូវ A} (State2);
+		
+		% Path B (Lower curve, 2 -> 1)
+		\draw[->, thick, khmerred] (State2) to[bend left=50] node[below=0.1cm] {ផ្លូវ B} (State1);
+		
+		% Cycle properties in the center
+		\node[khmerred, align=center] at (2,0) {\small $\Delta U = 0$ \\ \small $W = Q$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{ពោលការណ៍សមមូល៖}
+\begin{itemize}
+	\item ដោយសារភាពដើម និងភាពស្រេចត្រួតស៊ីគ្នា នោះថាមពលក្នុងនៃប្រព័ន្ធមិនប្រែប្រួលទេ មានន័យថា៖ $\Delta U = 0$។
+	\item តាមច្បាប់ទី១ ទែម៉ូឌីណាមិច ($Q = \Delta U + W$) យើងទាញបាន៖
+\end{itemize}
+
+\begin{equation}
+	\Delta U = 0 \implies Q = W
+\end{equation}
+
+\textbf{អត្ថន័យរូបវិទ្យា៖}
+\begin{itemize}
+	\item បរិមាណកម្ដៅ និងកម្មន្តសរុប {\englishfont (Net Work \& Net Heat)} ដែលប្រព័ន្ធបានប្តូរជាមួយមជ្ឈដ្ឋានក្រៅ មានតម្លៃស្មើគ្នា។
+	\item កម្មន្តសរុបគឺស្មើនឹងផលបូកពីចលករ និងទប់៖ $W = W_{\text{ជលករ}} + W_{\text{ទប់}}$
+	\item បើប្រព័ន្ធ \textbf{ធ្វើកម្មន្តសរុបជាចលករ} ($W > 0$) នោះវាត្រូវ \textbf{ស្រូបកម្ដៅសរុប} ($Q > 0$) ពីមជ្ឈដ្ឋានក្រៅ។
+	\item បើប្រព័ន្ធ \textbf{ទទួលកម្មន្តសរុប} ($W < 0$) នោះវាត្រូវ \textbf{បញ្ចេញកម្ដៅសរុប} ($Q < 0$) ទៅមជ្ឈដ្ឋានក្រៅ។
+\end{itemize}
+	\tanbgdivider
+
+\newpage
+\begin{center}
+	\khmerlesson{មេរៀនទី៣៖ ម៉ាស៊ីន}
+\end{center}
+
+\khmertopic{១. លំនាំអាដ្យាបាទិច ({\englishfont Adiabatic Process})}
+
+\textbf{និយមន័យ៖} ក្នុងលំនាំអាដ្យាបាទិច ប្រព័ន្ធមិនប្ដូរកម្ដៅជាមួយមជ្ឈដ្ឋានក្រៅទេ នាំឱ្យ $Q = 0$។
+
+% --- P-V Graph for Adiabatic Expansion ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.3]
+		% Axes
+		\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+		\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+		
+		% Isotherm curves (Drawn in blue as reference)
+		\draw[thick, blue!60] (0.8,3.5) plot[domain=0.8:5, samples=50] (\x, {2.8/\x}) node[right] {$T_{1}$};
+		\draw[thick, blue!60] (0.5,1.5) plot[domain=0.5:5, samples=50] (\x, {1.2/\x}) node[right] {$T_{2}$};
+		
+		% Coordinates for the states on the adiabatic curve
+		\coordinate (State1) at (1.5, 1.87); % State 1 on T1
+		\coordinate (State2) at (3.5, 0.34); % State 2 on T2
+		
+		% Adiabatic curve (Steeper curve crossing from T1 down to T2)
+		\draw[thick, khmerred, ->] (State1) to[bend right=12] (2.5, 0.9);
+		\draw[thick, khmerred] (2.5, 0.9) to[bend right=10] (State2);
+		
+		% State points
+		\filldraw[black] (State1) circle (2pt) node[above right] {១};
+		\filldraw[black] (State2) circle (2pt) node[above right] {២};
+		
+		% Dashed lines connecting to axes
+		\draw[dashed] (State1) -- (1.5,0) node[below] {$V_1$};
+		\draw[dashed] (State2) -- (3.5,0) node[below] {$V_2$};
+		\draw[dashed] (State1) -- (0,1.87) node[left] {$P_1$};
+		\draw[dashed] (State2) -- (0,0.34) node[left] {$P_2$};
+		
+	\end{tikzpicture}
+\end{center}
+\begin{itemize}
+	\item \textbf{ចំណាំ៖} ពណ៌ខៀវតំណាងឲ្យ\textbf{លំនាំអុីសូទែម} ឯពណ៌ក្រហមតំណាងឲ្យ\textbf{លំនាំអាដ្យាបាទិច}។
+\end{itemize}
+
+\textbf{សម្រាយបញ្ជាក់រូបមន្ត៖}
+\begin{itemize}
+	\item តាមច្បាប់ទី១ ទែម៉ូឌីណាមិច $Q = \Delta U + W = 0 \implies W = -\Delta U$
+	\item ដោយ $\Delta U = \frac{3}{2}nR(T_2 - T_1)$
+	\item នាំឱ្យយើងទាញបានរូបមន្តកម្មន្ត៖
+\end{itemize}
+
+\begin{equation}
+	W = -\frac{3}{2}nR(T_2 - T_1) = \frac{3}{2}nR(T_1 - T_2)
+\end{equation}
+
+\textbf{លក្ខណៈនៃលំនាំអាដ្យាបាទិច៖}
+\begin{itemize}
+	\item បើប្រព័ន្ធ \textbf{ធ្វើកម្មន្ត} ($W > 0$) ឧស្ម័នរីកមាឌ នាំឱ្យថាមពលក្នុងថយចុះ ($\Delta U < 0$) ធ្វើឱ្យសីតុណ្ហភាពឧស្ម័នថយចុះ។
+	\item បើប្រព័ន្ធ \textbf{ទទួលកម្មន្ត} ($W < 0$) ឧស្ម័នរួមមាឌ នាំឱ្យថាមពលក្នុងកើនឡើង ($\Delta U > 0$) ធ្វើឱ្យសីតុណ្ហភាពឧស្ម័នកើនឡើង។
+\end{itemize}
+
+
+\khmertopic{២. ស៊ិចកាកណូ និងទ្រឹស្តីបទកាកណូ ({\englishfont Carnot Cycle})}
+
+\khmersubtopic{២.១. ស៊ិចកាកណូ} 
+\textbf{ស៊ិចកាកណូ} ជាលំនាំបិទដែលមានប្រសិទ្ធភាពខ្ពស់បំផុត ដែលមាន ៤ ដំណាក់កាល៖
+\begin{enumerate}
+\item \textbf{ដំណាក់កាលទី១ (អ៊ីសូទែម):} ឧស្ម័នស្រូបកម្ដៅ មាឌកើន និងសម្ពាធថយ។
+\item \textbf{ដំណាក់កាលទី២ (អាដ្យាបាទិច):} ឧស្ម័នបន្តរីកមាឌ និងសម្ពាធថយចុះ។
+\item \textbf{ដំណាក់កាលទី៣ (អ៊ីសូទែម):} ឧស្ម័នបញ្ចេញកម្ដៅ រួមមាឌ និងសម្ពាធកើន។
+\item \textbf{ដំណាក់កាលទី៤ (អាដ្យាបាទិច):} ឧស្ម័នត្រូវបណ្ណែនរហូតដល់ភាពដើមវិញ។
+\end{enumerate}
+
+% --- P-V Graph for Carnot Cycle ---
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.3]
+	% Axes
+	\draw[->, thick] (0,0) -- (6,0) node[right] {$V$};
+	\draw[->, thick] (0,0) -- (0,4) node[above] {$P$};
+	
+	% Carnot Cycle curves
+	\draw[thick, khmerred, ->] (1,3) to[bend right=15] node[above] {$Q_{H}$} (2.5,2); % Isotherm 1
+	\draw[thick, blue, ->] (2.5,2) to[bend right=15] (4,0.8); % Adiabat 1
+	\draw[thick, khmerred, ->] (4,0.8) to[bend left=15] node[below] {$Q_{C}$} (2,1.2); % Isotherm 2
+	\draw[thick, blue, ->] (2,1.2) to[bend left=15] (1,3); % Adiabat 2
+	
+	% Isotherm labels
+	\node[khmerred] at (3.5, 2.5) {$T_{H}$ (ក្ដៅ)};
+	\node[khmerred] at (1.5, 0.5) {$T_{C}$ (ត្រជាក់)};
+	
+	% State points
+	\filldraw[black] (1,3) circle (2pt) node[left] {១};
+	\filldraw[black] (2.5,2) circle (2pt) node[right] {២};
+	\filldraw[black] (4,0.8) circle (2pt) node[right] {៣};
+	\filldraw[black] (2,1.2) circle (2pt) node[left] {៤};
+	
+	% Shaded Area
+	\fill[khmerred!10] (1,3) to[bend right=15] (2.5,2) to[bend right=15] (4,0.8) to[bend left=15] (2,1.2) to[bend left=15] cycle;
+	\node[khmerred] at (2.4, 1.8) {$W$};
+\end{tikzpicture}
+\end{center}
+
+\khmersubtopic{២.២. ទ្រឹស្តីបទទកាកណូ និង ទិន្នផលកម្ដៅអតិបរមា}
+\begin{itemize}
+\item ទិន្នផលកម្ដៅអតិបរមាមិនអាស្រ័យនឹងប្រភពកម្ដៅ ឬរបៀបវិវឌ្ឍទេ តែវាអាស្រ័យតែលើសីតុណ្ហភាពដាច់ខាត $T_H$ នៃប្រភពក្ដៅ និង $T_C$ នៃប្រភពត្រជាក់ប៉ុណ្ណោះ។
+\item ទំនាក់ទំនងប្រភពកម្ដៅ និងសីតុណ្ហភាព៖ $\frac{T_C}{T_H} = \frac{Q_C}{Q_H}$
+\end{itemize}
+\begin{equation}
+e_C = 1 - \frac{T_C}{T_H}
+\end{equation}
+
+
+\khmertopic{៣. ម៉ាស៊ីនសាំងបន្ទុះបួនវគ្គ និងពីរវគ្គ}
+
+\khmersubtopic{៣.១. ម៉ាស៊ីនសាំងបន្ទុះបួនវគ្គ {\englishfont(4-Stroke Engine)}:}
+\begin{itemize}
+\item \textbf{វគ្គទី១ (ស្រូប/{\englishfont Intake Stroke}):} ស៊ូប៉ាប់ស្រូបបើក ពីស្តុងចុះក្រោម ស្រូបល្បាយសាំង-ខ្យល់។
+\item \textbf{វគ្គទី២ (បណ្ណែន/{\englishfont Compression Stroke}):} ស៊ូប៉ាប់បិទទាំងពីរ ពីស្តុងឡើងលើបណ្ណែនល្បាយ។
+\item \textbf{វគ្គទី៣ (បន្ទុះ និងបន្ធូរ/{\englishfont Power Stroke}):} ប៊ូស៊ីផ្កាយភ្លើង ល្បាយផ្ទុះរុញពីស្តុងចុះក្រោម (\textbf{នេះជាវគ្គតែមួយគត់ដែលផ្ដល់កម្មន្ត!})
+\item \textbf{វគ្គទី៤ (បញ្ចេញ/{\englishfont Exhaust Stroke}):} ស៊ូប៉ាប់បញ្ចេញបើក ពីស្តុងឡើងលើរុញផ្សែងចេញ។
+\end{itemize}
+\khmerphoto{img/4se.jpg}{រូបភាពបង្ហាញអំពើដំណើរការ៤វគ្គនៃម៉ាសុីនសាំង៤វគ្គ}
+
+\khmersubtopic{៣.២. ម៉ាស៊ីនបន្ទុះពីរវគ្គ {\englishfont(2-Stroke Engine)}:}
+\begin{itemize}
+\item វគ្គទី១៖ បណ្ណែន និងបន្ទុះ
+\item វគ្គទី២៖ ស្រូបបញ្ចូល និងបញ្ចេញ (ច្រើនប្រើលើម៉ូតូ)
+\end{itemize}
+
+\khmersubtopic{៣.៣. រូបមន្តទិន្នផលនៃម៉ាស៊ីន:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|}
+	\hline
+	\textcolor{brownheader}{\textbf{{\khmerpagenum ប្រភេទភាគរយទិន្នផល}}} & \textcolor{brownheader}{\textbf{{\khmerpagenum រូបមន្តគណនា}}} \\
+	\hline
+	\textbf{១. ទិន្នផលកម្ដៅ {\englishfont (Thermal Efficiency)}} & $e_C = \frac{W_M}{Q_H}$ \\
+	\hline
+	\textbf{២. ទិន្នផលមេកានិចឬទិន្នផលបានការ {\englishfont (Mechanical Efficiency)}} & $e_M = \frac{W_U}{W_M}$ \\
+	\hline
+	\textbf{៣. ទិន្នផលសរុប {\englishfont (Overall Efficiency)}} & $e = e_C \times e_M = \frac{W_U}{Q_H}$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\textbf{សម្គាល់ទំហំ និងឯកតា៖}
+\begin{itemize}
+\item $Q_H$: កម្ដៅស្រូបពីប្រភពក្ដៅ (J)
+\item $Q_C$: កម្ដៅបញ្ចេញទៅប្រភពត្រជាក់ (J)
+\item $W_M$: កម្មន្តមេកានិចបង្កើតដោយពីស្តុង ($W_M = Q_H - Q_C$) គិតជា 
+\item $W_U$: កម្មន្តបានការ (កម្លាំងទាញដល់កង់ឬភ្លៅម៉ូទ័រ)
+\end{itemize}
+	\tanbgdivider

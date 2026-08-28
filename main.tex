@@ -1,0 +1,30 @@
+% main.tex
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[12pt,a4paper,twoside]{article}
+
+% load external preamble setup
+\input{preamble.tex}
+
+\begin{document}
+\sloppy
+
+\tanbgdivider
+
+\tableofcontents
+
+\clearpage
+
+% chapter-opening banner page
+\input{banners/chapter1banner.tex}
+
+% load individual chapters from folder
+\input{chapters/chapter1.tex}
+
+% chapter-opening banner page
+\input{banners/chapter2banner.tex}
+
+% page break before next chapter if needed
+\clearpage
+\input{chapters/chapter2.tex}
+
+\end{document}

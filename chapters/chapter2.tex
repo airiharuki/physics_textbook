@@ -1,0 +1,268 @@
+\khmerlesson{មេរៀនទី ១៖ គោលការណ៍តម្រួតនៃរលក និងរលកជញ្ច្រុំ}
+
+
+\khmertopic{១. សមីការបម្លាស់ទីភាគល្អិត ({\englishfont Equation of Particle Displacement})}
+
+\textbf{ក. និយមន័យ៖} រលកគឺជាការបញ្ជូនរញ្ជួយ ឬលំយោលបន្តបន្ទាប់គ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។ តាមច្បាប់ទី ២ ញូតុន និងកម្លាំងយឺត ($F=-kx$) យើងទទួលបានសមីការឌីផេរ៉ង់ស្យែល $\frac{d^2x}{dt^2} + \omega^2x = 0$ ដែលមានចម្លើយជាអនុគមន៍ស៊ីនុយសូអ៊ីត៖
+\begin{equation}
+	x = A \sin(\omega t + \varphi) \quad \text{ឬ} \quad x = A \cos(\omega t + \varphi)
+\end{equation}
+
+\khmertopic{២. ល្បឿន និងសំទុះនៃភាគល្អិតរញ្ជួយ}
+\begin{itemize}
+	\item \textbf{ល្បឿន ($v$):} $v = \frac{dx}{dt} = \omega A \cos(\omega t + \varphi)$។ ល្បឿនអតិបរមា $v_{max} = \omega A$ (នៅទីតាំងលំនឹង)។
+	\item \textbf{សំទុះ ($a$):} $a = \frac{dv}{dt} = -\omega^2 A \sin(\omega t + \varphi) = -\omega^2 x$។ សំទុះអតិបរមា $a_{max} = \omega^2 A$ (នៅអំព្លីទុត)។
+\end{itemize}
+
+\khmertopic{៣. របៀបគូសក្រាបនៃអនុគមន៍រលក ({\englishfont Step-by-Step Graphing})}
+
+ការគូសក្រាបរលកចែកជា ២ ប្រភេទ៖ ក្រាបតាមពេល $f(t)$ និងក្រាបតាមទីតាំង $f(x)$។
+
+\vspace{0.3cm}
+\textbf{ឧទាហរណ៍ទី១៖ គូសក្រាបស៊ីនុសតាមពេល $x(t) = A \sin(\omega t)$}
+
+\textbf{ជំហានទី១៖} គូសអ័ក្សឈរជាបម្លាស់ទី $x$ (កត់សម្គាល់អំព្លីទុត $\pm A$) និងអ័ក្សដេកជាពេល $t$ (កត់សម្គាល់ខួប $T$ និង $T/2$)។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$x(t)$};
+		\draw[->, thick] (0,0) -- (7,0) node[right] {$t$};
+		\draw[dashed] (0,1) node[left] {$A$} -- (6.5,1);
+		\draw[dashed] (0,-1) node[left] {$-A$} -- (6.5,-1);
+		\draw[thick] (6.28,0.1) -- (6.28,-0.1) node[below] {$T$};
+		\draw[thick] (3.14,0.1) -- (3.14,-0.1) node[below] {$T/2$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{ជំហានទី២៖} អនុគមន៍ស៊ីនុសចាប់ផ្តើមពីគល់អ័ក្ស ($0,0$) កើនទៅរក $A$ កាត់អ័ក្សដេកនៅ $T/2$ ហើយចុះដល់ $-A$ មុនត្រឡប់មក ០ វិញនៅ $T$។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$x(t)$};
+		\draw[->, thick] (0,0) -- (7,0) node[right] {$t$};
+		\draw[dashed, opacity=0.5] (0,1) node[left, text opacity=1] {$A$} -- (6.5,1);
+		\draw[dashed, opacity=0.5] (0,-1) node[left, text opacity=1] {$-A$} -- (6.5,-1);
+		\draw[khmerred, thick, domain=0:6.28, samples=100] plot (\x, {sin(\x r)});
+		\filldraw[black] (0,0) circle (1.5pt) node[below left] {$0$};
+		\filldraw[black] (3.14,0) circle (1.5pt) node[below left] {$T/2$};
+		\filldraw[black] (6.28,0) circle (1.5pt) node[below left] {$T$};
+	\end{tikzpicture}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{ឧទាហរណ៍ទី២៖ គូសក្រាបកូស៊ីនុសតាមទីតាំង $y(x) = A \cos(kx)$}
+
+\textbf{ជំហានទី១៖} គូសអ័ក្សដេកជាចម្ងាយ $x$ ដោយបែងចែកប្រវែងរលក $\lambda$ ជា ៤ ចំណែកស្មើគ្នា ($\lambda/4, \lambda/2, 3\lambda/4, \lambda$)។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y(x)$};
+		\draw[->, thick] (0,0) -- (7,0) node[right] {$x$};
+		\draw[dashed] (0,1) node[left] {$A$} -- (6.5,1);
+		\draw[dashed] (0,-1) node[left] {$-A$} -- (6.5,-1);
+		\draw[thick] (1.57,0.1) -- (1.57,-0.1) node[below] {$\frac{\lambda}{4}$};
+		\draw[thick] (3.14,0.1) -- (3.14,-0.1) node[below] {$\frac{\lambda}{2}$};
+		\draw[thick] (4.71,0.1) -- (4.71,-0.1) node[below] {$\frac{3\lambda}{4}$};
+		\draw[thick] (6.28,0.1) -- (6.28,-0.1) node[below] {$\lambda$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{ជំហានទី២៖} អនុគមន៍កូស៊ីនុសចាប់ផ្តើមពីចំណុចកំពូល ($0,A$) ចុះកាត់អ័ក្សដេកនៅ $\lambda/4$, ដល់ចំណុចបាត $-A$ នៅ $\lambda/2$, កាត់អ័ក្សដេកនៅ $3\lambda/4$, និងឡើងដល់កំពូលវិញនៅ $\lambda$។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y(x)$};
+		\draw[->, thick] (0,0) -- (7,0) node[right] {$x$};
+		\draw[blue, thick, domain=0:6.28, samples=100] plot (\x, {cos(\x r)});
+		\filldraw[black] (0,1) circle (1.5pt) node[left] {$A$};
+		\filldraw[black] (3.14,-1) circle (1.5pt) node[below] {$-A$};
+		\filldraw[black] (6.28,1) circle (1.5pt);
+		\node[below] at (6.28, 0) {$\lambda$};
+	\end{tikzpicture}
+\end{center}
+
+\tanbgdivider
+
+\khmertopic{៤. វិធីសាស្ត្រក្នុងការធ្វើសំណង់ប្រេណែល ({\englishfont Fresnel Construction})}
+
+វិធីសាស្ត្រហ្វ្រេនណែល ប្រើសម្រាប់បូកបញ្ចូលរលកពីរដែលមានប្រេកង់ដូចគ្នា តែមានអំព្លីទុត និងផាសដើមខុសគ្នា ដោយប្រើការបូកវិចទ័រ។
+
+\textbf{ជំហានអនុវត្ត (ឧទាហរណ៍៖ បូករលក $x_1$ ផាស $\varphi_1=30^\circ$ និង $x_2$ ផាស $\varphi_2=90^\circ$):}
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.8]
+		\draw[->, thick, dashed] (0,0) -- (4,0) node[right] {អ័ក្សគល់ (Reference)};
+		\coordinate (O) at (0,0);
+		\coordinate (A1) at (30:3);
+		\coordinate (A2) at ($(A1) + (90:4)$); % Calculate tip of A2
+		
+		\draw[->, thick, khmerred] (O) -- (A1) node[midway, below right] {$\vec{{\englishfont A}}_1$};
+		\draw[->, thick, blue] (A1) -- (A2) node[midway, right] {$\vec{{\englishfont A}}_2$};
+		
+		% Resultant Vector
+		\draw[->, ultra thick, purple] (O) -- (A2) node[midway, above left] {$\vec{{\englishfont A}} \text{ (សរុប)}$};
+		
+		% Angles
+		\draw (1,0) arc (0:30:1) node[midway, right] {$\varphi_1$};
+		\draw[dashed] (A1) -- ++(2,0);
+		\draw (A1) ++(0.7,0) arc (0:90:0.7) node[midway, above right] {$\varphi_2$};
+		\draw (1.5,0) arc (0:56:1.5) node[midway, right=0.1cm] {$\varphi$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{រូបមន្តគណនាទំហំ និងមុំវិចទ័រសរុប (តាមទ្រឹស្តីបទកូស៊ីនុស):}
+\begin{align}
+	A &= \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos(\varphi_2 - \varphi_1)} \\
+	\tan \varphi &= \frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}{A_1\cos\varphi_1 + A_2\cos\varphi_2}
+\end{align}
+
+\noindent \textbf{\color{brownheader}ឧទាហរណ៍៖ }គេឲ្យរលក២ដូចខាងក្រោម៖
+\[
+  y_1=(5 \mathrm{cm}) \sin (10 \pi t + \pi)\]
+\[
+  y_2=(5 \mathrm{cm}) \sin (10 \pi t + \frac{\pi}{2})
+\]
+\noindent សរសេរសមីការលំយោលតម្រួតនៃរលកទាំងពីរ។\\
+\noindent \textbf{\color{brownheader}ចម្លើយ៖}\\
+\hspace{2em} $\bigstar$ 
+
+
+\khmertopic{៥. គោលការណ៍តម្រួតនៃរលក ({\englishfont Principle of Superposition Waves})}
+
+\textbf{ក. និយមន័យ៖} កាលណារលកពីរ ឬច្រើន ធ្វើដំណើរឆ្លងកាត់គ្នាត្រង់ចំណុចមួយក្នុងមជ្ឈដ្ឋានតែមួយ នោះបម្លាស់ទីសរុបនៃភាគល្អិតត្រង់ចំណុចនោះ គឺជាផលបូកពិជគណិតនៃបម្លាស់ទីនៃរលកនីមួយៗ ($y = y_1 + y_2$)។
+\textit{ចំណាំ៖ ក្រោយពេលឆ្លងកាត់គ្នា រលកនៅតែរក្សារូបរាង និងទិសដៅដដែល ដោយមិនបំផ្លាញគ្នាឡើយ។}
+
+\khmertopic{៦. រលកជញ្ច្រុំ ({\englishfont Standing Waves})}
+
+\textbf{ក. និយមន័យ៖} រលកជញ្ច្រុំ គឺជារលកដែលកើតចេញពីការតម្រួតគ្នារវាង \textbf{រលកចូល} និង \textbf{រលកចំណាំងផ្លាត} ដែលមានអំព្លីទុត ប្រវែងរលក និងប្រេកង់ដូចគ្នា ប៉ុន្តែធ្វើដំណើរក្នុងទិសដៅផ្ទុយគ្នា។
+
+\textbf{ខ. សមីការរលកជញ្ច្រុំ៖}
+តាងរលកចូល៖ $y_1 = a \sin(kx - \omega t)$ និង រលកចំណាំងផ្លាត៖ $y_2 = a \sin(kx + \omega t)$។ 
+តាមគោលការណ៍តម្រួត និងរូបមន្តត្រីកោណមាត្រ យើងទទួលបានសមីការ៖
+\begin{equation}
+	y(x,t) = [2a \sin(kx)] \cos(\omega t) \quad \text{ឬ} \quad y(x,t) = A_{SW} \cos(\omega t)
+\end{equation}
+
+\textbf{គ. ទីតាំងថ្នាំង និងទីតាំងពោះ ({\englishfont Nodes and Antinodes}):}
+
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=1.5]
+		% Axis
+		\draw[->, thick] (0,0) -- (6.5,0) node[right] {$x$};
+		
+		% Incident Wave
+		\draw[thick, khmerred] plot[domain=0:6, samples=150] (\x, {sin(\x*120)});
+		
+		% Reflected Wave
+		\draw[thick, blue, dashed] plot[domain=0:6, samples=150] (\x, {-sin(\x*120)});
+		
+		% Envelopes marking Nodes (N) and Antinodes (A)
+		\node[below] at (0,0) {{\englishfont N}};
+		\node[above] at (0.75,1) {{\englishfont A}};
+		\node[below] at (1.5,0) {{\englishfont N}};
+		\node[above] at (2.25,1) {{\englishfont A}};
+		\node[below] at (3,0) {{\englishfont N}};
+		\node[above] at (3.75,1) {{\englishfont A}};
+		\node[below] at (4.5,0) {{\englishfont N}};
+		\node[above] at (5.25,1) {{\englishfont A}};
+		\node[below] at (6,0) {{\englishfont N}};
+		
+		% Support Line at the end
+		\draw[ultra thick, black] (6,-1.2) -- (6,1.2);
+		\filldraw[black] (6,0) circle (2pt);
+	\end{tikzpicture}
+\end{center}
+\begin{itemize}
+	\item \textbf{ចំណាំ}៖ \textbf{{\englishfont A (Antinode)}} ជាទីតាំងពោះ។ ចំណែកឯ \textbf{{\englishfont N (Node)}} ជាទីតាំងថ្នាំង។
+	\item \textbf{ថ្នាំង (Nodes):} ជាទីតាំងដែលភាគល្អិត \textbf{មិនរញ្ជួយ} ($A_{SW} = 0$)។ វាកើតឡើងនៅចម្ងាយ $x = n\frac{\lambda}{2}$។
+	\item \textbf{ពោះ (Antinodes):} ជាទីតាំងដែលភាគល្អិតរញ្ជួយដោយ \textbf{អំព្លីទុតអតិបរមា} ($A_{SW} = \pm 2a$)។ វាកើតឡើងនៅចម្ងាយ $x = (2n+1)\frac{\lambda}{4}$។
+\end{itemize}
+\tanbgdivider
+\newpage
+% =================================================================
+% LESSON 2: INTERFERENCE OF WAVES
+% =================================================================
+
+\khmerlesson{មេរៀនទី ២៖ អាំងទែផេរ៉ង់នៃរលក ({\englishfont Interference of Waves})}
+
+
+\khmertopic{១. និយមន័យ និងលក្ខខណ្ឌនៃរលកកូអេរ៉ង់}
+
+\textbf{អាំងទែផេរ៉ង់} គឺជាបាតុភូតដែលកើតឡើងនៅពេលរលកពីរ (ឬច្រើន) ជួបគ្នា ហើយផ្តុំបង្កើតបានជារលកថ្មីមួយដែលមានការចែកចាយថាមពល និងអំព្លីទុតឡើងវិញ (ធំជាងមុន ឬតូចជាងមុន)។ 
+ដើម្បីឱ្យមានបាតុភូតអាំងទែផេរ៉ង់ច្បាស់ល្អ និងមានលំនឹង រលកទាំងពីរត្រូវតែជា \textbf{រលកកូអេរ៉ង់ ({\englishfont Coherent Waves})} ដែលមានលក្ខខណ្ឌពីរយ៉ាង៖
+\begin{enumerate}
+	\item ប្រេកង់ដូចគ្នា ($f_1 = f_2 \implies \lambda_1 = \lambda_2$)
+	\item ផលសងផាសថេរជានិច្ចធៀបនឹងពេលវេលា ($\Delta \varphi = \text{ថេរ}$)
+\end{enumerate}
+
+\khmertopic{២. ទំនាក់ទំនងរវាងផលសងផាស និងផលសងចម្ងាយដំណើរ}
+
+នៅពេលរលកពីរចេញពីប្រភព $S_1$ និង $S_2$ ទៅជួបគ្នានៅចំណុច $P$ មួយ ពួកវាធ្វើដំណើរបានចម្ងាយ $d_1$ និង $d_2$ រៀងគ្នា។ 
+ផលសងនៃចម្ងាយនេះហៅថា \textbf{ផលសងចម្ងាយដំណើរ ({\englishfont Path Difference, } $\Delta d$)} ៖
+\begin{equation}
+	\Delta d = d_2 - d_1
+\end{equation}
+
+ដោយសាររលកមួយខួប (មុំ $2\pi$) ត្រូវនឹងប្រវែងរលក $\lambda$ មួយ នោះយើងអាចទាញទំនាក់ទំនងរវាងផលសងផាស ($\Delta \varphi$) និងផលសងចម្ងាយដំណើរ ($\Delta d$) បានតាមរូបមន្ត៖
+\begin{equation}
+	\Delta \varphi = \frac{2\pi}{\lambda} (d_2 - d_1) = \frac{2\pi}{\lambda} \Delta d
+\end{equation}
+
+
+\khmertopic{៣. អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}
+
+អាំងទែផេរ៉ង់សង់ កើតឡើងនៅពេលរលកទាំងពីរមកដល់ចំណុច $P$ ដោយមាន \textbf{ផាសដូចគ្នា} (កំពូលជួបកំពូល, បាតជួបបាត) ធ្វើឱ្យរលកទាំងពីរជួយជម្រុញគ្នា បង្កើតបានអំព្លីទុតសរុបអតិបរមា។
+
+\textbf{លក្ខខណ្ឌគណិតវិទ្យា៖}
+\begin{itemize}
+	\item \textbf{ផលសងផាស៖} $\Delta \varphi = 2k\pi$ (ចំនួនគូនៃ $\pi$)
+	\item \textbf{ផលសងចម្ងាយដំណើរ៖} $\Delta d = d_2 - d_1 = k\lambda$ \quad ($k = 0, 1, 2, ...$)
+	\item \textbf{អំព្លីទុតអតិបរមា៖} $A_{max} = a_1 + a_2$ (បើ $a_1=a_2 \implies A = 2a$)
+\end{itemize}
+
+% --- TikZ Graph for Constructive Interference ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-2.5) -- (0,2.5) node[above] {$y$};
+		\draw[->, thick] (0,0) -- (8,0) node[right] {$x$};
+		
+		% Wave 1
+		\draw[wavered, thick, domain=0:7.5, samples=100] plot (\x, {sin(100*\x)});
+		\node[wavered] at (1.5, 1.3) {$y_1$};
+		
+		% Wave 2 (Identical phase)
+		\draw[waveblue, thick, dashed, domain=0:7.5, samples=100] plot (\x, {0.8*sin(100*\x)});
+		\node[waveblue] at (2.5, -1.2) {$y_2$};
+		
+		% Resultant Wave
+		\draw[wavepurple, ultra thick, domain=0:7.5, samples=100] plot (\x, {1.8*sin(100*\x)});
+		\node[wavepurple] at (0.8, 2.2) {$y = y_1 + y_2$ (សង់)};
+	\end{tikzpicture}
+\end{center}
+
+\khmertopic{៤. អាំងទែផេរ៉ង់បំផ្លាញ ({\englishfont Destructive Interference})}
+
+អាំងទែផេរ៉ង់បំផ្លាញ កើតឡើងនៅពេលរលកទាំងពីរមកដល់ចំណុច $P$ ដោយមាន \textbf{ផាសផ្ទុយគ្នា} (កំពូលជួបបាត) ធ្វើឱ្យរលកទាំងពីរទូទាត់កម្លាំងគ្នា បង្កើតបានអំព្លីទុតសរុបអប្បបរមា។
+
+\textbf{លក្ខខណ្ឌគណិតវិទ្យា៖}
+\begin{itemize}
+	\item \textbf{ផលសងផាស៖} $\Delta \varphi = (2k+1)\pi$ (ចំនួនសេសនៃ $\pi$)
+	\item \textbf{ផលសងចម្ងាយដំណើរ៖} $\Delta d = d_2 - d_1 = (k + \frac{1}{2})\lambda$ \quad ($k = 0, 1, 2, ...$)
+	\item \textbf{អំព្លីទុតអប្បបរមា៖} $A_{min} = |a_1 - a_2|$ (បើ $a_1=a_2 \implies A = 0$)
+\end{itemize}
+
+% --- TikZ Graph for Destructive Interference ---
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y$};
+		\draw[->, thick] (0,0) -- (8,0) node[right] {$x$};
+		
+		% Wave 1
+		\draw[wavered, thick, domain=0:7.5, samples=100] plot (\x, {sin(100*\x)});
+		\node[wavered] at (1.5, 1.3) {$y_1$};
+		
+		% Wave 2 (Out of phase by pi)
+		\draw[waveblue, thick, dashed, domain=0:7.5, samples=100] plot (\x, {-sin(100*\x)});
+		\node[waveblue] at (1.5, -1.3) {$y_2$};
+		
+		% Resultant Wave (Flat line if equal amplitude)
+		\draw[wavepurple, ultra thick] (0,0) -- (7.5,0);
+		\node[wavepurple, above] at (6, 0.1) {$y = 0$ (បំផ្លាញ)};
+	\end{tikzpicture}
+\end{center}
+\tanbgdivider
