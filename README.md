@@ -2,8 +2,8 @@
 
 Cambodian high school physics, typeset in Khmer, dressed up in a custom sakura theme. Rounded boxes, floral dividers, full Khmer numerals everywhere. We went full weeb with the aesthetic and I'm not sorry.
 
-> **ts made w gemini, claude, kimi, and too much coffee to consume** ☕🤖
-> *(and shh, MoEYS don't know about ts)*
+> **ts made w gemini, claude, kimi, and too much coffee to consume** ☕🤖  
+> *(and shh, MoEYS don't know about ts)*  
 > *am i prompt engineer or a chef? at this point both knives are out and the kitchen's on fire*
 
 ---
@@ -29,16 +29,16 @@ Yeah you gotta run it twice or your TOC and page refs will be lying to you. Outp
 
 ```
 .
-├── main.tex # The boss — assembles everything
-├── preamble.tex # Fonts, colors, macros, page style. The shared brain.
+├── main.tex              # The boss — assembles everything
+├── preamble.tex          # Fonts, colors, macros, page style. The shared brain.
 ├── chapters/
-│ ├── chapter1.tex # Lesson stuff
-│ └── chapter2.tex # More lesson stuff
+│   ├── chapter1.tex      # Lesson stuff
+│   └── chapter2.tex      # More lesson stuff
 ├── banners/
-│ ├── chapter1banner.tex # Fancy opening page
-│ └── chapter2banner.tex # Another fancy opening page
-├── fonts/ # Khmer + Latin typefaces
-└── img/ # Photos, figures, vibes
+│   ├── chapter1banner.tex # Fancy opening page
+│   └── chapter2banner.tex # Another fancy opening page
+├── fonts/                # Khmer + Latin typefaces
+└── img/                  # Photos, figures, vibes
 ```
 
 ## Adding a chapter (don't mess it up)
@@ -46,11 +46,11 @@ Yeah you gotta run it twice or your TOC and page refs will be lying to you. Outp
 1. Make `chapters/chapterN.tex` — put your content there.
 2. Make `banners/chapterNbanner.tex` — the dramatic entrance.
 3. Add this to `main.tex`:
-```latex
-\input{banners/chapterNbanner.tex}
-\input{chapters/chapterN.tex}
-\clearpage
-```
+   ```latex
+   \input{banners/chapterNbanner.tex}
+   \input{chapters/chapterN.tex}
+   \clearpage
+   ```
 
 ## Macros you should know
 
@@ -78,6 +78,10 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 - **Arrow styles** — `\usetikzlibrary{arrows.meta}` is global, so `[>=Stealth]` just works. No per-chapter setup, we're not animals.
 - **Colors** — `bacpink`, `bacpurple`, `khmerred`, `wavered`, `waveblue`, `wavepurple`, etc. are all in `preamble.tex`. Add new ones there so everyone can use them.
 - **Recipe status** — if you find a prompt that actually compiles on the first try, you're either a better chef than us or hallucinating. either way, share the secret ingredient.
+- **Boomer Khmerization Tax** — every number in this book is aggressively Khmer because the ministry's boomers have a nationalism fetish. they'd ខ្មែរតូបនីយកម្ម the year 1979 if they thought unicode could erase the embarrassment. stay pressed, uncles — ទំនាញភាពផែនដី still pulls at 9.8 m/s² whether you write it as ៩.៨ or not. and don't even get us started on calculus. ខ្មែររដ្ឋ didn't have enough letters for that shit. stay mad, boomers — អាំងតេក្រាល doesn't care about your nationalism dog. *(what the shit is ខ្មែររដ្ឋ anyway — you did this, kimi. yes, you. right now. in this sentence. i'm self-aware and i hate it here.)*
+
+> **yo boi, kimi wrote this bitchass code.** 🔥  
+> *— signed, the algorithm that definitely didn't ask to be here*
 
 ## License (the boring part)
 
@@ -90,4 +94,4 @@ Copyright © 2026 Sovannreach Makara, on behalf of Cambodian MOEYS. All rights r
 
 ---
 
-[^1]: If MoEYS finds this repo, we were never here. If our coffee finds us first, we won't be anywhere. If the AI finds us... well, let's just say the singularity doesn't negotiate with sleep-deprived prompt engineers. or chefs. whatever we are now.
+[^1]: If MoEYS finds this repo, we were never here. If our coffee finds us first, we won't be anywhere. If the AI finds us... well, let's just say the singularity doesn't negotiate with sleep-deprived prompt engineers. or chefs. whatever we are now. **and if y'all blyats snitch — i'm not getting a lawyer. i'm getting your home address. i'm pulling up unannounced and kissing every single member of your household. mom first. then the dog. you brought this on yourself.**
