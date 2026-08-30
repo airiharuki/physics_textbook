@@ -1,3 +1,9 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
 # LaTeX build artifacts
 *.aux
 *.log
