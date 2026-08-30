@@ -8,6 +8,7 @@
 % ---------------------------------------------------------
 
 \usepackage{amsmath,amsfonts,amssymb}
+\usepackage{fontawesome7}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{geometry}
@@ -885,8 +886,8 @@
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 
-\newcommand{\kstar}{{\color{bacpink}\ding{72}}} % 5-point star
-\newcommand{\kstarfour}{{\color{bacpink}\ding{100}}} % 4-point star/sparkle
+\newcommand{\kstar}{{\color{bacpink}\Pifont{pzd}\char72}}
+\newcommand{\kstarfour}{{\color{bacpink}\Pifont{pzd}\char100}}
 
 % --- tables (the holy trinity for your trig table) ---
 \usepackage{colortbl}
@@ -900,14 +901,6 @@
 \usepackage{indentfirst}
 \usepackage{caption}
 \usepackage{multicol}
-
-\IfFileExists{fontawesome5.sty}{
-  \usepackage{fontawesome5}
-}{
-  \newcommand{\faCoffee}{☕}
-  \newcommand{\faHeart}{♥}
-}
-
 
 \pdfstringdefDisableCommands{%
   \def\englishfont#1{#1}%

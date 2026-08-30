@@ -1,4 +1,5 @@
 \khmerlesson{មេរៀនទី ១៖ គោលការណ៍តម្រួតនៃរលក និងរលកជញ្ច្រុំ}
+\tanbgdivider
 
 
 \khmertopic{១. សមីការបម្លាស់ទីភាគល្អិត ({\englishfont Equation of Particle Displacement})}
@@ -81,7 +82,7 @@
 
 \khmertopic{៤. វិធីសាស្ត្រក្នុងការធ្វើសំណង់ប្រេណែល ({\englishfont Fresnel Construction})}
 
-វិធីសាស្ត្រហ្វ្រេនណែល ប្រើសម្រាប់បូកបញ្ចូលរលកពីរដែលមានប្រេកង់ដូចគ្នា តែមានអំព្លីទុត និងផាសដើមខុសគ្នា ដោយប្រើការបូកវិចទ័រ។
+វិធីសាស្ត្រប្រណែល ប្រើសម្រាប់បូកបញ្ចូលរលកពីរដែលមានប្រេកង់ដូចគ្នា តែមានអំព្លីទុត និងផាសដើមខុសគ្នា ដោយប្រើការបូកវិចទ័រ។
 
 \textbf{ជំហានអនុវត្ត (ឧទាហរណ៍៖ បូករលក $x_1$ ផាស $\varphi_1=30^\circ$ និង $x_2$ ផាស $\varphi_2=90^\circ$):}
 \begin{center}
@@ -119,7 +120,72 @@
 \]
 \noindent សរសេរសមីការលំយោលតម្រួតនៃរលកទាំងពីរ។\\
 \noindent \textbf{\color{brownheader}ចម្លើយ៖}\\
-\hspace{2em} $\bigstar$ 
+
+\noindent \textbf{ជំហានទី១៖ ដកស្រង់ទិន្នន័យពីសមីការរលកទាំងពីរ}\\
+ដោយប្រៀបធៀបនឹងទម្រង់ទូទៅ $y = A\sin(\omega t + \varphi)$ យើងបាន៖
+\[
+  A_1 = 5\,\mathrm{cm}, \quad \varphi_1 = \pi \qquad ; \qquad
+  A_2 = 5\,\mathrm{cm}, \quad \varphi_2 = \frac{\pi}{2}
+\]
+រលកទាំងពីរមានប៉ូល្សាស្យុងដូចគ្នា $\omega = 10\pi\ \mathrm{rad/s}$ ដូច្នេះយើងអាចប្រើសំណង់ប្រេណែលបាន។
+ផលសងផាស៖
+\[
+  \Delta\varphi = \varphi_2 - \varphi_1 = \frac{\pi}{2} - \pi = -\frac{\pi}{2}
+\]
+
+\noindent \textbf{ជំហានទី២៖ គូសសំណង់ប្រេណែល (បូកវិចទ័រ)}\\
+តាង $\vec{A}_1$ ធ្វើមុំ $\varphi_1 = \pi$ ($180^\circ$) និង $\vec{A}_2$ ធ្វើមុំ $\varphi_2 = \frac{\pi}{2}$ ($90^\circ$) ជាមួយអ័ក្សគល់៖
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.8]
+		\draw[->, thick, dashed] (-4,0) -- (2,0) node[right] {អ័ក្សគល់};
+		\draw[->, thick, dashed] (0,-0.6) -- (0,3.6);
+		\coordinate (O) at (0,0);
+		\coordinate (A1) at (180:3);
+		\coordinate (A2) at ($(A1) + (90:3)$);
+
+		\draw[->, thick, khmerred] (O) -- (A1) node[midway, below=2pt] {$\vec{{\englishfont A}}_1 = 5$};
+		\draw[->, thick, blue] (A1) -- (A2) node[midway, left=2pt] {$\vec{{\englishfont A}}_2 = 5$};
+		\draw[->, ultra thick, purple] (O) -- (A2)
+			node[midway, above left=-1pt] {$\vec{{\englishfont A}} = 5\sqrt{2}$};
+
+		\draw[thin] (1.0,0) arc (0:180:1.0);
+		\node at (-1.95,0.45) {$\varphi_1 = \pi$};
+		\draw[thin] (0.55,0) arc (0:135:0.55);
+		\node at (0.72,0.68) {$\varphi$};
+		\filldraw[black] (O) circle (1.5pt) node[below right] {${\englishfont O}$};
+	\end{tikzpicture}
+\end{center}
+កត់សម្គាល់៖ ដោយ $\Delta\varphi = -\dfrac{\pi}{2}$ វិចទ័រទាំងពីរកែងគ្នា ដូច្នេះត្រីកោណបូកវិចទ័រជាត្រីកោណកែងសមបាត។
+
+\noindent \textbf{ជំហានទី៣៖ គណនាអំព្លីទុតសរុប $A$}\\
+តាមទ្រឹស្តីបទកូស៊ីនុស៖
+\begin{align*}
+	A &= \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos(\varphi_2 - \varphi_1)} \\
+	  &= \sqrt{5^2 + 5^2 + 2(5)(5)\cos\left(-\frac{\pi}{2}\right)} \\
+	  &= \sqrt{25 + 25 + 50 \times 0} = \sqrt{50} \\
+	A &= 5\sqrt{2} \approx 7{,}07\ \mathrm{cm}
+\end{align*}
+
+\noindent \textbf{ជំហានទី៤៖ គណនាផាសដើមសរុប $\varphi$}\\
+\begin{align*}
+	\tan\varphi &= \frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}{A_1\cos\varphi_1 + A_2\cos\varphi_2}
+	 = \frac{5\sin\pi + 5\sin\frac{\pi}{2}}{5\cos\pi + 5\cos\frac{\pi}{2}} \\
+	&= \frac{5(0) + 5(1)}{5(-1) + 5(0)} = \frac{5}{-5} = -1
+\end{align*}
+ដោយភាគយក $> 0$ ($\sin\varphi > 0$) និងភាគបែង $< 0$ ($\cos\varphi < 0$) នោះ $\varphi$ ស្ថិតក្នុងកាដ្រង់ទី២៖
+\[
+  \varphi = \pi - \frac{\pi}{4} = \frac{3\pi}{4}
+\]
+
+\noindent \textbf{ជំហានទី៥៖ សរសេរសមីការលំយោលតម្រួត}\\
+ដោយ $\omega = 10\pi\ \mathrm{rad/s}$ មិនប្រែប្រួល យើងបាន៖
+\begin{equation*}
+	\boxed{\,y = y_1 + y_2 = \left(5\sqrt{2}\ \mathrm{cm}\right)\sin\left(10\pi t + \frac{3\pi}{4}\right)\,}
+\end{equation*}
+
+\noindent \textbf{ជំហានទី៦៖ ផ្ទៀងផ្ទាត់លទ្ធផល}\\
+ជំនួស $t = 0$ ក្នុងសមីការដើម៖ $y_1(0) = 5\sin\pi = 0$ និង $y_2(0) = 5\sin\frac{\pi}{2} = 5$ ដូច្នេះ $y(0) = 5\ \mathrm{cm}$។\\
+ជំនួស $t = 0$ ក្នុងលទ្ធផល៖ $y(0) = 5\sqrt{2}\sin\frac{3\pi}{4} = 5\sqrt{2} \times \frac{\sqrt{2}}{2} = 5\ \mathrm{cm}$។ ត្រូវ។
 
 
 \khmertopic{៥. គោលការណ៍តម្រួតនៃរលក ({\englishfont Principle of Superposition Waves})}
@@ -138,8 +204,11 @@
 	y(x,t) = [2a \sin(kx)] \cos(\omega t) \quad \text{ឬ} \quad y(x,t) = A_{SW} \cos(\omega t)
 \end{equation}
 
-\textbf{គ. ទីតាំងថ្នាំង និងទីតាំងពោះ ({\englishfont Nodes and Antinodes}):}
-
+\textbf{គ. ទីតាំងថ្នាំង និងទីតាំងពោះ ({\englishfont Nodes and Antinodes}):}\\
+\begin{itemize}[label=\faChevronRight, noitemsep, topsep=2pt, parsep=0pt]
+	\item \textbf{ទីតាំងពោះ} គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃអតិបរមា។ គេសរសេរវាដោយ $2a \sin kx$ កើនដល់អតិបរមា។
+	\item \textbf{ទីតាំងថ្នាំង} គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃស្មើសូន្យ។ គេសរសេរវាដោយ $2a \sin kx = 0$។
+\end{itemize}
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=1.5]
 		% Axis
@@ -167,53 +236,96 @@
 		\filldraw[black] (6,0) circle (2pt);
 	\end{tikzpicture}
 \end{center}
-\begin{itemize}
+\begin{itemize}[label=\textcolor{bacpink}{\faCaretRight}]
 	\item \textbf{ចំណាំ}៖ \textbf{{\englishfont A (Antinode)}} ជាទីតាំងពោះ។ ចំណែកឯ \textbf{{\englishfont N (Node)}} ជាទីតាំងថ្នាំង។
-	\item \textbf{ថ្នាំង (Nodes):} ជាទីតាំងដែលភាគល្អិត \textbf{មិនរញ្ជួយ} ($A_{SW} = 0$)។ វាកើតឡើងនៅចម្ងាយ $x = n\frac{\lambda}{2}$។
-	\item \textbf{ពោះ (Antinodes):} ជាទីតាំងដែលភាគល្អិតរញ្ជួយដោយ \textbf{អំព្លីទុតអតិបរមា} ($A_{SW} = \pm 2a$)។ វាកើតឡើងនៅចម្ងាយ $x = (2n+1)\frac{\lambda}{4}$។
+	\item \textbf{ថ្នាំង {\englishfont (Nodes)}:} ជាទីតាំងដែលភាគល្អិត \textbf{មិនរញ្ជួយ} ($A_{SW} = 0$)។ វាកើតឡើងនៅចម្ងាយ $x = n\frac{\lambda}{2}$។
+	\item \textbf{ពោះ {\englishfont (Antinodes)}:} ជាទីតាំងដែលភាគល្អិតរញ្ជួយដោយ \textbf{អំព្លីទុតអតិបរមា} ($A_{SW} = \pm 2a$)។ វាកើតឡើងនៅចម្ងាយ $x = (2n+1)\frac{\lambda}{4}$។
+	\item \textbf{ចំណាំ}៖ ចំនួនពោះ និងចំនួនថ្នាំងនៅក្នុងរលកជញ្ចុំមានចំនួនស្មើគ្នា។ ចំនួនពោះ និងចំនួនថ្នាំងអាចកើតឡើងបានតាមលំដាប់៖
+	\item \textbf{{\englishfont Note:}} ប្រវែងរលកជញ្ចុំ អាចទាញបាន៖ $L = n\frac{\lambda}{2}$ ដែល $n$ ជាចំនួនពិត។
 \end{itemize}
-\tanbgdivider
-\newpage
+\khmertopic{៧. រ៉េសូណង់ {\englishfont (Resonance)}}
+$\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀងរបស់ប្រព័ន្ធលំយោលត្រង់អំភ្លីទុតអតិបរមា និងប្រេកង់ដែលមានខួបតូច។
+\begin{itemize}[label=\textcolor{bacpink}{\faCarrot}]
+	\item \textbf{រ៉េសូណង់ស្ទក់៖ } កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា និងមានផាសដូចគ្នា។
+	\item \textbf{រ៉េសូណង់ឆ្មារ៖ } កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា ប៉ុន្តែមានផាសខុសគ្នា។
+\end{itemize}
+\noindent \begin{center}
+			  \textbf{តើរ៉េសូណង់កើតឡើងនៅពេលណា?}
+\end{center}
+\noindent \textbf{\color{brownheader} ចម្លើយ៖}\\
+\hspace{2em} \begin{itemize}[label=\textcolor{bacpink}{\faCaretRight}]
+				 \item រ៉េសូណង់សូររបស់ឧបករណ៍តន្ត្រីនិងការបញ្ចេញសម្លេងដោយមនុស្ស។
+				 \item រ៉េសូណង់សម្លេងរបស់នាឡិការោទិ៍។
+				 \item រ៉េសូណង់អគ្គិសនីរបស់សៀគ្វី (ប្រើក្នុងការប្តូរប៉ុស្តិ៍) នៅក្នុងវិទ្យុនិងទូរទស្សន៍។
+				 \item និងមានលក្ខខណ្ឌផ្សេងៗទៀតដូចជា លំញ័រម៉ាសុីនរថយន្ត...។
+			\end{itemize}
+
+\clearpage
+
 % =================================================================
 % LESSON 2: INTERFERENCE OF WAVES
 % =================================================================
 
 \khmerlesson{មេរៀនទី ២៖ អាំងទែផេរ៉ង់នៃរលក ({\englishfont Interference of Waves})}
+\tanbgdivider
 
 
-\khmertopic{១. និយមន័យ និងលក្ខខណ្ឌនៃរលកកូអេរ៉ង់}
+\khmertopic{១. អាំងទែផេរ៉ង់ {\englishfont (Interference)}}
+\khmersubtopic{១.១. និយមន័យ}
+\begin{center}
+	\textbf{ដូចម្តេចដែលហៅថាអាំងទែផេរ៉ង់?}
+\end{center}
+\hspace{2em}\textbf{អាំងទែផេរ៉ង់} ជាបាតុភូតមួយដែលកើតឡើងពេលណាដែលរលកពីរដាលកាត់គ្នាមានខួបនិងទឹសដូចគ្នា ព្រមទាំងមានអំព្លីទុតនិងផាសដូចគ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។\\
+បាតុភូតអាំងទែផេរ៉ង់កើតមាននោះខុសៗគ្នា អាស្រ័យទៅតាមមជ្ឈដ្ឋានដំណាលដូចជា៖ \textbf{អាំងទែផេរ៉ង់មេកានិច អាំងទែផេរ៉ង់សូរ និងអាំងទែផេរ៉ង់ពន្លឺ}។
 
-\textbf{អាំងទែផេរ៉ង់} គឺជាបាតុភូតដែលកើតឡើងនៅពេលរលកពីរ (ឬច្រើន) ជួបគ្នា ហើយផ្តុំបង្កើតបានជារលកថ្មីមួយដែលមានការចែកចាយថាមពល និងអំព្លីទុតឡើងវិញ (ធំជាងមុន ឬតូចជាងមុន)។ 
-ដើម្បីឱ្យមានបាតុភូតអាំងទែផេរ៉ង់ច្បាស់ល្អ និងមានលំនឹង រលកទាំងពីរត្រូវតែជា \textbf{រលកកូអេរ៉ង់ ({\englishfont Coherent Waves})} ដែលមានលក្ខខណ្ឌពីរយ៉ាង៖
-\begin{enumerate}
-	\item ប្រេកង់ដូចគ្នា ($f_1 = f_2 \implies \lambda_1 = \lambda_2$)
-	\item ផលសងផាសថេរជានិច្ចធៀបនឹងពេលវេលា ($\Delta \varphi = \text{ថេរ}$)
-\end{enumerate}
+\khmersubtopic{១.២. ប្រភេទនៃអាំងទែផេរ៉ង់ ({\englishfont Types of Interference})}
+អាំងទែផេរ៉ង់ចែកចេញជា២ប្រភេទគឺ៖ \textbf{អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})} និង \textbf{អាំងទែផេរ៉ង់បំផ្លាញ ({\englishfont Destructive Interference}) និងអាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}។\\
+\khmersubsubtopic{ក. អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}
+\textbf{អាំងទែផេរ៉ង់សង់} កើតឡើងនៅពេលដែលអំព្លីទុតអតិបរមានៃរលកមួយដាលកាត់អំព្លីទុតអតិបរមានៃរលកមួយទៀត (\textbf{\color{brownheader} កំពូល + កំពូល}) ឬ (\textbf{\color{brownheader} បាត + បាត})។\\
+\vspace{2cm}
+\begin{center}
+	\begin{tikzpicture}[
+		>={Stealth[length=3mm, width=2mm]},
+		line join=round,
+		line cap=round,
+		declare function={
+			pulse(\x,\c,\w)=exp(-((\x-\c)/\w)^2);
+		}
+	]
 
-\khmertopic{២. ទំនាក់ទំនងរវាងផលសងផាស និងផលសងចម្ងាយដំណើរ}
+% --- frame & background ---
+		\definecolor{creambg}{RGB}{255, 248, 220}
+		\definecolor{framebrown}{RGB}{210, 190, 150}
+		\definecolor{wavebrown}{RGB}{145, 130, 85}
 
-នៅពេលរលកពីរចេញពីប្រភព $S_1$ និង $S_2$ ទៅជួបគ្នានៅចំណុច $P$ មួយ ពួកវាធ្វើដំណើរបានចម្ងាយ $d_1$ និង $d_2$ រៀងគ្នា។ 
-ផលសងនៃចម្ងាយនេះហៅថា \textbf{ផលសងចម្ងាយដំណើរ ({\englishfont Path Difference, } $\Delta d$)} ៖
-\begin{equation}
-	\Delta d = d_2 - d_1
-\end{equation}
+		\fill[creambg] (-5.5,-4) rectangle (5.5,4);
+		\draw[framebrown, line width=0.8pt] (-5.5,-4) rectangle (5.5,4);
 
-ដោយសាររលកមួយខួប (មុំ $2\pi$) ត្រូវនឹងប្រវែងរលក $\lambda$ មួយ នោះយើងអាចទាញទំនាក់ទំនងរវាងផលសងផាស ($\Delta \varphi$) និងផលសងចម្ងាយដំណើរ ($\Delta d$) បានតាមរូបមន្ត៖
-\begin{equation}
-	\Delta \varphi = \frac{2\pi}{\lambda} (d_2 - d_1) = \frac{2\pi}{\lambda} \Delta d
-\end{equation}
+		\def\w{0.85}
 
+% --- TOP: two pulses approaching ---
+		\def\ytop{2.4}
+		\draw[wavebrown, line width=2.5pt]
+		plot[domain=-5:5, samples=200] (\x, {\ytop + pulse(\x,-2,\w) + pulse(\x,2,\w)});
+% arrows
+		\draw[->, line width=1.2pt] (-1.6,\ytop+1.3) -- (-0.4,\ytop+1.3);
+		\draw[->, line width=1.2pt] (1.6,\ytop+1.3) -- (0.4,\ytop+1.3);
 
-\khmertopic{៣. អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}
+% --- MIDDLE: constructive superposition ---
+		\def\ymid{0}
+		\draw[wavebrown, line width=2.5pt]
+		plot[domain=-5:5, samples=200] (\x, {\ymid + 2*pulse(\x,0,\w)});
 
-អាំងទែផេរ៉ង់សង់ កើតឡើងនៅពេលរលកទាំងពីរមកដល់ចំណុច $P$ ដោយមាន \textbf{ផាសដូចគ្នា} (កំពូលជួបកំពូល, បាតជួបបាត) ធ្វើឱ្យរលកទាំងពីរជួយជម្រុញគ្នា បង្កើតបានអំព្លីទុតសរុបអតិបរមា។
+% --- BOTTOM: two pulses separating ---
+		\def\ybot{-2.4}
+		\draw[wavebrown, line width=2.5pt]
+		plot[domain=-5:5, samples=200] (\x, {\ybot + pulse(\x,-2,\w) + pulse(\x,2,\w)});
+% arrows
+		\draw[->, line width=1.2pt] (-1.6,\ybot-0.4) -- (-2.8,\ybot-0.4);
+		\draw[->, line width=1.2pt] (1.6,\ybot-0.4) -- (2.8,\ybot-0.4);
 
-\textbf{លក្ខខណ្ឌគណិតវិទ្យា៖}
-\begin{itemize}
-	\item \textbf{ផលសងផាស៖} $\Delta \varphi = 2k\pi$ (ចំនួនគូនៃ $\pi$)
-	\item \textbf{ផលសងចម្ងាយដំណើរ៖} $\Delta d = d_2 - d_1 = k\lambda$ \quad ($k = 0, 1, 2, ...$)
-	\item \textbf{អំព្លីទុតអតិបរមា៖} $A_{max} = a_1 + a_2$ (បើ $a_1=a_2 \implies A = 2a$)
-\end{itemize}
+	\end{tikzpicture}
+\end{center}
 
 % --- TikZ Graph for Constructive Interference ---
 \begin{center}
@@ -233,6 +345,85 @@
 		\draw[wavepurple, ultra thick, domain=0:7.5, samples=100] plot (\x, {1.8*sin(100*\x)});
 		\node[wavepurple] at (0.8, 2.2) {$y = y_1 + y_2$ (សង់)};
 	\end{tikzpicture}
+\end{center}
+
+\vspace{2cm}
+តាមរយៈរង្វង់ យើងអាចសង្កេតឃើញ៖
+
+\begin{center}
+	\begin{tikzpicture}[
+		line join=round,
+		line cap=round,
+		declare function={R(\n)=0.55*\n;}
+	]
+
+\definecolor{wavered}{RGB}{220, 50, 50}
+\definecolor{waveblue}{RGB}{30, 100, 200}
+\definecolor{construct}{RGB}{34, 139, 34}
+
+% --- Source positions ---
+\coordinate (S1) at (-1.6,0);
+\coordinate (S2) at (1.6,0);
+
+% --- Crest wavefronts from S1 (red) ---
+\foreach \n in {1,2,3,4,5,6,7}{
+	\draw[wavered, line width=1pt, opacity=0.6]
+	(S1) circle ({R(\n)});
+}
+
+% --- Crest wavefronts from S2 (blue) ---
+\foreach \n in {1,2,3,4,5,6,7}{
+	\draw[waveblue, line width=1pt, opacity=0.6]
+	(S2) circle ({R(\n)});
+}
+
+% --- Constructive interference points (crest meets crest) ---
+% Central axis (perpendicular bisector) — always constructive
+\foreach \y in {0, 1.1, 2.2, 3.3, -1.1, -2.2, -3.3}{
+	\fill[construct] (0,\y) circle (3pt);
+}
+
+% Off-axis constructive spots (where nλ circles intersect)
+\fill[construct] (2.4,1.8) circle (2.5pt);
+\fill[construct] (-2.4,1.8) circle (2.5pt);
+\fill[construct] (2.4,-1.8) circle (2.5pt);
+\fill[construct] (-2.4,-1.8) circle (2.5pt);
+\fill[construct] (3.5,3.0) circle (2pt);
+\fill[construct] (-3.5,3.0) circle (2pt);
+\fill[construct] (3.5,-3.0) circle (2pt);
+\fill[construct] (-3.5,-3.0) circle (2pt);
+
+% --- Source dots & labels ---
+\fill[wavered] (S1) circle (4pt);
+\node[below=4pt, font=\small\bfseries, wavered] at (S1) {{\englishfont S$_1$}};
+
+\fill[waveblue] (S2) circle (4pt);
+\node[below=4pt, font=\small\bfseries, waveblue] at (S2) {{\englishfont S$_2$}};
+
+% --- Legend ---
+\node[anchor=west, font=\small] at (-5,3.8) {%
+	\tikz{\fill[construct] (0,0) circle (3pt);}~~%
+		{{\englishfont Constructive Interference} (អាំងទែផេរ៉ង់សង់)}%
+};
+\node[anchor=west, font=\small] at (-5,3.3) {%
+	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.6,0);}~~%
+		{{\englishfont Crest from S$_1$} (បាតនៃរលក $S_1$)}%
+};
+\node[anchor=west, font=\small] at (-5,2.8) {%
+	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.6,0);}~~%
+		{{\englishfont Crest from S$_2$} (បាតនៃរលក $S_2$)}%
+};
+
+% --- Annotation: path difference = nλ ---
+\node[font=\small, construct] at (0,-4.2) {%
+		{\englishfont Path difference $\Delta r = n\lambda$}~~(អាំងទែផេរ៉ង់សង់)%
+};
+
+	\end{tikzpicture}
+\end{center}
+
+\begin{center}
+	{\khmerpagenum \color{brownheader} រួបភាពបង្ហាញពីបាតុភូតអាំងទែផេរ៉ង់សង់}
 \end{center}
 
 \khmertopic{៤. អាំងទែផេរ៉ង់បំផ្លាញ ({\englishfont Destructive Interference})}
