@@ -365,57 +365,46 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 \coordinate (S1) at (-1.6,0);
 \coordinate (S2) at (1.6,0);
 
-% --- Crest wavefronts from S1 (red) ---
-\foreach \n in {1,2,3,4,5,6,7}{
+% --- Crest wavefronts (6 max so text has room to breathe) ---
+\foreach \n in {1,2,3,4,5,6}{
 	\draw[wavered, line width=1pt, opacity=0.6]
 	(S1) circle ({R(\n)});
-}
-
-% --- Crest wavefronts from S2 (blue) ---
-\foreach \n in {1,2,3,4,5,6,7}{
 	\draw[waveblue, line width=1pt, opacity=0.6]
 	(S2) circle ({R(\n)});
 }
 
-% --- Constructive interference points (crest meets crest) ---
-% Central axis (perpendicular bisector) — always constructive
-\foreach \y in {0, 1.1, 2.2, 3.3, -1.1, -2.2, -3.3}{
+% --- Constructive interference points ---
+\foreach \y in {0, 1.1, 2.2, 3.0, -1.1, -2.2, -3.0}{
 	\fill[construct] (0,\y) circle (3pt);
 }
+\fill[construct] (2.3,1.7) circle (2.5pt);
+\fill[construct] (-2.3,1.7) circle (2.5pt);
+\fill[construct] (2.3,-1.7) circle (2.5pt);
+\fill[construct] (-2.3,-1.7) circle (2.5pt);
 
-% Off-axis constructive spots (where nλ circles intersect)
-\fill[construct] (2.4,1.8) circle (2.5pt);
-\fill[construct] (-2.4,1.8) circle (2.5pt);
-\fill[construct] (2.4,-1.8) circle (2.5pt);
-\fill[construct] (-2.4,-1.8) circle (2.5pt);
-\fill[construct] (3.5,3.0) circle (2pt);
-\fill[construct] (-3.5,3.0) circle (2pt);
-\fill[construct] (3.5,-3.0) circle (2pt);
-\fill[construct] (-3.5,-3.0) circle (2pt);
-
-% --- Source dots & labels ---
+% --- Source dots & labels (pushed down so they don't kiss the inner circles) ---
 \fill[wavered] (S1) circle (4pt);
-\node[below=4pt, font=\small\bfseries, wavered] at (S1) {{\englishfont S$_1$}};
+\node[below=10pt, font=\small\bfseries, wavered] at (S1) {{\englishfont S$_1$}};
 
 \fill[waveblue] (S2) circle (4pt);
-\node[below=4pt, font=\small\bfseries, waveblue] at (S2) {{\englishfont S$_2$}};
+\node[below=10pt, font=\small\bfseries, waveblue] at (S2) {{\englishfont S$_2$}};
 
-% --- Legend ---
-\node[anchor=west, font=\small] at (-5,3.8) {%
+% --- Legend: ABOVE the circles, safely out of the way ---
+\node[anchor=west, font=\small] at (-5.2,4.0) {%
 	\tikz{\fill[construct] (0,0) circle (3pt);}~~%
 		{{\englishfont Constructive Interference} (អាំងទែផេរ៉ង់សង់)}%
 };
-\node[anchor=west, font=\small] at (-5,3.3) {%
+\node[anchor=west, font=\small] at (-5.2,3.5) {%
 	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.6,0);}~~%
-		{{\englishfont Crest from S$_1$} (បាតនៃរលក $S_1$)}%
+		{{\englishfont Crest from S$_1$} (កំពូលនៃរលក $S_1$)}%
 };
-\node[anchor=west, font=\small] at (-5,2.8) {%
+\node[anchor=west, font=\small] at (-5.2,3.0) {%
 	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.6,0);}~~%
-		{{\englishfont Crest from S$_2$} (បាតនៃរលក $S_2$)}%
+		{{\englishfont Crest from S$_2$} (កំពូលនៃរលក $S_2$)}%
 };
 
-% --- Annotation: path difference = nλ ---
-\node[font=\small, construct] at (0,-4.2) {%
+% --- Annotation: BELOW the circles ---
+\node[font=\small, construct] at (0,-4.0) {%
 		{\englishfont Path difference $\Delta r = n\lambda$}~~(អាំងទែផេរ៉ង់សង់)%
 };
 
