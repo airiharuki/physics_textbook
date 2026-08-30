@@ -15,6 +15,7 @@ out/
 *.bbl
 *.blg
 commitmsg.txt
+.mcp.json
 
 
 # OS junk
