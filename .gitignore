@@ -16,6 +16,8 @@ out/
 *.blg
 commitmsg.txt
 .mcp.json
+book_cover_template.pdf
+book_cover_template.tex
 
 
 # OS junk

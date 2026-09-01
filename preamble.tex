@@ -8,7 +8,6 @@
 % ---------------------------------------------------------
 
 \usepackage{amsmath,amsfonts,amssymb}
-\usepackage{fontawesome7}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{geometry}
@@ -25,17 +24,7 @@
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 
-\usetikzlibrary{calc, arrows.meta}
-% arrows.meta is required for the 'Stealth' arrow-tip style (>=Stealth) used
-% in various tikzpicture diagrams; without it pgf throws "Unknown arrow tip
-% kind 'Stealth'" and silently drops the arrowhead.
-
-% \khmerbody: kept as a harmless no-op for backward compatibility with
-% content that still references it. The shared body font (Ang DaunTep,
-% set via \setmainfont below) is already Khmer-capable, so no font switch
-% is actually needed here anymore -- this just prevents "Undefined control
-% sequence" errors on old text that still calls \khmerbody.
-\newcommand{\khmerbody}{}
+\usetikzlibrary{calc, arrows.meta, angles, quotes, patterns, 3d}
 
 % ---------------------------------------------------------
 % MICROTYPE
@@ -49,12 +38,12 @@
 % ---------------------------------------------------------
 
 \geometry{
-  left=2cm,
-  right=2cm,
-  top=3.4cm,
-  bottom=3cm,
-  footskip=50pt,
-  headheight=52pt
+    left=2cm,
+    right=2cm,
+    top=3.4cm,
+    bottom=3cm,
+    footskip=50pt,
+    headheight=52pt
 }
 
 % ---------------------------------------------------------
@@ -70,59 +59,63 @@
 % ---------------------------------------------------------
 
 \defaultfontfeatures{
-  Path = fonts/,
-  Script = Khmer,
-  Renderer = HarfBuzz,
-  HyphenChar = None
+    Path = fonts/,
+    Script = Khmer,
+    Renderer = HarfBuzz,
+    HyphenChar = None
 }
 
 % Main body font (matches the G10/G12 handbooks)
 \setmainfont[
-  Script=Khmer,
-  Renderer=HarfBuzz,
-  BoldFont = {Ang DaunTep Regular.ttf},
-  BoldFeatures = {FakeBold=2.0}
+    Script=Khmer,
+    Renderer=HarfBuzz,
+    BoldFont = {Ang DaunTep Regular.ttf},
+    BoldFeatures = {FakeBold=2.0}
 ]{Ang DaunTep Regular.ttf}
 
 % Other Khmer fonts
 \newfontfamily\khmerkbach[
-  Script=Khmer,
-  Renderer=HarfBuzz
+    Script=Khmer,
+    Renderer=HarfBuzz
 ]{AKbalthom Kbach Regular.ttf}
 
 \newfontfamily\khmermoul[
-  Script=Khmer,
-  Renderer=HarfBuzz
+    Script=Khmer,
+    Renderer=HarfBuzz
 ]{Moul.ttf}
 
 \newfontfamily\khmerheader[
-  Script=Khmer,
-  Renderer=HarfBuzz,
+    Script=Khmer,
+    Renderer=HarfBuzz,
 ]{Ang TaPich Regular.ttf}
 
 \newfontfamily\khmerpagenum[
-  Script=Khmer,
-  Renderer=HarfBuzz
+    Script=Khmer,
+    Renderer=HarfBuzz
 ]{Romnea.ttf}
 
 \newfontfamily\englishfont[
-  Path = fonts/Nunito/,
-  UprightFont = Nunito-Regular,
-  BoldFont = Nunito-Bold,
-  ItalicFont = Nunito-Italic,
-  BoldItalicFont = Nunito-BoldItalic,
-  Extension = .ttf,
+    Path = fonts/Nunito/,
+    UprightFont = Nunito-Regular,
+    BoldFont = Nunito-Bold,
+    ItalicFont = Nunito-Italic,
+    BoldItalicFont = Nunito-BoldItalic,
+    Extension = .ttf,
 ]{Nunito}
+
+% Safe no-op alias: content sometimes calls \khmerbody just to assert
+% "use the default Khmer body font" — main font already is.
+\newcommand{\khmerbody}{\normalfont\selectfont}
 
 % Hanuman kept available as a named font family (was your original
 % \setmainfont choice) in case you want it for a specific block —
 % use it with {\khmerhanuman ...text...}
 \newfontfamily\khmerhanuman{Hanuman}[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = * Regular,
-  BoldFont = * Bold,
-  Scale = 1.1,
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = * Regular,
+    BoldFont = * Bold,
+    Scale = 1.1,
 ]
 
 \newcommand{\ltext}[1]{\text{\fontfamily{cmr}\selectfont #1}}
@@ -155,8 +148,8 @@
 \hyphenpenalty=5000
 
 \ifdefined\XeTeXlinebreaklocale
-  \XeTeXlinebreaklocale "km"
-  \XeTeXlinebreakskip = 0pt plus 2pt minus 0.5pt
+\XeTeXlinebreaklocale "km"
+\XeTeXlinebreakskip = 0pt plus 2pt minus 0.5pt
 \fi
 
 % ---------------------------------------------------------
@@ -165,7 +158,7 @@
 
 \makeatletter
 \AtBeginDocument{
-  \DeclareSymbolFont{operators}{OT1}{cmr}{m}{n}
+    \DeclareSymbolFont{operators}{OT1}{cmr}{m}{n}
 }
 \makeatother
 
@@ -187,11 +180,8 @@
 \definecolor{boxbg}{RGB}{255, 245, 250}
 \definecolor{boxframe}{RGB}{230, 190, 230}
 \definecolor{rowhdr}{RGB}{245, 210, 235}
-
-% --- Colors used in the waves chapter's tikz diagrams (superposition,
-% interference plots) ---
-\definecolor{wavered}{RGB}{220, 20, 60}
 \definecolor{waveblue}{RGB}{30, 144, 255}
+\definecolor{wavered}{RGB}{220, 20, 60}
 \definecolor{wavepurple}{RGB}{138, 43, 226}
 
 % ---------------------------------------------------------
@@ -199,9 +189,9 @@
 % ---------------------------------------------------------
 
 \newcommand{\points}[1]{%
-  \fcolorbox{bacpurple!60}{bacpinklight}{%
-    \textcolor{bacpurple}{\textbf{#1}}%
-  }%
+    \fcolorbox{bacpurple!60}{bacpinklight}{%
+        \textcolor{bacpurple}{\textbf{#1}}%
+    }%
 }
 
 % ---------------------------------------------------------
@@ -209,48 +199,48 @@
 % ---------------------------------------------------------
 
 \newcommand{\tanbgdivider}{%
-  \noindent
-  \begin{center}
+    \noindent
+    \begin{center}
     \begin{tikzpicture}[baseline=0pt]
 
-      \draw[
+    \draw[
         color=tanbg,
         line width=1.5pt,
         line cap=round
-      ]
-      (-3,0) -- (-0.5,0);
+    ]
+    (-3,0) -- (-0.5,0);
 
-      \fill[tanbg]
-        (-3,0) circle (2.5pt);
+    \fill[tanbg]
+    (-3,0) circle (2.5pt);
 
-      \fill[tanbg]
-        (-0.5,0) circle (2.5pt);
+    \fill[tanbg]
+    (-0.5,0) circle (2.5pt);
 
-      \fill[
+    \fill[
         tanbg,
         rounded corners=1.5pt
-      ]
-        (0, 0.28)
-        -- (0.28, 0)
-        -- (0, -0.28)
-        -- (-0.28, 0)
-        -- cycle;
+    ]
+    (0, 0.28)
+    -- (0.28, 0)
+    -- (0, -0.28)
+    -- (-0.28, 0)
+    -- cycle;
 
-      \draw[
+    \draw[
         color=tanbg,
         line width=1.5pt,
         line cap=round
-      ]
-        (0.5,0) -- (3,0);
+    ]
+    (0.5,0) -- (3,0);
 
-      \fill[tanbg]
-        (0.5,0) circle (2.5pt);
+    \fill[tanbg]
+    (0.5,0) circle (2.5pt);
 
-      \fill[tanbg]
-        (3,0) circle (2.5pt);
+    \fill[tanbg]
+    (3,0) circle (2.5pt);
 
     \end{tikzpicture}
-  \end{center}
+    \end{center}
 }
 
 % ---------------------------------------------------------
@@ -258,8 +248,8 @@
 % ---------------------------------------------------------
 
 \usepackage[
-  unicode=true,
-  hidelinks
+    unicode=true,
+    hidelinks
 ]{hyperref}
 
 % ---------------------------------------------------------
@@ -275,49 +265,49 @@
 % ---------------------------------------------------------
 
 \newcommand{\khmerchapter}[1]{%
-  \phantomsection
-  \addcontentsline{toc}{section}{#1}%
-  \vspace{0.4cm}%
-  {\centering\khmermoul\large\color{brownheader} #1\par}%
-  \vspace{0.2cm}%
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}%
+    \vspace{0.4cm}%
+    {\centering\khmermoul\large\color{brownheader} #1\par}%
+    \vspace{0.2cm}%
 }
 
 % Circled number for objective lists (①②③④⑤ style)
 \newcommand{\khmercircnum}[1]{%
-  \tikz[baseline=-0.65ex]\node[draw=primary, line width=1pt, circle,
-    inner sep=0pt, minimum size=17pt, font=\small\bfseries, text=primary] {\khmerpagenum\khmerdigit{#1}};%
+    \tikz[baseline=-0.65ex]\node[draw=primary, line width=1pt, circle,
+        inner sep=0pt, minimum size=17pt, font=\small\bfseries, text=primary] {\khmerpagenum\khmerdigit{#1}};%
 }
 
 % Ornate chapter title: crescent moon icon + title + scrollwork divider
 \newcommand{\khmerornatetitle}[2]{%
-  % #1 = full TOC/bookmark title (e.g. ជំពូកទី៤៖ អគ្គិសនី), #2 = short title shown (e.g. អគ្គិសនី)
-  \clearpage
-  \phantomsection
-  \addcontentsline{toc}{section}{#1}%
-  \begin{center}
-  \begin{tikzpicture}[baseline=0pt]
+% #1 = full TOC/bookmark title (e.g. ជំពូកទី៤៖ អគ្គិសនី), #2 = short title shown (e.g. អគ្គិសនី)
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}%
+    \begin{center}
+    \begin{tikzpicture}[baseline=0pt]
     % --- moon + cloud base, positioned left of the title ---
     \begin{scope}[shift={(-4.2,0)}]
-      \fill[black!85] (0.15,-0.38) circle (0.20);
-      \fill[black!85] (0.38,-0.44) circle (0.16);
-      \fill[black!85] (-0.05,-0.42) circle (0.14);
-      \fill[black!85] (0.15,0.05) circle (0.40);
-      \fill[white] (0.38,0.12) circle (0.34);
-      % small comma/swirl accent
-      \fill[brownheader] (0.85,-0.05)
-        .. controls (1.05,0.05) and (1.02,-0.15) .. (0.85,-0.15)
-        .. controls (0.72,-0.15) and (0.72,0.08) .. (0.92,0.18)
-        .. controls (0.78,0.14) and (0.65,0.02) .. (0.85,-0.05) -- cycle;
+    \fill[black!85] (0.15,-0.38) circle (0.20);
+    \fill[black!85] (0.38,-0.44) circle (0.16);
+    \fill[black!85] (-0.05,-0.42) circle (0.14);
+    \fill[black!85] (0.15,0.05) circle (0.40);
+    \fill[white] (0.38,0.12) circle (0.34);
+    % small comma/swirl accent
+    \fill[brownheader] (0.85,-0.05)
+    .. controls (1.05,0.05) and (1.02,-0.15) .. (0.85,-0.15)
+    .. controls (0.72,-0.15) and (0.72,0.08) .. (0.92,0.18)
+    .. controls (0.78,0.14) and (0.65,0.02) .. (0.85,-0.05) -- cycle;
     \end{scope}
     % --- title text ---
     \node[anchor=base] at (0,0) {\khmermoul\Large\color{brownheader} #2};
-  \end{tikzpicture}
-  \end{center}
- 
-  \vspace{0.15cm}
+    \end{tikzpicture}
+    \end{center}
 
-  \begin{center}
-  \begin{tikzpicture}[baseline=0pt]
+    \vspace{0.15cm}
+
+    \begin{center}
+    \begin{tikzpicture}[baseline=0pt]
     \draw[brownheader, line width=1.1pt] (-3.4,0) -- (-0.5,0);
     \draw[brownheader, line width=1.1pt] (0.5,0) -- (3.4,0);
     % coiled end-caps
@@ -327,26 +317,26 @@
     \draw[brownheader, line width=1pt] (3.4,0) circle (0.13);
     % center flourish: four petals + center dot
     \foreach \a in {45,135,225,315}{
-      \begin{scope}[rotate=\a]
+        \begin{scope}[rotate=\a]
         \fill[brownheader] (0,0) ..
-          controls (0.09,0.05) and (0.09,0.19) .. (0,0.24) ..
-          controls (-0.09,0.19) and (-0.09,0.05) .. (0,0) -- cycle;
-      \end{scope}
+        controls (0.09,0.05) and (0.09,0.19) .. (0,0.24) ..
+        controls (-0.09,0.19) and (-0.09,0.05) .. (0,0) -- cycle;
+        \end{scope}
     }
     \draw[brownheader, line width=0.8pt] (0,0) circle (0.06);
-  \end{tikzpicture}
-  \end{center}
-  \vspace{0.1cm}
+    \end{tikzpicture}
+    \end{center}
+    \vspace{0.1cm}
 }
 
 % Photo banner (frame auto-fits the image's natural rendered size)
 \newcommand{\khmerbannerphoto}[1]{%
-  \begin{center}
-  \begin{tikzpicture}
+    \begin{center}
+    \begin{tikzpicture}
     \node[inner sep=0pt] (img) {\includegraphics[width=0.85\linewidth]{#1}};
     \draw[primary, line width=2pt, rounded corners=4mm] (img.south west) rectangle (img.north east);
-  \end{tikzpicture}
-  \end{center}
+    \end{tikzpicture}
+    \end{center}
 }
 
 % General-purpose framed photo for use in the body text (not just chapter
@@ -357,87 +347,87 @@
 %   \khmerphoto[0.4\linewidth]{path}{}        -> custom width, no caption
 %   \khmerphoto[0.4\linewidth]{path}{caption text}
 \newcommand{\khmerphoto}[3][0.6\linewidth]{%
-  \begin{center}
-  \begin{tikzpicture}
+    \begin{center}
+    \begin{tikzpicture}
     \node[inner sep=0pt] (img) {\includegraphics[width=#1]{#2}};
     \draw[primary, line width=1.5pt, rounded corners=3mm] (img.south west) rectangle (img.north east);
-  \end{tikzpicture}
-  \def\khmerphotocap{#3}%
-  \def\khmerphotoblank{}%
-  \ifx\khmerphotocap\khmerphotoblank
-  \else
-    \\[0.15cm]
-    {\khmerpagenum\small\color{brownheader} #3}%
-  \fi
-  \end{center}
+    \end{tikzpicture}
+    \def\khmerphotocap{#3}%
+    \def\khmerphotoblank{}%
+    \ifx\khmerphotocap\khmerphotoblank
+    \else
+        \\[0.15cm]
+        {\khmerpagenum\small\color{brownheader} #3}%
+    \fi
+    \end{center}
 }
 
 
 \newcommand{\khmerchapterbanner}[3]{%
-  % #1 = chapter number (e.g. ៤), #2 = chapter title text, #3 = image path
-  \clearpage
-  \phantomsection
-  \addcontentsline{toc}{section}{ជំពូកទី#1៖ #2}%
-  \begin{center}
+% #1 = chapter number (e.g. ៤), #2 = chapter title text, #3 = image path
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{section}{ជំពូកទី#1៖ #2}%
+    \begin{center}
     \begin{tabular}{@{}c@{\hspace{0.5cm}}l@{}}
-      \begin{tikzpicture}
-        \node[fill=primary, rounded corners=6pt, minimum width=2.3cm,
-              minimum height=1.9cm, text=white, align=center, inner sep=3pt] {
-          {\khmerheader\small ជំពូក}\\[2pt]
-          {\fontsize{26}{26}\selectfont\bfseries #1}
-        };
-      \end{tikzpicture}
-      &
-      {\khmermoul\Large\color{brownheader} #2}
+    \begin{tikzpicture}
+    \node[fill=primary, rounded corners=6pt, minimum width=2.3cm,
+        minimum height=1.9cm, text=white, align=center, inner sep=3pt] {
+            {\khmerheader\small ជំពូក}\\[2pt]
+        {\fontsize{26}{26}\selectfont\bfseries #1}
+    };
+    \end{tikzpicture}
+    &
+        {\khmermoul\Large\color{brownheader} #2}
     \end{tabular}
-  \end{center}
+    \end{center}
 
-  \vspace{0.25cm}
+    \vspace{0.25cm}
 
-  \begin{center}
+    \begin{center}
     \begin{tcolorbox}[boxrule=2pt, colframe=primary, arc=4mm,
-                       boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt]
-      \includegraphics[width=\linewidth, height=7.5cm, keepaspectratio]{#3}
+        boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt]
+    \includegraphics[width=\linewidth, height=7.5cm, keepaspectratio]{#3}
     \end{tcolorbox}
-  \end{center}
+    \end{center}
 
-  \vspace{0.25cm}
+    \vspace{0.25cm}
 }
 
 % Lesson macro (Centered)
 \newcommand{\khmerlesson}[1]{%
-  \phantomsection
-  \addcontentsline{toc}{subsection}{#1}%
-  \vspace{0.35cm}%
-  {\centering\khmermoul\large\color{brownheader} #1\par}%
-  \vspace{0.2cm}%
+    \phantomsection
+    \addcontentsline{toc}{subsection}{#1}%
+    \vspace{0.35cm}%
+    {\centering\khmermoul\large\color{brownheader} #1\par}%
+    \vspace{0.2cm}%
 }
 
 % Topic macro (1.)
 \newcommand{\khmertopic}[1]{%
-  \phantomsection
-  \addcontentsline{toc}{subsubsection}{#1}%
-  \vspace{0.3cm}%
-  \noindent{\khmerheader\color{brownheader} #1}\par
-  \vspace{0.15cm}%
+    \phantomsection
+    \addcontentsline{toc}{subsubsection}{#1}%
+    \vspace{0.3cm}%
+    \noindent{\khmerheader\color{brownheader} #1}\par
+    \vspace{0.15cm}%
 }
 
 % Subtopic macro (1.1.)
 \newcommand{\khmersubtopic}[1]{%
-  \phantomsection
-  \addcontentsline{toc}{paragraph}{#1}%
-  \vspace{0.25cm}%
-  \noindent\hspace*{0.6cm}{\khmerkbach\color{brownheader} #1}\par
-  \vspace{0.1cm}%
+    \phantomsection
+    \addcontentsline{toc}{paragraph}{#1}%
+    \vspace{0.25cm}%
+    \noindent\hspace*{0.6cm}{\khmerkbach\color{brownheader} #1}\par
+    \vspace{0.1cm}%
 }
 
 % Subsubtopic macro (1.1.1.)
 \newcommand{\khmersubsubtopic}[1]{%
-  \phantomsection
-  \addcontentsline{toc}{subparagraph}{#1}%
-  \vspace{0.2cm}%
-  \noindent\hspace*{1.2cm}{\khmerkbach\color{brownheader} #1}\par
-  \vspace{0.1cm}%
+    \phantomsection
+    \addcontentsline{toc}{subparagraph}{#1}%
+    \vspace{0.2cm}%
+    \noindent\hspace*{1.2cm}{\khmerkbach\color{brownheader} #1}\par
+    \vspace{0.1cm}%
 }
 
 % ---------------------------------------------------------
@@ -447,18 +437,18 @@
 \makeatletter
 
 \newcommand{\khmerdigit}[1]{%
-  \ifcase#1
+    \ifcase#1
     ០%
-  \or ១%
-  \or ២%
-  \or ៣%
-  \or ៤%
-  \or ៥%
-  \or ៦%
-  \or ៧%
-  \or ៨%
-  \or ៩%
-  \fi
+    \or ១%
+    \or ២%
+    \or ៣%
+    \or ៤%
+    \or ៥%
+    \or ៦%
+    \or ៧%
+    \or ៨%
+    \or ៩%
+    \fi
 }
 
 % NOTE 1: e-TeX's \numexpr "/" ROUNDS to the nearest integer rather than
@@ -479,28 +469,42 @@
 % expanding #1 itself.
 \newcommand{\khmer@donums}[2]{\khmernumraw{#1}\khmerdigit{#2}}
 \newcommand{\khmernumraw}[1]{%
-  \count9=#1\relax
-  \ifnum\count9<10 %
+    \count9=#1\relax
+    \ifnum\count9<10 %
     \khmerdigit{\the\count9}%
-  \else
-    \begingroup
-      \count8=\count9
-      \divide\count8 by 10 %
-      \count7=\count8
-      \multiply\count7 by 10 %
-      \advance\count9 by -\count7 %
-      % capture quotient+remainder as literal text (not a shared macro
-      % name) before recursing, so nested calls can't clobber this level
-      \xdef\khmer@qr{{\the\count8}{\the\count9}}%
-    \endgroup
-    \expandafter\khmer@donums\khmer@qr
-  \fi
+    \else
+        \begingroup
+        \count8=\count9
+        \divide\count8 by 10 %
+        \count7=\count8
+        \multiply\count7 by 10 %
+        \advance\count9 by -\count7 %
+        % capture quotient+remainder as literal text (not a shared macro
+        % name) before recursing, so nested calls can't clobber this level
+        \xdef\khmer@qr{{\the\count8}{\the\count9}}%
+        \endgroup
+        \expandafter\khmer@donums\khmer@qr
+    \fi
 }
 
 \makeatother
 
 \newcommand{\khmernum}[1]{%
-  {\khmerpagenum ទំព័រទី \khmernumraw{#1}}%
+        {\khmerpagenum ទំព័រទី \khmernumraw{#1}}%
+}
+
+% Quick formula box: single formula, no title bar (distinct from the
+% two-arg titled \formulabox below)
+\newcommand{\quickformula}[1]{%
+    \begin{center}
+    \colorbox{boxbg}{%
+        \begin{minipage}{0.75\linewidth}
+        \centering\vspace{0.2cm}
+        {\large \color{brownheader} #1}
+        \vspace{0.2cm}
+        \end{minipage}%
+    }
+    \end{center}
 }
 
 % --- Formula box (from the trig formula-sheet doc, adapted to use \khmerheader) ---
@@ -517,21 +521,6 @@
     #1
 }
 
-% --- Quick formula box: a single untitled formula highlighted in a small
-% rounded pink/purple box, centered on its own line. Distinct from
-% \formulabox above (which is a *titled* environment for a block of
-% content) -- this is for one inline result you want to call out.
-%   \quickformula{$F = ma$}
-\newcommand{\quickformula}[1]{%
-  \begin{center}
-  \begin{tcolorbox}[enhanced, colback=bacpinklight, colframe=bacpurple,
-                     boxrule=1pt, arc=3mm, width=0.75\linewidth, halign=center]
-    {\large \color{bacpurple} #1}
-  \end{tcolorbox}
-  \end{center}
-}
-\let\simpleformulabox\quickformula
-
 % ---------------------------------------------------------
 % HEADER / FOOTER
 % ---------------------------------------------------------
@@ -544,20 +533,20 @@
 \renewcommand{\footrulewidth}{0pt}
 
 \fancyfoot[LO,RE]{%
-  \small
-  \textcolor{bacpurple}{
-    \khmernum{\thepage}
-  }%
+    \small
+    \textcolor{bacpurple}{
+        \khmernum{\thepage}
+    }%
 }
 
 \fancyhead[C]{%
-  \large
-  \khmermoul
-  \shortstack{
-    មេរៀនសង្ខេបសម្រាប់ត្រៀមប្រឡង (ថ្នាក់ទី១២)
-    \\[0.15em]
-    មុខវិជ្ជា៖ រូបវិទ្យា
-  }
+    \large
+    \khmermoul
+    \shortstack{
+        មេរៀនសង្ខេបសម្រាប់ត្រៀមប្រឡង (ថ្នាក់ទី១១)
+        \\[0.15em]
+        មុខវិជ្ជា៖ រូបវិទ្យា
+    }
 }
 
 % ---------------------------------------------------------
@@ -565,97 +554,97 @@
 % ---------------------------------------------------------
 
 \newcommand{\sakuraflower}[3][0.4]{%
-  \begin{scope}[
-    shift={(#2)},
-    scale=#1
-  ]
+    \begin{scope}[
+        shift={(#2)},
+        scale=#1
+    ]
 
     \foreach \angle in {0,72,144,216,288}{
-      \begin{scope}[rotate=\angle]
+        \begin{scope}[rotate=\angle]
 
         \fill[
-          sakurapetal,
-          opacity=#3
+            sakurapetal,
+            opacity=#3
         ]
-          (0,0.05)
-          .. controls
-             (0.22,0.18)
-             and
-             (0.25,0.45)
-             ..
-             (0.08,0.62)
+        (0,0.05)
+        .. controls
+        (0.22,0.18)
+        and
+        (0.25,0.45)
+        ..
+        (0.08,0.62)
 
-          .. controls
-             (0.04,0.66)
-             and
-             (0.02,0.64)
-             ..
-             (0,0.60)
+        .. controls
+        (0.04,0.66)
+        and
+        (0.02,0.64)
+        ..
+        (0,0.60)
 
-          .. controls
-             (-0.02,0.64)
-             and
-             (-0.04,0.66)
-             ..
-             (-0.08,0.62)
+        .. controls
+        (-0.02,0.64)
+        and
+        (-0.04,0.66)
+        ..
+        (-0.08,0.62)
 
-          .. controls
-             (-0.25,0.45)
-             and
-             (-0.22,0.18)
-             ..
-             (0,0.05);
+        .. controls
+        (-0.25,0.45)
+        and
+        (-0.22,0.18)
+        ..
+        (0,0.05);
 
-      \end{scope}
+        \end{scope}
     }
 
     \fill[
-      bacpink,
-      opacity=#3
+        bacpink,
+        opacity=#3
     ]
-      (0,0) circle (0.07);
+    (0,0) circle (0.07);
 
     \foreach \angle in {0,72,144,216,288}{
-      \begin{scope}[rotate=\angle]
+        \begin{scope}[rotate=\angle]
 
         \draw[
-          sakuradark,
-          line width=0.4pt,
-          opacity={#3*0.5}
+            sakuradark,
+            line width=0.4pt,
+            opacity={#3*0.5}
         ]
-          (0,0.05)
-          .. controls
-             (0.22,0.18)
-             and
-             (0.25,0.45)
-             ..
-             (0.08,0.62)
+        (0,0.05)
+        .. controls
+        (0.22,0.18)
+        and
+        (0.25,0.45)
+        ..
+        (0.08,0.62)
 
-          .. controls
-             (0.04,0.66)
-             and
-             (0.02,0.64)
-             ..
-             (0,0.60)
+        .. controls
+        (0.04,0.66)
+        and
+        (0.02,0.64)
+        ..
+        (0,0.60)
 
-          .. controls
-             (-0.02,0.64)
-             and
-             (-0.04,0.66)
-             ..
-             (-0.08,0.62)
+        .. controls
+        (-0.02,0.64)
+        and
+        (-0.04,0.66)
+        ..
+        (-0.08,0.62)
 
-          .. controls
-             (-0.25,0.45)
-             and
-             (-0.22,0.18)
-             ..
-             (0,0.05);
+        .. controls
+        (-0.25,0.45)
+        and
+        (-0.22,0.18)
+        ..
+        (0,0.05);
 
-      \end{scope}
+        \end{scope}
     }
 
-  \end{scope}
+    \end{scope}
 }
 
 % ---------------------------------------------------------
@@ -663,46 +652,46 @@
 % ---------------------------------------------------------
 
 \newcommand{\sakurapetaldrift}[4][0.3]{%
-  \begin{scope}[
-    shift={(#2)},
-    rotate=#3,
-    scale=#1
-  ]
+    \begin{scope}[
+        shift={(#2)},
+        rotate=#3,
+        scale=#1
+    ]
 
     \fill[
-      sakurapetal,
-      opacity=#4
+        sakurapetal,
+        opacity=#4
     ]
-      (0,0.05)
-      .. controls
-         (0.22,0.18)
-         and
-         (0.25,0.45)
-         ..
-         (0.08,0.62)
+    (0,0.05)
+    .. controls
+    (0.22,0.18)
+    and
+    (0.25,0.45)
+    ..
+    (0.08,0.62)
 
-      .. controls
-         (0.04,0.66)
-         and
-         (0.02,0.64)
-         ..
-         (0,0.60)
+    .. controls
+    (0.04,0.66)
+    and
+    (0.02,0.64)
+    ..
+    (0,0.60)
 
-      .. controls
-         (-0.02,0.64)
-         and
-         (-0.04,0.66)
-         ..
-         (-0.08,0.62)
+    .. controls
+    (-0.02,0.64)
+    and
+    (-0.04,0.66)
+    ..
+    (-0.08,0.62)
 
-      .. controls
-         (-0.25,0.45)
-         and
-         (-0.22,0.18)
-         ..
-         (0,0.05);
+    .. controls
+    (-0.25,0.45)
+    and
+    (-0.22,0.18)
+    ..
+    (0,0.05);
 
-  \end{scope}
+    \end{scope}
 }
 
 % ---------------------------------------------------------
@@ -710,184 +699,198 @@
 % ---------------------------------------------------------
 
 \newcommand{\sparkle}[3][1]{%
-  \begin{scope}[
-    shift={(#2)},
-    scale=#1
-  ]
+    \begin{scope}[
+        shift={(#2)},
+        scale=#1
+    ]
 
     \fill[
-      bacpurple,
-      opacity=#3
+        bacpurple,
+        opacity=#3
     ]
-      (0,0.38)
-      .. controls
-         (0.05,0.09)
-         and
-         (0.09,0.05)
-         ..
-         (0.38,0)
+    (0,0.38)
+    .. controls
+    (0.05,0.09)
+    and
+    (0.09,0.05)
+    ..
+    (0.38,0)
 
-      .. controls
-         (0.09,-0.05)
-         and
-         (0.05,-0.09)
-         ..
-         (0,-0.38)
+    .. controls
+    (0.09,-0.05)
+    and
+    (0.05,-0.09)
+    ..
+    (0,-0.38)
 
-      .. controls
-         (-0.05,-0.09)
-         and
-         (-0.09,-0.05)
-         ..
-         (-0.38,0)
+    .. controls
+    (-0.05,-0.09)
+    and
+    (-0.09,-0.05)
+    ..
+    (-0.38,0)
 
-      .. controls
-         (-0.09,0.05)
-         and
-         (-0.05,0.09)
-         ..
-         (0,0.38);
+    .. controls
+    (-0.09,0.05)
+    and
+    (-0.05,0.09)
+    ..
+    (0,0.38);
 
-  \end{scope}
+    \end{scope}
 }
 
 \newcommand{\pinksparkle}[3][1]{%
-  \begin{scope}[
-    shift={(#2)},
-    scale=#1
-  ]
+    \begin{scope}[
+        shift={(#2)},
+        scale=#1
+    ]
 
     \fill[
-      bacpink,
-      opacity=#3
+        bacpink,
+        opacity=#3
     ]
-      (0,0.38)
-      .. controls
-         (0.05,0.09)
-         and
-         (0.09,0.05)
-         ..
-         (0.38,0)
+    (0,0.38)
+    .. controls
+    (0.05,0.09)
+    and
+    (0.09,0.05)
+    ..
+    (0.38,0)
 
-      .. controls
-         (0.09,-0.05)
-         and
-         (0.05,-0.09)
-         ..
-         (0,-0.38)
+    .. controls
+    (0.09,-0.05)
+    and
+    (0.05,-0.09)
+    ..
+    (0,-0.38)
 
-      .. controls
-         (-0.05,-0.09)
-         and
-         (-0.09,-0.05)
-         ..
-         (-0.38,0)
+    .. controls
+    (-0.05,-0.09)
+    and
+    (-0.09,-0.05)
+    ..
+    (-0.38,0)
 
-      .. controls
-         (-0.09,0.05)
-         and
-         (-0.05,0.09)
-         ..
-         (0,0.38);
+    .. controls
+    (-0.09,0.05)
+    and
+    (-0.05,0.09)
+    ..
+    (0,0.38);
 
-  \end{scope}
+    \end{scope}
 }
 
 % ---------------------------------------------------------
 % PAGE BACKGROUND
 % ---------------------------------------------------------
 
+% Original vector version kept as \pagebackgroundvector in case you ever
+% need to re-render the background at a different resolution/size later.
 \newcommand{\pagebackground}{%
-  \begin{tikzpicture}[
-    remember picture,
-    overlay
-  ]
+    \begin{tikzpicture}[
+        remember picture,
+        overlay
+    ]
 
     % North-west
     \sakuraflower[0.75]
-      {$(current page.north west)+(1.05,-1.2)$}{1}
+    {$(current page.north west)+(1.05,-1.2)$}{1}
 
     \sakuraflower[0.45]
-      {$(current page.north west)+(1.9,-2.1)$}{0.75}
+    {$(current page.north west)+(1.9,-2.1)$}{0.75}
 
     \sakuraflower[0.35]
-      {$(current page.north west)+(0.7,-2.3)$}{0.55}
+    {$(current page.north west)+(0.7,-2.3)$}{0.55}
 
     \sparkle[0.28]
-      {$(current page.north west)+(2.6,-1.2)$}{0.8}
+    {$(current page.north west)+(2.6,-1.2)$}{0.8}
 
     \pinksparkle[0.18]
-      {$(current page.north west)+(2.0,-0.85)$}{0.7}
+    {$(current page.north west)+(2.0,-0.85)$}{0.7}
 
     \sakurapetaldrift[0.35]
-      {$(current page.north west)+(1.55,-2.7)$}{35}{0.5}
+    {$(current page.north west)+(1.55,-2.7)$}{35}{0.5}
 
     % North-east
     \sakuraflower[0.72]
-      {$(current page.north east)+(-1.1,-1.3)$}{1}
+    {$(current page.north east)+(-1.1,-1.3)$}{1}
 
     \sakuraflower[0.42]
-      {$(current page.north east)+(-2.0,-2.0)$}{0.75}
+    {$(current page.north east)+(-2.0,-2.0)$}{0.75}
 
     \sakuraflower[0.33]
-      {$(current page.north east)+(-0.65,-2.4)$}{0.55}
+    {$(current page.north east)+(-0.65,-2.4)$}{0.55}
 
     \sparkle[0.28]
-      {$(current page.north east)+(-2.65,-1.1)$}{0.8}
+    {$(current page.north east)+(-2.65,-1.1)$}{0.8}
 
     \pinksparkle[0.18]
-      {$(current page.north east)+(-1.9,-0.8)$}{0.7}
+    {$(current page.north east)+(-1.9,-0.8)$}{0.7}
 
     % South-west
     \sakuraflower[0.70]
-      {$(current page.south west)+(1.1,1.7)$}{1}
+    {$(current page.south west)+(1.1,1.7)$}{1}
 
     \sakuraflower[0.40]
-      {$(current page.south west)+(2.0,2.6)$}{0.7}
+    {$(current page.south west)+(2.0,2.6)$}{0.7}
 
     \sakuraflower[0.32]
-      {$(current page.south west)+(0.65,2.8)$}{0.5}
+    {$(current page.south west)+(0.65,2.8)$}{0.5}
 
     \sparkle[0.25]
-      {$(current page.south west)+(2.5,1.6)$}{0.75}
+    {$(current page.south west)+(2.5,1.6)$}{0.75}
 
     % South-east
     \sakuraflower[0.68]
-      {$(current page.south east)+(-1.15,1.6)$}{1}
+    {$(current page.south east)+(-1.15,1.6)$}{1}
 
     \sakuraflower[0.38]
-      {$(current page.south east)+(-2.1,2.5)$}{0.7}
+    {$(current page.south east)+(-2.1,2.5)$}{0.7}
 
     \sakuraflower[0.30]
-      {$(current page.south east)+(-0.6,2.7)$}{0.5}
+    {$(current page.south east)+(-0.6,2.7)$}{0.5}
 
     \pinksparkle[0.22]
-      {$(current page.south east)+(-2.4,1.7)$}{0.75}
+    {$(current page.south east)+(-2.4,1.7)$}{0.75}
 
     % Subtle interior decoration
     \sakurapetaldrift[0.25]
-      {$(current page.north west)+(5.5,-6)$}{50}{0.12}
+    {$(current page.north west)+(5.5,-6)$}{50}{0.12}
 
     \sakurapetaldrift[0.22]
-      {$(current page.north east)+(-4,-8)$}{-60}{0.10}
+    {$(current page.north east)+(-4,-8)$}{-60}{0.10}
 
     \sparkle[0.18]
-      {$(current page.north west)+(7,-3)$}{0.08}
+    {$(current page.north west)+(7,-3)$}{0.08}
 
-  \end{tikzpicture}%
+    \end{tikzpicture}%
 }
 
 % ---------------------------------------------------------
 % APPLY BACKGROUND TO EVERY PAGE
 % ---------------------------------------------------------
-
 \AddToShipoutPictureBG{\pagebackground}
 
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 
-\newcommand{\kstar}{{\color{bacpink}\Pifont{pzd}\char72}}
-\newcommand{\kstarfour}{{\color{bacpink}\Pifont{pzd}\char100}}
+% \ding{} (pifont) uses an old 8-bit font-encoding switch to reach the
+% Zapf Dingbats symbol font. That switch can silently fail under XeLaTeX
+% when a custom fontspec-loaded font (your Khmer fonts) is active at the
+% point of use, falling back to typesetting the raw code as plain ASCII
+% instead - \ding{100} rendering as literal "d" (ASCII/Unicode 100) is
+% exactly that failure. Fix: use real Unicode star glyphs directly,
+% explicitly forced through a font known to have them (DejaVu Sans ships
+% with TeX Live, so it's reliably present regardless of what Khmer font
+% is active).
+{
+    \defaultfontfeatures{} % clear inherited Path/Script/Renderer for this one font
+    \global\newfontfamily\khmersymbolfont{DejaVu Sans}
+}
+\newcommand{\kstar}{{\khmersymbolfont\color{bacpink}★}} % 5-point star
+\newcommand{\kstarfour}{{\khmersymbolfont\color{bacpink}✦}} % 4-point star/sparkle
 
 % --- tables (the holy trinity for your trig table) ---
 \usepackage{colortbl}
@@ -902,6 +905,14 @@
 \usepackage{caption}
 \usepackage{multicol}
 
-\pdfstringdefDisableCommands{%
-  \def\englishfont#1{#1}%
+\IfFileExists{fontawesome7.sty}{
+    \usepackage{fontawesome7}
+}{
+    \IfFileExists{fontawesome5.sty}{
+        \usepackage{fontawesome5}
+    }{
+        \newcommand{\faCoffee}{☕}
+        \newcommand{\faHeart}{♥}
+        \newcommand{\faChevronRight}{›}
+    }
 }

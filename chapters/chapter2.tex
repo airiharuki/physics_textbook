@@ -1,78 +1,142 @@
-\khmerlesson{មេរៀនទី ១៖ គោលការណ៍តម្រួតនៃរលក និងរលកជញ្ច្រុំ}
+\khmerlesson
+{មេរៀនទី ១៖ គោលការណ៍តម្រួតនៃរលក និងរលកជញ្ច្រុំ}
 \tanbgdivider
 
 
-\khmertopic{១. សមីការបម្លាស់ទីភាគល្អិត ({\englishfont Equation of Particle Displacement})}
+\khmertopic{១. សមីការបម្លាស់ទីភាគល្អិត ({
+	\englishfont
+	Equation of Particle Displacement})}
 
-\textbf{ក. និយមន័យ៖} រលកគឺជាការបញ្ជូនរញ្ជួយ ឬលំយោលបន្តបន្ទាប់គ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។ តាមច្បាប់ទី ២ ញូតុន និងកម្លាំងយឺត ($F=-kx$) យើងទទួលបានសមីការឌីផេរ៉ង់ស្យែល $\frac{d^2x}{dt^2} + \omega^2x = 0$ ដែលមានចម្លើយជាអនុគមន៍ស៊ីនុយសូអ៊ីត៖
+\textbf{ក. និយមន័យ៖}រលកគឺជាការបញ្ជូនរញ្ជួយ
+ឬលំយោលបន្តបន្ទាប់គ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។
+តាមច្បាប់ទី ២ ញូតុន និងកម្លាំងយឺត ($F=-kx$
+) យើងទទួលបានសមីការឌីផេរ៉ង់ស្យែល
+$\frac{d^2x}{dt^2} + \omega^2x = 0$
+ដែលមានចម្លើយជាអនុគមន៍ស៊ីនុយសូអ៊ីត៖
 \begin{equation}
-	x = A \sin(\omega t + \varphi) \quad \text{ឬ} \quad x = A \cos(\omega t + \varphi)
+	x = A \sin(\omega t + \varphi) \quad \text{ឬ}
+	\quad x = A \cos(\omega t + \varphi)
 \end{equation}
 
 \khmertopic{២. ល្បឿន និងសំទុះនៃភាគល្អិតរញ្ជួយ}
 \begin{itemize}
-	\item \textbf{ល្បឿន ($v$):} $v = \frac{dx}{dt} = \omega A \cos(\omega t + \varphi)$។ ល្បឿនអតិបរមា $v_{max} = \omega A$ (នៅទីតាំងលំនឹង)។
-	\item \textbf{សំទុះ ($a$):} $a = \frac{dv}{dt} = -\omega^2 A \sin(\omega t + \varphi) = -\omega^2 x$។ សំទុះអតិបរមា $a_{max} = \omega^2 A$ (នៅអំព្លីទុត)។
+	\item \textbf{ល្បឿន ($v$):}$
+	v = \frac{dx}{dt} = \omega A
+	\cos(\omega t + \varphi)$។ ល្បឿនអតិបរមា
+	$v_{max} = \omega A$ (នៅទីតាំងលំនឹង)។
+	\item \textbf{សំទុះ ($a$):}$
+	a = \frac{dv}{dt} = -\omega^2 A
+	\sin(\omega t + \varphi) = -\omega^2 x$
+	។ សំទុះអតិបរមា $a_{max} = \omega^2 A$
+	(នៅអំព្លីទុត)។
 \end{itemize}
 
-\khmertopic{៣. របៀបគូសក្រាបនៃអនុគមន៍រលក ({\englishfont Step-by-Step Graphing})}
+\khmertopic{៣. របៀបគូសក្រាបនៃអនុគមន៍រលក (
+		{\englishfont Step-by-Step Graphing})}
 
-ការគូសក្រាបរលកចែកជា ២ ប្រភេទ៖ ក្រាបតាមពេល $f(t)$ និងក្រាបតាមទីតាំង $f(x)$។
-
-\vspace{0.3cm}
-\textbf{ឧទាហរណ៍ទី១៖ គូសក្រាបស៊ីនុសតាមពេល $x(t) = A \sin(\omega t)$}
-
-\textbf{ជំហានទី១៖} គូសអ័ក្សឈរជាបម្លាស់ទី $x$ (កត់សម្គាល់អំព្លីទុត $\pm A$) និងអ័ក្សដេកជាពេល $t$ (កត់សម្គាល់ខួប $T$ និង $T/2$)។
-\begin{center}
-	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$x(t)$};
-		\draw[->, thick] (0,0) -- (7,0) node[right] {$t$};
-		\draw[dashed] (0,1) node[left] {$A$} -- (6.5,1);
-		\draw[dashed] (0,-1) node[left] {$-A$} -- (6.5,-1);
-		\draw[thick] (6.28,0.1) -- (6.28,-0.1) node[below] {$T$};
-		\draw[thick] (3.14,0.1) -- (3.14,-0.1) node[below] {$T/2$};
-	\end{tikzpicture}
-\end{center}
-
-\textbf{ជំហានទី២៖} អនុគមន៍ស៊ីនុសចាប់ផ្តើមពីគល់អ័ក្ស ($0,0$) កើនទៅរក $A$ កាត់អ័ក្សដេកនៅ $T/2$ ហើយចុះដល់ $-A$ មុនត្រឡប់មក ០ វិញនៅ $T$។
-\begin{center}
-	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$x(t)$};
-		\draw[->, thick] (0,0) -- (7,0) node[right] {$t$};
-		\draw[dashed, opacity=0.5] (0,1) node[left, text opacity=1] {$A$} -- (6.5,1);
-		\draw[dashed, opacity=0.5] (0,-1) node[left, text opacity=1] {$-A$} -- (6.5,-1);
-		\draw[khmerred, thick, domain=0:6.28, samples=100] plot (\x, {sin(\x r)});
-		\filldraw[black] (0,0) circle (1.5pt) node[below left] {$0$};
-		\filldraw[black] (3.14,0) circle (1.5pt) node[below left] {$T/2$};
-		\filldraw[black] (6.28,0) circle (1.5pt) node[below left] {$T$};
-	\end{tikzpicture}
-\end{center}
+ការគូសក្រាបរលកចែកជា ២ ប្រភេទ៖ ក្រាបតាមពេល $f(t)$
+និងក្រាបតាមទីតាំង $f(x)$។
 
 \vspace{0.3cm}
-\textbf{ឧទាហរណ៍ទី២៖ គូសក្រាបកូស៊ីនុសតាមទីតាំង $y(x) = A \cos(kx)$}
+\textbf{ឧទាហរណ៍ទី១៖ គូសក្រាបស៊ីនុសតាមពេល
+	$x(t) = A \sin(\omega t)$}
 
-\textbf{ជំហានទី១៖} គូសអ័ក្សដេកជាចម្ងាយ $x$ ដោយបែងចែកប្រវែងរលក $\lambda$ ជា ៤ ចំណែកស្មើគ្នា ($\lambda/4, \lambda/2, 3\lambda/4, \lambda$)។
+\textbf{ជំហានទី១៖} គូសអ័ក្សឈរជាបម្លាស់ទី $x$
+(កត់សម្គាល់អំព្លីទុត $\pm A$) និងអ័ក្សដេកជាពេល $t$
+(កត់សម្គាល់ខួប $T$ និង $T/2$)។
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y(x)$};
-		\draw[->, thick] (0,0) -- (7,0) node[right] {$x$};
-		\draw[dashed] (0,1) node[left] {$A$} -- (6.5,1);
-		\draw[dashed] (0,-1) node[left] {$-A$} -- (6.5,-1);
-		\draw[thick] (1.57,0.1) -- (1.57,-0.1) node[below] {$\frac{\lambda}{4}$};
-		\draw[thick] (3.14,0.1) -- (3.14,-0.1) node[below] {$\frac{\lambda}{2}$};
-		\draw[thick] (4.71,0.1) -- (4.71,-0.1) node[below] {$\frac{3\lambda}{4}$};
-		\draw[thick] (6.28,0.1) -- (6.28,-0.1) node[below] {$\lambda$};
+		\draw[->, thick] (0,-1.5)
+		-- (0,1.5) node[above] {$x(t)$};
+		\draw[->, thick] (0,0)
+		-- (7,0) node[right] {$t$};
+		\draw[dashed] (0,1) node[left] {$A$}
+		-- (6.5,1);
+		\draw[dashed] (0,-1) node[left] {$-A$}
+		-- (6.5,-1);
+		\draw[thick] (6.28,0.1)
+		-- (6.28,-0.1) node[below] {$T$};
+		\draw[thick] (3.14,0.1)
+		-- (3.14,-0.1) node[below] {$T/2$};
 	\end{tikzpicture}
 \end{center}
 
-\textbf{ជំហានទី២៖} អនុគមន៍កូស៊ីនុសចាប់ផ្តើមពីចំណុចកំពូល ($0,A$) ចុះកាត់អ័ក្សដេកនៅ $\lambda/4$, ដល់ចំណុចបាត $-A$ នៅ $\lambda/2$, កាត់អ័ក្សដេកនៅ $3\lambda/4$, និងឡើងដល់កំពូលវិញនៅ $\lambda$។
+\textbf{ជំហានទី២៖}
+អនុគមន៍ស៊ីនុសចាប់ផ្តើមពីគល់អ័ក្ស ($0,0$) កើនទៅរក
+$A$ កាត់អ័ក្សដេកនៅ $T/2$ ហើយចុះដល់ $-A$
+មុនត្រឡប់មក ០ វិញនៅ $T$។
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y(x)$};
-		\draw[->, thick] (0,0) -- (7,0) node[right] {$x$};
-		\draw[blue, thick, domain=0:6.28, samples=100] plot (\x, {cos(\x r)});
-		\filldraw[black] (0,1) circle (1.5pt) node[left] {$A$};
-		\filldraw[black] (3.14,-1) circle (1.5pt) node[below] {$-A$};
+		\draw[->, thick] (0,-1.5)
+		-- (0,1.5) node[above] {$x(t)$};
+		\draw[->, thick] (0,0)
+		-- (7,0) node[right] {$t$};
+		\draw[dashed, opacity=0.5] (0,1)
+		node[left, text opacity=1] {$A$}
+		-- (6.5,1);
+		\draw[dashed, opacity=0.5] (0,-1)
+		node[left, text opacity=1] {$-A$}
+		-- (6.5,-1);
+		\draw[khmerred, thick, domain=0:6.28,
+			samples=100] plot (\x, {sin(\x r)});
+		\filldraw[black] (0,0)
+		circle (1.5pt) node[below left] {$0$};
+		\filldraw[black] (3.14,0)
+		circle (1.5pt) node[below left] {$T/2$};
+		\filldraw[black] (6.28,0)
+		circle (1.5pt) node[below left] {$T$};
+	\end{tikzpicture}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{ឧទាហរណ៍ទី២៖ គូសក្រាបកូស៊ីនុសតាមទីតាំង
+	$y(x) = A \cos(kx)$}
+
+\textbf{ជំហានទី១៖} គូសអ័ក្សដេកជាចម្ងាយ $x$
+ដោយបែងចែកប្រវែងរលក $\lambda$ ជា ៤ ចំណែកស្មើគ្នា (
+$\lambda/4, \lambda/2, 3\lambda/4, \lambda$)។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5)
+		-- (0,1.5) node[above] {$y(x)$};
+		\draw[->, thick] (0,0)
+		-- (7,0) node[right] {$x$};
+		\draw[dashed] (0,1) node[left] {$A$}
+		-- (6.5,1);
+		\draw[dashed] (0,-1) node[left] {$-A$}
+		-- (6.5,-1);
+		\draw[thick] (1.57,0.1)
+		-- (1.57,-0.1) node[below]
+			{$\frac{\lambda}{4}$};
+		\draw[thick] (3.14,0.1)
+		-- (3.14,-0.1) node[below]
+			{$\frac{\lambda}{2}$};
+		\draw[thick] (4.71,0.1)
+		-- (4.71,-0.1) node[below]
+			{$\frac{3\lambda}{4}$};
+		\draw[thick] (6.28,0.1)
+		-- (6.28,-0.1) node[below] {$\lambda$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{ជំហានទី២៖}
+អនុគមន៍កូស៊ីនុសចាប់ផ្តើមពីចំណុចកំពូល ($0,A$
+) ចុះកាត់អ័ក្សដេកនៅ $\lambda/4$, ដល់ចំណុចបាត $-A$
+នៅ $\lambda/2$, កាត់អ័ក្សដេកនៅ $3\lambda/4$
+, និងឡើងដល់កំពូលវិញនៅ $\lambda$។
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.9]
+		\draw[->, thick] (0,-1.5)
+		-- (0,1.5) node[above] {$y(x)$};
+		\draw[->, thick] (0,0)
+		-- (7,0) node[right] {$x$};
+		\draw
+		[blue, thick, domain=0:6.28, samples=100]
+		plot (\x, {cos(\x r)});
+		\filldraw[black] (0,1)
+		circle (1.5pt) node[left] {$A$};
+		\filldraw[black] (3.14,-1)
+		circle (1.5pt) node[below] {$-A$};
 		\filldraw[black] (6.28,1) circle (1.5pt);
 		\node[below] at (6.28, 0) {$\lambda$};
 	\end{tikzpicture}
@@ -80,185 +144,329 @@
 
 \tanbgdivider
 
-\khmertopic{៤. វិធីសាស្ត្រក្នុងការធ្វើសំណង់ប្រេណែល ({\englishfont Fresnel Construction})}
+\khmertopic
+{៤. វិធីសាស្ត្រក្នុងការធ្វើសំណង់ប្រេណែល (
+		{\englishfont Fresnel Construction})}
 
-វិធីសាស្ត្រប្រណែល ប្រើសម្រាប់បូកបញ្ចូលរលកពីរដែលមានប្រេកង់ដូចគ្នា តែមានអំព្លីទុត និងផាសដើមខុសគ្នា ដោយប្រើការបូកវិចទ័រ។
+វិធីសាស្ត្រប្រណែល
+ប្រើសម្រាប់បូកបញ្ចូលរលកពីរដែលមានប្រេកង់ដូចគ្នា
+តែមានអំព្លីទុត និងផាសដើមខុសគ្នា
+ដោយប្រើការបូកវិចទ័រ។
 
-\textbf{ជំហានអនុវត្ត (ឧទាហរណ៍៖ បូករលក $x_1$ ផាស $\varphi_1=30^\circ$ និង $x_2$ ផាស $\varphi_2=90^\circ$):}
+\textbf{ជំហានអនុវត្ត (ឧទាហរណ៍៖ បូករលក $x_1$ ផាស
+	$\varphi_1=30^\circ$ និង $x_2$ ផាស
+	$\varphi_2=90^\circ$):}
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.8]
-		\draw[->, thick, dashed] (0,0) -- (4,0) node[right] {អ័ក្សគល់ (Reference)};
+		\draw[->, thick, dashed] (0,0)
+		-- (4,0) node[right]
+			{អ័ក្សគល់ (Reference)};
 		\coordinate (O) at (0,0);
 		\coordinate (A1) at (30:3);
-		\coordinate (A2) at ($(A1) + (90:4)$); % Calculate tip of A2
+		\coordinate (A2) at ($(A1) + (90:4)$);
+		% Calculate tip of A2
 		
-		\draw[->, thick, khmerred] (O) -- (A1) node[midway, below right] {$\vec{{\englishfont A}}_1$};
-		\draw[->, thick, blue] (A1) -- (A2) node[midway, right] {$\vec{{\englishfont A}}_2$};
+		\draw[->, thick, khmerred] (O)
+		-- (A1) node[midway, below right]
+			{$\vec{{\englishfont A}}_1$};
+		\draw[->, thick, blue] (A1)
+		-- (A2) node[midway, right]
+			{$\vec{{\englishfont A}}_2$};
 		
 		% Resultant Vector
-		\draw[->, ultra thick, purple] (O) -- (A2) node[midway, above left] {$\vec{{\englishfont A}} \text{ (សរុប)}$};
+		\draw[->, ultra thick, purple] (O)
+		-- (A2) node[midway, above left]{$
+		\vec{{\englishfont A}} \text{ (សរុប)}$};
 		
 		% Angles
-		\draw (1,0) arc (0:30:1) node[midway, right] {$\varphi_1$};
+		\draw (1,0)
+		arc (0:30:1) node[midway, right]
+			{$\varphi_1$};
 		\draw[dashed] (A1) -- ++(2,0);
-		\draw (A1) ++(0.7,0) arc (0:90:0.7) node[midway, above right] {$\varphi_2$};
-		\draw (1.5,0) arc (0:56:1.5) node[midway, right=0.1cm] {$\varphi$};
+		\draw (A1)
+		++(0.7,0) arc (0:90:0.7) node[midway,
+		above
+		right] {$\varphi_2$};
+		\draw (1.5,0)
+		arc (0:56:1.5) node[midway, right=0.1cm]
+			{$\varphi$};
 	\end{tikzpicture}
 \end{center}
 
-\textbf{រូបមន្តគណនាទំហំ និងមុំវិចទ័រសរុប (តាមទ្រឹស្តីបទកូស៊ីនុស):}
+\textbf{រូបមន្តគណនាទំហំ និងមុំវិចទ័រសរុប (
+	តាមទ្រឹស្តីបទកូស៊ីនុស):}
 \begin{align}
-	A &= \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos(\varphi_2 - \varphi_1)} \\
-	\tan \varphi &= \frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}{A_1\cos\varphi_1 + A_2\cos\varphi_2}
+	A &=\sqrt{A_1^2 + A_2^2 + 2A_1A_2
+	\cos(\varphi_2 - \varphi_1)} \\
+	\tan \varphi &=
+	\frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}
+	{A_1\cos\varphi_1 + A_2\cos\varphi_2}
 \end{align}
 
-\noindent \textbf{\color{brownheader}ឧទាហរណ៍៖ }គេឲ្យរលក២ដូចខាងក្រោម៖
+\noindent \textbf{\color{brownheader}ឧទាហរណ៍៖ }
+គេឲ្យរលក២ដូចខាងក្រោម៖
 \[
-  y_1=(5 \mathrm{cm}) \sin (10 \pi t + \pi)\]
+	y_1=(5 \mathrm{cm}) \sin (10 \pi t + \pi)\]
 \[
-  y_2=(5 \mathrm{cm}) \sin (10 \pi t + \frac{\pi}{2})
+	y_2=(5 \mathrm{cm})
+	\sin (10 \pi t + \frac{\pi}{2})
 \]
 \noindent សរសេរសមីការលំយោលតម្រួតនៃរលកទាំងពីរ។\\
 \noindent \textbf{\color{brownheader}ចម្លើយ៖}\\
 
-\noindent \textbf{ជំហានទី១៖ ដកស្រង់ទិន្នន័យពីសមីការរលកទាំងពីរ}\\
-ដោយប្រៀបធៀបនឹងទម្រង់ទូទៅ $y = A\sin(\omega t + \varphi)$ យើងបាន៖
+\noindent\textbf
+{ជំហានទី១៖ ដកស្រង់ទិន្នន័យពីសមីការរលកទាំងពីរ}\\
+ដោយប្រៀបធៀបនឹងទម្រង់ទូទៅ
+$y = A\sin(\omega t + \varphi)$ យើងបាន៖
 \[
-  A_1 = 5\,\mathrm{cm}, \quad \varphi_1 = \pi \qquad ; \qquad
-  A_2 = 5\,\mathrm{cm}, \quad \varphi_2 = \frac{\pi}{2}
+	A_1 = 5\,\mathrm{cm}, \quad \varphi_1 = \pi
+	\qquad ; \qquad
+	A_2 = 5\,\mathrm{cm}, \quad \varphi_2 =
+	\frac{\pi}{2}
 \]
-រលកទាំងពីរមានប៉ូល្សាស្យុងដូចគ្នា $\omega = 10\pi\ \mathrm{rad/s}$ ដូច្នេះយើងអាចប្រើសំណង់ប្រេណែលបាន។
+រលកទាំងពីរមានប៉ូល្សាស្យុងដូចគ្នា
+$\omega = 10\pi\ \mathrm{rad/s}$
+ដូច្នេះយើងអាចប្រើសំណង់ប្រេណែលបាន។
 ផលសងផាស៖
 \[
-  \Delta\varphi = \varphi_2 - \varphi_1 = \frac{\pi}{2} - \pi = -\frac{\pi}{2}
+	\Delta\varphi = \varphi_2 - \varphi_1 =
+	\frac{\pi}{2} - \pi = -\frac{\pi}{2}
 \]
 
-\noindent \textbf{ជំហានទី២៖ គូសសំណង់ប្រេណែល (បូកវិចទ័រ)}\\
-តាង $\vec{A}_1$ ធ្វើមុំ $\varphi_1 = \pi$ ($180^\circ$) និង $\vec{A}_2$ ធ្វើមុំ $\varphi_2 = \frac{\pi}{2}$ ($90^\circ$) ជាមួយអ័ក្សគល់៖
+\noindent
+\textbf{ជំហានទី២៖ គូសសំណង់ប្រេណែល (បូកវិចទ័រ)}\\
+តាង $\vec{A}_1$ ធ្វើមុំ $\varphi_1 = \pi$ (
+$180^\circ$) និង $\vec{A}_2$ ធ្វើមុំ
+$\varphi_2 = \frac{\pi}{2}$ ($90^\circ$
+) ជាមួយអ័ក្សគល់៖
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.8]
-		\draw[->, thick, dashed] (-4,0) -- (2,0) node[right] {អ័ក្សគល់};
-		\draw[->, thick, dashed] (0,-0.6) -- (0,3.6);
+		\draw[->, thick, dashed] (-4,0)
+		-- (2,0) node[right] {អ័ក្សគល់};
+		\draw[->, thick, dashed] (0,-0.6)
+		-- (0,3.6);
 		\coordinate (O) at (0,0);
 		\coordinate (A1) at (180:3);
 		\coordinate (A2) at ($(A1) + (90:3)$);
-
-		\draw[->, thick, khmerred] (O) -- (A1) node[midway, below=2pt] {$\vec{{\englishfont A}}_1 = 5$};
-		\draw[->, thick, blue] (A1) -- (A2) node[midway, left=2pt] {$\vec{{\englishfont A}}_2 = 5$};
-		\draw[->, ultra thick, purple] (O) -- (A2)
-			node[midway, above left=-1pt] {$\vec{{\englishfont A}} = 5\sqrt{2}$};
-
+		
+		\draw[->, thick, khmerred] (O)
+		-- (A1) node[midway, below=2pt]
+			{$\vec{{\englishfont A}}_1 = 5$};
+		\draw[->, thick, blue] (A1)
+		-- (A2) node[midway, left=2pt]
+			{$\vec{{\englishfont A}}_2 = 5$};
+		\draw[->, ultra thick, purple] (O)
+		-- (A2)
+		node[midway, above left=-1pt]
+			{
+			$\vec{{\englishfont A}} = 5\sqrt{2}$}
+		;
+		
 		\draw[thin] (1.0,0) arc (0:180:1.0);
 		\node at (-1.95,0.45) {$\varphi_1 = \pi$};
 		\draw[thin] (0.55,0) arc (0:135:0.55);
 		\node at (0.72,0.68) {$\varphi$};
-		\filldraw[black] (O) circle (1.5pt) node[below right] {${\englishfont O}$};
+		\filldraw[black] (O)
+		circle (1.5pt) node[below right]
+			{${\englishfont O}$};
 	\end{tikzpicture}
 \end{center}
-កត់សម្គាល់៖ ដោយ $\Delta\varphi = -\dfrac{\pi}{2}$ វិចទ័រទាំងពីរកែងគ្នា ដូច្នេះត្រីកោណបូកវិចទ័រជាត្រីកោណកែងសមបាត។
+កត់សម្គាល់៖ ដោយ $\Delta\varphi = -\dfrac{\pi}{2}$
+វិចទ័រទាំងពីរកែងគ្នា
+ដូច្នេះត្រីកោណបូកវិចទ័រជាត្រីកោណកែងសមបាត។
 
-\noindent \textbf{ជំហានទី៣៖ គណនាអំព្លីទុតសរុប $A$}\\
+\noindent \textbf{ជំហានទី៣៖ គណនាអំព្លីទុតសរុប $A$}
+\\
 តាមទ្រឹស្តីបទកូស៊ីនុស៖
 \begin{align*}
-	A &= \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos(\varphi_2 - \varphi_1)} \\
-	  &= \sqrt{5^2 + 5^2 + 2(5)(5)\cos\left(-\frac{\pi}{2}\right)} \\
-	  &= \sqrt{25 + 25 + 50 \times 0} = \sqrt{50} \\
+	A &=\sqrt{A_1^2 + A_2^2 + 2A_1A_2
+	\cos(\varphi_2 - \varphi_1)} \\
+	&=\sqrt{5^2 + 5^2 + 2(5)(5)
+		\cos\left(-\frac{\pi}{2}\right)} \\
+	&= \sqrt{25 + 25 + 50 \times 0} =
+	\sqrt{50} \\
 	A &= 5\sqrt{2} \approx 7{,}07\ \mathrm{cm}
 \end{align*}
 
-\noindent \textbf{ជំហានទី៤៖ គណនាផាសដើមសរុប $\varphi$}\\
+\noindent
+\textbf{ជំហានទី៤៖ គណនាផាសដើមសរុប $\varphi$}\\
 \begin{align*}
-	\tan\varphi &= \frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}{A_1\cos\varphi_1 + A_2\cos\varphi_2}
-	 = \frac{5\sin\pi + 5\sin\frac{\pi}{2}}{5\cos\pi + 5\cos\frac{\pi}{2}} \\
-	&= \frac{5(0) + 5(1)}{5(-1) + 5(0)} = \frac{5}{-5} = -1
+	\tan\varphi &=
+	\frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}
+	{A_1\cos\varphi_1 + A_2\cos\varphi_2}
+	=\frac{5\sin\pi + 5\sin\frac{\pi}{2}}
+	{5\cos\pi + 5\cos\frac{\pi}{2}} \\
+	&= \frac{5(0) + 5(1)}{5(-1) + 5(0)} =
+	\frac{5}{-5} = -1
 \end{align*}
-ដោយភាគយក $> 0$ ($\sin\varphi > 0$) និងភាគបែង $< 0$ ($\cos\varphi < 0$) នោះ $\varphi$ ស្ថិតក្នុងកាដ្រង់ទី២៖
+ដោយភាគយក $> 0$ ($\sin\varphi > 0$) និងភាគបែង $< 0$
+($\cos\varphi < 0$) នោះ $\varphi$
+ស្ថិតក្នុងកាដ្រង់ទី២៖
 \[
-  \varphi = \pi - \frac{\pi}{4} = \frac{3\pi}{4}
+	\varphi = \pi - \frac{\pi}{4} = \frac{3\pi}{4}
 \]
 
-\noindent \textbf{ជំហានទី៥៖ សរសេរសមីការលំយោលតម្រួត}\\
-ដោយ $\omega = 10\pi\ \mathrm{rad/s}$ មិនប្រែប្រួល យើងបាន៖
+\noindent
+\textbf{ជំហានទី៥៖ សរសេរសមីការលំយោលតម្រួត}\\
+ដោយ $\omega = 10\pi\ \mathrm{rad/s}$
+មិនប្រែប្រួល យើងបាន៖
 \begin{equation*}
-	\boxed{\,y = y_1 + y_2 = \left(5\sqrt{2}\ \mathrm{cm}\right)\sin\left(10\pi t + \frac{3\pi}{4}\right)\,}
+	\boxed{\,y = y_1 + y_2 =
+		\left(5\sqrt{2}\ \mathrm{cm}\right)\sin
+		\left(10\pi t + \frac{3\pi}{4}\right)\,}
 \end{equation*}
 
 \noindent \textbf{ជំហានទី៦៖ ផ្ទៀងផ្ទាត់លទ្ធផល}\\
-ជំនួស $t = 0$ ក្នុងសមីការដើម៖ $y_1(0) = 5\sin\pi = 0$ និង $y_2(0) = 5\sin\frac{\pi}{2} = 5$ ដូច្នេះ $y(0) = 5\ \mathrm{cm}$។\\
-ជំនួស $t = 0$ ក្នុងលទ្ធផល៖ $y(0) = 5\sqrt{2}\sin\frac{3\pi}{4} = 5\sqrt{2} \times \frac{\sqrt{2}}{2} = 5\ \mathrm{cm}$។ ត្រូវ។
+ជំនួស $t = 0$ ក្នុងសមីការដើម៖
+$y_1(0) = 5\sin\pi = 0$ និង
+$y_2(0) = 5\sin\frac{\pi}{2} = 5$ ដូច្នេះ
+$y(0) = 5\ \mathrm{cm}$។\\
+ជំនួស $t = 0$ ក្នុងលទ្ធផល៖$
+y(0) = 5\sqrt{2}\sin\frac{3\pi}{4} = 5\sqrt{2}
+\times \frac{\sqrt{2}}{2} = 5\ \mathrm{cm}$
+។ ត្រូវ។
 
 
-\khmertopic{៥. គោលការណ៍តម្រួតនៃរលក ({\englishfont Principle of Superposition Waves})}
+\khmertopic{៥. គោលការណ៍តម្រួតនៃរលក ({
+	\englishfont Principle of Superposition Waves}
+	)}
 
-\textbf{ក. និយមន័យ៖} កាលណារលកពីរ ឬច្រើន ធ្វើដំណើរឆ្លងកាត់គ្នាត្រង់ចំណុចមួយក្នុងមជ្ឈដ្ឋានតែមួយ នោះបម្លាស់ទីសរុបនៃភាគល្អិតត្រង់ចំណុចនោះ គឺជាផលបូកពិជគណិតនៃបម្លាស់ទីនៃរលកនីមួយៗ ($y = y_1 + y_2$)។
-\textit{ចំណាំ៖ ក្រោយពេលឆ្លងកាត់គ្នា រលកនៅតែរក្សារូបរាង និងទិសដៅដដែល ដោយមិនបំផ្លាញគ្នាឡើយ។}
+\textbf{ក. និយមន័យ៖}កាលណារលកពីរ ឬច្រើន
+ធ្វើដំណើរឆ្លងកាត់គ្នាត្រង់ចំណុចមួយក្នុងមជ្ឈដ្ឋានតែមួយ
+នោះបម្លាស់ទីសរុបនៃភាគល្អិតត្រង់ចំណុចនោះ
+គឺជាផលបូកពិជគណិតនៃបម្លាស់ទីនៃរលកនីមួយៗ (
+$y = y_1 + y_2$)។
+\textit
+{ចំណាំ៖ ក្រោយពេលឆ្លងកាត់គ្នា រលកនៅតែរក្សារូបរាង
+និងទិសដៅដដែល ដោយមិនបំផ្លាញគ្នាឡើយ។}
 
-\khmertopic{៦. រលកជញ្ច្រុំ ({\englishfont Standing Waves})}
+\khmertopic
+{៦. រលកជញ្ច្រុំ ({\englishfont Standing Waves})}
 
-\textbf{ក. និយមន័យ៖} រលកជញ្ច្រុំ គឺជារលកដែលកើតចេញពីការតម្រួតគ្នារវាង \textbf{រលកចូល} និង \textbf{រលកចំណាំងផ្លាត} ដែលមានអំព្លីទុត ប្រវែងរលក និងប្រេកង់ដូចគ្នា ប៉ុន្តែធ្វើដំណើរក្នុងទិសដៅផ្ទុយគ្នា។
+\textbf{ក. និយមន័យ៖}
+រលកជញ្ច្រុំ គឺជារលកដែលកើតចេញពីការតម្រួតគ្នារវាង
+\textbf{រលកចូល} និង \textbf{រលកចំណាំងផ្លាត}
+ដែលមានអំព្លីទុត ប្រវែងរលក និងប្រេកង់ដូចគ្នា
+ប៉ុន្តែធ្វើដំណើរក្នុងទិសដៅផ្ទុយគ្នា។
 
 \textbf{ខ. សមីការរលកជញ្ច្រុំ៖}
-តាងរលកចូល៖ $y_1 = a \sin(kx - \omega t)$ និង រលកចំណាំងផ្លាត៖ $y_2 = a \sin(kx + \omega t)$។ 
-តាមគោលការណ៍តម្រួត និងរូបមន្តត្រីកោណមាត្រ យើងទទួលបានសមីការ៖
+តាងរលកចូល៖ $y_1 = a \sin(kx - \omega t)$
+និង រលកចំណាំងផ្លាត៖ $y_2 = a \sin(kx + \omega t)$។
+តាមគោលការណ៍តម្រួត និងរូបមន្តត្រីកោណមាត្រ
+យើងទទួលបានសមីការ៖
 \begin{equation}
-	y(x,t) = [2a \sin(kx)] \cos(\omega t) \quad \text{ឬ} \quad y(x,t) = A_{SW} \cos(\omega t)
+	y(x,t) = [2a \sin(kx)] \cos(\omega t) \quad
+	\text{ឬ} \quad y(x,t) = A_{SW} \cos(\omega t)
 \end{equation}
 
-\textbf{គ. ទីតាំងថ្នាំង និងទីតាំងពោះ ({\englishfont Nodes and Antinodes}):}\\
-\begin{itemize}[label=\faChevronRight, noitemsep, topsep=2pt, parsep=0pt]
-	\item \textbf{ទីតាំងពោះ} គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃអតិបរមា។ គេសរសេរវាដោយ $2a \sin kx$ កើនដល់អតិបរមា។
-	\item \textbf{ទីតាំងថ្នាំង} គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃស្មើសូន្យ។ គេសរសេរវាដោយ $2a \sin kx = 0$។
+\textbf{គ. ទីតាំងថ្នាំង និងទីតាំងពោះ (
+		{\englishfont Nodes and Antinodes}):}\\
+\begin{itemize}
+	[label=\faChevronRight, noitemsep, topsep=
+	2pt,
+		parsep=0pt]
+	\item \textbf{ទីតាំងពោះ}
+	គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃអតិបរមា។
+	គេសរសេរវាដោយ $2a \sin kx$ កើនដល់អតិបរមា។
+	\item \textbf{ទីតាំងថ្នាំង}
+	គឺជាទីតាំងទាំងឡាយណាដែលអំព្លីទុតរលកជញ្ចុំមានតម្លៃស្មើសូន្យ។
+	គេសរសេរវាដោយ $2a \sin kx = 0$។
 \end{itemize}
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=1.5]
 		% Axis
-		\draw[->, thick] (0,0) -- (6.5,0) node[right] {$x$};
+		\draw[->, thick] (0,0)
+		-- (6.5,0) node[right] {$x$};
 		
 		% Incident Wave
-		\draw[thick, khmerred] plot[domain=0:6, samples=150] (\x, {sin(\x*120)});
+		\draw[thick, khmerred]
+		plot[domain=0:6, samples=150] (\x,
+			{sin(\x*120)});
 		
 		% Reflected Wave
-		\draw[thick, blue, dashed] plot[domain=0:6, samples=150] (\x, {-sin(\x*120)});
+		\draw[thick, blue, dashed]
+		plot[domain=0:6, samples=150] (\x,
+			{-sin(\x*120)});
 		
-		% Envelopes marking Nodes (N) and Antinodes (A)
+		% Envelopes marking Nodes (N) and
+%		Antinodes (A)
 		\node[below] at (0,0) {{\englishfont N}};
-		\node[above] at (0.75,1) {{\englishfont A}};
-		\node[below] at (1.5,0) {{\englishfont N}};
-		\node[above] at (2.25,1) {{\englishfont A}};
+		\node[above] at (0.75,1)
+			{{\englishfont A}};
+		\node[below] at (1.5,0) {{\englishfont N}}
+		;
+		\node[above] at (2.25,1)
+			{{\englishfont A}};
 		\node[below] at (3,0) {{\englishfont N}};
-		\node[above] at (3.75,1) {{\englishfont A}};
-		\node[below] at (4.5,0) {{\englishfont N}};
-		\node[above] at (5.25,1) {{\englishfont A}};
+		\node[above] at (3.75,1)
+			{{\englishfont A}};
+		\node[below] at (4.5,0) {{\englishfont N}}
+		;
+		\node[above] at (5.25,1)
+			{{\englishfont A}};
 		\node[below] at (6,0) {{\englishfont N}};
 		
 		% Support Line at the end
-		\draw[ultra thick, black] (6,-1.2) -- (6,1.2);
+		\draw[ultra thick, black] (6,-1.2)
+		-- (6,1.2);
 		\filldraw[black] (6,0) circle (2pt);
 	\end{tikzpicture}
 \end{center}
-\begin{itemize}[label=\textcolor{bacpink}{\faCaretRight}]
-	\item \textbf{ចំណាំ}៖ \textbf{{\englishfont A (Antinode)}} ជាទីតាំងពោះ។ ចំណែកឯ \textbf{{\englishfont N (Node)}} ជាទីតាំងថ្នាំង។
-	\item \textbf{ថ្នាំង {\englishfont (Nodes)}:} ជាទីតាំងដែលភាគល្អិត \textbf{មិនរញ្ជួយ} ($A_{SW} = 0$)។ វាកើតឡើងនៅចម្ងាយ $x = n\frac{\lambda}{2}$។
-	\item \textbf{ពោះ {\englishfont (Antinodes)}:} ជាទីតាំងដែលភាគល្អិតរញ្ជួយដោយ \textbf{អំព្លីទុតអតិបរមា} ($A_{SW} = \pm 2a$)។ វាកើតឡើងនៅចម្ងាយ $x = (2n+1)\frac{\lambda}{4}$។
-	\item \textbf{ចំណាំ}៖ ចំនួនពោះ និងចំនួនថ្នាំងនៅក្នុងរលកជញ្ចុំមានចំនួនស្មើគ្នា។ ចំនួនពោះ និងចំនួនថ្នាំងអាចកើតឡើងបានតាមលំដាប់៖
-	\item \textbf{{\englishfont Note:}} ប្រវែងរលកជញ្ចុំ អាចទាញបាន៖ $L = n\frac{\lambda}{2}$ ដែល $n$ ជាចំនួនពិត។
+\begin{itemize}
+	[label=\textcolor{bacpink}{\faCaretRight}]
+	\item \textbf{ចំណាំ}៖
+	\textbf{{\englishfont A (Antinode)}}
+	ជាទីតាំងពោះ។ ចំណែកឯ
+	\textbf{{\englishfont N (Node)}}
+	ជាទីតាំងថ្នាំង។
+	\item \textbf{ថ្នាំង {\englishfont (Nodes)}:}
+	ជាទីតាំងដែលភាគល្អិត
+	\textbf{មិនរញ្ជួយ} ($A_{SW} = 0$)
+	។ វាកើតឡើងនៅចម្ងាយ $x = n\frac{\lambda}{2}$។
+	\item
+	\textbf{ពោះ {\englishfont (Antinodes)}:}
+	ជាទីតាំងដែលភាគល្អិតរញ្ជួយដោយ
+	\textbf{អំព្លីទុតអតិបរមា} ($A_{SW} = \pm 2a$)
+	។ វាកើតឡើងនៅចម្ងាយ
+	$x = (2n+1)\frac{\lambda}{4}$។
+	\item \textbf{ចំណាំ}៖ ចំនួនពោះ
+	និងចំនួនថ្នាំងនៅក្នុងរលកជញ្ចុំមានចំនួនស្មើគ្នា។
+	ចំនួនពោះ និងចំនួនថ្នាំងអាចកើតឡើងបានតាមលំដាប់៖
+	\item \textbf{{\englishfont Note:}}
+	ប្រវែងរលកជញ្ចុំ អាចទាញបាន៖
+	$L = n\frac{\lambda}{2}$ ដែល $n$ ជាចំនួនពិត។
 \end{itemize}
-\khmertopic{៧. រ៉េសូណង់ {\englishfont (Resonance)}}
-$\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀងរបស់ប្រព័ន្ធលំយោលត្រង់អំភ្លីទុតអតិបរមា និងប្រេកង់ដែលមានខួបតូច។
-\begin{itemize}[label=\textcolor{bacpink}{\faCarrot}]
-	\item \textbf{រ៉េសូណង់ស្ទក់៖ } កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា និងមានផាសដូចគ្នា។
-	\item \textbf{រ៉េសូណង់ឆ្មារ៖ } កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា ប៉ុន្តែមានផាសខុសគ្នា។
+\khmertopic
+{៧. រ៉េសូណង់ {\englishfont (Resonance)}}
+$\bigstar$ \hspace{1em} \textbf{រេសូណង់}
+គឺជាលំអៀងរបស់ប្រព័ន្ធលំយោលត្រង់អំភ្លីទុតអតិបរមា
+និងប្រេកង់ដែលមានខួបតូច។
+\begin{itemize}
+	[label=\textcolor{bacpink}{\faCarrot}]
+	\item \textbf{រ៉េសូណង់ស្ទក់៖ }
+	កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា
+	និងមានផាសដូចគ្នា។
+	\item \textbf{រ៉េសូណង់ឆ្មារ៖ }
+	កើតឡើងនៅពេលប្រព័ន្ធលំយោលត្រូវបានបំលែងដោយកម្លាំងខាងក្រៅដែលមានប្រេកង់ដូចគ្នា
+	ប៉ុន្តែមានផាសខុសគ្នា។
 \end{itemize}
 \noindent \begin{center}
-			  \textbf{តើរ៉េសូណង់កើតឡើងនៅពេលណា?}
+	          \textbf{តើរ៉េសូណង់កើតឡើងនៅពេលណា?}
 \end{center}
 \noindent \textbf{\color{brownheader} ចម្លើយ៖}\\
-\hspace{2em} \begin{itemize}[label=\textcolor{bacpink}{\faCaretRight}]
-				 \item រ៉េសូណង់សូររបស់ឧបករណ៍តន្ត្រីនិងការបញ្ចេញសម្លេងដោយមនុស្ស។
-				 \item រ៉េសូណង់សម្លេងរបស់នាឡិការោទិ៍។
-				 \item រ៉េសូណង់អគ្គិសនីរបស់សៀគ្វី (ប្រើក្នុងការប្តូរប៉ុស្តិ៍) នៅក្នុងវិទ្យុនិងទូរទស្សន៍។
-				 \item និងមានលក្ខខណ្ឌផ្សេងៗទៀតដូចជា លំញ័រម៉ាសុីនរថយន្ត...។
-			\end{itemize}
+\hspace{2em}\begin{itemize}[label=
+\textcolor{bacpink}{\faCaretRight}]
+				 \item
+				 រ៉េសូណង់សូររបស់ឧបករណ៍តន្ត្រីនិងការបញ្ចេញសម្លេងដោយមនុស្ស។
+				 \item
+				 រ៉េសូណង់សម្លេងរបស់នាឡិការោទិ៍។
+				 \item រ៉េសូណង់អគ្គិសនីរបស់សៀគ្វី
+				 (ប្រើក្នុងការប្តូរប៉ុស្តិ៍)
+				 នៅក្នុងវិទ្យុនិងទូរទស្សន៍។
+				 \item
+				 និងមានលក្ខខណ្ឌផ្សេងៗទៀតដូចជា
+				 លំញ័រម៉ាសុីនរថយន្ត...។
+\end{itemize}
 
 \clearpage
 
@@ -266,22 +474,42 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 % LESSON 2: INTERFERENCE OF WAVES
 % =================================================================
 
-\khmerlesson{មេរៀនទី ២៖ អាំងទែផេរ៉ង់នៃរលក ({\englishfont Interference of Waves})}
+\khmerlesson{មេរៀនទី ២៖ អាំងទែផេរ៉ង់នៃរលក (
+		{\englishfont Interference of Waves})}
 \tanbgdivider
 
 
-\khmertopic{១. អាំងទែផេរ៉ង់ {\englishfont (Interference)}}
+\khmertopic
+{១. អាំងទែផេរ៉ង់ {\englishfont (Interference)}}
 \khmersubtopic{១.១. និយមន័យ}
 \begin{center}
 	\textbf{ដូចម្តេចដែលហៅថាអាំងទែផេរ៉ង់?}
 \end{center}
-\hspace{2em}\textbf{អាំងទែផេរ៉ង់} ជាបាតុភូតមួយដែលកើតឡើងពេលណាដែលរលកពីរដាលកាត់គ្នាមានខួបនិងទឹសដូចគ្នា ព្រមទាំងមានអំព្លីទុតនិងផាសដូចគ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។\\
-បាតុភូតអាំងទែផេរ៉ង់កើតមាននោះខុសៗគ្នា អាស្រ័យទៅតាមមជ្ឈដ្ឋានដំណាលដូចជា៖ \textbf{អាំងទែផេរ៉ង់មេកានិច អាំងទែផេរ៉ង់សូរ និងអាំងទែផេរ៉ង់ពន្លឺ}។
+\hspace{2em}\textbf{អាំងទែផេរ៉ង់}
+ជាបាតុភូតមួយដែលកើតឡើងពេលណាដែលរលកពីរដាលកាត់គ្នាមានខួបនិងទឹសដូចគ្នា
+ព្រមទាំងមានអំព្លីទុតនិងផាសដូចគ្នាក្នុងមជ្ឈដ្ឋានតែមួយ។
+\\
+បាតុភូតអាំងទែផេរ៉ង់កើតមាននោះខុសៗគ្នា
+អាស្រ័យទៅតាមមជ្ឈដ្ឋានដំណាលដូចជា៖\textbf
+{អាំងទែផេរ៉ង់មេកានិច អាំងទែផេរ៉ង់សូរ
+និងអាំងទែផេរ៉ង់ពន្លឺ}។
 
-\khmersubtopic{១.២. ប្រភេទនៃអាំងទែផេរ៉ង់ ({\englishfont Types of Interference})}
-អាំងទែផេរ៉ង់ចែកចេញជា២ប្រភេទគឺ៖ \textbf{អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})} និង \textbf{អាំងទែផេរ៉ង់បំផ្លាញ ({\englishfont Destructive Interference}) និងអាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}។\\
-\khmersubsubtopic{ក. អាំងទែផេរ៉ង់សង់ ({\englishfont Constructive Interference})}
-\textbf{អាំងទែផេរ៉ង់សង់} កើតឡើងនៅពេលដែលអំព្លីទុតអតិបរមានៃរលកមួយដាលកាត់អំព្លីទុតអតិបរមានៃរលកមួយទៀត (\textbf{\color{brownheader} កំពូល + កំពូល}) ឬ (\textbf{\color{brownheader} បាត + បាត})។\\
+\khmersubtopic{១.២. ប្រភេទនៃអាំងទែផេរ៉ង់ (
+		{\englishfont Types of Interference})}
+អាំងទែផេរ៉ង់ចែកចេញជា២ប្រភេទគឺ៖\textbf
+{អាំងទែផេរ៉ង់សង់ (
+		{\englishfont Constructive Interference})}
+និង\textbf{អាំងទែផេរ៉ង់បំផ្លាញ (
+		{\englishfont Destructive Interference})
+	និងអាំងទែផេរ៉ង់សង់ (
+		{\englishfont Constructive Interference})}
+។\\
+\khmersubsubtopic{ក. អាំងទែផេរ៉ង់សង់ (
+		{\englishfont Constructive Interference})}
+\textbf{អាំងទែផេរ៉ង់សង់}
+កើតឡើងនៅពេលដែលអំព្លីទុតអតិបរមានៃរលកមួយដាលកាត់អំព្លីទុតអតិបរមានៃរលកមួយទៀត
+(\textbf{\color{brownheader} កំពូល + កំពូល}) ឬ (
+\textbf{\color{brownheader} បាត + បាត})។\\
 \vspace{2cm}
 \begin{center}
 	\begin{tikzpicture}[
@@ -295,55 +523,77 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 
 % --- frame & background ---
 		\definecolor{creambg}{RGB}{255, 248, 220}
-		\definecolor{framebrown}{RGB}{210, 190, 150}
+		\definecolor{framebrown}{RGB}
+		{210, 190, 150}
 		\definecolor{wavebrown}{RGB}{145, 130, 85}
-
-		\fill[creambg] (-5.5,-4) rectangle (5.5,4);
-		\draw[framebrown, line width=0.8pt] (-5.5,-4) rectangle (5.5,4);
-
+		
+		\fill[creambg] (-5.5,-4)
+		rectangle (5.5,4);
+		\draw[framebrown, line width=0.8pt]
+		(-5.5,-4) rectangle (5.5,4);
+		
 		\def\w{0.85}
 
 % --- TOP: two pulses approaching ---
 		\def\ytop{2.4}
 		\draw[wavebrown, line width=2.5pt]
-		plot[domain=-5:5, samples=200] (\x, {\ytop + pulse(\x,-2,\w) + pulse(\x,2,\w)});
+		plot[domain=-5:5, samples=200] (\x,{
+			\ytop + pulse(\x,-2,\w) + pulse(\x,2,
+			\w)});
 % arrows
-		\draw[->, line width=1.2pt] (-1.6,\ytop+1.3) -- (-0.4,\ytop+1.3);
-		\draw[->, line width=1.2pt] (1.6,\ytop+1.3) -- (0.4,\ytop+1.3);
+		\draw[->, line width=1.2pt]
+		(-1.6,\ytop+1.3) -- (-0.4,\ytop+1.3);
+		\draw[->, line width=1.2pt]
+		(1.6,\ytop+1.3) -- (0.4,\ytop+1.3);
 
 % --- MIDDLE: constructive superposition ---
 		\def\ymid{0}
 		\draw[wavebrown, line width=2.5pt]
-		plot[domain=-5:5, samples=200] (\x, {\ymid + 2*pulse(\x,0,\w)});
+		plot[domain=-5:5, samples=200] (\x,
+			{\ymid + 2*pulse(\x,0,\w)});
 
 % --- BOTTOM: two pulses separating ---
 		\def\ybot{-2.4}
 		\draw[wavebrown, line width=2.5pt]
-		plot[domain=-5:5, samples=200] (\x, {\ybot + pulse(\x,-2,\w) + pulse(\x,2,\w)});
+		plot[domain=-5:5, samples=200] (\x,{
+			\ybot + pulse(\x,-2,\w) + pulse(\x,2,
+			\w)});
 % arrows
-		\draw[->, line width=1.2pt] (-1.6,\ybot-0.4) -- (-2.8,\ybot-0.4);
-		\draw[->, line width=1.2pt] (1.6,\ybot-0.4) -- (2.8,\ybot-0.4);
-
+		\draw[->, line width=1.2pt]
+		(-1.6,\ybot-0.4) -- (-2.8,\ybot-0.4);
+		\draw[->, line width=1.2pt]
+		(1.6,\ybot-0.4) -- (2.8,\ybot-0.4);
+	
 	\end{tikzpicture}
 \end{center}
 
 % --- TikZ Graph for Constructive Interference ---
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-2.5) -- (0,2.5) node[above] {$y$};
-		\draw[->, thick] (0,0) -- (8,0) node[right] {$x$};
+		\draw[->, thick] (0,-2.5)
+		-- (0,2.5) node[above] {$y$};
+		\draw[->, thick] (0,0)
+		-- (8,0) node[right] {$x$};
 		
 		% Wave 1
-		\draw[wavered, thick, domain=0:7.5, samples=100] plot (\x, {sin(100*\x)});
+		\draw[wavered, thick, domain=0:7.5,
+			samples=100] plot (\x, {sin(100*\x)});
 		\node[wavered] at (1.5, 1.3) {$y_1$};
 		
 		% Wave 2 (Identical phase)
-		\draw[waveblue, thick, dashed, domain=0:7.5, samples=100] plot (\x, {0.8*sin(100*\x)});
+		\draw
+		[waveblue, thick, dashed, domain=0:7.5,
+			samples=100] plot (\x,
+			{0.8*sin(100*\x)});
 		\node[waveblue] at (2.5, -1.2) {$y_2$};
 		
 		% Resultant Wave
-		\draw[wavepurple, ultra thick, domain=0:7.5, samples=100] plot (\x, {1.8*sin(100*\x)});
-		\node[wavepurple] at (0.8, 2.2) {$y = y_1 + y_2$ (សង់)};
+		\draw
+		[wavepurple, ultra thick, domain=0:7.5,
+			samples=100] plot (\x,
+			{1.8*sin(100*\x)});
+		\node[wavepurple] at (0.8, 2.2)
+			{$y = y_1 + y_2$ (សង់)};
 	\end{tikzpicture}
 \end{center}
 
@@ -365,7 +615,8 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 \coordinate (S1) at (-1.6,0);
 \coordinate (S2) at (1.6,0);
 
-% --- Crest wavefronts (6 max so text has room to breathe) ---
+% --- Crest wavefronts (6 max so text has room
+% to breathe) ---
 \foreach \n in {1,2,3,4,5,6}{
 	\draw[wavered, line width=1pt, opacity=0.6]
 	(S1) circle ({R(\n)});
@@ -374,7 +625,8 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 }
 
 % --- Constructive interference points ---
-\foreach \y in {0, 1.1, 2.2, 3.0, -1.1, -2.2, -3.0}{
+\foreach \y in
+	{0, 1.1, 2.2, 3.0, -1.1, -2.2, -3.0}{
 	\fill[construct] (0,\y) circle (3pt);
 }
 \fill[construct] (2.3,1.7) circle (2.5pt);
@@ -382,67 +634,430 @@ $\bigstar$ \hspace{1em} \textbf{រេសូណង់} គឺជាលំអៀ�
 \fill[construct] (2.3,-1.7) circle (2.5pt);
 \fill[construct] (-2.3,-1.7) circle (2.5pt);
 
-% --- Source dots & labels (pushed down so they don't kiss the inner circles) ---
+% --- Source dots & labels (pushed down so they
+% don't kiss the inner circles) ---
 \fill[wavered] (S1) circle (4pt);
-\node[below=10pt, font=\small\bfseries, wavered] at (S1) {{\englishfont S$_1$}};
+\node[below=10pt, font=\small\bfseries, wavered]
+at (S1) {{\englishfont S$_1$}};
 
 \fill[waveblue] (S2) circle (4pt);
-\node[below=10pt, font=\small\bfseries, waveblue] at (S2) {{\englishfont S$_2$}};
+\node[below=10pt, font=\small\bfseries, waveblue]
+at (S2) {{\englishfont S$_2$}};
 
-% --- Legend: ABOVE the circles, safely out of the way ---
+% --- Legend: ABOVE the circles, safely out of
+% the way ---
 \node[anchor=west, font=\small] at (-5.2,4.0) {%
 	\tikz{\fill[construct] (0,0) circle (3pt);}~~%
-		{{\englishfont Constructive Interference} (អាំងទែផេរ៉ង់សង់)}%
+		{{\englishfont Constructive Interference}
+	(អាំងទែផេរ៉ង់សង់)}%
 };
 \node[anchor=west, font=\small] at (-5.2,3.5) {%
-	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.6,0);}~~%
-		{{\englishfont Crest from S$_1$} (កំពូលនៃរលក $S_1$)}%
+	\tikz
+	{\draw[wavered, line width=1pt] (0,0) -- (0.6,
+		0);}~~%
+		{{\englishfont Crest from S$_1$}
+	(កំពូលនៃរលក $S_1$)}%
 };
 \node[anchor=west, font=\small] at (-5.2,3.0) {%
-	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.6,0);}~~%
-		{{\englishfont Crest from S$_2$} (កំពូលនៃរលក $S_2$)}%
+	\tikz
+	{\draw[waveblue, line width=1pt] (0,0) -- (0.6
+		,0);}~~%
+		{{\englishfont Crest from S$_2$}
+	(កំពូលនៃរលក $S_2$)}%
 };
-
-% --- Annotation: BELOW the circles ---
-\node[font=\small, construct] at (0,-4.0) {%
-		{\englishfont Path difference $\Delta r = n\lambda$}~~(អាំងទែផេរ៉ង់សង់)%
-};
-
+	
 	\end{tikzpicture}
 \end{center}
 
 \begin{center}
-	{\khmerpagenum \color{brownheader} រួបភាពបង្ហាញពីបាតុភូតអាំងទែផេរ៉ង់សង់}
+	{\khmerpagenum \color{brownheader}
+	រួបភាពបង្ហាញពីបាតុភូតអាំងទែផេរ៉ង់សង់}
 \end{center}
 
-\khmertopic{៤. អាំងទែផេរ៉ង់បំផ្លាញ ({\englishfont Destructive Interference})}
+\khmersubsubtopic{ខ. អាំងទែផេរ៉ង់បំផ្លាញ (
+		{\englishfont Destructive Interference})}
 
-អាំងទែផេរ៉ង់បំផ្លាញ កើតឡើងនៅពេលរលកទាំងពីរមកដល់ចំណុច $P$ ដោយមាន \textbf{ផាសផ្ទុយគ្នា} (កំពូលជួបបាត) ធ្វើឱ្យរលកទាំងពីរទូទាត់កម្លាំងគ្នា បង្កើតបានអំព្លីទុតសរុបអប្បបរមា។
+អាំងទែផេរ៉ង់បំផ្លាញ
+កើតឡើងនៅពេលដែលកំពូលនៃរលកមួយដាលកាត់បាតនៃរលកមួយទៀត (
+\textbf{\color{brownheader} កំពូល + បាត})។
 
-\textbf{លក្ខខណ្ឌគណិតវិទ្យា៖}
-\begin{itemize}
-	\item \textbf{ផលសងផាស៖} $\Delta \varphi = (2k+1)\pi$ (ចំនួនសេសនៃ $\pi$)
-	\item \textbf{ផលសងចម្ងាយដំណើរ៖} $\Delta d = d_2 - d_1 = (k + \frac{1}{2})\lambda$ \quad ($k = 0, 1, 2, ...$)
-	\item \textbf{អំព្លីទុតអប្បបរមា៖} $A_{min} = |a_1 - a_2|$ (បើ $a_1=a_2 \implies A = 0$)
-\end{itemize}
+\begin{center}
+	\begin{tikzpicture}[
+		>={Stealth[length=3mm, width=2mm]},
+		line join=round,
+		line cap=round,
+		declare function={
+			pulse(\x,\c,\w)=exp(-((\x-\c)/\w)^2);
+		}
+	]
+
+\definecolor{wavebrown}{RGB}{145, 130, 85}
+
+\def\w{0.85}
+
+% --- TOP: crest + trough approaching ---
+\def\ytop{2.4}
+\draw[wavebrown, line width=2.5pt]
+plot[domain=-5:5, samples=200] (\x,
+	{\ytop + pulse(\x,-2,\w) - pulse(\x,2,\w)});
+% crest (left) moving right — arrow above
+\draw[->, line width=1.2pt] (-1.6,\ytop+1.2)
+-- (-0.4,\ytop+1.2);
+% trough (right) moving left — arrow below
+\draw[->, line width=1.2pt] (1.6,\ytop-0.4)
+-- (0.4,\ytop-0.4);
+
+% --- MIDDLE: destructive superposition
+% (flatline) ---
+\def\ymid{0}
+\draw[wavebrown, line width=2.5pt] (-5,\ymid)
+-- (5,\ymid);
+\node[font=\large] at (0,\ymid+0.7)
+	{អាំងទែផេរ៉ង់បំផ្លាញ};
+
+% --- BOTTOM: trough + crest separating ---
+\def\ybot{-2.4}
+\draw[wavebrown, line width=2.5pt]
+plot[domain=-5:5, samples=200] (\x,
+	{\ybot - pulse(\x,-2,\w) + pulse(\x,2,\w)});
+% trough (left) moving left — arrow below
+\draw[->, line width=1.2pt] (-1.6,\ybot-0.4)
+-- (-2.8,\ybot-0.4);
+% crest (right) moving right — arrow above
+\draw[->, line width=1.2pt] (1.6,\ybot+1.2)
+-- (2.8,\ybot+1.2);
+	
+	\end{tikzpicture}
+\end{center}
+
+\vspace{2cm}
+តាមរយៈដ្យាក្រាមរង្វង់ យើងអាចមើលឃើញថា៖
+\vspace{2cm}
+
+\begin{center}
+	\begin{tikzpicture}[
+		line join=round,
+		line cap=round,
+		declare function={R(\n)=0.55*\n;}
+	]
+
+\definecolor{wavered}{RGB}{220, 50, 50}
+\definecolor{waveblue}{RGB}{30, 100, 200}
+\definecolor{destruct}{RGB}{100, 100, 100}
+
+\coordinate (S1) at (-1.6,0);
+\coordinate (S2) at (1.6,0);
+
+% --- Crests (solid) ---
+\foreach \n in {1,2,3,4,5,6}{
+	\draw[wavered, line width=1pt, opacity=0.6]
+	(S1) circle ({R(\n)});
+	\draw[waveblue, line width=1pt, opacity=0.6]
+	(S2) circle ({R(\n)});
+}
+
+% --- Troughs (dashed, half-integer radii) ---
+\foreach \n in {0.5,1.5,2.5,3.5,4.5,5.5}{
+	\draw[wavered, line width=0.8pt, opacity=0.35,
+		dashed] (S1) circle ({R(\n)});
+	\draw
+	[waveblue, line width=0.8pt, opacity=0.35,
+		dashed] (S2) circle ({R(\n)});
+}
+
+% --- Destructive points (crest meets trough) ---
+\foreach \x/\y in {
+	0.5/0.6, -0.5/0.6, 0.5/-0.6, -0.5/-0.6,
+	1.4/1.0, -1.4/1.0, 1.4/-1.0, -1.4/-1.0,
+	0.8/1.8, -0.8/1.8, 0.8/-1.8, -0.8/-1.8,
+	2.4/1.5, -2.4/1.5, 2.4/-1.5, -2.4/-1.5
+}{
+	\fill[destruct] (\x,\y) circle (2.5pt);
+}
+
+% --- Sources ---
+\fill[wavered] (S1) circle (4pt);
+\node[below=10pt, font=\small\bfseries, wavered]
+at (S1) {{\englishfont S$_1$}};
+
+\fill[waveblue] (S2) circle (4pt);
+\node[below=10pt, font=\small\bfseries, waveblue]
+at (S2) {{\englishfont S$_2$}};
+
+% --- Legend ---
+\node[anchor=west, font=\small] at (-5.2,4.0) {%
+	\tikz{\fill[destruct] (0,0) circle (3pt);}~~%
+		{{\englishfont Destructive Interference}
+	(អាំងទែផេរ៉ង់បំផ្លាញ)}%
+};
+\node[anchor=west, font=\small] at (-5.2,3.5) {%
+	\tikz
+	{\draw[wavered, line width=1pt] (0,0) -- (0.6,
+		0);}~~%
+		{{\englishfont Crest from S$_1$} (កំពូល
+	$S_1$)}%
+};
+\node[anchor=west, font=\small] at (-5.2,3.0) {%
+	\tikz
+	{\draw[waveblue, line width=1pt] (0,0) -- (0.6
+		,0);}~~%
+		{{\englishfont Crest from S$_2$} (កំពូល
+	$S_2$)}%
+};
+\node[anchor=west, font=\small] at (-5.2,2.5) {%
+	\tikz{
+		\draw[wavered, line width=0.8pt, dashed]
+	(0,0) -- (0.6,0);}~~%
+		{{\englishfont Trough from S$_1$} (បាត
+	$S_1$)}%
+};
+\node[anchor=west, font=\small] at (-5.2,2.0) {%
+	\tikz
+	{\draw[waveblue, line width=0.8pt, dashed]
+	(0,0) -- (0.6,0);}~~%
+		{{\englishfont Trough from S$_2$} (បាត
+	$S_2$)}%
+};
+
+% --- Annotation ---
+\node[font=\small, destruct] at (0,-4.0) {%
+		{\englishfont Path difference$
+	\Delta r = \left(n+\frac{1}{2}\right)\lambda$}
+	~~(អាំងទែផេរ៉ង់បំផ្លាញ)%
+};
+	
+	\end{tikzpicture}
+\end{center}
 
 % --- TikZ Graph for Destructive Interference ---
 \begin{center}
 	\begin{tikzpicture}[>=Stealth, scale=0.9]
-		\draw[->, thick] (0,-1.5) -- (0,1.5) node[above] {$y$};
-		\draw[->, thick] (0,0) -- (8,0) node[right] {$x$};
+		\draw[->, thick] (0,-1.5)
+		-- (0,1.5) node[above] {$y$};
+		\draw[->, thick] (0,0)
+		-- (8,0) node[right] {$x$};
 		
 		% Wave 1
-		\draw[wavered, thick, domain=0:7.5, samples=100] plot (\x, {sin(100*\x)});
+		\draw[wavered, thick, domain=0:7.5,
+			samples=100] plot (\x, {sin(100*\x)});
 		\node[wavered] at (1.5, 1.3) {$y_1$};
 		
 		% Wave 2 (Out of phase by pi)
-		\draw[waveblue, thick, dashed, domain=0:7.5, samples=100] plot (\x, {-sin(100*\x)});
+		\draw
+		[waveblue, thick, dashed, domain=0:7.5,
+			samples=100] plot (\x, {-sin(100*\x)}
+		);
 		\node[waveblue] at (1.5, -1.3) {$y_2$};
 		
-		% Resultant Wave (Flat line if equal amplitude)
-		\draw[wavepurple, ultra thick] (0,0) -- (7.5,0);
-		\node[wavepurple, above] at (6, 0.1) {$y = 0$ (បំផ្លាញ)};
+		% Resultant Wave (Flat line if equal
+%		amplitude)
+		\draw[wavepurple, ultra thick] (0,0)
+		-- (7.5,0);
+		\node[wavepurple, above] at (6, 0.1)
+			{$y = 0$ (បំផ្លាញ)};
 	\end{tikzpicture}
 \end{center}
-\tanbgdivider
+\begin{center}
+	{\khmerpagenum \color{brownheader}
+	រួបភាពបង្ហាញពីបាតុភូតអាំងទែផេរ៉ង់បំផ្លាញ}
+\end{center}
+
+\khmersubtopic
+{១.៣. សមីការអាំងទែផេរ៉ង់ (អាំងទែផេរ៉ង់មេកានិច)}
+\noindent\begin{minipage}[t]{0.35\textwidth}
+			         \vspace{0pt}\centering
+		         \begin{tikzpicture}
+			         [scale=0.42,line join=round,
+				         line cap=round]
+\definecolor{wavefront}{RGB}{120,120,200}
+\coordinate(S1)at(-1.4,0);\coordinate(S2)
+at(0.6,0);\coordinate(M)at(2.8,2.4);
+\foreach\r in{0.25,0.5,...,5.5}{\draw
+[wavefront,line width=0.35pt,opacity=0.55](S1)
+circle(\r);}
+\foreach\r in{0.25,0.5,...,5.5}{\draw
+[wavefront,line width=0.35pt,opacity=0.55](S2)
+circle(\r);}
+\draw[red,thick](S1)
+--(M)node[midway,above left,font=\small\bfseries]
+	{{\englishfont $d_1$}};
+\draw[red,thick](S2)
+--(M)node[midway,below right,font=\small\bfseries]
+	{{\englishfont $d_2$}};
+\node[below=3pt,font=\bfseries]at(S1)
+	{{\englishfont S$_1$}};
+\node[below=3pt,font=\bfseries]at(S2)
+	{{\englishfont S$_2$}};
+\node[above right=2pt,font=\bfseries]at(M)
+	{{\englishfont M}};
+\fill[black](S1)circle(1.5pt);\fill[black](S2)
+circle(1.5pt);\fill[black](M)circle(1.2pt);
+		         \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.60\textwidth}
+			\vspace{0pt}
+		\raggedright
+		យើងសិក្សាពីរលកដំណាលដែលដាលចេញពីប្រភពទាំងពីរនៃរលកត្រង់ចំណុច
+		$M$៖
+		\begin{itemize}[label=
+		\color{bacpink}{\faChevronRight}]
+\item សមីការរលកត្រង់ $M$ ពីប្រភព $S_1$៖
+$y_1=a\sin(\omega t-kd_1)$
+\item សមីការរលកត្រង់ $M$ ពីប្រភព $S_2$៖
+$y_2=a\sin(\omega t-kd_2)$
+\item សមីការតម្រួតនៃរលកត្រង់ $M$៖ $y=y_1+y_2$
+		\end{itemize}
+		តាមគោលការណ៍តម្រួតនៃរលក គេបាន៖
+		\begin{align*}
+			y&=y_1+y_2\\
+			&=a\sin(\omega t-kd_1)+a
+			\sin(\omega t-kd_2)\\
+			&=2a\sin\!\left(\omega t-k
+				          \frac{d_1+d_2}{2}\right)
+			\cos\!\left(k\frac{d_2-d_1}{2}\right)
+			\\
+			\text{ប៉ុន្តែ៖ }k&=
+			\frac{2\pi}{\lambda}\\
+			\implies y&=2a\sin\!
+			\left(\omega t-\frac{2\pi}{\lambda}
+				\cdot\frac{d_1+d_2}{2}\right)\cos
+			\!\left(\frac{2\pi}{\lambda}\cdot
+				  \frac{d_2-d_1}{2}\right)
+		\end{align*}
+\end{minipage}
+
+\vspace{0.4cm}
+\noindent
+\textbf{ដូចនេះសមីការអាំងទែផេរ៉ង់មានទម្រង់៖}
+\begin{center}
+	$\boxed{y =2a\sin\!
+	\left(\omega t - \frac{2\pi}{\lambda} \cdot
+		\frac{d_1+d_2}{2}\right)\cos\!
+	\left(\frac{2\pi}{\lambda} \cdot
+		\frac{d_2-d_1}{2}\right)}$
+\end{center}
+\begin{itemize}
+	[label=\textcolor{bacpink}{\faChevronRight}]
+    \item គេតាង$A=2a\cos
+    \left(\frac{2\pi}{\lambda} \cdot
+	    \frac{d_2-d_1}{2}\right)$
+    ជាអំព្លីទុតរបស់រលកអាំងទែផេរ៉ង់។
+    \item និង
+    $\varphi=-\pi \cdot \frac{d_2-d_1}{\lambda}$
+    ជាផាសតម្រួតនៃរលកអាំងទែផេរ៉ង់។
+\end{itemize}
+
+\khmersubtopic{១.៤. បណ្តាទីតាំងអំព្លីទុតអតិបរមា
+និងអប្បបរមានៃអាំងទែផេរ៉ង់} % keep this %
+\khmersubsubtopic{ក. អំព្លីទុតអតិបរមានៃអាំងទែផេរ៉ង់}
+\textcolor{bacpink}{\faCarrot}~\textbf{{\englishfont Mental Note} (ចំណាំ៖)} បើកាលណាគេនិយាយពីទីតាំងអតិបរមា គេនិយាយអំពី \textbf{អាំងទែផេរ៉ង់សង់}។\\ % and this %
+\noindent
+\begin{minipage}[t]{0.48\textwidth}%
+	\vspace{0pt}%
+	\centering
+% --- Define colors OUTSIDE the tikzpicture so they survive for the legend ---
+	\definecolor{wavered}{RGB}{220, 50, 50}
+	\definecolor{waveblue}{RGB}{30, 100, 200}
+	\definecolor{construct}{RGB}{34, 139, 34}
+	
+	\begin{tikzpicture}[scale=0.7,line join=round,line cap=round,declare function={R(\n)=0.55*\n;}]
+\coordinate (S1) at (-1.6,0);
+\coordinate (S2) at (1.6,0);
+\foreach \n in {1,2,3,4,5,6}{
+	\draw[wavered, line width=1pt, opacity=0.6] (S1) circle ({R(\n)});
+	\draw[waveblue, line width=1pt, opacity=0.6] (S2) circle ({R(\n)});
+}
+\foreach \y in {0, 1.1, 2.2, 3.0, -1.1, -2.2, -3.0}{
+	\fill[construct] (0,\y) circle (3pt);
+}
+\fill[construct] (2.3,1.7) circle (2.5pt);
+\fill[construct] (-2.3,1.7) circle (2.5pt);
+\fill[construct] (2.3,-1.7) circle (2.5pt);
+\fill[construct] (-2.3,-1.7) circle (2.5pt);
+\fill[wavered] (S1) circle (4pt);
+\node[below=10pt, font=\small\bfseries, text=wavered] at (S1) {{\englishfont S$_1$}};
+\fill[waveblue] (S2) circle (4pt);
+\node[below=10pt, font=\small\bfseries, text=waveblue] at (S2) {{\englishfont S$_2$}};
+	\end{tikzpicture}%
+	
+	\vspace{0.2cm}
+	{\small
+	\tikz{\fill[construct] (0,0) circle (3pt);}~~{\englishfont Constructive Interference} (អាំងទែផេរ៉ង់សង់)\\[2pt]
+	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.5,0);}~~{\englishfont Crest from S$_1$} (កំពូលនៃរលក $S_1$)\\[2pt]
+	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.5,0);}~~{\englishfont Crest from S$_2$} (កំពូលនៃរលក $S_2$)
+	}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}%
+	\vspace{0pt}%
+	\raggedright
+	\noindent យើងមានអំព្លីទុតនៃរលក៖ $A=2a\cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right)$\\
+	ដើម្បីឲ្យអំព្លីទុតកើនឡើងដល់តម្លៃអតិបរមា៖
+% derive max amplitude: cos term = ±1, path diff = nλ
+	\begin{align*}
+		\text{លុះត្រាតែ } \cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right) &= \pm 1 \\
+		\text{សមមូល } \pi \cdot \frac{d_2-d_1}{\lambda} &= n\pi \\
+		\text{ឬក៏   } &\boxed{d_2-d_1=n\lambda}
+	\end{align*}
+\end{minipage}
+
+\begin{center}
+	\textcolor{bacpink}{\textbf{ចំណាំ៖}}
+	គេអាចតាង $d_2-d_1$ ជា $\Delta d$ ក៏បាន។ ហើយ $n$ ជាចំនួនគត់ ដែល ($n=1,2,3,4,5,...$ ឬ $n \in \mathbb{N}^*$)។
+\end{center}
+
+% --- Destructive section, properly fixed ---
+\khmersubsubtopic{ខ. អំព្លីទុតអប្បបរមានៃអាំងទែផេរ៉ង់}
+\textcolor{bacpink}{\faCarrot}~\textbf{{\englishfont Mental Note} (ចំណាំ៖)} បើកាលណាគេនិយាយពីទីតាំងអប្បបរមា គេនិយាយអំពី \textbf{អាំងទែផេរ៉ង់បំផ្លាញ}។\\
+\noindent
+\begin{minipage}[t]{0.42\textwidth}%
+	\vspace{0pt}%
+	\centering
+	\definecolor{wavered}{RGB}{220, 50, 50}
+	\definecolor{waveblue}{RGB}{30, 100, 200}
+	\definecolor{destruct}{RGB}{100, 100, 100}
+	
+	\begin{tikzpicture}[scale=0.55,line join=round,line cap=round,declare function={R(\n)=0.55*\n;}]
+\coordinate (S1) at (-1.6,0);
+\coordinate (S2) at (1.6,0);
+\foreach \n in {1,2,3,4,5,6}{
+	\draw[wavered, line width=1pt, opacity=0.6] (S1) circle ({R(\n)});
+	\draw[waveblue, line width=1pt, opacity=0.6] (S2) circle ({R(\n)});
+}
+\foreach \n in {0.5,1.5,2.5,3.5,4.5,5.5}{
+	\draw[wavered, line width=0.8pt, opacity=0.35, dashed] (S1) circle ({R(\n)});
+	\draw[waveblue, line width=0.8pt, opacity=0.35, dashed] (S2) circle ({R(\n)});
+}
+\foreach \x/\y in {0.5/0.6,-0.5/0.6,0.5/-0.6,-0.5/-0.6,1.4/1.0,-1.4/1.0,1.4/-1.0,-1.4/-1.0,0.8/1.8,-0.8/1.8,0.8/-1.8,-0.8/-1.8,2.4/1.5,-2.4/1.5,2.4/-1.5,-2.4/-1.5}{
+	\fill[destruct] (\x,\y) circle (2.5pt);
+}
+\fill[wavered] (S1) circle (4pt);
+\node[below=8pt, font=\small\bfseries, text=wavered] at (S1) {{\englishfont S$_1$}};
+\fill[waveblue] (S2) circle (4pt);
+\node[below=8pt, font=\small\bfseries, text=waveblue] at (S2) {{\englishfont S$_2$}};
+	\end{tikzpicture}%
+	
+	\vspace{0.15cm}
+	{\small
+	\tikz{\fill[destruct] (0,0) circle (2.5pt);}~~{\englishfont Destructive Interference} (អាំងទែផេរ៉ង់បំផ្លាញ)\\[1pt]
+	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.4,0);}~~{\englishfont Crest from S$_1$} (កំពូល $S_1$)\\[1pt]
+	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.4,0);}~~{\englishfont Crest from S$_2$} (កំពូល $S_2$)\\[1pt]
+	\tikz{\draw[wavered, line width=0.8pt, dashed] (0,0) -- (0.4,0);}~~{\englishfont Trough from S$_1$} (បាត $S_1$)\\[1pt]
+	\tikz{\draw[waveblue, line width=0.8pt, dashed] (0,0) -- (0.4,0);}~~{\englishfont Trough from S$_2$} (បាត $S_2$)
+	}
+\end{minipage}%
+\hspace{0.04\textwidth}%
+\begin{minipage}[t]{0.52\textwidth}%
+	\vspace{0pt}%
+	\noindent យើងមានអំព្លីទុតនៃរលក៖
+	\[A=2a\cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right)\]
+	ដើម្បីឲ្យអំព្លីទុតកើនឡើងដល់តម្លៃអប្បបរមា៖
+	\begin{align*}
+		\text{លុះត្រាតែ } \cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right) &= 0 \\
+		\text{សមមូល } \pi \cdot \frac{d_2-d_1}{\lambda} &= \frac{\pi}{2} + n\pi \\
+		\frac{d_2-d_1}{\lambda} &= n + \frac{1}{2} \\
+		\frac{d_2-d_1}{\lambda} &= \left(2n+1\right)\frac{1}{2} \\
+		\text{\textbf{ដូចនេះ៖}} \quad &\boxed{d_2-d_1=\left(2n+1\right)\frac{\lambda}{2}}
+	\end{align*}
+\end{minipage}
