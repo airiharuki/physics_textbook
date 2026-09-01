@@ -1008,17 +1008,34 @@ $y_2=a\sin(\omega t-kd_2)$
 \end{center}
 
 % --- Destructive section, properly fixed ---
+\clearpage
 \khmersubsubtopic{ខ. អំព្លីទុតអប្បបរមានៃអាំងទែផេរ៉ង់}
 \textcolor{bacpink}{\faCarrot}~\textbf{{\englishfont Mental Note} (ចំណាំ៖)} បើកាលណាគេនិយាយពីទីតាំងអប្បបរមា គេនិយាយអំពី \textbf{អាំងទែផេរ៉ង់បំផ្លាញ}។\\
+
 \noindent
-\begin{minipage}[t]{0.42\textwidth}%
+\begin{minipage}[t]{0.54\textwidth}%
+	\vspace{0pt}%
+	\raggedright
+	\noindent យើងមានអំព្លីទុតនៃរលក៖
+	\[A=2a\cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right)\]
+	ដើម្បីឲ្យអំព្លីទុតកើនឡើងដល់តម្លៃអប្បបរមា៖
+	\begin{align*}
+		\text{លុះត្រាតែ } \cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right) &= 0 \\
+		\text{សមមូល } \pi \cdot \frac{d_2-d_1}{\lambda} &= \frac{\pi}{2} + n\pi \\
+		\frac{d_2-d_1}{\lambda} &= n + \frac{1}{2} \\
+		\frac{d_2-d_1}{\lambda} &= \left(2n+1\right)\frac{1}{2} \\
+		\text{\textbf{ដូចនេះ៖}} \quad &\boxed{d_2-d_1=\left(2n+1\right)\frac{\lambda}{2}}
+	\end{align*}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}%
 	\vspace{0pt}%
 	\centering
 	\definecolor{wavered}{RGB}{220, 50, 50}
 	\definecolor{waveblue}{RGB}{30, 100, 200}
 	\definecolor{destruct}{RGB}{100, 100, 100}
 	
-	\begin{tikzpicture}[scale=0.55,line join=round,line cap=round,declare function={R(\n)=0.55*\n;}]
+	\begin{tikzpicture}[scale=0.48,line join=round,line cap=round,declare function={R(\n)=0.55*\n;}]
 \coordinate (S1) at (-1.6,0);
 \coordinate (S2) at (1.6,0);
 \foreach \n in {1,2,3,4,5,6}{
@@ -1033,31 +1050,17 @@ $y_2=a\sin(\omega t-kd_2)$
 	\fill[destruct] (\x,\y) circle (2.5pt);
 }
 \fill[wavered] (S1) circle (4pt);
-\node[below=8pt, font=\small\bfseries, text=wavered] at (S1) {{\englishfont S$_1$}};
+\node[below=6pt, font=\small\bfseries, text=wavered] at (S1) {{\englishfont S$_1$}};
 \fill[waveblue] (S2) circle (4pt);
-\node[below=8pt, font=\small\bfseries, text=waveblue] at (S2) {{\englishfont S$_2$}};
+\node[below=6pt, font=\small\bfseries, text=waveblue] at (S2) {{\englishfont S$_2$}};
 	\end{tikzpicture}%
 	
-	\vspace{0.15cm}
-	{\small
-	\tikz{\fill[destruct] (0,0) circle (2.5pt);}~~{\englishfont Destructive Interference} (អាំងទែផេរ៉ង់បំផ្លាញ)\\[1pt]
-	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.4,0);}~~{\englishfont Crest from S$_1$} (កំពូល $S_1$)\\[1pt]
-	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.4,0);}~~{\englishfont Crest from S$_2$} (កំពូល $S_2$)\\[1pt]
-	\tikz{\draw[wavered, line width=0.8pt, dashed] (0,0) -- (0.4,0);}~~{\englishfont Trough from S$_1$} (បាត $S_1$)\\[1pt]
-	\tikz{\draw[waveblue, line width=0.8pt, dashed] (0,0) -- (0.4,0);}~~{\englishfont Trough from S$_2$} (បាត $S_2$)
+	\vspace{0.1cm}
+	{\footnotesize
+	\tikz{\fill[destruct] (0,0) circle (2pt);}~{\englishfont Destructive Interference} (អាំងទែផេរ៉ង់បំផ្លាញ)\\[1pt]
+	\tikz{\draw[wavered, line width=1pt] (0,0) -- (0.35,0);}~{\englishfont Crest from} $S_1$ (កំពូលនៃរលក $S_1$)\\[1pt]
+	\tikz{\draw[waveblue, line width=1pt] (0,0) -- (0.35,0);}~{\englishfont Crest from} $S_2$ (កំពូលនៃរលក $S_2$)\\[1pt]
+	\tikz{\draw[wavered, line width=0.8pt, dashed] (0,0) -- (0.35,0);}~{\englishfont Trough from} $S_1$ (បាតនៃរលក $S_1$)\\[1pt]
+	\tikz{\draw[waveblue, line width=0.8pt, dashed] (0,0) -- (0.35,0);}~{\englishfont Trough from} $S_2$ (បាតនៃរលក $S_2$)
 	}
-\end{minipage}%
-\hspace{0.04\textwidth}%
-\begin{minipage}[t]{0.52\textwidth}%
-	\vspace{0pt}%
-	\noindent យើងមានអំព្លីទុតនៃរលក៖
-	\[A=2a\cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right)\]
-	ដើម្បីឲ្យអំព្លីទុតកើនឡើងដល់តម្លៃអប្បបរមា៖
-	\begin{align*}
-		\text{លុះត្រាតែ } \cos\left(\frac{2\pi}{\lambda} \cdot \frac{d_2-d_1}{2}\right) &= 0 \\
-		\text{សមមូល } \pi \cdot \frac{d_2-d_1}{\lambda} &= \frac{\pi}{2} + n\pi \\
-		\frac{d_2-d_1}{\lambda} &= n + \frac{1}{2} \\
-		\frac{d_2-d_1}{\lambda} &= \left(2n+1\right)\frac{1}{2} \\
-		\text{\textbf{ដូចនេះ៖}} \quad &\boxed{d_2-d_1=\left(2n+1\right)\frac{\lambda}{2}}
-	\end{align*}
 \end{minipage}
