@@ -916,3 +916,19 @@
         \newcommand{\faChevronRight}{›}
     }
 }
+
+\newcommand{\defbox}[1]{%
+    \begin{center}
+    \begin{tcolorbox}[
+        enhanced,
+        colback=bacpinklight,
+        colframe=bacpurple,
+        boxrule=0.8pt,
+        arc=2.5mm,
+        width=0.75\linewidth,
+        halign=left,
+        left=8pt, right=8pt, top=5pt, bottom=5pt,
+        fontupper=\small
+    ] #1 \end{tcolorbox}
+    \end{center}
+}
