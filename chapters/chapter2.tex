@@ -878,9 +878,140 @@ $\boxed{d_2-d_1=\Delta d = (2n+1)\frac{v}{2f}}$
 \khmersubtopic{៣.១. រង្វាស់មុំនៃអាំងទែផេរ៉ង់ពន្លឺ}
 \khmersubsubtopic{ក. រង្វាស់មុំប្រង់ភ្លឺ}
 
-% =========================================================
-% Side-by-side: Young's Diagram + Bright Fringe Text
-% =========================================================
+\noindent
+\begin{minipage}[c]{0.44\textwidth}
+	\centering
+	\begin{tikzpicture}[
+		font=\small,
+		>=Stealth,
+		line join=round,
+		line cap=round,
+		scale=0.92
+	]
+
+% --- Parameters ---
+		\def\L{5.4}
+		\def\a{1.6}
+		\def\thetaA{20}
+
+% --- Coordinates ---
+		\coordinate (S1) at (0, \a/2);
+		\coordinate (S2) at (0, -\a/2);
+		\coordinate (O)  at (\L, 0);
+		\coordinate (P)  at (\L, {\L*tan(\thetaA)});
+
+% ==================== BARRIER ====================
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, 2.6) rectangle (0, \a/2+0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, \a/2-0.12) rectangle (0, 0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, -0.12) rectangle (0, -\a/2+0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, -\a/2-0.12) rectangle (0, -2.6);
+		
+		\draw[bacpurple, line width=1.5pt, rounded corners=2pt]
+		(-0.22, 2.6) -- (-0.22, \a/2+0.12)
+		(-0.22, \a/2-0.12) -- (-0.22, 0.12)
+		(-0.22, -0.12) -- (-0.22, -\a/2+0.12)
+		(-0.22, -\a/2-0.12) -- (-0.22, -2.6);
+		
+		\node[left=5pt] at (-0.22, \a/2) {$S_1$};
+		\node[left=5pt] at (-0.22, -\a/2) {$S_2$};
+
+% ==================== SCREEN ====================
+		\fill[brownheader!8, rounded corners=2pt] (\L-0.08, -2.8) rectangle (\L+0.08, 3.0);
+		\draw[brownheader, line width=1.8pt, rounded corners=2pt] (\L-0.08, -2.8) rectangle (\L+0.08, 3.0);
+		
+		\foreach \y in {-2.4, -1.8, -1.2, -0.6, 0, 0.6, 1.2, 1.8, 2.4} {
+			\draw[brownheader!45, line width=0.35pt] (\L-0.08, \y) -- (\L-0.15, \y);
+		}
+		
+		\node[above=5pt] at (\L, 3.0) {\englishfont\scriptsize Screen};
+		\node[below=4pt] at (\L, -2.8) {$O$};
+
+% ==================== AXIS & RAYS ====================
+		\draw[brownheader!35, dashed, line width=0.5pt] (0,0) -- (\L,0);
+		
+		\draw[waveblue, line width=1.1pt, opacity=0.9, ->] (S1) -- (P);
+		\draw[wavered, line width=1.1pt, opacity=0.9, ->] (S2) -- (P);
+		
+		\node[above=2pt, waveblue] at ($(S1)!0.40!(P)$) {$d_1$};
+		\node[below=2pt, wavered] at ($(S2)!0.40!(P)$) {$d_2$};
+
+% ==================== POINT P ====================
+		\fill[bacpurple] (P) circle (1.8pt);
+		\draw[white, line width=0.9pt] (P) circle (1.8pt);
+		\draw[bacpurple, line width=0.6pt] (P) circle (2.6pt);
+		\node[above right=3pt] at (P) {$P$};
+
+% ==================== DIMENSIONS ====================
+		\draw[brownheader!55, <->, line width=0.6pt] (\L+0.32, 0) -- (\L+0.32, {\L*tan(\thetaA)});
+		\node[right=3pt] at (\L+0.32, {0.5*\L*tan(\thetaA)}) {$x$};
+		
+		\draw[brownheader!55, <->, line width=0.6pt] (0, -3.05) -- (\L, -3.05);
+		\node[below=3pt] at (\L/2, -3.05) {$L$};
+		
+		\draw[brownheader!55, <->, line width=0.6pt] (-0.48, \a/2) -- (-0.48, -\a/2);
+		\node[left=3pt] at (-0.48, 0) {$a$};
+
+% ==================== GEOMETRY TRIANGLE ====================
+		\fill[tanbg, opacity=0.28] (0,0) -- (1.5, {1.5*tan(\thetaA)}) -- (1.5, {-1.5*tan(\thetaA)}) -- cycle;
+		\draw[brownheader!40, line width=0.5pt] (0,0) -- (1.5, {1.5*tan(\thetaA)});
+		\draw[brownheader!40, line width=0.5pt] (0,0) -- (1.5, {-1.5*tan(\thetaA)});
+
+% ==================== ANGLES ====================
+% Theta at slits (filled sectors)
+		\fill[brownheader!10] (0,0) -- (0.9, 0) arc[start angle=0, end angle=\thetaA, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] (0.9, 0) arc[start angle=0, end angle=\thetaA, radius=0.9];
+		\node at (1.18, 0.24) {\scriptsize $\theta$};
+		
+		\fill[brownheader!10] (0,0) -- (0.9, 0) arc[start angle=0, end angle=-\thetaA, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] (0.9, 0) arc[start angle=0, end angle=-\thetaA, radius=0.9];
+
+% Theta at screen
+		\fill[brownheader!10] (\L,0) -- ({\L-0.9}, 0) arc[start angle=180, end angle={180-\thetaA}, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] ({\L-0.9}, 0) arc[start angle=180, end angle={180-\thetaA}, radius=0.9];
+		\node at ({\L-1.18}, 0.24) {\scriptsize $\theta$};
+
+% Delta
+		\draw[brownheader, line width=0.5pt] ({0.52*cos(\thetaA)}, {0.52*sin(\thetaA)}) arc[start angle=\thetaA, end angle=-\thetaA, radius=0.52];
+		\node[right=2pt] at (0.64, 0) {\scriptsize $\delta$};
+
+% ==================== PATH DIFFERENCE ====================
+		\draw[brownheader!45, dashed, line width=0.5pt] (S1) -- ($(S2)!(S1)!(P)$);
+	
+	\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.52\textwidth}
+	\raggedright
+	
+	ទីតាំងប្រង់ភ្លឺនៃអាំងទែផេរ៉ង់ពន្លឺកើតមានលើអេក្រង់គឺជាទីតាំងដែលមានអំព្លីទុតនៃរលកមានតម្លៃអតិបរមា។
+	\begin{align*}
+		\text{យើងមាន៖ } \Delta d &= n\lambda\ ~(1)\\
+		\text{ម៉្យាងទៀត៖ } \Delta d &= a \sin \theta\ ~(2)\\
+		\text{នោះ៖ } a \sin \theta &= n\lambda\ \textcolor{brownheader}{\text{(ផ្ទឹម (1) និង (2))}}\\
+		\text{នាំឲ្យ៖ }
+		\boxed{\sin \theta = \frac{n\lambda}{a}} &\text{ ({\englishfont n} = 0, 1, 2, 3, \dots)}
+	\end{align*}
+\defbox{$n$ ជាលំដាប់ប្រង់\\ $a$ ជាចម្ងាយរវាងប្រង់ទាំងពីរ}
+\end{minipage}
+
+\khmersubsubtopic{ខ. រង្វាស់មុំប្រង់ងងឹត}
+ទីតាំងប្រង់ភ្លឺនៃអាំងទែផេរ៉ង់ពន្លឺកើតមានលើអេក្រង់គឺជាទីតាំងដែលមានអំព្លីទុតនៃរលកមានតម្លៃអតិបរមា។
+\begin{align*}
+	\text{យើងមាន៖ } \Delta d &= (2n+1)\frac{
+		\lambda}{2}\ ~(1)\\
+	\text{ម៉្យាងទៀត៖ } \Delta d &= a \sin \theta\ ~(2)\\
+	\text{នោះ៖ } a \sin \theta &=(2n+1)\frac{
+		\lambda}{2}\  \textcolor{brownheader}{\text{(ផ្ទឹម (1) និង (2))}}\\
+	\text{នាំឲ្យ៖ }
+	\boxed{\sin \theta = (2n+1)
+		\frac{\lambda}{2a}} &\text{ ({\englishfont n} = 0, 1, 2, 3, \dots)}
+\end{align*}
+\defbox{
+	\begin{center}
+		$n$ ជាលំដាប់ប្រង់\\ $a$ ជាចម្ងាយរវាងប្រង់ទាំងពីរ
+	\end{center}
+}
+\khmersubtopic{៣.២. ទីតាំងប្រង់ (ករណីទូទៅ)}
 
 \noindent
 \begin{minipage}[c]{0.44\textwidth}
@@ -890,114 +1021,222 @@ $\boxed{d_2-d_1=\Delta d = (2n+1)\frac{v}{2f}}$
 		>=Stealth,
 		line join=round,
 		line cap=round,
-		scale=0.85
+		scale=0.92
 	]
 
 % --- Parameters ---
-		\def\L{5.6}
-		\def\a{1.5}
-		\def\slitW{0.10}
-		\def\barrierH{3.6}
-		\def\screenH{3.8}
-		\def\thetaA{18}
+		\def\L{5.4}
+		\def\a{1.6}
+		\def\thetaA{20}
 
 % --- Coordinates ---
 		\coordinate (S1) at (0, \a/2);
 		\coordinate (S2) at (0, -\a/2);
-		\coordinate (Q)  at (0, 0);
 		\coordinate (O)  at (\L, 0);
-		\coordinate (P)  at ({\L}, {\L*tan(\thetaA)});
+		\coordinate (P)  at (\L, {\L*tan(\thetaA)});
 
-% --- Barrier ---
-		\fill[bacpurple!12] (-0.12, \a/2+\slitW/2) rectangle (0, \barrierH/2);
-		\fill[bacpurple!12] (-0.12, -\barrierH/2) rectangle (0, -\a/2-\slitW/2);
-		\fill[bacpurple!12] (-0.12, \a/2-\slitW/2) rectangle (0, \slitW/2);
-		\fill[bacpurple!12] (-0.12, -\slitW/2) rectangle (0, -\a/2+\slitW/2);
+% ==================== BARRIER ====================
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, 2.6) rectangle (0, \a/2+0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, \a/2-0.12) rectangle (0, 0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, -0.12) rectangle (0, -\a/2+0.12);
+		\fill[bacpurple!10, rounded corners=2pt] (-0.22, -\a/2-0.12) rectangle (0, -2.6);
 		
-		\draw[bacpurple, line width=1.6pt]
-		(-0.12, \barrierH/2) -- (-0.12, \a/2+\slitW/2)
-		(-0.12, \a/2-\slitW/2) -- (-0.12, \slitW/2)
-		(-0.12, -\slitW/2) -- (-0.12, -\a/2+\slitW/2)
-		(-0.12, -\a/2-\slitW/2) -- (-0.12, -\barrierH/2);
+		\draw[bacpurple, line width=1.5pt, rounded corners=2pt]
+		(-0.22, 2.6) -- (-0.22, \a/2+0.12)
+		(-0.22, \a/2-0.12) -- (-0.22, 0.12)
+		(-0.22, -0.12) -- (-0.22, -\a/2+0.12)
+		(-0.22, -\a/2-0.12) -- (-0.22, -2.6);
 		
-		\node[left=2pt] at (-0.12, \a/2) {\textcolor{brownheader}{$S_1$}};
-		\node[left=2pt] at (-0.12, -\a/2) {\textcolor{brownheader}{$S_2$}};
+		\node[left=5pt] at (-0.22, \a/2) {$S_1$};
+		\node[left=5pt] at (-0.22, -\a/2) {$S_2$};
 
-% --- Screen ---
-		\draw[brownheader, line width=2pt] (\L, -\screenH/2) -- (\L, \screenH/2);
-		\fill[brownheader] (\L, \screenH/2) circle (1.2pt);
-		\fill[brownheader] (\L, -\screenH/2) circle (1.2pt);
-		\node[right=3pt] at (\L, \screenH/2) {\textcolor{brownheader}{\scriptsize Screen}};
-		\node[below=3pt] at (\L, -\screenH/2) {\textcolor{brownheader}{$O$}};
-
-% --- Axis ---
-		\draw[brownheader, dashed, line width=0.5pt] (0,0) -- (\L,0);
-
-% --- Rays ---
-		\draw[waveblue, line width=1.1pt, ->] (S1) -- (P);
-		\draw[wavered, line width=1.1pt, ->] (S2) -- (P);
+% ==================== SCREEN ====================
+		\fill[brownheader!8, rounded corners=2pt] (\L-0.08, -2.8) rectangle (\L+0.08, 3.0);
+		\draw[brownheader, line width=1.8pt, rounded corners=2pt] (\L-0.08, -2.8) rectangle (\L+0.08, 3.0);
 		
-		\node[above=1pt, waveblue] at ($(S1)!0.55!(P)$) {$d_1$};
-		\node[below=1pt, wavered] at ($(S2)!0.55!(P)$) {$d_2$};
-
-% --- Point P ---
-		\fill[bacpurple] (P) circle (2pt);
-		\node[above right=1pt] at (P) {\textcolor{brownheader}{$P$}};
-
-% --- Dimension x ---
-		\draw[brownheader, <->, line width=0.7pt] (\L+0.30, 0) -- (\L+0.30, {\L*tan(\thetaA)});
-		\node[right=2pt] at (\L+0.30, {0.5*\L*tan(\thetaA)}) {$x$};
-
-% --- Dimension L ---
-		\draw[brownheader, <->, line width=0.7pt] (0, -\screenH/2-0.35) -- (\L, -\screenH/2-0.35);
-		\node[below=2pt] at (\L/2, -\screenH/2-0.35) {$L$};
-
-% --- Dimension a ---
-		\draw[brownheader, <->, line width=0.7pt] (-0.48, \a/2) -- (-0.48, -\a/2);
-		\node[left=2pt] at (-0.48, 0) {$a$};
-
-% --- Yellow triangle ---
-		\fill[sakurapetal, opacity=0.40]
-		(Q) -- ({\L*0.20}, {\L*0.20*tan(\thetaA)}) -- ({\L*0.20}, {-\L*0.20*tan(\thetaA)}) -- cycle;
+		\foreach \y in {-2.4, -1.8, -1.2, -0.6, 0, 0.6, 1.2, 1.8, 2.4} {
+			\draw[brownheader!45, line width=0.35pt] (\L-0.08, \y) -- (\L-0.15, \y);
+		}
 		
-		\draw[brownheader, line width=0.6pt]
-		(Q) -- ({\L*0.20}, {\L*0.20*tan(\thetaA)})
-		(Q) -- ({\L*0.20}, {-\L*0.20*tan(\thetaA)});
-		
-		\draw[brownheader, line width=0.6pt]
-		({0.50*cos(\thetaA)}, {0.50*sin(\thetaA)}) arc[start angle=\thetaA, end angle=-\thetaA, radius=0.50];
-		\node[right=1pt] at (0.62, 0) {\scriptsize $\delta$};
+		\node[above=5pt] at (\L, 3.0) {\englishfont\scriptsize Screen};
+		\node[below=4pt] at (\L, -2.8) {$O$};
 
-% --- Theta arcs ---
-		\draw[brownheader, line width=0.7pt]
-		(0.82, 0) arc[start angle=0, end angle=\thetaA, radius=0.82];
-		\node at (1.05, 0.20) {\scriptsize $\theta$};
+% ==================== AXIS & RAYS ====================
+		\draw[brownheader!35, dashed, line width=0.5pt] (0,0) -- (\L,0);
 		
-		\draw[brownheader, line width=0.7pt]
-		(0.82, 0) arc[start angle=0, end angle=-\thetaA, radius=0.82];
+		\draw[waveblue, line width=1.1pt, opacity=0.9, ->] (S1) -- (P);
+		\draw[wavered, line width=1.1pt, opacity=0.9, ->] (S2) -- (P);
 		
-		\draw[brownheader, line width=0.7pt]
-		({\L-0.82}, 0) arc[start angle=180, end angle={180-\thetaA}, radius=0.82];
-		\node at ({\L-1.05}, 0.20) {\scriptsize $\theta$};
+		\node[above=2pt, waveblue] at ($(S1)!0.40!(P)$) {$d_1$};
+		\node[below=2pt, wavered] at ($(S2)!0.40!(P)$) {$d_2$};
 
-% --- Path difference dashed line ---
-		\draw[brownheader, dashed, line width=0.6pt] (S1) -- ($(S2)!(S1)!(P)$);
+% ==================== POINT P ====================
+		\fill[bacpurple] (P) circle (1.8pt);
+		\draw[white, line width=0.9pt] (P) circle (1.8pt);
+		\draw[bacpurple, line width=0.6pt] (P) circle (2.6pt);
+		\node[above right=3pt] at (P) {$P$};
 
-% --- Sakura accent ---
-		\sakurapetaldrift[0.20]{(\L+0.9, 1.5)}{30}{0.5}
+% ==================== DIMENSIONS ====================
+		\draw[brownheader!55, <->, line width=0.6pt] (\L+0.32, 0) -- (\L+0.32, {\L*tan(\thetaA)});
+		\node[right=3pt] at (\L+0.32, {0.5*\L*tan(\thetaA)}) {$x$};
+		
+		\draw[brownheader!55, <->, line width=0.6pt] (0, -3.05) -- (\L, -3.05);
+		\node[below=3pt] at (\L/2, -3.05) {$L$};
+		
+		\draw[brownheader!55, <->, line width=0.6pt] (-0.48, \a/2) -- (-0.48, -\a/2);
+		\node[left=3pt] at (-0.48, 0) {$a$};
+
+% ==================== GEOMETRY TRIANGLE ====================
+		\fill[tanbg, opacity=0.28] (0,0) -- (1.5, {1.5*tan(\thetaA)}) -- (1.5, {-1.5*tan(\thetaA)}) -- cycle;
+		\draw[brownheader!40, line width=0.5pt] (0,0) -- (1.5, {1.5*tan(\thetaA)});
+		\draw[brownheader!40, line width=0.5pt] (0,0) -- (1.5, {-1.5*tan(\thetaA)});
+
+% ==================== ANGLES ====================
+% Theta at slits (filled sectors)
+		\fill[brownheader!10] (0,0) -- (0.9, 0) arc[start angle=0, end angle=\thetaA, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] (0.9, 0) arc[start angle=0, end angle=\thetaA, radius=0.9];
+		\node at (1.18, 0.24) {\scriptsize $\theta$};
+		
+		\fill[brownheader!10] (0,0) -- (0.9, 0) arc[start angle=0, end angle=-\thetaA, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] (0.9, 0) arc[start angle=0, end angle=-\thetaA, radius=0.9];
+
+% Theta at screen
+		\fill[brownheader!10] (\L,0) -- ({\L-0.9}, 0) arc[start angle=180, end angle={180-\thetaA}, radius=0.9] -- cycle;
+		\draw[brownheader, line width=0.6pt] ({\L-0.9}, 0) arc[start angle=180, end angle={180-\thetaA}, radius=0.9];
+		\node at ({\L-1.18}, 0.24) {\scriptsize $\theta$};
+
+% Delta
+		\draw[brownheader, line width=0.5pt] ({0.52*cos(\thetaA)}, {0.52*sin(\thetaA)}) arc[start angle=\thetaA, end angle=-\thetaA, radius=0.52];
+		\node[right=2pt] at (0.64, 0) {\scriptsize $\delta$};
+
+% ==================== PATH DIFFERENCE ====================
+		\draw[brownheader!45, dashed, line width=0.5pt] (S1) -- ($(S2)!(S1)!(P)$);
 	
 	\end{tikzpicture}
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.52\textwidth}
 	\raggedright
-	ទីតាំងប្រង់ភ្លឺនៃអាំងទែផេរ៉ង់ពន្លឺកើតមានលើអេក្រង់គឺជាទីតាំងដែលមានអំព្លីទុតនៃរលកមានតម្លៃអតិបរមា។
+	តាមត្រីកោណធំ $QPO$ គេបាន៖ $\tan\theta=\frac{x}{L}$\\
+	នាំឲ្យ៖ $\boxed{x=L\tan\theta}$
+	\defbox{
+		\begin{center}
+			$x$ ជាទីតាំងប្រង់\\
+			$L$ ជាទីតាំងពីប្រភពទៅអេក្រង់ ({\englishfont Screen})
+		\end{center}
+	}
+\end{minipage}
+
+\khmersubsubtopic{ក. ទីតាំងប្រង់ភ្លឺ (ករណីមុំតូច)}
+\noindent
+\begin{minipage}[t]{0.54\textwidth}
+	$\begin{aligned}[t]
+\text{រង្វាស់មុំប្រង់ភ្លឺ៖} \quad \sin\theta &= n\frac{\lambda}{a} \\[0.35em]
+\text{ករណីមុំតូច៖} \quad \sin\theta = \tan\theta &= \frac{x}{L} \\[0.35em]
+\text{យើងបាន៖} \quad \frac{x}{L} &= n\frac{\lambda}{a} \\[0.55em]
+\text{នាំឲ្យ៖} \quad \boxed{x = n\frac{\lambda L}{a}} &
+	\end{aligned}$
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.43\textwidth}
+	\vspace*{0.3em}
+	\defbox{%
+		\begin{center}
+			$n$ ជាទីតាំងប្រង់ភ្លឺ ({\englishfont n = 1, 2 ,3,\dots})\\
+		\end{center}
+	}
+\end{minipage}
+
+\khmersubsubtopic{ខ. ទីតាំងប្រង់ងងឹត (ករណីមុំតូច)}
+\noindent
+\begin{minipage}[t]{0.54\textwidth}
+	$\begin{aligned}[t]
+\text{រង្វាស់មុំប្រង់ភ្លឺ៖} \quad \sin\theta &= (2n+1)\frac{\lambda}{2a} \\[0.35em]
+\text{ករណីមុំតូច៖} \quad \sin\theta = \tan\theta &= \frac{x}{L} \\[0.35em]
+\text{យើងបាន៖} \quad \frac{x}{L} &= (2n+1)\frac{\lambda}{2a} \\[0.55em]
+\text{នាំឲ្យ៖} \quad \boxed{x = (2n+1)\frac{\lambda L}{2a}} &
+	\end{aligned}$
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.43\textwidth}
+	\vspace*{0.3em}
+	\defbox{%
+		\begin{center}
+			$n$ ជាទីតាំងប្រង់ភ្លឺ ({\englishfont n = 1, 2 ,3,\dots})\\
+		\end{center}
+	}
+\end{minipage}
+
+\khmersubsubtopic{គ. ប្រវែងទីតាំងប្រង់ (អាំងទែប្រង់)}
+
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+	\centering
+	\begin{tikzpicture}[
+		font=\small,
+		>=Stealth,
+		line join=round,
+		line cap=round
+	]
+		
+		% --- Parameters ---
+		\def\A{3.0}
+		\def\i{1.0}
+		\def\W{3.6}
+		\def\ymax{3.4}
+		
+		\pgfmathsetmacro{\k}{pi/\i}
+		\pgfmathsetmacro{\m}{pi/\W}
+		
+		% --- Screen (soft muted purple) ---
+		\draw[primary, line width=1.6pt] (0, -\ymax-0.2) -- (0, \ymax+0.2);
+		
+		% --- Very soft pink fill under curve ---
+		\fill[bacpinklight, opacity=0.6]
+		plot[domain=-\ymax:\ymax, samples=300, smooth]
+		({\A*cos(deg(\k*\x))^2*(sin(deg(abs(\x)*\m))/(abs(\x)*\m+0.0001))^2}, \x)
+		-- (0, \ymax) -- (0, -\ymax) -- cycle;
+		
+		% --- Main curve: soft orchid (elegant, not loud) ---
+		\draw[primary, line width=1.4pt]
+		plot[domain=-\ymax:\ymax, samples=300, smooth]
+		({\A*cos(deg(\k*\x))^2*(sin(deg(abs(\x)*\m))/(abs(\x)*\m+0.0001))^2}, \x);
+		
+		% --- Hairline ticks at bright fringes ---
+		\foreach \n in {-3,-2,-1,0,1,2,3} {
+			\draw[sakuradark!25, line width=0.3pt]
+			(0.05, \n*\i) -- (\A+0.28, \n*\i);
+		}
+		
+		% --- Fringe spacing arrow ---
+		\draw[bacpurple!55, <->, line width=0.65pt] (\A+0.15, 0) -- (\A+0.15, \i);
+		\node[right=3pt, sakuradark] at (\A+0.15, \i/2) {$i$};
+		
+		% --- Soft dots at maxima ---
+		\foreach \n in {-2,-1,0,1,2} {
+			\pgfmathsetmacro{\env}{(sin(deg(abs(\n*\i)*\m))/(abs(\n*\i)*\m+0.0001))^2}
+			\fill[sakuradark] ({\A*\env}, \n*\i) circle (1.0pt);
+		}
+	
+	\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.58\textwidth}
+	\raggedright
+	ប្រវែងចន្លោះប្រង់ពីរជាប់គ្នា៖
 	\begin{align*}
-		\text{យើងមាន៖ } \Delta d &= n\lambda\ ~(1)\\
-		\text{ម៉្យាងទៀត៖ } \Delta d &= a \sin \theta\ ~(2)\\
-		\text{នោះ៖ } a \sin \theta &= n\lambda\ \text{ \textcolor{brownheader}{(ផ្ទឹម (1) និង (2))}}\\
-		\text{នាំឲ្យ៖ }
-		\boxed{\sin \theta = \frac{n\lambda}{a}} &\text{ (
-				{\englishfont n=0,1,2,3,} \dots)}
+		i &= x_2 - x_1 \\[0.3em]
+		i &= \frac{2L\lambda}{a} - \frac{L\lambda}{a} \\[0.5em]
+		\text{យើងបាន៖ } &\boxed{i = \frac{L\lambda}{a}}
 	\end{align*}
+	
+	\vspace{0.4em}
+
+	\defbox{
+		\raggedright
+        \makebox[0.8em][l]{$i$} : ជាប្រវែងចន្លោះប្រង់ \\[0.3em]
+        \makebox[0.8em][l]{$L$} : ជាទីតាំងពីប្រភពទៅអេក្រង់ {\englishfont(Screen)}
+	}
+	\vspace{0.6em}
+	\textbf{ចំណាំ៖} ប្រវែងចន្លោះពីប្រង់នីមួយៗមានប្រវែងស្មើគ្នា (ប្រង់ភ្លឺ និងប្រង់ងងឹត)។
 \end{minipage}
