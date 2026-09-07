@@ -1,0 +1,206 @@
+\khmerlesson{មេរៀនទី៣៖ ដែននិងកម្លាំងម៉ាញេទិក}
+\tanbgdivider
+
+\khmertopic{១. មេដែកនឹងដែនម៉ាញេទិក}
+\khmersubtopic{១.១. មេដែក}
+\noindent\hspace*{0.6cm}\faCaretRight~\textbf{\textcolor{brownheader}{មេដែក}} គឺជាអង្គធាតុដែលអាចឆក់ទាញដែកបាន។
+លក្ខណៈឆក់ទាញទាំងនោះហៅថា \textbf{លក្ខណៈម៉ាញេទិក}
+។ ជាទូទៅ មេដែកមានប៉ូលចំនួនពីរគឺ
+ចុងម្ខាងជាប៉ូលជើង ({\englishfont N})
+និងចុងម្ខាងជាប៉ូលជើង ({\englishfont S})។
+ប៉ូលទាំងមិនអាចកាត់ផ្តាច់ពីគ្នាបានឡើយ
+ហើយគេចែកវាជា២ប្រភេទគឺ៖
+
+\noindent
+\begin{minipage}[t]{0.55\textwidth}
+	\raggedright
+	\begin{itemize}[label={\textcolor{brownheader}{\faCaretRight}}]
+		\item \textbf{មេដែកធម្មជាតិ} ជាមេដែកដែលមានស្រាប់នៅក្នុងធម្មជាតិដូចជា សំណាក \ce{Fe3O4} និងមេដែកផែនដី សញ្ញាជាដើម។
+		\item \textbf{មេដែកសិប្បនិម្មិត} ជាមេដែកដែលត្រូវបានបង្កើតឡើងតាមតម្រូវការចាំបាច់ មានដូចជា របាមេដែក ម្ជុលមេដែក និងមេដែករាងអក្សរ ({\englishfont U})។
+	\end{itemize}
+	\khmersubsubtopic{ក. អន្តរកម្មនៃមេដែក}
+	នៅពេលដែលគេដាក់មេដែកពីរជិតគ្នា
+	នោះបាតុភូតពីរនឹងកើតឡើង
+	នោះគឺមេដែកច្រានចេញពីគ្នា ឬទាញគ្នាចូល
+	ដែលបាតុភូតនេះហៅថា
+	\textbf{អន្តរកម្មនៃមេដែក ឬអន្តរកម្មមេដែក}
+	និងមានលក្ខណៈដូចខាងក្រោម៖
+	\begin{itemize}[label={\textcolor{brownheader}{\faCaretRight}}]
+		\item បើគេដាក់ប៉ូលដូចគ្នា ({\englishfont N-N} ឬ {\englishfont S-S}) ជិតគ្នា នោះមេដែកទាំងពីរនឹងច្រានចេញពីគ្នា។
+		\item បើគេដាក់ប៉ូលខុសគ្នា ({\englishfont N-S} ឬ {\englishfont S-N}) ជិតគ្នា នោះមេដែកទាំងពីរនឹងទាញគ្នាចូល។
+	\end{itemize}
+	\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\khmerphoto[0.95\linewidth]{img/magnetite.jpg}{សំណាកមេដែក \ce{Fe3O4}}
+	\vspace{0.75mm}
+	\khmerphoto[0.75\linewidth]{img/mgshapes.jpg}{រាងមេដែកសិប្បនិម្មិត}
+\end{minipage}
+
+\begin{center}
+	\newcommand{\drawmagnet}[3]{%
+		\begin{scope}[shift={(#1,#2)}]
+		\ifnum#3=0
+		\fill[waveblue!80] (-1.05,-0.30) rectangle (0,0.30);
+		\fill[wavered!80] (0,-0.30) rectangle (1.05,0.30);
+		\node[white, font=\bfseries\small] at (-0.525,0) {S};
+		\node[white, font=\bfseries\small] at (0.525,0) {N};
+		\else
+			\fill[wavered!80] (-1.05,-0.30) rectangle (0,0.30);
+			\fill[waveblue!80] (0,-0.30) rectangle (1.05,0.30);
+			\node[white, font=\bfseries\small] at (-0.525,0) {N};
+			\node[white, font=\bfseries\small] at (0.525,0) {S};
+		\fi
+		\fill[white, opacity=0.15] (-1.05,0.22) rectangle (1.05,0.30);
+		\fill[black, opacity=0.10] (-1.05,-0.30) rectangle (1.05,-0.22);
+		\draw[black!20, line width=0.35pt, rounded corners=0.6pt] (-1.05,-0.30) rectangle (1.05,0.30);
+		\end{scope}%
+	}
+	
+	\begin{center}
+		\begin{tikzpicture}[
+			font=\small,
+			>=Stealth,
+			line join=round,
+			line cap=round,
+			scale=1.05
+		]
+
+% --- Row 1: Attract (N faces S) ---
+			\drawmagnet{-2.0}{1.6}{0}   % left: S|N
+			\drawmagnet{2.0}{1.6}{0}    % right: S|N
+			
+			\draw[black, line width=1.5pt, ->] (-0.85,1.6) -- (-0.15,1.6);
+			\draw[black, line width=1.5pt, ->] (0.85,1.6) -- (0.15,1.6);
+			\node[above=7pt, brownheader] at (
+			0,1.6) {ទាញចូល};
+
+% --- Row 2: Repel (N faces N) ---
+			\drawmagnet{-2.0}{0}{0}     % left: S|N
+			\drawmagnet{2.0}{0}{1}      % right: N|S
+			
+			\draw[black, line width=1.5pt, ->] (-0.15,0) -- (-0.85,0);
+			\draw[black, line width=1.5pt, ->] (0.15,0) -- (0.85,0);
+			\node[above=7pt, brownheader] at (
+			0,0) {ច្រានចេញ};
+
+% --- Row 3: Repel (S faces S) ---
+			\drawmagnet{-2.0}{-1.6}{1}  % left: N|S
+			\drawmagnet{2.0}{-1.6}{0}   % right: S|N
+			
+			\draw[black, line width=1.5pt, ->] (-0.15,-1.6) -- (-0.85,-1.6);
+			\draw[black, line width=1.5pt, ->] (0.15,-1.6) -- (0.85,-1.6);
+			\node[above=7pt, brownheader] at (
+			0,-1.6) {ច្រានចេញ};
+		
+		\end{tikzpicture}
+	\end{center}
+	\textcolor{brownheader}{\khmerpagenum អន្តរកម្មនៃមេដែក}
+\end{center}
+
+\khmertopic{២. ដែនម៉ាញេទិកនៃមេដែក}
+លក្ខណៈទាញគ្នាចូលនិងច្រានចេញនៃមេដែកគឺបានបង្កើតឡើងដោយសារកម្លាំងអន្តរកម្មម៉ាញេទិកនៃមេដែកទាំងនោះ។ កាលពីថ្នាក់ទី១១ យើងបានសិក្សារួចមកហើយថា កម្លាំងអគ្គិសនីដែលមានអំពើលើបន្ទុកអគ្គិសនីត្រូវបានពណ៌នាដោយលំហនៃដែនអគ្គិសនីជុំវិញបន្ទុកអគ្គិសនីស្ថិតនៅនឹង ហើយបង្កើតឲ្យមានអន្តរកម្មរវាងដែនអគ្គិសនីនិងបន្ទុកអគ្គិសនីនោះ។ នៅក្នុងការសិក្សាអំពីកម្លាំងម៉ាញេទិកក៏មានលក្ខណៈស្រដៀងទៅនឹងកម្លាំងអគ្គិសនីដែរ គឺមានន័យថាកម្លាំងម៉ាញេទិកដែលត្រូវបានបង្កើតឡើងដោយលំហនៃដែនម៉ាញេទិក មានអន្តរកម្មលើមេដែកដែលស្ថិតនៅក្នុងលំហនោះ។ ក្នុងការសិក្សាដែនម៉ាញេទិក គ៏មានលក្ខណៈស្រដៀងទៅនឹងកម្លាំងអគ្គិសនីដែរ គឺមានន័យថាកម្លាំងម៉ាញេទិក ដែលបង្កើតឡើងនៅក្នុងលំហនៃដែនម៉ាញេទិកមានអន្តរកម្មលើមេដែកស្ថិតនៅក្នងលំហនោះ។ ដូចនេះ ដែនម៉ាញេទិក ($\vec{B}$) គឺជាមជ្ឍដ្ឋានរូបធាតុពិសេសសដែលកើតឡើងជុំវិញមេដែក ហើយនឹងបង្កើតកម្លាំងម៉ាញេទិកលើមេដែក (ច្រានចេញ និងទាញចូល) ស្ថិតនៅក្នុងមជ្ឈដ្ឋានមួយនេះ។\\
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+	\raggedright
+ដើម្បីបង្ហាញពីលក្ខណៈវុិចទ័រនៃដែនម៉ាញេទិក
+គេត្រូវធ្វើការពិសោធន៍ដោយរោយកម្ទេចដែក
+នៅលើក្រដាសរឹងមួយសន្លឹក នៅជុំវិញរបារមេដែកមួយ
+បន្ទាប់មកគេគោះក្រដាសនោះតិចៗ
+ហើយយើងសង្កេតឃើញថាកម្ទេចដែកនោះត្រូវបានរត់ជាជួរខ្សែមានរាយជុំវិញមេដែក។ កម្ទេចដែលបានរៀបជាជួរហៅថា ស្បុិចម៉ាញេទិកនៃរបារមេដែក។\\
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+	\vspace{0pt}
+	\khmerphoto[0.5\linewidth]{
+img/magfield.jpg}{
+ស្បុិចម៉ាញេទិកនៃរបារមេដែក}
+\end{minipage}
+
+\noindent
+\begin{minipage}[t]{0.55\textwidth}
+	\raggedright
+	\faCaretRight~\textbf{\textcolor{brownheader}{ខ្សែដែនម៉ាញេទិក}} គឺជាខ្សែដែលប៉ះនឹងវុិចទ័រដែនម៉ាញេទិក $\vec{B}$ ហើយនៅគ្រប់ចំណុចនីមួយៗរបស់វាហើយមានវុិចទ័រដែនម៉ាញេទិក $\vec{B}$។\\
+	លក្ខណៈនៃខ្សែដែនម៉ាញេទិកត្រូវបានកំណត់ដោយ៖
+	\begin{itemize}[label={\textcolor{brownheader}{\faCaretRight}}]
+	\item ចាប់ផ្តើមពីប៉ូលជើង {\englishfont N} ហើយបញ្ចប់នៅប៉ូលជើង {\englishfont S}។
+	\item មានទឹសដៅពីលើប៉ូលជើង {\englishfont N} ទៅប៉ូលជើង {\englishfont S} ផ្នែកខាងក្នុង។
+	\item មានរាងជាខ្សែបិទនិងមិនកាត់គ្នាទេ។
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[
+		font=\small,
+		>={Stealth[scale=0.55, length=2.2mm, width=1.8mm]},
+		line join=round,
+		line cap=round,
+		scale=0.85
+	]
+
+% --- Parameters ---
+		\def\mw{1.9}
+		\def\mh{0.38}
+		\def\ymax{2.4}
+
+% ==================== SUBTLE BACKGROUND GLOW ====================
+		\fill[primary, opacity=0.04] (0,0) ellipse (3.6cm and 2.7cm);
+
+% ==================== MAGNET BODY ====================
+		\fill[wavered!72] (-\mw,-\mh) rectangle (0,\mh);
+		\fill[waveblue!72] (0,-\mh) rectangle (\mw,\mh);
+
+% Top highlight / bottom shadow
+		\fill[white, opacity=0.18] (-\mw,\mh-0.04) rectangle (\mw,\mh);
+		\fill[black, opacity=0.12] (-\mw,-\mh) rectangle (\mw,-\mh+0.04);
+
+% Soft border
+		\draw[black!14, line width=0.35pt, rounded corners=0.6pt] (-\mw,-\mh) rectangle (\mw,\mh);
+		\draw[black!10, line width=0.2pt] (0,-\mh) -- (0,\mh);
+
+% Labels
+		\node[white, font=\bfseries\small] at (-\mw/2,0) {\englishfont N};
+		\node[white, font=\bfseries\small] at (\mw/2,0) {\englishfont S};
+
+% ==================== INTERNAL FIELD LINES ====================
+		\foreach \y in {-0.12, 0, 0.12} {
+			\draw[primary!28, dashed, line width=0.45pt, ->] (\mw-0.10,\y) -- (-\mw+0.10,\y);
+		}
+
+% ==================== EXTERNAL FIELD LINES ====================
+% Loop 1 (innermost)
+		\draw[primary!78, line width=0.85pt] (-\mw+0.02,\mh+0.01) to[out=68, in=180] (0,0.52);
+		\draw[primary!78, line width=0.85pt, <-] (0,0.52) to[out=0, in=112] (\mw-0.02,\mh+0.01);
+		\draw[primary!78, line width=0.85pt] (-\mw+0.02,-\mh-0.01) to[out=-68, in=180] (0,-0.52);
+		\draw[primary!78, line width=0.85pt, <-] (0,-0.52) to[out=0, in=-112] (\mw-0.02,-\mh-0.01);
+
+% Loop 2
+		\draw[primary!65, line width=0.75pt] (-\mw+0.02,\mh+0.01) to[out=78, in=180] (0,0.98);
+		\draw[primary!65, line width=0.75pt, <-] (0,0.98) to[out=0, in=102] (\mw-0.02,\mh+0.01);
+		\draw[primary!65, line width=0.75pt] (-\mw+0.02,-\mh-0.01) to[out=-78, in=180] (0,-0.98);
+		\draw[primary!65, line width=0.75pt, <-] (0,-0.98) to[out=0, in=-102] (\mw-0.02,-\mh-0.01);
+
+% Loop 3
+		\draw[primary!52, line width=0.68pt] (-\mw+0.02,\mh+0.01) to[out=84, in=180] (0,1.48);
+		\draw[primary!52, line width=0.68pt, <-] (0,1.48) to[out=0, in=96] (\mw-0.02,\mh+0.01);
+		\draw[primary!52, line width=0.68pt] (-\mw+0.02,-\mh-0.01) to[out=-84, in=180] (0,-1.48);
+		\draw[primary!52, line width=0.68pt, <-] (0,-1.48) to[out=0, in=-96] (\mw-0.02,-\mh-0.01);
+
+% Loop 4 (outermost)
+		\draw[primary!40, line width=0.6pt] (-\mw+0.02,\mh+0.01) to[out=88, in=180] (0,2.05);
+		\draw[primary!40, line width=0.6pt, <-] (0,2.05) to[out=0, in=92] (\mw-0.02,\mh+0.01);
+		\draw[primary!40, line width=0.6pt] (-\mw+0.02,-\mh-0.01) to[out=-88, in=180] (0,-2.05);
+		\draw[primary!40, line width=0.6pt, <-] (0,-2.05) to[out=0, in=-92] (\mw-0.02,-\mh-0.01);
+
+% ==================== FAR-FIELD SIDE LINES ====================
+		\draw[primary!35, line width=0.55pt, ->] (-\mw-0.03, 0.14) -- (-\mw-1.6, 0.14);
+		\draw[primary!35, line width=0.55pt, ->] (-\mw-0.03,-0.14) -- (-\mw-1.6,-0.14);
+		\draw[primary!35, line width=0.55pt, ->] (\mw+1.6, 0.14) -- (\mw+0.03, 0.14);
+		\draw[primary!35, line width=0.55pt, ->] (\mw+1.6,-0.14) -- (\mw+0.03,-0.14);
+	
+	\end{tikzpicture}
+\end{minipage}
