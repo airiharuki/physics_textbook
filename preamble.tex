@@ -66,12 +66,19 @@
 }
 
 % Main body font (matches the G10/G12 handbooks)
+
 \setmainfont[
-    Script=Khmer,
-    Renderer=HarfBuzz,
-    BoldFont = {Ang DaunTep Regular.ttf},
-    BoldFeatures = {FakeBold=2.0}
-]{Ang DaunTep Regular.ttf}
+    Path = ./fonts/Kantumruy Pro/,
+    Extension = .ttf,
+    Script = Khmer,
+    Renderer = HarfBuzz,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]{KantumruyPro}
+
+
 
 % Other Khmer fonts
 \newfontfamily\khmerkbach[
@@ -101,7 +108,11 @@
     ItalicFont = Nunito-Italic,
     BoldItalicFont = Nunito-BoldItalic,
     Extension = .ttf,
+    Script = Latin,
 ]{Nunito}
+
+\usepackage{ucharclasses}
+\setTransitionsForLatin{\englishfont}{\khmerbody}
 
 % Safe no-op alias: content sometimes calls \khmerbody just to assert
 % "use the default Khmer body font" — main font already is.
