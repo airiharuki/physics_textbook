@@ -68,15 +68,16 @@
 % Main body font (matches the G10/G12 handbooks)
 
 \setmainfont[
-    Path = ./fonts/Kantumruy Pro/,
+    Path = ./fonts/Open Khmer School/,
     Extension = .ttf,
     Script = Khmer,
     Renderer = HarfBuzz,
     UprightFont = *-Regular,
     BoldFont = *-Bold,
-    ItalicFont = *-Italic,
-    BoldItalicFont = *-BoldItalic
-]{KantumruyPro}
+    ItalicFont = *-Regular,
+    BoldItalicFont = *-Bold,
+    AutoFakeSlant = 0.2
+]{OpenKhmerSchool}
 
 
 
@@ -112,7 +113,31 @@
 ]{Nunito}
 
 \usepackage{ucharclasses}
-\setTransitionsForLatin{\englishfont}{\khmerbody}
+\makeatletter
+\newcommand{\khmer@latinon}{%
+    \xdef\khmer@savedfont{%
+        \noexpand\fontencoding{\f@encoding}%
+        \noexpand\fontfamily{\f@family}%
+        \noexpand\fontseries{\f@series}%
+        \noexpand\fontshape{\f@shape}%
+        \noexpand\fontsize{\f@size}{\f@baselineskip}%
+        \noexpand\selectfont}%
+    \englishfont}
+\newcommand{\khmer@latinoff}{%
+    \khmer@savedfont}
+\newcommand{\khmer@greekon}{%
+    \xdef\khmer@savedfont{%
+        \noexpand\fontencoding{\f@encoding}%
+        \noexpand\fontfamily{\f@family}%
+        \noexpand\fontseries{\f@series}%
+        \noexpand\fontshape{\f@shape}%
+        \noexpand\fontsize{\f@size}{\f@baselineskip}%
+        \noexpand\selectfont}%
+    \khmersymbolfont}
+\setTransitionsForLatin{\khmer@latinon}{\khmer@latinoff}
+\setTransitionsForPunctuation{\khmer@latinon}{\khmer@latinoff}
+\setTransitionsForGreek{\khmer@greekon}{\khmer@latinoff}
+\makeatother
 
 % Safe no-op alias: content sometimes calls \khmerbody just to assert
 % "use the default Khmer body font" — main font already is.
@@ -898,10 +923,9 @@
 % explicitly forced through a font known to have them (DejaVu Sans ships
 % with TeX Live, so it's reliably present regardless of what Khmer font
 % is active).
-{
-    \defaultfontfeatures{} % clear inherited Path/Script/Renderer for this one font
-    \global\newfontfamily\khmersymbolfont{DejaVu Sans}
-}
+\defaultfontfeatures{} % clear inherited Path/Script/Renderer for this one font
+\newfontfamily\khmersymbolfont{DejaVu Sans}
+\defaultfontfeatures{Path = fonts/, Script = Khmer, Renderer = HarfBuzz, HyphenChar = None}
 \newcommand{\kstar}{{\khmersymbolfont\color{bacpink}★}} % 5-point star
 \newcommand{\kstarfour}{{\khmersymbolfont\color{bacpink}✦}} % 4-point star/sparkle
 
