@@ -10,6 +10,14 @@ Every paragraph you fix, every formula you double-check, every figure you draw e
 
 And honestly? You don't need to be a LaTeX wizard or a physics professor. You need to care a little and be willing to learn the rest. We're all still learning.
 
+## 🤫 The secret club
+
+Here's the thing: this whole project is an undercover operation. Officially, it's a labor of love with a license and a copyright notice — but spiritually, it's a surprise gift quietly being cooked for the Cambodian Ministry of Education (MoEYS) and the students they serve. MoEYS doesn't know this exists yet. The plan is cinematic: one day the handbook simply *appears*, fully formed, subtle as sakura.
+
+So the one rule of the club is: **don't go out of your way to announce the repo.** No "hey ministry, check this out" memos, no press releases, no snitching. When it ships, the delight will do the talking. Being in this repo means you're in the club — sworn in by vibes, and the vibes are unbreakable. 🤫
+
+*(Translation for the legally-minded: contributing to an open community project is always welcome and always above board — we just prefer the surprise to stay intact.)*
+
 ## Who we're looking for
 
 - **Writers & editors** — content already exists, but clarity can always be better. If a sentence makes you squint, fix it.
