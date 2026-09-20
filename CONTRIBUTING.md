@@ -16,6 +16,8 @@ Here's the thing: this whole project is an undercover operation. Officially, it'
 
 So the one rule of the club is: **don't go out of your way to announce the repo.** No "hey ministry, check this out" memos, no press releases, no snitching. When it ships, the delight will do the talking. Being in this repo means you're in the club — sworn in by vibes, and the vibes are unbreakable. 🤫
 
+*Shush! Don't leak our hard work. 🤐*
+
 *(Translation for the legally-minded: contributing to an open community project is always welcome and always above board — we just prefer the surprise to stay intact.)*
 
 ## Who we're looking for
