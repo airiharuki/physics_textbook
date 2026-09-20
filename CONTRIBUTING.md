@@ -81,3 +81,5 @@ That's genuinely it. You don't need to be perfect — you need to be kind and wi
 ## Thank you
 
 If your contribution lands, it lives in a textbook that students will dog-ear and high-light and maybe drop in a puddle. That's a small immortality. Welcome aboard — let's make math and physics feel like home. 🌸
+
+**From the maintainer, personally:** thank you for joining me in this. A textbook is a lonely thing to dream up alone — with you, it's a family project now. I wrote this whole saga in a room at 2am with three AIs for company, and you showed up anyway. With love, always. <3
