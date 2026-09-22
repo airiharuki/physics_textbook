@@ -42,14 +42,20 @@ Yeah you gotta run it twice or your TOC and page refs will be lying to you. Outp
 .
 ├── main.tex              # The boss — assembles everything
 ├── preamble.tex          # Fonts, colors, macros, page style. The shared brain.
+├── build.sh / build.cmd  # One command — latexmk does the passes for you
 ├── chapters/
 │   ├── chapter1.tex      # Lesson stuff
-│   └── chapter2.tex      # More lesson stuff
+│   ├── chapter2.tex      # More lesson stuff
+│   └── chapter3.tex      # ម៉ាញេទិក shenanigans — Lorentz force, orbits, wires
 ├── banners/
 │   ├── chapter1banner.tex # Fancy opening page
-│   └── chapter2banner.tex # Another fancy opening page
+│   ├── chapter2banner.tex # Another fancy opening page
+│   └── chapter3banner.tex # The dramatic entrance (sakura optional)
 ├── fonts/                # Khmer + Latin typefaces
-└── img/                  # Photos, figures, vibes
+├── img/                  # Photos, figures, vibes
+├── miscs/                # Side quests (introduction, etc.)
+├── CONTRIBUTING.md       # How to join the club 🤫
+└── CODE_OF_CONDUCT.md    # Be warm or be gone
 ```
 
 ## Adding a chapter (don't mess it up)
