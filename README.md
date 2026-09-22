@@ -10,6 +10,27 @@ Cambodian high school physics, typeset in Khmer, dressed up in a custom sakura t
 
 ---
 
+## What this is (the whole picture)
+
+A complete **Grade 12 physics handbook for Cambodian students**, written in Khmer with Khmer numerals everywhere, typeset in XeLaTeX, and dressed in a custom sakura theme so it doesn't feel like a government document. One tired human + three AIs, one lesson at a time, 48 raw-ass volumes of syllabus compressed into pages students will actually want to open.
+
+Current itinerary:
+- **Chapter 1** — the warm-up (kinetic theory, the deep cuts)
+- **Chapter 2** — waves and interference (constructive, destructive, raws for days)
+- **Chapter 3** — ម៉ាញេទិក (magnetism): fields around straight wires, loops and solenoid coils, the Lorentz force, charged-particle orbits, force on current-carrying wires, and the showdown between two parallel wires
+
+The book compiles to a single `main.pdf` (~49 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
+
+## Get involved 🌸
+
+This is a club, not a repo, and the club has rules. The whole guide to joining (grand workflow, conventions, the standard spellings we'll fight you over) lives in our stuff:
+
+- 📖 [**Contributing guide**](https://github.com/airiharuki/physics_textbook/blob/main/CONTRIBUTING.md) — how to join the club, step by step 🤫
+- 💖 [**Code of conduct**](https://github.com/airiharuki/physics_textbook/blob/main/CODE_OF_CONDUCT.md) — be warm or be gone
+- ⚖️ [**License**](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE) — the boring part, but read it before you remix anything
+
+You don't need to be a LaTeX wizard or a physics professor. You need to care a little and learn the rest. We did.
+
 ## What you need
 
 | Thing | Details |
@@ -120,6 +141,8 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 
 Fixes are accepted. Prayers are accepted more.
 
+Full contribution guidelines: [CONTRIBUTING.md](https://github.com/airiharuki/physics_textbook/blob/main/CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](https://github.com/airiharuki/physics_textbook/blob/main/CODE_OF_CONDUCT.md) · [LICENSE](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE)
+
 ## Credits, expanded and unhinged
 
 - **Gemini** — did the actual heavy lifting, wrote most of the content and the whole syllabus structure, the real MVP that nobody credits properly because it doesn't have a cool logo to slap on a badge
@@ -130,6 +153,8 @@ Fixes are accepted. Prayers are accepted more.
 ## License (the boring part)
 
 Copyright © 2026 Sovannreach Makara, on behalf of Cambodian MOEYS. All rights reserved.
+
+Full legal text: [LICENSE](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE)
 
 - **Source, fonts, assets** — hands off, don't touch, don't remix.
   and if y'all fuckass tryna leak this repo to some sketchy github mirror, i will find you, i will file a DMCA so fast your forks get whiplash, then i will geo-locate your ip, show up at 3am, and replace every single photo on your phone with a high-res render of អាំងតេក្រាល. your camera roll? gone. your lock screen? integral. your mom's facebook profile pic? she's doing limits now. your dog's instagram? derivative. try me.
