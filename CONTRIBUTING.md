@@ -29,20 +29,54 @@ So the one rule of the club is: **don't go out of your way to announce the repo.
 - **OCR survivors** — we sometimes start from scanned pages. If you've wrestled a messy OCR dump into something clean, you are one of us.
 - **Design souls** — treasures the sakura boxes. Make it prettier and more consistent.
 
-## Getting started
+## Getting started — a step-by-step guide
 
-1. **Fork** the repo, then **clone** your fork.
-2. **Install the fonts** from `fonts/` on to your system. XeLaTeX needs them registered — the README has the exact steps for Linux, Windows, and mac.
-3. **Build** (always twice — TOC and page references lie on the first pass):
+The repo lives at **https://github.com/airiharuki/physics_textbook**, clone it with:
+
+```bash
+git clone https://github.com/airiharuki/physics_textbook.git
+```
+
+### 1. Fork + clone
+
+1. Click **Fork** in the top-right of the repo page — that gives you your own copy to work freely in.
+2. Clone **your** fork:
    ```bash
-   xelatex main.tex
-   xelatex main.tex
+   git clone https://github.com/<your-github-username>/physics_textbook.git
+   cd physics_textbook
    ```
-   (or use `build.sh` / `build.cmd`)
-4. **Find something kind to do:**
-   - The "Known issues" table in the README is 100% real. Pick a bug, kill a bug.
-   - Open any `chapters/` file and fix whatever makes you twitch.
-   - For anything bigger than a sentence, open an issue first so we can agree on the shape of it.
+3. Add the original repo as `upstream` so you can stay in sync with us:
+   ```bash
+   git remote add upstream https://github.com/airiharuki/physics_textbook.git
+   ```
+   (check it landed with `git remote -v` — you should see both `origin` and `upstream`)
+
+### 2. Install the fonts
+
+Install the fonts from `fonts/` onto your **system** — XeLaTeX needs them registered, it won't magically find them in the repo. The README has the exact steps for Linux, Windows, and mac.
+
+### 3. Make a branch
+
+Never work directly on `main` (well, we do, but you're a civilized person). Give your change a cozy name:
+
+```bash
+git checkout -b fix/typo-chapter3
+```
+
+### 4. Build (always twice — TOC and page references lie on the first pass)
+
+```bash
+xelatex main.tex
+xelatex main.tex
+```
+
+(or use `build.sh` / `build.cmd`). A clean build with zero `^!` errors is your ticket to ride. Then flip through the pages you touched — no overlapping text, no overflowing boxes. We promise nothing feels worse than a textbook where words fight each other.
+
+### 5. Find something kind to do
+
+- The "Known issues" table in the README is 100% real. Pick a bug, kill a bug.
+- Open any `chapters/` file and fix whatever makes you twitch.
+- For anything bigger than a sentence, open an issue first so we can agree on the shape of it.
 
 ## Conventions (we beg you)
 
@@ -58,12 +92,36 @@ So the one rule of the club is: **don't go out of your way to announce the repo.
 - **Images** live in `img/`, referenced with `\khmerphoto[...]{img/name.jpg}{caption}`. Give files descriptive lowercase names.
 - **New chapter:** `chapters/chapterN.tex` + `banners/chapterNbanner.tex` + two `\input{}` lines in `main.tex`. That's the whole recipe.
 
-## Pull requests
+## Making a pull request — the whole dance
 
-- **Small and focused** — one idea, one PR. Easier to review, easier to say yes to.
-- **Conventional commits:** `feat(ch3): add ...`, `fix(preamble): ...`, `chore(img): ...`.
-- **Rebuild before pushing** — two passes, no `^!` errors, no new `tcolorbox` warnings. A PR that doesn't compile is a sad PR.
-- `main.pdf` is tracked and we ship it, so including your rebuilt PDF is fine and expected.
+1. Make sure you're on your branch (`git branch` should show it) and the build is clean — two passes, no `^!`.
+2. Commit with a conventional message:
+   ```bash
+   git add chapters/chapter3.tex main.pdf
+   git commit -m "feat(ch3): fix the declination example"
+   ```
+3. Push your branch up to **your** fork:
+   ```bash
+   git push -u origin fix/typo-chapter3
+   ```
+4. Head to GitHub — a bright yellow **Compare & pull request** banner will appear. Click it.
+5. In the PR description: what you changed, why, and which page numbers to look at (e.g. "p46-47"). It makes reviewing genuinely pleasant.
+6. `main.pdf` rides along in your PR — we ship the compiled book, so include your rebuilt PDF.
+7. If reviewers ask for tweaks, push more commits to the **same branch** — the PR updates automatically. No new PRs per revision, no drama.
+8. Once merged, you're immortalized in the credits of a handbook students will actually use. That's the whole reward. (And maybe we'll owe you coffee.)
+
+### Staying in sync
+
+If the main repo moved while you were busy, don't panic — drift happens:
+
+```bash
+git checkout main
+git pull upstream main
+git checkout your-branch
+git merge main        # resolve any conflicts calmly, then rebuild
+```
+
+(Pro tip: `git pull upstream main` before you *start* a task, so you're never fighting a moving target.)
 
 ## How we review
 
