@@ -21,11 +21,20 @@ Cambodian high school physics, typeset in Khmer, dressed up in a custom sakura t
 ## Build it
 
 ```bash
+bash build.sh      # Linux/mac — checks prerequisites, one command
+```
+```bat
+build.cmd          # Windows
+```
+
+Both use **latexmk**, which auto-runs the passes needed for TOC/page refs — no running it twice, no babysitting. On error they stay open until you press a key so you can read what broke. Raw manual way (old-school, two passes):
+
+```bash
 xelatex main.tex
 xelatex main.tex
 ```
 
-Yeah you gotta run it twice or your TOC and page refs will be lying to you. Output is `main.pdf`.
+Yeah you gotta run it twice or your TOC and page refs will be lying to you. Output is `main.pdf`. Want auto-rebuild on every save? `latexmk -xelatex -pvc main.tex`.
 
 ## Folder layout
 

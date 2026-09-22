@@ -1,24 +1,57 @@
 @echo off
-REM build.bat - compiles main.tex with xelatex, twice, so TOC/bookmarks/
-REM page references resolve correctly. Run this from inside your project
-REM folder (same place as main.tex, preamble.tex, fonts\, img\, chapters\).
+REM build.cmd - compiles main.tex with XeLaTeX using latexmk.
+REM latexmk figures out how many passes are needed (TOC/page refs),
+REM so you run this ONE command and it does the rest.
+REM On failure this script does NOT just close - it waits for a key
+REM press so you can see what went wrong.
+REM
+REM Want it to rebuild automatically on every save? Run:
+REM     latexmk -xelatex -pvc main.tex
 
 echo.
-echo === Pass 1 of 2 ===
-xelatex -interaction=nonstopmode -halt-on-error main.tex
-if errorlevel 1 (
+echo === Checking prerequisites ===
+
+if not exist main.tex (
     echo.
-    echo *** Pass 1 FAILED - stopping before pass 2. Check the error above. ***
+    echo *** main.tex not found here. ***
+    echo     Run this from the project folder (the one containing main.tex,
+    echo     preamble.tex, chapters\, img\ and fonts\).
+    echo.
     pause
     exit /b 1
 )
 
-echo.
-echo === Pass 2 of 2 ===
-xelatex -interaction=nonstopmode -halt-on-error main.tex
+where latexmk >nul 2>nul
 if errorlevel 1 (
     echo.
-    echo *** Pass 2 FAILED. Check the error above. ***
+    echo *** latexmk not found. ***
+    echo     Install TeX Live 2023+ ^(latexmk is included^).
+    echo     Grab it from https://tug.org/texlive/ and reopen your terminal.
+    echo.
+    pause
+    exit /b 1
+)
+
+where xelatex >nul 2>nul
+if errorlevel 1 (
+    echo.
+    echo *** xelatex not found ^(latexmk needs it^). ***
+    echo     Make sure XeLaTeX is in your PATH with your TeX Live install.
+    echo.
+    pause
+    exit /b 1
+)
+
+echo Prerequisites OK.
+
+echo.
+echo === Building ^(latexmk runs as many passes as needed^) ===
+echo.
+
+latexmk -xelatex -interaction=nonstopmode -file-line-error main.tex
+if errorlevel 1 (
+    echo.
+    echo *** Build FAILED. Check the errors above. Press any key to close. ***
     pause
     exit /b 1
 )

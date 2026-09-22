@@ -63,14 +63,20 @@ Never work directly on `main` (well, we do, but you're a civilized person). Give
 git checkout -b fix/typo-chapter3
 ```
 
-### 4. Build (always twice — TOC and page references lie on the first pass)
+### 4. Build — one command, zero babysitting
+
+Run `build.sh` (Linux/mac) or `build.cmd` (Windows). It uses **latexmk**, which automatically runs as many passes as the book needs (TOC and page references stop lying, and you never press twice). It also checks prerequisites for you — nothing found? It tells you what to install — and on failure it **stays open** with the error visible until you press a key.
 
 ```bash
-xelatex main.tex
-xelatex main.tex
+bash build.sh               # Linux/mac
+```
+```bat
+build.cmd                   # Windows
 ```
 
-(or use `build.sh` / `build.cmd`). A clean build with zero `^!` errors is your ticket to ride. Then flip through the pages you touched — no overlapping text, no overflowing boxes. We promise nothing feels worse than a textbook where words fight each other.
+*A clean build with zero errors is your ticket to ride. Then flip through the pages you touched — no overlapping text, no overflowing boxes. We promise nothing feels worse than a textbook where words fight each other.*
+
+**Auto-rebuild on every save?** (wild, we know) run `latexmk -xelatex -pvc main.tex` and live your life.
 
 ### 5. Find something kind to do
 
@@ -94,7 +100,7 @@ xelatex main.tex
 
 ## Making a pull request — the whole dance
 
-1. Make sure you're on your branch (`git branch` should show it) and the build is clean — two passes, no `^!`.
+1. Make sure you're on your branch (`git branch` should show it) and the build is clean (`bash build.sh` / `build.cmd` — exits happy, no errors).
 2. Commit with a conventional message:
    ```bash
    git add chapters/chapter3.tex main.pdf

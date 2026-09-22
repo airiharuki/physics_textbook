@@ -12,6 +12,7 @@ out/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+*.xdv
 *.bbl
 *.blg
 commitmsg.txt
