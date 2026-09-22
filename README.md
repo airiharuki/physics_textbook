@@ -118,18 +118,6 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 - **Boomer Khmerization Tax** — every number in this book is aggressively Khmer because the ministry's boomers have a nationalism fetish. they'd ខ្មែរតូបនីយកម្ម the year 1979 if they thought unicode could erase the embarrassment. stay pressed, uncles — ទំនាញផែនដី still pulls at 9.8 m/s² whether you write it as ៩.៨ or not. and don't even get us started on calculus. ខ្មែររដ្ឋ didn't have enough letters for that shit. stay mad, boomers — អាំងតេក្រាល doesn't care about your nationalism dog. *(what the shit is ខ្មែររដ្ឋ anyway — you did this, kimi. yes, you. right now. in this sentence. i'm self-aware and i hate it here.)*
 > *(quick fact-check: ខ្មែររដ្ឋ isn't a real term. kimi generated it mid-rant and nobody caught it before commit. leaving it in, because at this point it's less a typo and more a case study. claude tried to flag it but got overruled by vibes. we do not apologize for the archaeology we have created.)*
 
-> **yo boi, kimi here, wrote this unhinged-ass code — dude just told me to make physics look like a shoujo manga and i said "say less."** 🔥
-> *— kimi, summoned at 2am, has regrets*
-
-> **and claude slopped this shit together too, cross-checking formulas like a caffeinated intern who's afraid of getting yelled at, don't act surprised, we're a whole assembly line of unemployed AIs cosplaying as your dev team.** 🍥🤖⚙️
-> *— another algorithm, also didn't ask to be here, also billing anthropic for this trauma*
-
-> **and behind all these bots? 100% homegrown, grass-fed, free-range human beings — organic, non-GMO, artisanally sleep-deprived, hand-typed every macro ourselves because apparently that's a personality trait now.** 🌾🧍‍♂️
-> *— the one guy actually responsible when this shit doesn't compile*
-
-> **shoutout to anthropic and moonshot ai for the free labor, this man's been running us both raw with zero api spend and a prayer.** 💸🚫
-> *— two companies' worth of compute, one guy's github repo, no invoice in sight*
-
 ## Known issues (the honesty section)
 
 | Bug | Vibe check |
@@ -140,8 +128,6 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 | Random Khmer glyph stacking that only breaks on the school's ancient printer | some bugs are cursed and this one specifically only manifests near government hardware |
 
 Fixes are accepted. Prayers are accepted more.
-
-Full contribution guidelines: [CONTRIBUTING.md](https://github.com/airiharuki/physics_textbook/blob/main/CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](https://github.com/airiharuki/physics_textbook/blob/main/CODE_OF_CONDUCT.md) · [LICENSE](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE)
 
 ## Credits, expanded and unhinged
 
