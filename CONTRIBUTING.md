@@ -31,20 +31,44 @@ So the one rule of the club is: **don't go out of your way to announce the repo.
 
 ## Getting started — a step-by-step guide
 
-The repo lives at **https://github.com/airiharuki/physics_textbook**, clone it with:
+The repo lives at **https://github.com/airiharuki/physics_textbook**. Read the LFS heads-up below before you clone — it'll save you a very confusing first build.
+
+### 0. Git LFS — grab the images (read this first)
+
+All the photos and figures live in **Git LFS** (Large File Storage). That's how a ~19 MB handbook stays cloneable. The catch: the **source zip** GitHub offers (Code → Download ZIP) does **not** include the images — you get tiny LFS pointer files instead (files named like `magfield.jpg` that are actually ~130 bytes of `<hash>` text), and the book refuses to build. Same thing happens if you `git clone` before Git LFS is installed.
+
+The fix:
 
 ```bash
-git clone https://github.com/airiharuki/physics_textbook.git
+# 1. Install Git LFS once (https://git-lfs.com, or your package manager:
+#    sudo apt install git-lfs / brew install git-lfs / choco install git-lfs)
+git lfs install
+
+# 2. Clone WITH the images (note: git lfs clone, not git clone)
+git lfs clone https://github.com/airiharuki/physics_textbook.git
+cd physics_textbook
 ```
+
+Already cloned, or images missing after a pull? No re-clone needed:
+
+```bash
+git lfs install          # just in case
+git lfs pull             # fetch and place every LFS file
+```
+
+Verify you're whole: `git lfs ls-files -l` should list the images in `img/` with real file sizes. If `img/deflexion.jpg` is ~130 bytes and reads like `<0a8f…>`, you haven't pulled yet — run `git lfs pull`.
+
+*(The compiled book never hits this — the released PDF bundles every image. LFS only matters if you want to build from source.)*
 
 ### 1. Fork + clone
 
 1. Click **Fork** in the top-right of the repo page — that gives you your own copy to work freely in.
-2. Clone **your** fork:
+2. Clone **your** fork (LFS included):
    ```bash
-   git clone https://github.com/<your-github-username>/physics_textbook.git
+   git lfs clone https://github.com/<your-github-username>/physics_textbook.git
    cd physics_textbook
    ```
+   (plain `git clone` also works — just run `git lfs pull` right after it)
 3. Add the original repo as `upstream` so you can stay in sync with us:
    ```bash
    git remote add upstream https://github.com/airiharuki/physics_textbook.git
