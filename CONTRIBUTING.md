@@ -31,7 +31,7 @@ So the one rule of the club is: **don't go out of your way to announce the repo.
 
 ## Getting started — a step-by-step guide
 
-The repo lives at **https://github.com/airiharuki/physics_textbook**. Read the LFS heads-up below before you clone — it'll save you a very confusing first build.
+The repo lives at **https://github.com/airiharuki/physics_textbook**. New here and want the backstory before you commit to anything? The **[CHANGELOG.md](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md)** is our whole saga in order — every victory, every 2am fix, every mistake we've already made so you don't have to. Skim it, then read the LFS heads-up below before you clone — it'll save you a very confusing first build.
 
 ### 0. Git LFS — grab the images (read this first)
 

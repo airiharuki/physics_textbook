@@ -19,13 +19,16 @@ Current itinerary:
 - **Chapter 2** — waves and interference (constructive, destructive, raws for days)
 - **Chapter 3** — ម៉ាញេទិក (magnetism): fields around straight wires, loops and solenoid coils, the Lorentz force, charged-particle orbits, force on current-carrying wires, and the showdown between two parallel wires
 
-The book compiles to a single `main.pdf` (~49 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
+The book compiles to a single `main.pdf` (~54 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
+
+Brave enough for the full timeline? **[CHANGELOG.md](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md)** — every mistake, victory, and 2am commit, in order.
 
 ## Get involved 🌸
 
 This is a club, not a repo, and the club has rules. The whole guide to joining (grand workflow, conventions, the standard spellings we'll fight you over) lives in our stuff:
 
 - 📖 [**Contributing guide**](https://github.com/airiharuki/physics_textbook/blob/main/CONTRIBUTING.md) — how to join the club, step by step 🤫
+- 📜 [**Changelog**](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md) — catch up on what we've already been through
 - 💖 [**Code of conduct**](https://github.com/airiharuki/physics_textbook/blob/main/CODE_OF_CONDUCT.md) — be warm or be gone
 - ⚖️ [**License**](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE) — the boring part, but read it before you remix anything
 
@@ -75,6 +78,9 @@ Yeah you gotta run it twice or your TOC and page refs will be lying to you. Outp
 ├── fonts/                # Khmer + Latin typefaces
 ├── img/                  # Photos, figures, vibes
 ├── miscs/                # Side quests (introduction, etc.)
+├── .latexmkrc            # Makes `latexmk main.tex` just work (xelatex)
+├── .gitignore            # Keeps the LaTeX junk out
+├── CHANGELOG.md          # The whole saga, in order
 ├── CONTRIBUTING.md       # How to join the club 🤫
 └── CODE_OF_CONDUCT.md    # Be warm or be gone
 ```
