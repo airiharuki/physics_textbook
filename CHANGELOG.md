@@ -34,6 +34,33 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 - Minipage side-by-side layouts (we won the war)
 - OCR garble normalization (ម៉ាញេទិក, សូលេណូអុីត, វ៉ិចទ័រ — standardized, non-negotiable)
 
+## [Unreleased] — 2026-10-02
+
+Lesson 2 lands, and for the first time every single picture in the book knows its own number.
+
+### Added
+
+- **Chapter 3 · Lesson 2 (Faraday's law & induction) — complete:**
+  - Faraday portrait + intro (រូបទី២០) and both experiments with photos (រូបទី២១, រូបទី២២)
+  - ភ្លុចម៉ាញេទិក: `Φ_B = B⃗ · A⃗ = BA cos α = B_⊥A` (សញ្ញាត្រាម១), symbol glossary, flux figure + the three cases (ក/ខ/គ)
+  - ច្បាប់ផារ៉ាដេ: `E = −N ΔΦ_B/Δt` (សញ្ញាត្រាម២), Δt → 0 note, `e(t) = −N dΦ_B/dt` (សញ្ញាត្រាម៣)
+  - Flux-change cases table (magnet & coil, expanding coil, rotating loop) as a native-width figure
+- **Every chapter 3 figure now has a caption number** — ១ through ២៣, photos *and* hand-built TikZ panels, with ក./ខ./គ. where panels genuinely belong together
+- New images: `faradayexperiment1.jpg`, `faradayexperiment2.jpg`, `magflux.jpg`, `magneticfluxcases.png`, `magnetincoil.jpg`, `handsincoil.jpg`, `magnetic-generator.jpg`
+
+### Changed
+
+- Equation numbering continues the book-wide (១)→(១២) sequence into lesson 2
+- `main.pdf` rebuilt: **59 pages** (chapter 3 now at 2 of 5 lessons)
+- Repo remote migrated from token-in-URL HTTPS to SSH (`core.sshCommand` pinned to `~/.ssh/githubkey`)
+
+### Fixed
+
+- Equation labels were sitting *inside* math mode, so Khmer numerals fell back to `cmr12` — "Missing character: There is no ២ in font cmr12!" gone
+- Corrupted `magfield.jpg` figure block repaired
+- Terminology guardrail: `កម្មន្ត` stays `កម្មន្ត` (no more quiet swaps with `កម្លាំង`)
+- OCR caption garble normalized for the new flux/EMF figures
+
 ## Earlier history (pre-release, straight from the depths)
 
 - **2026-09-19** — Chapter 3 begins: circular-loop field, solenoid render, build unblocked
@@ -47,3 +74,5 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 ---
 
 *The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
+
+*Currently in the pipeline: 59 pages, chapter 3 at 2 of 5 lessons — lesson 2 is in, and no image is anonymous anymore.* 🌸
