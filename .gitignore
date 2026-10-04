@@ -4,6 +4,9 @@
 *.iws
 out/
 
+# JetBrains Rider
+.rider/
+
 # LaTeX build artifacts
 *.aux
 *.log
