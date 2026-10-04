@@ -34,9 +34,32 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 - Minipage side-by-side layouts (we won the war)
 - OCR garble normalization (ម៉ាញេទិក, សូលេណូអុីត, វ៉ិចទ័រ — standardized, non-negotiable)
 
+## [v1.0.0-alpha.8] — 2026-10-04
+
+The minus sign explained itself, the eddy currents swirled in, and the book grew a video box.
+
+### Added
+
+- **Chapter 3 · Lesson 2 continued:**
+  - ច្បាប់ឡិនទី២ (២.២) — all four magnet-motion cases, with the pull-the-magnet-away diagram as រូបទី២៦
+  - ចរន្តភូកូល / ចរន្តអេឌី (៣) — eddy currents in a conductor, heating the metal and opposing the change, beside រូបទី២៧
+  - ជនិតានិងម៉ូទ័រអគ្គិសនី (៤) heading opened, with `electricgenerator.png` and `electricmotor.png` staged for it
+- **`\khmervideobox{VIDEO}{TITLE}{CAPTION}`** in `preamble.tex` — a clickable YouTube link plus an auto-generated QR code (2.6 cm) in a box that reuses the Faraday box's exact palette (`boxbg`/`boxframe` fill, `primary` title bar, 1pt rule, 3mm radius). Takes a bare video ID or a full URL; breakable, so long captions split instead of overflowing
+- `qrcode` package added to the build (verified working under XeLaTeX)
+- New images: `lenzlaw1.png`, `lenzlawdiagram2.png`, `eddycurrentdiagram.png`
+
+### Changed
+
+- Figure ២៦ printed at `0.95\linewidth` (3.18:1 strip — full width costs only ~5.1cm of height); figure ២៧ at `0.75\linewidth` (1.42:1 diagram — the largest size that still leaves a usable amount of text on the page). Both sources are 6250px wide, so quality was never the constraint
+- `main.pdf` rebuilt: **63 pages** — lesson 2 still in progress
+
+### Fixed
+
+- Raw `&` in the new `Electric Generators & Electric Motors` topic title blew up as a misplaced alignment tab (and poisoned `main.toc` on the next pass) — now escaped
+
 ## [Unreleased]
 
-Next up: **Lenz's law** — the minus sign finally gets to explain itself.
+Next up: **generators & electric motors** (៤) — plus the first real `\khmervideobox` in the body text, if any videos survive the curation.
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
@@ -84,4 +107,4 @@ Lesson 2 lands in full — and for the first time every single picture in the bo
 
 *The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: 60 pages, chapter 3 at 2 of 5 lessons — lesson 2 is done, Faraday's law and all, and no image is anonymous anymore. Next up: Lenz's law, because the minus sign has to explain itself.* 🌸
+*Currently in the pipeline: 63 pages, chapter 3 at 2 of 5 lessons — lesson 2 is deep into Lenz's law now, with eddy currents and two freshly drawn diagrams in tow. Next up: generators and electric motors.* 🌸

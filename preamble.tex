@@ -560,6 +560,48 @@
 }
 
 % ---------------------------------------------------------
+% VIDEO BOX - clickable YouTube link + scannable QR code,
+% styled to match \formulabox exactly (same colors, frame
+% weight, corner radius and attached title bar). QR code is
+% generated automatically from the link, so a phone user just
+% scans the printed page and lands in the video.
+%   \khmervideobox{youtube-id}{title}{caption}
+%   \khmervideobox{https://youtu.be/xyz}{title}{caption}
+% The caption goes below the hyperlink; keep it to 3-4 lines
+% so the QR code stays roughly square with the text block.
+% ---------------------------------------------------------
+\newcommand{\khmervideobox}[3]{%
+    \def\khmervideourl{#1}%
+    \ifdefstring{\khmervideourl}{http}{%
+    }{%
+        \def\khmervideourl{https://youtu.be/#1}%
+    }%
+    \begin{tcolorbox}[
+        enhanced, breakable,
+        colback=boxbg, colframe=boxframe,
+        boxrule=1pt, arc=3mm, auto outer arc,
+        title={\khmerheader\large #2},
+        coltitle=white, colbacktitle=primary,
+        fonttitle=\bfseries,
+        attach boxed title to top left={xshift=5mm, yshift=-3mm},
+        boxed title style={colframe=primary, arc=2mm},
+        left=1em, right=1em, top=1em, bottom=1em
+    ]
+        \begin{minipage}[c]{0.68\linewidth}
+            \href{\khmervideourl}{%
+                \textcolor{primary}{\faChevronRight\ %
+                \textbf{\englishfont Watch on YouTube}}}%
+            \par\smallskip
+            #3
+        \end{minipage}\hfill
+        \begin{minipage}[c]{0.26\linewidth}
+            \centering
+            \qrcode[height=2.6cm]{\khmervideourl}
+        \end{minipage}
+    \end{tcolorbox}%
+}
+
+% ---------------------------------------------------------
 % HEADER / FOOTER
 % ---------------------------------------------------------
 
@@ -941,6 +983,7 @@
 \usepackage{indentfirst}
 \usepackage{caption}
 \usepackage{multicol}
+\usepackage{qrcode}
 
 \IfFileExists{fontawesome7.sty}{
     \usepackage{fontawesome7}
