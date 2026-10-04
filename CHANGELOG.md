@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes, compiled honestly from the git history of this repo. Format follows the vibes, not semver. Dates are the day each commit swore.
+All notable changes, compiled honestly from the git history of this repo. Format follows the vibes, not semver. Dates are the day each commit swore. From lesson 2 onward, every commit is also a release: annotated tags run `v1.0-alpha.N` in commit order and each one gets its own section below.
 
 ## [0.1-alpha-1] — 2026-09-25
 
@@ -35,6 +35,10 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 - OCR garble normalization (ម៉ាញេទិក, សូលេណូអុីត, វ៉ិចទ័រ — standardized, non-negotiable)
 
 ## [Unreleased]
+
+Next up: **Lenz's law** — the minus sign finally gets to explain itself.
+
+## [v1.0-alpha.1] — 2026-09-25
 
 Lesson 2 lands in full — and for the first time every single picture in the book knows its own number.
 
