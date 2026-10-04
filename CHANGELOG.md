@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes, compiled honestly from the git history of this repo. Versions follow **SemVer 2.0.0**; the prose follows the vibes. Dates are the day each commit swore. From lesson 2 onward, every commit is also a release: annotated tags run `v1.0.0-alpha.N` in commit order and each one gets its own section below.
+All notable changes, compiled honestly from the git history of this repo. Versions follow **[SemVer 2.0.0](https://semver.org/spec/v2.0.0.html)**; commits follow **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)**; the prose follows the vibes. Dates are the day each commit swore. From lesson 2 onward, every commit is also a release: annotated tags run `v1.0.0-alpha.N` in commit order and each one gets its own section below.
 
 ## [0.1-alpha-1] — 2026-09-25
 

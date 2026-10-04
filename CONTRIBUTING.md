@@ -121,6 +121,9 @@ build.cmd                   # Windows
 - **Khmer numerals everywhere.** Pages, sections, equations, tables. If a student will see the number, it's Khmer: (៤) not (4). The boomers demand it, and honestly so do the vibes.
 - **Images** live in `img/`, referenced with `\khmerphoto[...]{img/name.jpg}{caption}`. Give files descriptive lowercase names.
 - **New chapter:** `chapters/chapterN.tex` + `banners/chapterNbanner.tex` + two `\input{}` lines in `main.tex`. That's the whole recipe.
+- **Commits follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):** `<type>(<scope>)!: <description>`, lowercase scope. A `commit-msg` hook (`.githooks/commit-msg`, wired through `core.hooksPath`) enforces it, so `git commit -m "add flux section"` gets bounced with a lesson. Types: `build chore ci docs feat fix perf refactor revert style test`. Breaking change: `!` before the colon plus a `BREAKING CHANGE:` footer.
+- **Versions follow [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html), and every commit is a release:** annotated tag `v1.0.0-alpha.N` in commit order, each with a matching section in `CHANGELOG.md`. Alpha while the book is being written → `1.0.0-beta.1` when it's feature-complete → `1.0.0` on release day.
+- **Hooks and shell scripts must be LF.** `.gitattributes` pins `*.sh` and `.githooks/**` to `eol=lf`; with `core.autocrlf=true` on Windows a CRLF shebang makes bash refuse the hook, silently disarming the gate.
 
 ## Making a pull request — the whole dance
 

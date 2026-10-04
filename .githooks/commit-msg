@@ -1,0 +1,44 @@
+#!/bin/sh
+# Conventional Commits gate for the physics handbook.
+# Wired up through core.hooksPath=.githooks, so it travels with the repo.
+# Spec: https://www.conventionalcommits.org/en/v1.0.0/
+
+msg_file="$1"
+msg=$(head -n 1 "$msg_file")
+git_dir=$(git rev-parse --git-dir)
+
+# Merges, rebases, fixups and amends are git's business, not ours.
+for marker in MERGE_HEAD REBASE_HEAD CHERRY_PICK_HEAD REVERT_HEAD; do
+	if [ -f "$git_dir/$marker" ]; then
+		exit 0
+	fi
+done
+
+case "$msg" in
+fixup!* | squash!*) exit 0 ;;
+esac
+
+# Deliberately no subject-length check: Khmer subjects are multi-byte and a
+# byte count would reject perfectly reasonable lines.
+pattern='^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z0-9._/-]+\))?!?: .+'
+
+if ! printf '%s' "$msg" | grep -Eq "$pattern"; then
+	cat >&2 <<'EOF'
+commit-msg: not a Conventional Commit.
+
+  Format:  <type>(<optional scope>)!: <description>
+  Types:   build chore ci docs feat fix perf refactor revert style test
+  Scope:   lowercase, e.g. ch3, readme, contributing
+
+  Examples:
+    feat(ch3): add magnetic flux section
+    fix: repair flalign brace error in 4.4 derivation
+    docs: changelog entry for lesson 2
+
+  Breaking change: put "!" before the colon and add a "BREAKING CHANGE:"
+  footer describing it.
+EOF
+	exit 1
+fi
+
+exit 0
