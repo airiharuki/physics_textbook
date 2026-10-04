@@ -34,9 +34,9 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 - Minipage side-by-side layouts (we won the war)
 - OCR garble normalization (ម៉ាញេទិក, សូលេណូអុីត, វ៉ិចទ័រ — standardized, non-negotiable)
 
-## [Unreleased] — 2026-10-02
+## [Unreleased]
 
-Lesson 2 lands, and for the first time every single picture in the book knows its own number.
+Lesson 2 lands in full — and for the first time every single picture in the book knows its own number.
 
 ### Added
 
@@ -45,20 +45,25 @@ Lesson 2 lands, and for the first time every single picture in the book knows it
   - ភ្លុចម៉ាញេទិក: `Φ_B = B⃗ · A⃗ = BA cos α = B_⊥A` (សញ្ញាត្រាម១), symbol glossary, flux figure + the three cases (ក/ខ/គ)
   - ច្បាប់ផារ៉ាដេ: `E = −N ΔΦ_B/Δt` (សញ្ញាត្រាម២), Δt → 0 note, `e(t) = −N dΦ_B/dt` (សញ្ញាត្រាម៣)
   - Flux-change cases table (magnet & coil, expanding coil, rotating loop) as a native-width figure
-- **Every chapter 3 figure now has a caption number** — ១ through ២៣, photos *and* hand-built TikZ panels, with ក./ខ./គ. where panels genuinely belong together
-- New images: `faradayexperiment1.jpg`, `faradayexperiment2.jpg`, `magflux.jpg`, `magneticfluxcases.png`, `magnetincoil.jpg`, `handsincoil.jpg`, `magnetic-generator.jpg`
+  - កម្លាំងអគ្គិសនីចលករអាំងឌ្វីក្នុងខ្សែចម្លង (១.៥): moving rod in a field, `|E| = |ΔΦ_B|/Δt = BΔA/Δt = B·LΔx/Δt` → `|E| = Blv` (សញ្ញាត្រាម៤) beside the rod figure (រូបទី២៤)
+  - Ohm's law tie-in `V = |E| = RI` and the circuit-current box `I = |E|/R` (សញ្ញាត្រាម៥) in a titled `formulabox`
+- **Every chapter 3 figure now has a caption number** — ១ through ២៤, photos *and* hand-built TikZ panels, with ក./ខ./គ. where panels genuinely belong together
+- New images: `faradayexperiment1.jpg`, `faradayexperiment2.jpg`, `magflux.jpg`, `magneticfluxcases.png`, `magneticrod.jpg`
 
 ### Changed
 
-- Equation numbering continues the book-wide (១)→(១២) sequence into lesson 2
-- `main.pdf` rebuilt: **59 pages** (chapter 3 now at 2 of 5 lessons)
+- Equation numbering continues the book-wide (១)→(១២) sequence into lesson 2, now running through (៥)
+- `main.pdf` rebuilt: **60 pages** — chapter 3 lesson 2 closed out, 2 of 5 lessons done
 - Repo remote migrated from token-in-URL HTTPS to SSH (`core.sshCommand` pinned to `~/.ssh/githubkey`)
+- `.rider/` added to `.gitignore` (JetBrains config, like `.idea/` before it)
 
 ### Fixed
 
 - Equation labels were sitting *inside* math mode, so Khmer numerals fell back to `cmr12` — "Missing character: There is no ២ in font cmr12!" gone
 - Corrupted `magfield.jpg` figure block repaired
 - Terminology guardrail: `កម្មន្ត` stays `កម្មន្ត` (no more quiet swaps with `កម្លាំង`)
+- Khmer terms normalized chapter-wide: `ម៉ាញេទិក` (not `ម៉ាញេទិច`), `ផ្ទៃ` (not `ផ្ទឃ`), `ទម្រ` (not `ទ្រមេ`) — the OCR and the AI finally agree
+- Stale figure cross-reference `រូបទី៤` retargeted to `រូបទី២៤` so continuous numbering and the prose match
 - OCR caption garble normalized for the new flux/EMF figures
 
 ## Earlier history (pre-release, straight from the depths)
@@ -75,4 +80,4 @@ Lesson 2 lands, and for the first time every single picture in the book knows it
 
 *The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: 59 pages, chapter 3 at 2 of 5 lessons — lesson 2 is in, and no image is anonymous anymore.* 🌸
+*Currently in the pipeline: 60 pages, chapter 3 at 2 of 5 lessons — lesson 2 is done, Faraday's law and all, and no image is anonymous anymore. Next up: Lenz's law, because the minus sign has to explain itself.* 🌸
