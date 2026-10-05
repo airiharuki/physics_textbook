@@ -57,9 +57,32 @@ The minus sign explained itself, the eddy currents swirled in, and the book grew
 
 - Raw `&` in the new `Electric Generators & Electric Motors` topic title blew up as a misplaced alignment tab (and poisoned `main.toc` on the next pass) — now escaped
 
+## [v1.0.0-alpha.9] — 2026-10-04
+
+Lesson 2 closes out. Generators, motors, and the whole book now knows what a minus sign is for. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 2 finished:**
+  - ជនិតាអគ្គិសនី (៤.១) — spinning magnet induces a sinusoidal EMF, `e(t) = -N dφ/dt = NBAω sin(ωt)` (សញ្ញាត្រាម៦) beside រូបទី២៨, with the full symbol glossary and `E_max = E_m = NBAω`
+  - ម៉ូទ័រអគ្គិសនី (៤.២) — the motor as an electric motor: same coil, same field, force instead of induction, with រូបទី២៩
+  - Lesson 2 figure run now complete at ២០–២៩; equations at (១)–(៦)
+- Release artifact published as a GitHub release asset: `PHY - G12 - Physics Handbook (2026 Version - 1.0.0-alpha.9).pdf`
+
+### Changed
+
+- Generator derivation follows the house pattern for multi-step work: `flalign*` for the steps, result and its Khmer number in a plain `center` — keeps ៦ out of math mode
+- Generator figure printed beside its derivation at 0.55/0.40 minipage widths; motor figure stacked below its paragraph at `0.75\linewidth`, matching figure ២ៗ (same 1.42:1 aspect)
+- `main.pdf` rebuilt: **63 pages** — **chapter 3 lesson 2 complete**, 2 of 5 lessons done
+
+### Fixed
+
+- `ម៉ាញេទិច` → `ម៉ាញេទិក` in the new generator prose and symbol list
+- Stale figure pointer `រូបទី៨` / `រូបទី៩` retargeted to រូបទី២៨ / រូបទី២៩ so the prose and the continuous numbering agree
+
 ## [Unreleased]
 
-Next up: **generators & electric motors** (៤) — plus the first real `\khmervideobox` in the body text, if any videos survive the curation.
+Next up: **chapter 3 · lesson 3** — whatever waits in the wings.
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
@@ -107,4 +130,4 @@ Lesson 2 lands in full — and for the first time every single picture in the bo
 
 *The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: 63 pages, chapter 3 at 2 of 5 lessons — lesson 2 is deep into Lenz's law now, with eddy currents and two freshly drawn diagrams in tow. Next up: generators and electric motors.* 🌸
+*Currently in the pipeline: 63 pages, chapter 3 at 2 of 5 lessons — and lesson 2 is done, Faraday to Lenz to eddy currents to generators to motors, every figure numbered, every equation labeled. Next up: lesson 3.* 🌸
