@@ -89,9 +89,26 @@ Lesson 2 closes out. Generators, motors, and the whole book now knows what a min
 
 *Tag note: the first v1.0.0-alpha.9 cut shipped the motor heading with no body; the tag was re-cut after restoring it. v1.0.0-alpha.10 was folded back into alpha.9 and its tag dropped.*
 
+## [v1.0.0-alpha.10] — 2026-10-05
+
+Lesson 3 cracks open, and its derivations look like lesson 2's: steps in `flalign*`, results boxed, Khmer numbers outside math.
+
+### Added
+
+- **Chapter 3 · Lesson 3 — មេរៀនទី៣៖ អូតូអាំងឌុចស្យុង, opened:**
+  - Lesson intro paragraph and the `\khmerlesson` + `\tanbgdivider` banner, plus topic ១ heading (mutual induction / linking inductance)
+  - ១. mutual-induction block: the two-coils figure `mutualinductance.png` placed left of its caption (រូបទី៣០) beside the bullet list and `e_2 = -N_2 dΦ_{B2}/dt` (៧)
+  - Derivation chain (`N_2Φ_2 = M_{21}i_1` (៨)) → នាំឱ្យ substitution → boxed `e_2`, `E_2`, `N_1Φ_1 = M_{12}i_2`, boxed `e_1`, `E_1`, and the boxed `M` (៩–១៤)
+  - Full symbol glossary for `M`, `M_{12}`, `M_{21}`, fluxes, turns, currents, ΔI, Δt, rates, and the EMFs
+
+### Changed
+
+- Generator result `e(t) = NBAω sin(ωt)` (៦) is now boxed like the rest of the key results
+- `main.pdf` rebuilt: **67 pages** — chapter 3 at 2 of 5 lessons plus the lesson-3 opener
+
 ## [Unreleased]
 
-Next up: **chapter 3 · lesson 3** — whatever waits in the wings.
+Next up: the rest of lesson 3 — self-inductance, magnetic energy, the `RL` and `LC` circuits.
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
@@ -139,4 +156,4 @@ Lesson 2 lands in full — and for the first time every single picture in the bo
 
 *The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: 63 pages, chapter 3 at 2 of 5 lessons — and lesson 2 is done, Faraday to Lenz to eddy currents to generators to motors, every figure numbered, every equation labeled. Next up: lesson 3.* 🌸
+*Currently in the pipeline: 67 pages, chapter 3 at 2 of 5 lessons finished plus lesson 3 started — mutual inductance, the full `M` glossary and all. Next up: self-inductance, magnetic energy, the `RL` and `LC` circuits.* 🌸
