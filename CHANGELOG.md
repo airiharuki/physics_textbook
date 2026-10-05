@@ -77,23 +77,17 @@ Lesson 2 closes out. Generators, motors, and the whole book now knows what a min
 
 ### Fixed
 
+- **The electric-motor subsection briefly shipped as a heading with a corpse attached** — the ៤.២ heading slipped into an early alpha.9 commit with no body (an editor buffer overwrite lost the paragraph). This alpha.9 tag includes the restored paragraph and the correctly balanced heading
+- Stale figure pointers `រូបទី៨` / `រូបទី៩` retargeted to រូបទី២៨ / រូបទី២៩ so the prose and the continuous numbering agree
 - `ម៉ាញេទិច` → `ម៉ាញេទិក` in the new generator prose and symbol list
-- Stale figure pointer `រូបទី៨` / `រូបទី៩` retargeted to រូបទី២៨ / រូបទី២៩ so the prose and the continuous numbering agree
-
-## [v1.0.0-alpha.10] — 2026-10-05
-
-The motor shows up this time. 🛵
-
-### Fixed
-
-- **The electric-motor subsection was a heading with a corpse attached** — the `៤.២` heading slipped into the alpha.9 commit with no body and no figure (an editor buffer overwrite lost the paragraph and the `electricmotor.png` block). alpha.10 puts the paragraph back and places រូបទី២៩ under it, stacked below the text at `0.75\linewidth`
-- The heading itself had an unmatched `(` — now `(\textbf{\englishfont Electric Motors})`, balanced and bold like its sibling subtopics
 
 ### Changed
 
-- `main.pdf` rebuilt: **64 pages** — lesson 2 is finished *for real* now
+- Generator derivation follows the house pattern for multi-step work: `flalign*` for the steps, result and its Khmer number in a plain `center` — keeps ៦ out of math mode
+- Generator figure printed beside its derivation at 0.55/0.40 minipage widths; motor figure stacked below its paragraph at `0.75\linewidth`, matching figure ២ៗ (same 1.42:1 aspect)
+- `main.pdf` rebuilt: **64 pages** — **chapter 3 lesson 2 complete**, 2 of 5 lessons done
 
-*Note: `v1.0.0-alpha.9`'s release still ships the heading-only version — this section is what actually delivers ៤.២.*
+*Tag note: the first v1.0.0-alpha.9 cut shipped the motor heading with no body; the tag was re-cut after restoring it. v1.0.0-alpha.10 was folded back into alpha.9 and its tag dropped.*
 
 ## [Unreleased]
 
