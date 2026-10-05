@@ -80,6 +80,21 @@ Lesson 2 closes out. Generators, motors, and the whole book now knows what a min
 - `ម៉ាញេទិច` → `ម៉ាញេទិក` in the new generator prose and symbol list
 - Stale figure pointer `រូបទី៨` / `រូបទី៩` retargeted to រូបទី២៨ / រូបទី២៩ so the prose and the continuous numbering agree
 
+## [v1.0.0-alpha.10] — 2026-10-05
+
+The motor shows up this time. 🛵
+
+### Fixed
+
+- **The electric-motor subsection was a heading with a corpse attached** — the `៤.២` heading slipped into the alpha.9 commit with no body and no figure (an editor buffer overwrite lost the paragraph and the `electricmotor.png` block). alpha.10 puts the paragraph back and places រូបទី២៩ under it, stacked below the text at `0.75\linewidth`
+- The heading itself had an unmatched `(` — now `(\textbf{\englishfont Electric Motors})`, balanced and bold like its sibling subtopics
+
+### Changed
+
+- `main.pdf` rebuilt: **64 pages** — lesson 2 is finished *for real* now
+
+*Note: `v1.0.0-alpha.9`'s release still ships the heading-only version — this section is what actually delivers ៤.២.*
+
 ## [Unreleased]
 
 Next up: **chapter 3 · lesson 3** — whatever waits in the wings.
