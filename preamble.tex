@@ -545,17 +545,19 @@
     \end{center}
 }
 
-% --- Formula box (from the trig formula-sheet doc, adapted to use \khmerheader) ---
+% --- Formula box: washed-pink panel, 3pt primary accent bar on the left,
+%     sharp corners, title in primary with a hairline rule under it ---
 \newtcolorbox{formulabox}[2][]{
     enhanced, breakable,
-    colback=boxbg, colframe=boxframe,
-    boxrule=1pt, arc=3mm, auto outer arc,
+    colback=boxbg, frame hidden, boxrule=0pt,
+    sharp corners,
+    borderline west={3pt}{0pt}{primary},
+    left=14pt, right=12pt, top=9pt, bottom=10pt,
     title={\khmerheader\large #2},
-    coltitle=white, colbacktitle=primary,
+    coltitle=primary,
     fonttitle=\bfseries,
-    attach boxed title to top left={xshift=5mm, yshift=-3mm},
-    boxed title style={colframe=primary, arc=2mm},
-    left=1em, right=1em, top=1em, bottom=1em,
+    attach title to upper,
+    after title={\par\vskip3pt{\color{primary!45}\hrule height0.5pt}\vskip7pt},
     #1
 }
 
@@ -578,14 +580,15 @@
     }%
     \begin{tcolorbox}[
         enhanced, breakable,
-        colback=boxbg, colframe=boxframe,
-        boxrule=1pt, arc=3mm, auto outer arc,
+        colback=boxbg, frame hidden, boxrule=0pt,
+        sharp corners,
+        borderline west={3pt}{0pt}{primary},
+        left=14pt, right=12pt, top=9pt, bottom=10pt,
         title={\khmerheader\large #2},
-        coltitle=white, colbacktitle=primary,
+        coltitle=primary,
         fonttitle=\bfseries,
-        attach boxed title to top left={xshift=5mm, yshift=-3mm},
-        boxed title style={colframe=primary, arc=2mm},
-        left=1em, right=1em, top=1em, bottom=1em
+        attach title to upper,
+        after title={\par\vskip3pt{\color{primary!45}\hrule height0.5pt}\vskip7pt}
     ]
         \begin{minipage}[c]{0.68\linewidth}
             \href{\khmervideourl}{%

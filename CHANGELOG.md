@@ -106,6 +106,24 @@ Lesson 3 cracks open, and its derivations look like lesson 2's: steps in `flalig
 - Generator result `e(t) = NBAω sin(ωt)` (៦) is now boxed like the rest of the key results
 - `main.pdf` rebuilt: **67 pages** — chapter 3 at 2 of 5 lessons plus the lesson-3 opener
 
+## [v1.0.0-alpha.11] — 2026-10-06
+
+Boxes find a new face, and the first lesson-3 circuit diagram turns up.
+
+### Added
+
+- **Chapter 3 · Lesson 3 · ២.១ experiment shown:** the closing-switch paragraph now sits beside `img/autoinductionexperiment.png` (រូបទី៣១), replacing the temporary raw `circuitikz` sketch; caption follows the book pattern
+
+### Changed
+
+- `\formulabox` and `\khmervideobox` re-skinned: soft wash panel stays, the old framed-chip title bar is replaced by a 3pt `primary` accent bar, sharp corners, and an inline coloured title with a hairline rule
+- `.latexmkrc` repair: the live variable for XeLaTeX is `$xelatex`, not `$pdflatex`, so `latexmk main.tex` now just works (nonstopmode + file-line-error + synctex)
+
+### Fixed
+
+- `\usepackage{qrcode}` had been silently removed while adding `circuitikz`; restored and then dropped `circuitikz` again once the photo covered the figure
+- `main.pdf` rebuilt: **68 pages**, clean
+
 ## [Unreleased]
 
 Next up: the rest of lesson 3 — self-inductance, magnetic energy, the `RL` and `LC` circuits.
