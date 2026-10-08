@@ -1635,7 +1635,273 @@
 	\end{center}
 	\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
 		\item $i(t)$ ៖ ចរន្តនៅខណៈណាមួយ $(\mathrm{A})$
+		\item $I_m \text{ ឬ } I_{\max} = \dfrac{E}{R}$ ៖ ចរន្តអតិបរមានៃសៀគ្វី $(\mathrm{A})$
+		\item $\tau_{RL} = \dfrac{L}{R}$ ៖ ថេរពេលនៃសៀគ្វី $RL$ $(\mathrm{s})$
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.7em}
+\noindent
+\textbf{\textit{\textcolor{brownheader}{ក្រាបបកស្រាយពីចរន្តដែលរត់នៅក្នុងប៊ូប៊ីននៃសៀគ្វី $RL$ ៖}}}
+
+\vspace{0.4em}
+\noindent
+\begin{minipage}[t]{0.43\textwidth}
+	\vspace{0pt}
+	\centering
+	{\small \textbf{តារាងតម្លៃលេខនៃ $i = I_m \left( 1 - e^{-\frac{t}{\tau}} \right)$}}
+
+	\vspace{0.35em}
+	\renewcommand{\arraystretch}{1.35}
+	\setlength{\arrayrulewidth}{0.7pt}
+	\arrayrulecolor{boxframe}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2.1cm}|>{\centering\arraybackslash}m{2.3cm}|}
+		\hline
+		\rowcolor{rowhdr}
+		\textcolor{brownheader}{\textbf{$t$}} & \textcolor{brownheader}{\textbf{$i$}} \\
+		\hline
+		$t = \tau$   & $0.63\,I_m$ \\
+		\hline
+		$t = 2\tau$  & $0.86\,I_m$ \\
+		\hline
+		$t = 3\tau$  & $0.95\,I_m$ \\
+		\hline
+		$t = 4\tau$  & $0.98\,I_m$ \\
+		\hline
+		$t = 5\tau$  & $0.99\,I_m$ \\
+		\hline
+	\end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.92]
+		% Axes
+		\draw[->, line width=0.85pt] (0,0) -- (5.6,0) node[below right=-2pt] {\scriptsize $t\,(\mathrm{s})$};
+		\draw[->, line width=0.85pt] (0,0) -- (0,4.6) node[above right=-2pt] {\scriptsize $i\,(\mathrm{A})$};
+		\node[below left=1pt] at (0,0) {\scriptsize $0$};
+
+		% Grid/asymptote line (I_max = 4.0cm, tau = 0.9cm)
+		\draw[primary!50, dashed, line width=0.55pt] (0,4.0) -- (5.4,4.0);
+
+		% Curve: i(t) = 4.0 * (1 - exp(-x/0.9))
+		\draw[primary, line width=1.35pt, domain=0:5.0, samples=60, smooth] plot (\x, {4.0*(1 - exp(-\x/0.9))});
+		\draw[primary, line width=1.35pt] (5.0, {4.0*(1 - exp(-5.0/0.9))}) -- (5.4, {4.0*(1 - exp(-5.0/0.9))});
+
+		% Dashed projections and points
+		% t = tau = 0.9, y = 2.528
+		\draw[primary!55, dashed, line width=0.5pt] (0.9,0) -- (0.9,2.528) -- (0,2.528);
+		\fill[primary] (0.9,2.528) circle (2.1pt);
+
+		% t = 2tau = 1.8, y = 3.459
+		\draw[primary!55, dashed, line width=0.5pt] (1.8,0) -- (1.8,3.459) -- (0,3.459);
+		\fill[primary] (1.8,3.459) circle (2.1pt);
+
+		% t = 3tau = 2.7, y = 3.801
+		\draw[primary!55, dashed, line width=0.5pt] (2.7,0) -- (2.7,3.801) -- (0,3.801);
+		\fill[primary] (2.7,3.801) circle (2.1pt);
+
+		% t = 4tau = 3.6, y = 3.927
+		\draw[primary!55, dashed, line width=0.5pt] (3.6,0) -- (3.6,3.927) -- (0,3.927);
+		\fill[primary] (3.6,3.927) circle (2.1pt);
+
+		% t = 5tau = 4.5, y = 3.969
+		\draw[primary!55, dashed, line width=0.5pt] (4.5,0) -- (4.5,3.969) -- (0,3.969);
+		\fill[primary] (4.5,3.969) circle (2.1pt);
+
+		% X ticks
+		\foreach \x/\label in {0.9/\tau, 1.8/2\tau, 2.7/3\tau, 3.6/4\tau, 4.5/5\tau} {
+			\draw[line width=0.75pt] (\x,0) -- (\x,-0.12);
+			\node[below] at (\x,-0.08) {\scriptsize $\label$};
+		}
+		% Sub-ticks along x
+		\foreach \subx in {0.45, 1.35, 2.25, 3.15, 4.05} {
+			\draw[line width=0.5pt] (\subx,0) -- (\subx,-0.06);
+		}
+
+		% Y ticks and labels
+		\draw[line width=0.6pt] (0,2.528) -- (-0.1,2.528);
+		\node[left=0pt] at (-0.1,2.528) {\tiny $0.63I_{\max}$};
+
+		\draw[line width=0.6pt] (0,3.459) -- (-0.1,3.459);
+		\node[left=0pt] at (-0.1,3.459) {\tiny $0.86I_{\max}$};
+
+		\draw[line width=0.6pt] (0,3.801) -- (-0.1,3.801);
+		\node[left=0pt] at (-0.1,3.801) {\tiny $0.95I_{\max}$};
+
+		\draw[line width=0.6pt] (0,3.927) -- (-0.1,3.927);
+		\node[left=0pt] at (-0.1,4.05) {\tiny $0.98I_{\max}$};
+
+		\draw[line width=0.6pt] (0,3.969) -- (-0.1,3.969);
+		\node[left=0pt] at (-0.1,4.25) {\tiny $0.99I_{\max}$};
+
+		\draw[line width=0.6pt] (0,4.0) -- (-0.1,4.0);
+		\node[left=0pt] at (-0.1,4.45) {\tiny $I_{\max}$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣៦៖ ក្រាបនៃសៀគ្វី $RL$ ពេលផ្ទុក}
+\end{minipage}
+
+\khmersubtopic{៤.២. ករណីបើកកុងតាក់ $S_1$ (ករណីបិទកុងតាក់ $S_2$ ដោយចំហកុងតាក់ $S_1$ បន្ទាប់ពីប៊ូប៊ីនផ្ទុកពេញ)}
+
+តាមច្បាប់គៀឆុក ({\englishfont Kirchhoff's Loop Rule / Kirchhoff's Voltage Law}) ចំពោះតង់ស្យុងមួយជុំ ៖
+\begin{center}
+	$V_{ab} + V_{bc} + V_{ca} = 0$
+\end{center}
+
+ដោយ ៖
+\begin{flalign*}
+	V_{ab} &= V_R = Ri \\
+	V_{bc} &= V_L = L\dfrac{di}{dt} \\
+	V_{ca} &= 0\,\mathrm{V} \quad (\text{គ្មានប្រភពអគ្គិសនីក្នុងសៀគ្វី})
+\end{flalign*}
+
+យើងបាន ៖
+\begin{flalign*}
+	Ri + L\dfrac{di}{dt} + 0 &= 0 \\[0.4em]
+	L\dfrac{di}{dt} &= -Ri
+\end{flalign*}
+
+ចែកអង្គទាំងពីរនឹង $L$ រួចប្រមូលអថេរ $i$ ទៅម្ខាង និង $t$ ទៅម្ខាងទៀត ៖
+\begin{flalign*}
+	\dfrac{di}{dt} &= -\dfrac{R}{L}\,i \\[0.4em]
+	\dfrac{di}{i} &= -\dfrac{R}{L}\,dt
+\end{flalign*}
+
+នៅខណៈ $t = 0$ ចរន្តមានតម្លៃ $I_m$ ។ ដូចនេះធ្វើអាំងតេក្រាលកំណត់ពី $I_m$ ទៅ $i$ ចំពោះអង្គខាងឆ្វេង និងពី $0$ ទៅ $t$ ចំពោះអង្គខាងស្តាំ ៖
+\begin{center}
+	$\displaystyle\int_{I_m}^i \dfrac{di'}{i'} = -\dfrac{R}{L}\int_0^t dt'$
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	រូបមន្តជំនួយសម្រាប់អាំងតេក្រាល }
+	\begin{itemize}[itemsep=3pt, topsep=0pt, parsep=0pt, leftmargin=1.5em]
+		\item $\displaystyle\int_{I_m}^i \dfrac{di'}{i'} = \Big[\ln|i'|\Big]_{I_m}^i = \ln(i) - \ln(I_m) = \ln\left(\dfrac{i}{I_m}\right)$
+		\item $\displaystyle -\dfrac{R}{L}\int_0^t dt' = -\dfrac{R}{L}\Big[t'\Big]_0^t = -\dfrac{R}{L}\,t$
+		\item $\displaystyle\ln\left(\dfrac{i}{I_m}\right) = -\dfrac{R}{L}\,t \iff \dfrac{i}{I_m} = e^{-\frac{R}{L}t}$
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.3em}
+\noindent
+គណនាអាំងតេក្រាលអង្គទាំងសងខាង រួចដោះស្រាយរក $i$ ៖
+\begin{flalign*}
+	\Big[ \ln|i'| \Big]_{I_m}^i &= -\dfrac{R}{L} \Big[ t' \Big]_0^t \\[0.5em]
+	\ln(i) - \ln(I_m) &= -\dfrac{R}{L}(t - 0) \\[0.5em]
+	\ln\left( \dfrac{i}{I_m} \right) &= -\dfrac{R}{L}\,t \\[0.5em]
+	\dfrac{i}{I_m} &= e^{-\frac{R}{L}t} \\[0.5em]
+	i &= I_m\,e^{-\frac{R}{L}t}
+\end{flalign*}
+
+តាង $\tau_{RL} = \dfrac{L}{R}$ គឺជាថេរពេលនៃសៀគ្វី $RL$ (គិតជា $\mathrm{s}$)។
+
+\vspace{0.5em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	ចរន្តក្នុងសៀគ្វី $RL$ ពេលបិទកុងតាក់ $S_2$ }
+	\begin{center}
+		$\boxed{i(t) = I_m\,e^{-\frac{t}{\tau_{RL}}}}$ \quad (២២)
+	\end{center}
+	\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
+		\item $i(t)$ ៖ ចរន្តនៅខណៈណាមួយ $(\mathrm{A})$
 		\item $I_m \text{ ឬ } I_{\max} = \dfrac{\mathcal{E}}{R}$ ៖ ចរន្តអតិបរមានៃសៀគ្វី $(\mathrm{A})$
 		\item $\tau_{RL} = \dfrac{L}{R}$ ៖ ថេរពេលនៃសៀគ្វី $RL$ $(\mathrm{s})$
 	\end{itemize}
 \end{formulabox}
+
+\vspace{0.7em}
+\noindent
+\textbf{\textit{\textcolor{brownheader}{ក្រាបបកស្រាយពីចរន្តដែលផ្ទេរចេញពីប៊ូប៊ីននៃសៀគ្វី $RL$ ៖}}}
+
+\vspace{0.4em}
+\noindent
+\begin{minipage}[t]{0.43\textwidth}
+	\vspace{0pt}
+	\centering
+	{\small \textbf{តារាងតម្លៃលេខនៃ $i = I_m \left( e^{-\frac{t}{\tau}} \right)$}}
+
+	\vspace{0.35em}
+	\renewcommand{\arraystretch}{1.35}
+	\setlength{\arrayrulewidth}{0.7pt}
+	\arrayrulecolor{boxframe}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2.1cm}|>{\centering\arraybackslash}m{2.3cm}|}
+		\hline
+		\rowcolor{rowhdr}
+		\textcolor{brownheader}{\textbf{$t$}} & \textcolor{brownheader}{\textbf{$i$}} \\
+		\hline
+		$t = \tau$   & $0.37\,I_m$ \\
+		\hline
+		$t = 2\tau$  & $0.13\,I_m$ \\
+		\hline
+		$t = 3\tau$  & $0.049\,I_m$ \\
+		\hline
+		$t = 4\tau$  & $0.018\,I_m$ \\
+		\hline
+		$t = 5\tau$  & $0.0068\,I_m$ \\
+		\hline
+	\end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.92]
+		% Axes
+		\draw[->, line width=0.85pt] (0,0) -- (5.6,0) node[below right=-2pt] {\scriptsize $t\,(\mathrm{s})$};
+		\draw[->, line width=0.85pt] (0,0) -- (0,4.6) node[above right=-2pt] {\scriptsize $i\,(\mathrm{A})$};
+		\node[below left=1pt] at (0,0) {\scriptsize $0$};
+
+		% Curve: i(t) = 4.0 * exp(-x/0.9)
+		\draw[primary, line width=1.35pt, domain=0:5.2, samples=60, smooth] plot (\x, {4.0*exp(-\x/0.9)});
+
+		% Initial point at t = 0: y = 4.0
+		\fill[primary] (0,4.0) circle (2.1pt);
+
+		% Dashed projections and points
+		% t = tau = 0.9, y = 4.0 * exp(-1) = 1.472
+		\draw[primary!55, dashed, line width=0.5pt] (0.9,0) -- (0.9,1.472) -- (0,1.472);
+		\fill[primary] (0.9,1.472) circle (2.1pt);
+
+		% t = 2tau = 1.8, y = 4.0 * exp(-2) = 0.541
+		\draw[primary!55, dashed, line width=0.5pt] (1.8,0) -- (1.8,0.541) -- (0,0.541);
+		\fill[primary] (1.8,0.541) circle (2.1pt);
+
+		% t = 3tau = 2.7, y = 4.0 * exp(-3) = 0.199
+		\draw[primary!55, dashed, line width=0.5pt] (2.7,0) -- (2.7,0.199) -- (0,0.199);
+		\fill[primary] (2.7,0.199) circle (2.1pt);
+
+		% t = 4tau = 3.6, y = 4.0 * exp(-4) = 0.073
+		\fill[primary] (3.6,0.073) circle (2.1pt);
+
+		% t = 5tau = 4.5, y = 4.0 * exp(-5) = 0.027
+		\fill[primary] (4.5,0.027) circle (2.1pt);
+
+		% X ticks
+		\foreach \x/\label in {0.9/\tau, 1.8/2\tau, 2.7/3\tau, 3.6/4\tau, 4.5/5\tau} {
+			\draw[line width=0.75pt] (\x,0) -- (\x,-0.12);
+			\node[below] at (\x,-0.08) {\scriptsize $\label$};
+		}
+		% Sub-ticks along x
+		\foreach \subx in {0.45, 1.35, 2.25, 3.15, 4.05} {
+			\draw[line width=0.5pt] (\subx,0) -- (\subx,-0.06);
+		}
+
+		% Y ticks and labels
+		\draw[line width=0.6pt] (0,4.0) -- (-0.1,4.0);
+		\node[left=0pt] at (-0.1,4.0) {\tiny $I_{\max}$};
+
+		\draw[line width=0.6pt] (0,1.472) -- (-0.1,1.472);
+		\node[left=0pt] at (-0.1,1.472) {\tiny $0.37I_m$};
+
+		\draw[line width=0.6pt] (0,0.541) -- (-0.1,0.541);
+		\node[left=0pt] at (-0.1,0.541) {\tiny $0.13I_m$};
+
+		\draw[line width=0.6pt] (0,0.199) -- (-0.1,0.199);
+		\node[left=0pt] at (-0.1,0.199) {\tiny $0.049I_m$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣៧៖ ក្រាបនៃសៀគ្វី $RL$ ពេលផ្ទេរចរន្តចេញពីប៊ូប៊ីន}
+\end{minipage}

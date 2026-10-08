@@ -145,9 +145,24 @@ Self-inductance, magnetic energy, non-inductive coils, and the RL current rise d
 - **Modernized `\defbox`:** aligned with `formulabox` aesthetic using soft `boxbg` fill, sharp corners, and a 3pt `bacpink` left accent bar
 - `main.pdf` rebuilt: **74 pages**, clean under XeLaTeX
 
+## [v1.0.0-alpha.13] — 2026-10-08
+
+RL circuit current growth and decay curves complete with vector plots and full derivations. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 3 continued:**
+  - ក្រាបបកស្រាយពេលបិទកុងតាក់ (៤.១) — numerical data table ($t = \tau \dots 5\tau$) and vector TikZ exponential charging curve beside រូបទី៣៦ (`ក្រាបនៃសៀគ្វី RL ពេលផ្ទុក`)
+  - ករណីបើកកុងតាក់ $S_1$ / បិទកុងតាក់ $S_2$ (៤.២) — full Kirchhoff loop derivation $Ri + L di/dt = 0$, separation of variables, integration helper box, and boxed solution $i(t) = I_m e^{-t/\tau_{RL}}$ (២២) with symbol glossary
+  - ក្រាបបកស្រាយពេលផ្ទេរចរន្ត (៤.២) — numerical data table and vector TikZ exponential decay curve beside រូបទី៣៧ (`ក្រាបនៃសៀគ្វី RL ពេលផ្ទេរចរន្តចេញពីប៊ូប៊ីន`)
+
+### Changed
+
+- `main.pdf` rebuilt: **78 pages**, clean under XeLaTeX
+
 ## [Unreleased]
 
-Next up: RL circuit switch opening (decay), LC circuit, and electromagnetic oscillations.
+Next up: LC circuit and electromagnetic oscillations.
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
