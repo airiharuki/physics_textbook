@@ -1199,7 +1199,7 @@
 
 យើងបានសិក្សារួចមកហើយពីច្បាប់អាំងឌុចស្យុងរបស់លោកផារ៉ាដេ បង្ហាញពីការបង្កើតកម្លាំងអគ្គិសនីចលករអាំងឌ្វីនៅក្នុងរបុំខ្សែចម្លងមួយ ដោយមានបម្រែបម្រួលភ្លុចម៉ាញេទិចឆ្លងកាត់របុំខ្សែចម្លងវា។ នៅក្នុងមេរៀននេះយើងនឹងសិក្សាធាតុក្ខុកអាំងឌុចស្យុងដែលនាំឱ្យបង្កើតកម្លាំងអគ្គិសនីចលករ នោះដោយពិនិត្យលើរបុំខ្សែចម្លងពីរដាក់នៅក្បែរគ្នា ដូចជានៅពេលដែលមានបម្រែបម្រួលចរន្តនៅក្នុងរបុំទី១ នាំឱ្យបង្កើតបានកម្លាំងអគ្គិសនីចលករនៅក្នុងរបុំទី២ ។ ទំនាក់ទំនងចន្លោះរវាងរបុំទាំងពីរនេះ ត្រូវបកស្រាយដោយ \textbf{\textit{អាំងឌុចតង់ផ្ទេរ}} ។ របុំខ្សែចម្លងទាំងពីរ នេះមានឈ្មោះថា \textbf{\textit{អាំងឌុចទ័រ}} ។ មួយវិញទៀត គឺសិក្សាទៅលើការបង្កើតបានកម្លាំងអគ្គិសនីចលករនៅក្នុងរបុំខ្សែចម្លង១ នៅពេលដែលមានបម្រែបម្រួលចរន្តឆ្លងកាត់របុំខ្សែចម្លង ឬអាំងឌុចទ័រខ្លួនឯងផ្ទាល់ ត្រូវបានបកស្រាយដោយ \textbf{\textit{អាំងឌុចតង់}} ឬ\textbf{\textit{អាំងឌុចតង់ផ្ទាល់}} ។ ជាចុងក្រោយគឺផ្តោតសំខាន់ទៅលើ \textbf{\textit{ថាមពលម៉ាញេទិច}} ដែលជាថាមពលដែលអាំងឌុចទ័រត្រូវបានឆ្លងកាត់ដោយចរន្តអគ្គិសនី ព្រមទាំងលក្ខណៈនៃអាំងឌុចទ័រនៅក្នុងសៀគ្វី ដូចជាសៀគ្វី $RL$ និងសៀគ្វី $LC$ ។
 
-\khmertopic{១. អំពើទៅវិញទៅមករបស់អាំងឌុចស្យុង ឬអាំងឌុចតង់ភ្ជាប់}
+\khmertopic{១. អំពើទៅវិញទៅមករបស់អាំងឌុចស្យុង ឬអាំងឌុចតង់ភ្ជាប់ (\englishfont Mutual Induction)}
 
 គេមានរបុំខ្សែចម្លងពីរដាក់នៅក្បែរគ្នាដូចរូបទី៣០ ដែលមានអំពើលើគ្នាទៅវិញទៅមកកំណត់ដោយ៖
 
@@ -1299,6 +1299,343 @@
 \hfill
 \begin{minipage}[t]{0.40\textwidth}
 	\vspace{0pt}
-	\khmerphoto[0.95\linewidth]{img/autoinductionexperiment.png}{រូបទី៣១៖ សៀគ្វីបង្ហាញអំពីបាតុភូតអាំងឌុចស្យុងនៅពេលដែលបិទកុងតាក់}
+	\begin{center}
+	\begin{circuitikz}[scale=0.55]
+		% main loop: battery + K + rh
+		\draw (0,0) to[battery, l_=$\varepsilon$] (0,5)
+			to[short] (1,5)
+			to[vR, l=$R_h$] (4,5) coordinate(B)
+			to[lamp, l=$L_1$] (8,5)
+			-- (9,5) -- (9,0)
+			to[vR, l=$r_h$] (4,0)
+			to[switch, l=K] (0,0);
+
+		% middle node B down
+		\draw (B) -- (4,3) coordinate(M);
+		\draw (M) to[lamp, l=$L_2$] (8,3) -- (9,3);
+
+		% inductor in parallel with L2
+		\draw (M) -- (4,1.5)
+			to[L, l_=$L$] (8,1.5)
+			-- (9,1.5) -- (9,3);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣១៖ សៀគ្វីបង្ហាញអំពីបាតុភូតអាំងឌុចស្យុងនៅពេលដែលបិទកុងតាក់}
+	\end{center}
 \end{minipage}
 
+\vspace{0.5em}
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+	\vspace{0pt}
+	\raggedright
+	\textbf{\textit{ចំពោះការបើកសៀគ្វី៖}} ពេលបើកកុងតាក់ភ្លាមៗអំពូលភ្លឺខ្លាំងខុសពីធម្មតាក្នុងរយៈពេលខ្លី ព្រោះ៖
+
+	\begin{enumerate}[leftmargin=1.6em,topsep=4pt]
+		\item ចរន្តដែលឆ្លងកាត់សៀគ្វីថយចុះ ដែលធ្វើឱ្យបម្រែបម្រួលដែនម៉ាញេទិកត្រូវបានថយចុះ។ តាមច្បាប់ឡិន ចរន្តអាំងឌ្វីត្រូវបានបង្កើតយ៉ាងធំ ដើម្បីប្រឆាំងនឹងការថយចុះនៃដែនម៉ាញេទិក(បម្រែបម្រួលភ្លុចម៉ាញេទិកថយចុះ)ហើយចរន្តអាំងឌ្វីនោះក៏បានរត់ទៅចូលអំពូល។
+	\end{enumerate}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\khmerphoto[0.95\linewidth]{img/autoinductionexperiment.png}{រូបទី៣២៖ សៀគ្វីអគ្គិសនីសម្រាប់បង្ហាញពីបាតុភូតអូតូអាំងឌុចស្យុងពេលបើកកុងតាក់}
+\end{minipage}
+
+\khmersubtopic{២.២. អាំងឌុចតង់ផ្ទាល់ (អាំងឌុចតង់របស់សូលេណូអ៊ីត)}
+
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+	\vspace{0pt}
+	\raggedright
+	នៅពេលដែលសៀគ្វីដែលមានសូលេណូអ៊ីតមួយត្រូវបានឆ្លងកាត់ចរន្តដែលប្រែប្រួល (ដូចបង្ហាញក្នុងរូបទី៣៣) វាត្រូវបានបង្កើតបានបម្រែបម្រួលភ្លុចឆ្លងកាត់ខ្លួនវាផ្ទាល់ (សូលេណូអ៊ីត) ដូចនេះ ភ្លុចសរុបដែលឆ្លងកាត់សូលេណូអ៊ីតនេះសមាមាត្រនឹងតម្លៃចរន្តដែលរត់នៅក្នុងបូប៊ីន ហើយមានមេគុណសមាមាត្រតាងដោយអាំងឌុចតង់ផ្ទាល់ $(L)$ ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\khmerphoto[0.95\linewidth]{img/magneticfluxviasolenoid.png}{រូបទី៣៣៖ បូប៊ីនឆ្លងកាត់ដោយចរន្ត $i$ បង្កើតភ្លុចម៉ាញេទិចឆ្លងកាត់វាផ្ទាល់}
+\end{minipage}
+
+យើងបាន ៖
+\begin{center}
+	$\boxed{N\Phi = Li}$ \quad (១៥)
+\end{center}
+
+\begin{flalign*}
+	\text{នាំឱ្យ ៖ } L &= \dfrac{N\Phi}{i} \\
+	&= \dfrac{NBA}{i} \\
+	&= \dfrac{N\left(\dfrac{\mu_0 Ni}{l}\right)A}{i} \\
+	&= \mu_0 \dfrac{N^2 A}{l}
+\end{flalign*}
+
+ដូចនេះអាំងឌុចតង់នៃបូប៊ីនគឺ
+\begin{center}
+	$\boxed{L = \mu_0 \dfrac{N^2 A}{l}}$ \quad (១៦)
+\end{center}
+
+\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
+	\item $L$ ៖ អាំងឌុចតង់ $(\text{H})$
+	\item $\mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A}$ ៖ ជម្រាបម៉ាញេទិក
+	\item $N$ ៖ ចំនួនស្ពៀនៃរបុំ $(\text{ស្ពៀ ឬ ជុំ})$
+	\item $A = \pi R^2 = \pi \left(\frac{d}{2}\right)^2$ ៖ ផ្ទៃនៃសូលេណូអ៊ីត $(\text{m}^2)$
+	\item $l$ ៖ ប្រវែងសូលេណូអ៊ីត $(\text{m})$
+\end{itemize}
+
+\vspace{0.7em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	និយមន័យអាំងឌុចតង់ }
+	\textbf{\textit{\textcolor{brownheader}{អាំងឌុចតង់}}} គឺជាលក្ខណៈធរណីមាត្រនៃរបុំខ្សែចម្លងដែលត្រូវបានប្រែប្រួលចរន្តអគ្គិសនី និងបង្កើតបានកម្លាំងអគ្គិសនីចលករអាំងឌ្វីនៅក្នុងរបុំរបស់វាផ្ទាល់ ឬរបុំណាមួយ ។
+\end{formulabox}
+\vspace{0.5em}
+
+\khmersubtopic{២.៣. កម្លាំងអគ្គិសនីចលករអូតូអាំងឌ្វី}
+
+តាមច្បាប់ផារ៉ាដេ ៖
+\begin{center}
+	$e = -N\dfrac{d\Phi}{dt}$
+\end{center}
+
+យើងមាន (១៥) ៖ $N\Phi = Li$ \quad (ធ្វើដេរីវេអង្គទាំងពីរ)
+
+នាំឱ្យ ៖
+\begin{center}
+	$N\dfrac{d\Phi_B}{dt} = L\dfrac{di}{dt}$
+\end{center}
+
+យើងបាន ៖
+\begin{center}
+	$e = -L\dfrac{di}{dt}$
+\end{center}
+
+ដូចនេះកម្លាំងអគ្គិសនីចលករអូតូអាំងឌ្វីខណៈគឺ
+\begin{center}
+	$\boxed{e = -L\dfrac{di}{dt}}$ \quad (១៧)
+\end{center}
+
+យើងបានកម្លាំងអគ្គិសនីចលករអូតូអាំងឌ្វីមធ្យមគឺ
+\begin{center}
+	$\boxed{E = -L\dfrac{\Delta I}{\Delta t}}$ \quad (១៨)
+\end{center}
+
+\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
+	\item $e$ ៖ កម្លាំងអគ្គិសនីចលករអាំងឌ្វីខណៈនៃរបុំ $(\text{V})$
+	\item $E$ ៖ កម្លាំងអគ្គិសនីចលករអាំងឌ្វីមធ្យមនៃរបុំ $(\text{V})$
+	\item $L$ ៖ អាំងឌុចតង់ $(\text{H})$
+	\item $\frac{di}{dt}$ ៖ អត្រាចរន្តឆ្លងកាត់របុំ $(\text{A/s})$
+	\item $\Delta I = I_2 - I_1$ ៖ បម្រែបម្រួលចរន្តឆ្លងកាត់របុំ $(\text{A})$
+	\item $\Delta t = t_2 - t_1$ ៖ បម្រែបម្រួលរយៈពេល $(\text{s})$
+\end{itemize}
+
+\khmersubtopic{២.៤. សៀគ្វីគ្មានអាំងឌុចតង់}
+
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+	\vspace{0pt}
+	\raggedright
+	យើងដឹងហើយថា គ្រប់ប៊ូប៊ីនទាំងអស់សុទ្ធតែមានអាំងឌុចតង់ផ្ទាល់របស់វា ។ ដើម្បីបង្កើតប៊ូប៊ីនមួយដែលគ្មានអាំងឌុចតង់ យើងត្រូវបត់ខ្សែចម្លងជាពីរ មុននឹងយកវាទៅរុំធ្វើជាប៊ូប៊ីន ដែលធ្វើឲ្យភ្លុចម៉ាញេទិកដែលបង្កើតនៅក្នុងខ្សែចម្លងនីមួយៗប្រឆាំងគ្នា ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\khmerphoto[0.95\linewidth]{img/mortysolenoid.png}{រូបទី៣៤៖ បូប៊ីនគ្មានអាំងឌុចតង់}
+\end{minipage}
+
+\khmertopic{៣. ថាមពលម៉ាញេទិក}
+ដើម្បីឱ្យមានចរន្តរត់នៅក្នុងប៊ូប៊ីន (ឬរបុំខ្សែចម្លង) យើងត្រូវផ្តល់ថាមពលអគ្គិសនីទៅឱ្យវា។ នៅពេលដែលប៊ូប៊ីនត្រូវបានឆ្លងកាត់ដោយចរន្តអគ្គិសនី វាស្តុកថាមពលមួយដែលមានឈ្មោះថា \textbf{\textit{\textcolor{brownheader}{ថាមពលម៉ាញេទិច}}}។
+
+\vspace{0.3em}
+\noindent
+\textbf{ជំហានទី១ ៖ ប៉ូតង់ស្យែលរវាងគោលទាំងពីរនៃប៊ូប៊ីន}
+
+បើចរន្តអគ្គិសនី $i$ ដែលរត់នៅក្នុងប៊ូប៊ីនកើនឡើង នោះភ្លុចម៉ាញេទិចឆ្លងកាត់ប៊ូប៊ីនក៏ប្រែប្រួលដែរ ហើយបង្កើតបានកម្លាំងអគ្គិសនីចលករអូតូអាំងឌ្វី។ ហេតុនេះមានបម្រែបម្រួលប៉ូតង់ស្យែលរវាងគោលទាំងពីរនៃប៊ូប៊ីន ៖
+\begin{center}
+	$\boxed{V_{ab} = L\dfrac{di}{dt}}$ \quad (១៩)
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\textbf{ជំហានទី២ ៖ អានុភាព និងថាមពលក្នុងខណៈ $dt$}
+
+អានុភាពអគ្គិសនីនៅខណៈណាមួយដែលប៊ូប៊ីនទទួលបាន ៖
+\begin{center}
+	$p = V_{ab}\,i = Li\dfrac{di}{dt}$
+\end{center}
+
+\defbox{
+	\raggedright
+	\textbf{Editor's Note:	} រូបមន្តថាមពលគឺ $E=Pt$ បើគេសិក្សាមួយផ្នែកតូចនោះគេបាន $dE=pdt$។
+}
+
+ដូចនេះថាមពលដែលប៊ូប៊ីនទទួលបានក្នុងខណៈ $dt$ គឺ ៖
+\begin{center}
+	$dE_L = p\,dt = \left( Li\dfrac{di}{dt} \right) dt = Li\,di$
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\textbf{ជំហានទី៣ ៖ ថាមពលសរុបដែលស្តុកក្នុងប៊ូប៊ីន}
+
+ដើម្បីគណនាថាមពលសរុប យើងធ្វើអាំងតេក្រាលកំណត់ពីតម្លៃចរន្ត $0$ ទៅតម្លៃចរន្តថេរ $I$ នៅក្នុងប៊ូប៊ីន ៖
+\begin{flalign*}
+	E_L &= \int_0^I dE_L = \int_0^I Li\,di \\
+	&= L \left[ \dfrac{1}{2}i^2 \right]_0^I \\
+	&= L \left( \dfrac{1}{2}I^2 - \dfrac{1}{2}(0)^2 \right) \\
+	&= \dfrac{1}{2}LI^2
+\end{flalign*}
+
+\vspace{0.5em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	ថាមពលម៉ាញេទិចដែលស្តុកក្នុងប៊ូប៊ីន}
+	\begin{center}
+		$\boxed{E_L = \dfrac{1}{2}LI^2}$ \quad (២០)
+	\end{center}
+	\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
+		\item $V_{ab}$ ៖ តង់ស្យុងរវាងគោលទាំងពីរនៃរបុំ $(\mathrm{V})$
+		\item $L$ ៖ អាំងឌុចតង់ $(\mathrm{}m{H})$
+		\item $\dfrac{di}{dt}$ ៖ អត្រាចរន្តឆ្លងកាត់របុំ $(\mathrm{A/s})$
+		\item $E_L$ ៖ ថាមពលម៉ាញេទិច $(\mathrm{J})$
+		\item $i$ ៖ ចរន្តអគ្គិសនីដែលរត់នៅក្នុងរបុំខ្សែចម្លង ឬសូលេណូអ៊ីត $(\mathrm{A})$ ។
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.5em}
+\defbox{
+	\raggedright
+	\textbf{ចំណាំ៖	} ថាមពល $E_L$ សមាមាត្រនឹងអាំងឌុចតង់ $L$ និងការេនៃចរន្ត $I^2$ ។ ថាមពលនេះមិនបាត់បង់ក្នុងរូបរាងជាកម្តៅទេ គឺវាស្តុកទុកនៅក្នុងប៊ូប៊ីន ហើយត្រូវបានបញ្ចេញមកវិញនៅពេលចរន្តថយចុះ (ក្នុងរយៈពេលខ្លី)។
+}
+
+\khmertopic{៤. សៀគ្វី $RL$}
+
+
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	សៀគ្វីមួយដែលមានស៊េរីនៃរេស៊ីស្តង់ និងប៊ូប៊ីន តភ្ជាប់ទៅនឹងប្រភពអគ្គិសនី ត្រូវបានឲ្យឈ្មោះថា \textbf{\textit{សៀគ្វី $RL$}} ។ ដើម្បីធ្វើការសិក្សាពីលក្ខណៈប៊ូប៊ីន ឬអាំងឌុចទ័រ នៅក្នុងសៀគ្វី គេត្រូវរៀបចំសៀគ្វីមួយដូចរូបទី៣៥។ ប៊ូប៊ីននេះត្រូវបានធ្វើឱ្យចរន្តមិនអាចកើនឡើងឬថយចុះបានយ៉ាងលឿនបានទេ។ ចរន្តគឺត្រូវតែកើន ឬថយចុះជាអនុគមន៍អិចស្បូណង់ស្យែល ចំពោះករណីបិទកុងតាក់ ឬចំហកុងតាក់ $S_1$ ដូចខាងក្រោម ៖
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		% Outer rail junctions
+		\fill (0,2) circle (2.2pt);
+		\fill (7.4,2) circle (2.2pt);
+
+		% Middle branch
+		\draw[black] (0,2) -- (0.6,2);
+		\fill (0.6,2) circle (2pt) node[above=3pt] {$a$};
+		\draw (0.6,2) to[R, l_=$R$, color=bacpink] (2.9,2);
+		\draw[black] (2.9,2) -- (3.6,2);
+		\fill (3.6,2) circle (2pt) node[above=3pt] {$b$};
+		
+		\draw[->, >=Stealth, bacpurple, line width=1.4pt] (3.2, 1.5) -- (4.2, 1.5) node[midway, below=1pt] {$i$};
+		
+		\draw (3.6,2) to[cute inductor, l_=$L$, color=green!60!black] (6.0,2);
+		\draw[black] (6.0,2) -- (6.7,2);
+		\fill (6.7,2) circle (2pt) node[above=3pt] {$c$};
+		\draw[black] (6.7,2) -- (7.4,2);
+
+		% Top branch: Battery + S1
+		\draw[black] (0,2) -- (0,3.8) -- (2.0,3.8);
+		\draw[waveblue, line width=1.6pt] (2.0, 3.35) -- (2.0, 4.25);
+		\draw[waveblue, line width=3.8pt] (2.35, 3.55) -- (2.35, 4.05);
+		\node[above=8pt, black] at (2.17, 4.2) {$\mathcal{E}$};
+		\node[above=2pt, waveblue] at (1.75, 3.9) {\textbf{\footnotesize $+$}};
+		\draw[black] (2.35, 3.8) -- (4.5, 3.8);
+		\fill (4.5, 3.8) circle (2pt);
+		\fill (5.6, 3.8) circle (2pt);
+		\draw[line width=1.3pt] (5.6, 3.8) -- ++(155:1.15);
+		\node[below=5pt] at (5.05, 3.8) {$S_1$};
+		\draw[black] (5.6, 3.8) -- (7.4, 3.8) -- (7.4, 2);
+
+		% Bottom branch: S2
+		\draw[black] (0,2) -- (0,0.2) -- (4.5,0.2);
+		\fill (4.5, 0.2) circle (2pt);
+		\fill (5.6, 0.2) circle (2pt);
+		\draw[line width=1.3pt] (4.5, 0.2) -- ++(25:1.15);
+		\node[below=5pt] at (5.05, 0.2) {$S_2$};
+		\draw[black] (5.6, 0.2) -- (7.4, 0.2) -- (7.4, 2);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣៥៖ សៀគ្វី $RL$}
+\end{minipage}
+
+\vspace{0.5em}
+\khmersubtopic{៤.១. ករណីបិទកុងតាក់ $S_1$}
+
+តាមច្បាប់គៀឆុក ({\englishfont Kirchhoff's Loop Rule / Kirchhoff's Voltage Law}) ចំពោះតង់ស្យុងមួយជុំ ៖
+\begin{center}
+	$-\mathcal{E} + V_L + V_R = 0$
+\end{center}
+
+ដោយ ៖
+\begin{flalign*}
+	V_L &= L\dfrac{di}{dt} \\
+	V_R &= Ri
+\end{flalign*}
+
+ជំនួសចូលក្នុងច្បាប់គៀឆុក យើងបាន ៖
+\begin{flalign*}
+	-\mathcal{E} + L\dfrac{di}{dt} + Ri &= 0 \\[0.4em]
+	L\dfrac{di}{dt} &= \mathcal{E} - Ri
+\end{flalign*}
+
+ចែកអង្គទាំងពីរនឹង $L$ រួចដាក់ $R$ ជាកត្តារួម ៖
+\begin{flalign*}
+	\dfrac{di}{dt} &= \dfrac{R}{L}\left( \dfrac{\mathcal{E}}{R} - i \right)
+\end{flalign*}
+
+\vspace{0.3em}
+\noindent
+តាង $I_m = \dfrac{\mathcal{E}}{R}$ ជាចរន្តអតិបរមា ហើយប្រមូលអថេរ $i$ ទៅម្ខាង និង $t$ ទៅម្ខាងទៀត ៖
+\begin{flalign*}
+	\dfrac{di}{dt} &= \dfrac{R}{L}(I_m - i) \\[0.4em]
+	\dfrac{di}{I_m - i} &= \dfrac{R}{L}\,dt \\[0.4em]
+	\dfrac{di}{i - I_m} &= -\dfrac{R}{L}\,dt
+\end{flalign*}
+
+នៅខណៈ $t = 0$ ចរន្ត $i = 0$ ។ ដូចនេះធ្វើអាំងតេក្រាលកំណត់ពី $0$ ទៅ $i$ ចំពោះអង្គខាងឆ្វេង និងពី $0$ ទៅ $t$ ចំពោះអង្គខាងស្តាំ ៖
+\begin{center}
+	$\displaystyle\int_0^i \dfrac{di'}{i' - I_m} = -\dfrac{R}{L}\int_0^t dt'$
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	រូបមន្តជំនួយសម្រាប់អាំងតេក្រាល }
+	\begin{itemize}[itemsep=3pt, topsep=0pt, parsep=0pt, leftmargin=1.5em]
+		\item $\displaystyle\int \dfrac{du}{u} = \ln|u| + C \implies \int_a^b \dfrac{dx}{x - c} = \Big[\ln|x - c|\Big]_a^b$
+		\item $\displaystyle\int_0^t dt' = \Big[t'\Big]_0^t = t$
+		\item $\ln A - \ln B = \ln\left(\dfrac{A}{B}\right)$ \quad និង \quad $\ln X = Y \iff X = e^Y$
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.3em}
+\noindent
+គណនាអាំងតេក្រាលអង្គទាំងសងខាង រួចដោះស្រាយរក $i$ ៖
+\begin{flalign*}
+	\Big[ \ln|i' - I_m| \Big]_0^i &= -\dfrac{R}{L} \Big[ t' \Big]_0^t \\[0.5em]
+	\ln|i - I_m| - \ln|0 - I_m| &= -\dfrac{R}{L}(t - 0) \\[0.5em]
+	\ln\left( \dfrac{I_m - i}{I_m} \right) &= -\dfrac{R}{L}t \qquad (\text{ព្រោះ } i < I_m) \\[0.5em]
+	\dfrac{I_m - i}{I_m} &= e^{-\frac{R}{L}t} \\[0.5em]
+	1 - \dfrac{i}{I_m} &= e^{-\frac{R}{L}t} \\[0.5em]
+	i &= I_m \left( 1 - e^{-\frac{R}{L}t} \right)
+\end{flalign*}
+
+តាង $\tau_{RL} = \dfrac{L}{R}$ គឺជាថេរពេលនៃសៀគ្វី $RL$។
+
+\vspace{0.5em}
+\noindent
+\begin{formulabox}[breakable=false]{
+	ចរន្តក្នុងសៀគ្វី $RL$ ពេលបិទកុងតាក់ }
+	\begin{center}
+		$\boxed{i(t) = I_m \left( 1 - e^{-\frac{t}{\tau_{RL}}} \right)}$ \quad (២១)
+	\end{center}
+	\begin{itemize}[itemsep=2pt, topsep=4pt, parsep=0pt, leftmargin=1.6em]
+		\item $i(t)$ ៖ ចរន្តនៅខណៈណាមួយ $(\mathrm{A})$
+		\item $I_m \text{ ឬ } I_{\max} = \dfrac{\mathcal{E}}{R}$ ៖ ចរន្តអតិបរមានៃសៀគ្វី $(\mathrm{A})$
+		\item $\tau_{RL} = \dfrac{L}{R}$ ៖ ថេរពេលនៃសៀគ្វី $RL$ $(\mathrm{s})$
+	\end{itemize}
+\end{formulabox}

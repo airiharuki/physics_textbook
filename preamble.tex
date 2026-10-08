@@ -987,6 +987,7 @@
 \usepackage{caption}
 \usepackage{multicol}
 \usepackage{qrcode}
+\usepackage[american]{circuitikz}
 
 \IfFileExists{fontawesome7.sty}{
     \usepackage{fontawesome7}
@@ -1004,13 +1005,14 @@
     \begin{center}
     \begin{tcolorbox}[
         enhanced,
-        colback=bacpinklight,
-        colframe=bacpurple,
+        colback=boxbg,
+        colframe=bacpink!70,
         boxrule=0.8pt,
-        arc=2.5mm,
+        sharp corners,
+        borderline west={3pt}{0pt}{bacpink},
         width=0.75\linewidth,
         halign=left,
-        left=8pt, right=8pt, top=5pt, bottom=5pt,
+        left=14pt, right=12pt, top=7pt, bottom=7pt,
         fontupper=\small
     ] #1 \end{tcolorbox}
     \end{center}

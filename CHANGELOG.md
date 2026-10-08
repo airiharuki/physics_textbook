@@ -124,9 +124,30 @@ Boxes find a new face, and the first lesson-3 circuit diagram turns up.
 - `\usepackage{qrcode}` had been silently removed while adding `circuitikz`; restored and then dropped `circuitikz` again once the photo covered the figure
 - `main.pdf` rebuilt: **68 pages**, clean
 
+## [v1.0.0-alpha.12] — 2026-10-08
+
+Self-inductance, magnetic energy, non-inductive coils, and the RL current rise derivation land in lesson 3. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 3 continued:**
+  - អាំងឌុចតង់ផ្ទាល់ (១.២) — coil self-inductance derivation from $N\Phi = Li$ (១៥) to $L = \mu_0 N^2 A / l$ (១៦), instantaneous & average self-induced EMFs $e = -L di/dt$ (១៧) and $E = -L \Delta I/\Delta t$ (១៨) beside រូបទី៣៣ (`magneticfluxviasolenoid.png`)
+  - Styled definition box for inductance in a dedicated `\formulabox`
+  - សៀគ្វីគ្មានអាំងឌុចតង់ (២.៤) — non-inductive bifilar winding beside figure រូបទី៣៤ (`mortysolenoid.png`)
+  - ថាមពលម៉ាញេទិច (២.៥ / ៣) — magnetic energy stored in an inductor derived via calculus from power $p = Li di/dt$ to boxed $E_L = \frac{1}{2}LI^2$ (២០) with symbol glossary and field storage note
+  - សៀគ្វី $RL$ (៤ / ៤.១) — closing-switch current growth derived from Kirchhoff's loop rule $-\mathcal{E} + V_L + V_R = 0$, variable separation, integration helper formula box, to boxed $i(t) = I_m(1 - e^{-t/\tau_{RL}})$ (២១) with time constant $\tau_{RL} = L/R$
+- **Project Infrastructure & Tooling:**
+  - `AGENTS.md` operator notes for build workflow, font stack, design system, and Khmer typesetting gotchas
+  - GitHub issue templates under `.github/ISSUE_TEMPLATE/` (`content_or_typo.md`, `build_or_rendering.md`, `feature_or_diagram.md`, and `config.yml`)
+
+### Changed
+
+- **Modernized `\defbox`:** aligned with `formulabox` aesthetic using soft `boxbg` fill, sharp corners, and a 3pt `bacpink` left accent bar
+- `main.pdf` rebuilt: **74 pages**, clean under XeLaTeX
+
 ## [Unreleased]
 
-Next up: the rest of lesson 3 — self-inductance, magnetic energy, the `RL` and `LC` circuits.
+Next up: RL circuit switch opening (decay), LC circuit, and electromagnetic oscillations.
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
