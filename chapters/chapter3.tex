@@ -1905,3 +1905,353 @@
 	\par\vspace{0.15cm}
 	{\khmerpagenum\small\color{brownheader} រូបទី៣៧៖ ក្រាបនៃសៀគ្វី $RL$ ពេលផ្ទេរចរន្តចេញពីប៊ូប៊ីន}
 \end{minipage}
+
+\khmertopic{៥. សៀគ្វី $LC$}
+
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	\textbf{\textit{\textcolor{brownheader}{សៀគ្វី $LC$}}} គឺជាសៀគ្វីមួយដែលមានកុងដង់សាទ័រ ប៊ូប៊ីន និងប្រភពអគ្គិសនី ដែលត្រូវបានគេរៀបចំឡើងដើម្បីបង្កើតឲ្យមានបាតុភូតលំយោលសៀគ្វី (ដូចបង្ហាញក្នុងរូបទី៣៨) ដែលត្រូវបានបង្កើតឡើងដោយប៊ូប៊ីន ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		% Bottom wire
+		\draw[black] (0,0) -- (6.2,0);
+
+		% Left branch: Battery
+		\draw[black] (0,0) -- (0,1.05);
+		\draw[waveblue, line width=1.8pt] (-0.45, 1.7) -- (0.45, 1.7); % positive plate
+		\draw[waveblue, line width=4.0pt] (-0.25, 1.25) -- (0.25, 1.25); % negative plate
+		\node[left=8pt] at (-0.35, 1.5) {$\mathcal{E}$};
+		\node[above=2pt, waveblue] at (-0.35, 1.75) {\textbf{\footnotesize $+$}};
+		\node[below=2pt, waveblue] at (-0.35, 1.2) {\textbf{\footnotesize $-$}};
+		\draw[black] (0,1.7) -- (0,3) -- (2.1,3);
+
+		% Terminal a
+		\fill[black] (2.1,3) circle (2pt);
+		\node[above=3pt] at (2.1,3) {$a$};
+
+		% Terminal S
+		\fill[black] (3.9,3) circle (2pt);
+		\node[above=3pt] at (3.9,3) {$S$};
+
+		% Switch blade from S towards a
+		\draw[khmerred, line width=1.4pt] (3.9,3) -- ++(165:1.7);
+
+		% Terminal b and Inductor L branch
+		\fill[black] (3.0, 2.2) circle (2pt);
+		\node[right=3pt] at (3.0, 2.2) {$b$};
+		\draw[black] (3.0, 2.2) to[cute inductor, l_=$L$, color=khmerred] (3.0, 0);
+		\fill[black] (3.0, 0) circle (2.2pt);
+
+		% Top wire from S to C
+		\draw[black] (3.9,3) -- (6.2,3);
+
+		% Right branch: Capacitor C
+		\draw[black] (6.2,3) to[C, l_=$C$, color=waveblue] (6.2,0);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣៨៖ សៀគ្វី $LC$}
+\end{minipage}
+
+\vspace{0.5em}
+\khmersubtopic{៥.១. ពេលសៀគ្វីផ្ទុកថាមពល (បិទ $S$ មក $a$)}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	នៅពេលកុងតាក់ $S$ ត្រូវបានភ្ជាប់ទៅប៉ូល $a$ សៀគ្វីបង្កើតបានជាកង់បិទជិតមួយដែលមានតែប្រភពអគ្គិសនី $\mathcal{E}$ និងកុងដង់សាទ័រ $C$ ប៉ុណ្ណោះ ចំណែកឯប៊ូប៊ីន $L$ ស្ថិតក្នុងសភាពចំហ (មិនទាន់មានចរន្តឆ្លងកាត់ទេ)។ ពេលនោះប្រភពអគ្គិសនីចាប់ផ្តើមសាកបន្ទុកទៅឱ្យកុងដង់សាទ័ររហូតដល់ពេញ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		% Bottom wire
+		\draw[black] (0,0) -- (6.2,0);
+
+		% Left branch: Battery
+		\draw[black] (0,0) -- (0,1.05);
+		\draw[waveblue, line width=1.8pt] (-0.45, 1.7) -- (0.45, 1.7); % positive plate
+		\draw[waveblue, line width=4.0pt] (-0.25, 1.25) -- (0.25, 1.25); % negative plate
+		\node[left=8pt] at (-0.35, 1.5) {$\mathcal{E}$};
+		\node[above=2pt, waveblue] at (-0.35, 1.75) {\textbf{\footnotesize $+$}};
+		\node[below=2pt, waveblue] at (-0.35, 1.2) {\textbf{\footnotesize $-$}};
+		\draw[black] (0,1.7) -- (0,3) -- (2.1,3);
+
+		% Terminal a
+		\fill[black] (2.1,3) circle (2pt);
+		\node[above=3pt] at (2.1,3) {$a$};
+
+		% Terminal S
+		\fill[black] (3.9,3) circle (2pt);
+		\node[above=3pt] at (3.9,3) {$S$};
+
+		% Switch blade connected to a
+		\draw[khmerred, line width=1.5pt] (3.9,3) to[bend left=8] (2.1,3);
+
+		% Terminal b and Inductor L branch (open circuit)
+		\fill[black] (3.0, 2.2) circle (2pt);
+		\node[right=3pt] at (3.0, 2.2) {$b$};
+		\draw[black] (3.0, 2.2) to[cute inductor, l_=$L$, color=khmerred] (3.0, 0);
+		\fill[black] (3.0, 0) circle (2.2pt);
+
+		% Top wire from S to C
+		\draw[black] (3.9,3) -- (6.2,3);
+
+		% Right branch: Capacitor C
+		\draw[black] (6.2,3) to[C, l_=$C$, color=waveblue] (6.2,0);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៣៩៖ សៀគ្វីពេលកុងតាក់ $S$ ភ្ជាប់ទៅ $a$}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+តាមច្បាប់គៀឆុក ({\englishfont Kirchhoff's Voltage Law}) ចំពោះតង់ស្យុងក្នុងកង់បិទជិត ៖
+\begin{center}
+	$\mathcal{E} - v_C = 0 \implies v_C = \mathcal{E}$
+\end{center}
+
+\noindent
+នៅពេលកុងដង់សាទ័រសាកបន្ទុកពេញ (ស្ថានភាពនឹងនរ / {\englishfont Steady State}) ៖
+\begin{itemize}[itemsep=4pt, topsep=2pt, parsep=0pt, leftmargin=1.6em]
+	\item \textbf{តង់ស្យុងអតិបរមារវាងគោលកុងដង់សាទ័រ ៖}
+	\begin{center}
+		$V_C = \mathcal{E}$
+	\end{center}
+	\item \textbf{បន្ទុកអគ្គិសនីអតិបរមាដែលស្តុកក្នុងកុងដង់សាទ័រ ៖}
+	\begin{center}
+		$\boxed{Q_0 = C\mathcal{E}}$ \quad (២៣)
+	\end{center}
+	\item \textbf{ចរន្តអគ្គិសនីក្នុងសៀគ្វី ៖} នៅពេលបន្ទុកពេញ គ្មានចរន្តរត់ទៀតទេ គឺ $i = 0$ ។
+	\item \textbf{ថាមពលអគ្គិសនីដែលស្តុកក្នុងដែនអគ្គិសនីនៃកុងដង់សាទ័រ ៖}
+	\begin{center}
+		$\boxed{E_E = \dfrac{1}{2}C\mathcal{E}^2 = \dfrac{Q_0^2}{2C}}$ \quad (២៤)
+	\end{center}
+	\item \textbf{ថាមពលម៉ាញេទិកក្នុងប៊ូប៊ីន ៖} ដោយសារគ្មានចរន្តឆ្លងកាត់ប៊ូប៊ីន នោះ $E_B = 0$ ។
+\end{itemize}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{លក្ខខណ្ឌដើមសម្រាប់ដំណាក់កាលបន្ទាប់ (Initial Conditions for $t = 0$) ៖}}\par\vspace{3pt}
+	នៅខណៈពេលដែលគេបង្វែរកុងតាក់ $S$ ពី $a$ ទៅ $b$ (កំណត់យកជាខណៈដើម $t = 0$) ៖
+	\[ q(0) = Q_0 = C\mathcal{E} \qquad \text{និង} \qquad i(0) = 0 \]
+	ថាមពលសរុបនៃសៀគ្វីនៅខណៈដើមនេះ គឺស្មើនឹងថាមពលអគ្គិសនីសុទ្ធ ៖
+	\[ E = E_E = \dfrac{Q_0^2}{2C} \]
+}
+
+\khmersubtopic{៥.២. ពេលសៀគ្វីផ្ទេរថាមពល (បិទ $S$ មក $b$)}
+
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	កុងដង់សាទ័រចាប់ផ្តើមផ្ទេរបន្ទុកអគ្គិសនីទៅឱ្យប៊ូប៊ីនរហូតដល់អស់។ ដោយគោរពតាមច្បាប់ឡិន នៅពេលដែលភ្លុចឆ្លងកាត់ប៊ូប៊ីនថយចុះ ប៊ូប៊ីនបានបង្កើតចរន្តអាំងឌ្វី និងដែនម៉ាញេទិកថ្មីមួយដើម្បីប្រឆាំងនឹងការថយចុះនៃភ្លុចម៉ាញេទិក នាំឱ្យប៊ូប៊ីនចាប់ផ្តើមផ្ទេរបន្ទុកឱ្យទៅកុងដង់សាទ័រនោះវិញ។ ដំណើរការនេះកើតឡើងជាបន្តបន្ទាប់ ដែលបង្កើតបានជាបាតុភូតលំយោលអគ្គិសនីនៃសៀគ្វី $LC$ ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		% Bottom wire
+		\draw[black] (0,0) -- (6.2,0);
+
+		% Left branch: Battery (disconnected)
+		\draw[black] (0,0) -- (0,1.05);
+		\draw[waveblue, line width=1.8pt] (-0.45, 1.7) -- (0.45, 1.7); % positive plate
+		\draw[waveblue, line width=4.0pt] (-0.25, 1.25) -- (0.25, 1.25); % negative plate
+		\node[left=8pt] at (-0.35, 1.5) {$\mathcal{E}$};
+		\node[above=2pt, waveblue] at (-0.35, 1.75) {\textbf{\footnotesize $+$}};
+		\node[below=2pt, waveblue] at (-0.35, 1.2) {\textbf{\footnotesize $-$}};
+		\draw[black] (0,1.7) -- (0,3) -- (2.1,3);
+
+		% Terminal a (open)
+		\fill[black] (2.1,3) circle (2pt);
+		\node[above=3pt] at (2.1,3) {$a$};
+
+		% Terminal S
+		\fill[black] (3.9,3) circle (2pt);
+		\node[above=3pt] at (3.9,3) {$S$};
+
+		% Terminal b and Inductor L branch
+		\fill[black] (3.0, 2.2) circle (2pt);
+		\node[left=3pt] at (3.0, 2.2) {$b$};
+		\draw[black] (3.0, 2.2) to[cute inductor, l_=$L$, color=khmerred] (3.0, 0);
+		\fill[black] (3.0, 0) circle (2.2pt);
+
+		% Switch blade connected from S to b
+		\draw[khmerred, line width=1.5pt] (3.9,3) to[bend left=8] (3.0, 2.2);
+
+		% Top wire from S to C
+		\draw[black] (3.9,3) -- (6.2,3);
+
+		% Right branch: Capacitor C
+		\draw[black] (6.2,3) to[C, l_=$C$, color=waveblue] (6.2,0);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៤០៖ សៀគ្វីពេលកុងតាក់ $S$ ភ្ជាប់ទៅ $b$}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+តាមច្បាប់គៀឆុកចំពោះកង់បិទជិតខាងស្តាំ ៖
+\begin{center}
+	$-v_C + v_L = 0$
+\end{center}
+
+ដោយ ៖
+\begin{flalign*}
+	v_C &= \dfrac{q}{C} \\
+	v_L &= L\dfrac{di}{dt} = L\dfrac{d}{dt}\left(-\dfrac{dq}{dt}\right) = -L\dfrac{d^2q}{dt^2} \qquad \left(\text{ព្រោះ } i = -\dfrac{dq}{dt} \text{ កុងដង់សាទ័របន្ទោរបន្ទុក}\right)
+\end{flalign*}
+
+យើងបាន ៖
+\begin{flalign*}
+	-\dfrac{q}{C} - L\dfrac{d^2q}{dt^2} &= 0 \\[0.4em]
+	L\dfrac{d^2q}{dt^2} + \dfrac{q}{C} &= 0
+\end{flalign*}
+
+ចែកអង្គទាំងពីរនឹង $L$ យើងទទួលបានសមីការឌីផេរ៉ង់ស្យែល ៖
+\begin{center}
+	$\boxed{\dfrac{d^2q}{dt^2} + \dfrac{1}{LC}q = 0}$ \quad (២៥)
+\end{center}
+
+\vspace{0.2em}
+\noindent
+សមីការ (២៥) មានរាងដូចសមីការឌីផេរ៉ង់ស្យែលនៃលំយោលអាម៉ូនិចក្នុងមេកានិច ៖
+\begin{center}
+	$\dfrac{d^2x}{dt^2} + \omega^2 x = 0 \implies x(t) = x_m\cos(\omega t + \varphi)$
+\end{center}
+
+\vspace{0.3em}
+\noindent
+ដូចនេះ ចម្លើយទូទៅនៃបន្ទុកអគ្គិសនីដែលស្តុកដោយកុងដង់សាទ័រគឺ ៖
+\begin{center}
+	$\boxed{q(t) = q_{\max}\cos(\omega t + \varphi)}$ \quad (២៦)
+\end{center}
+
+\vspace{0.2em}
+\noindent
+និងមានកន្សោមអាំងតង់ស៊ីតេចរន្តអគ្គិសនីឆ្លងកាត់សៀគ្វី ៖
+\begin{center}
+	$\boxed{i(t) = \dfrac{dq}{dt} = -\omega q_{\max}\sin(\omega t + \varphi) = -I_{\max}\sin(\omega t + \varphi)}$ \quad (២៧)
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+	\vspace{0pt}
+	\raggedright
+	\begin{itemize}[itemsep=3pt, topsep=1pt, parsep=0pt, leftmargin=1.4em]
+		\item $q(t)$ ៖ បន្ទុកនៅខណៈ $t$ ណាមួយ $(\mathrm{C})$
+		\item $q_{\max} = Q_0 = C\mathcal{E}$ ៖ បន្ទុកអតិបរមា $(\mathrm{C})$
+		\item $i(t)$ ៖ ចរន្តនៅខណៈ $t$ ណាមួយ $(\mathrm{A})$
+		\item $I_{\max} = \omega q_{\max} = \omega Q_0$ ៖ ចរន្តអតិបរមានៃសៀគ្វី $(\mathrm{A})$
+		\item $\omega = \dfrac{1}{\sqrt{LC}}$ ៖ ប្រេកង់មុំនៃសៀគ្វី $LC$ $(\mathrm{rad/s})$
+		\item $\varphi$ ៖ ផាសដើមនៃលំយោល $(\mathrm{rad})$
+	\end{itemize}
+
+	\vspace{0.4em}
+	\noindent
+	$\blacktriangleright$ \textbf{\textcolor{khmerred}{ខួបផ្ទាល់នៃសៀគ្វី $LC$ (ថេរពេល $\tau_{LC}$) ៖}}
+	\begin{center}
+		$\boxed{\tau_{LC} = T = 2\pi\sqrt{LC}}$ \quad (២៨)
+	\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.51\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[scale=0.82, transform shape]
+		% Top axes (Charge q vs t)
+		\draw[->, >=stealth, line width=0.8pt] (-0.2, 3.2) -- (5.6, 3.2) node[right] {\small $t$};
+		\draw[->, >=stealth, line width=0.8pt] (0, 2.1) -- (0, 4.4) node[above] {\small $q$};
+
+		% Bottom axes (Current i vs t)
+		\draw[->, >=stealth, line width=0.8pt] (-0.2, 0) -- (5.6, 0) node[right] {\small $t$};
+		\draw[->, >=stealth, line width=0.8pt] (0, -1.1) -- (0, 1.3) node[above] {\small $i$};
+
+		% Labels on axes
+		\node[left=2pt] at (0, 4.0) {\footnotesize $q_{\max}$};
+		\draw[line width=0.8pt] (-0.06, 4.0) -- (0.06, 4.0);
+
+		\node[left=2pt] at (0, 0.8) {\footnotesize $I_{\max}$};
+		\draw[line width=0.8pt] (-0.06, 0.8) -- (0.06, 0.8);
+
+		% Horizontal dashed line to peak of current
+		\draw[densely dashed, gray!60, line width=0.6pt] (0, 0.8) -- (1.8, 0.8);
+
+		% Vertical dashed lines linking key times
+		% t = T/2 (x = 1.2)
+		\draw[densely dashed, gray!60, line width=0.6pt] (1.2, 2.4) -- (1.2, -0.6);
+		% t = T (x = 2.4)
+		\draw[densely dashed, gray!60, line width=0.6pt] (2.4, 4.0) -- (2.4, -0.6);
+		% t = 3T/2 (x = 3.6)
+		\draw[densely dashed, gray!60, line width=0.6pt] (3.6, 2.4) -- (3.6, -0.6);
+		% t = 2T (x = 4.8)
+		\draw[densely dashed, gray!60, line width=0.6pt] (4.8, 4.0) -- (4.8, -0.6);
+
+		% Curves
+		% q(t) = q_max * cos(omega * t)
+		\draw[brownheader, line width=1.5pt, smooth] plot[domain=0:5.2, samples=120] (\x, {3.2 + 0.8*cos((\x/2.4)*360)});
+
+		% i(t) = -I_max * sin(omega * t)
+		\draw[primary, line width=1.5pt, smooth] plot[domain=0:5.2, samples=120] (\x, {0.0 - 0.8*sin((\x/2.4)*360)});
+
+		% Time ticks and labels on bottom axis
+		\node[below=3pt, fill=white, inner sep=1pt] at (0, 0) {\footnotesize $0$};
+		\node[below=3pt, fill=white, inner sep=1pt] at (1.2, 0) {\footnotesize $\dfrac{T}{2}$};
+		\node[below=3pt, fill=white, inner sep=1pt] at (2.4, 0) {\footnotesize $T$};
+		\node[below=3pt, fill=white, inner sep=1pt] at (3.6, 0) {\footnotesize $\dfrac{3T}{2}$};
+		\node[below=3pt, fill=white, inner sep=1pt] at (4.8, 0) {\footnotesize $2T$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៤១៖ ក្រាបនៃកន្សោមបន្ទុក និងចរន្តនៃសៀគ្វី $LC$}
+\end{minipage}
+
+\vspace{0.8em}
+\noindent
+$\blacktriangleright$ \textbf{\textcolor{khmerred}{\large ថាមពលនៃសៀគ្វី $LC$ ({\englishfont Energy of an $LC$ Circuit}) ៖}}
+\par\vspace{3pt}
+ថាមពលសរុបនៃសៀគ្វី $LC$ គឺជាផលបូករវាងថាមពលម៉ាញេទិកដែលស្តុកក្នុងប៊ូប៊ីន និងថាមពលអគ្គិសនីដែលស្តុកក្នុងកុងដង់សាទ័រ ៖
+\begin{center}
+	$\boxed{E = E_L + E_C = \dfrac{1}{2}Li^2 + \dfrac{1}{2}Cv^2}$ \quad (២៩)
+\end{center}
+
+\vspace{0.3em}
+\begin{formulabox}[breakable=false]{
+	បរិមាណ និងខ្នាតក្នុងកន្សោមថាមពលសៀគ្វី $LC$ }
+	\begin{itemize}[itemsep=3pt, topsep=2pt, parsep=0pt, leftmargin=1.6em]
+		\item $E$ ៖ ថាមពលអេឡិចត្រូម៉ាញេទិកសរុបនៃសៀគ្វី $(\mathrm{J})$
+		\item $E_L = \dfrac{1}{2}Li^2$ ៖ ថាមពលម៉ាញេទិកនៃអាំងឌុចទ័រ (ប៊ូប៊ីន) $(\mathrm{J})$
+		\item $E_C = \dfrac{1}{2}Cv^2 = \dfrac{q^2}{2C}$ ៖ ថាមពលអគ្គិសនីនៃកុងដង់សាទ័រ $(\mathrm{J})$
+		\item $\tau_{LC} = T = 2\pi\sqrt{LC}$ ៖ ថេរពេល (ខួបផ្ទាល់) នៃសៀគ្វី $LC$ $(\mathrm{s})$
+		\item $L$ ៖ អាំងឌុចតង់នៃប៊ូប៊ីន $(\mathrm{H})$
+		\item $C$ ៖ កាប៉ាស៊ីតេនៃកុងដង់សាទ័រ $(\mathrm{F})$
+		\item $i$ ៖ អាំងតង់ស៊ីតេចរន្តនៅខណៈណាមួយ $(\mathrm{A})$
+		\item $v \text{ ឬ } V$ ៖ តង់ស្យុងរវាងគោលទាំងពីរនៃកុងដង់សាទ័រ $(\mathrm{V})$
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ការរក្សាថាមពលក្នុងសៀគ្វី $LC$ ឧត្តម (Conservation of Energy) ៖}}\par\vspace{3pt}
+	ក្នុងសៀគ្វី $LC$ ឧត្តម (គ្មានរេស៊ីស្តង់ $R = 0$) គ្មានការបាត់បង់ថាមពលជាកម្ដៅឡើយ។ ថាមពលសរុបនៃសៀគ្វីរក្សាតម្លៃថេរជានិច្ច ៖
+	\[ E = E_L + E_C = \dfrac{1}{2}Li^2 + \dfrac{q^2}{2C} = \dfrac{1}{2}LI_{\max}^2 = \dfrac{Q_0^2}{2C} = \text{ថេរ} \]
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.4em]
+		\item នៅពេល $q = \pm Q_0$ នោះ $i = 0$ ៖ ថាមពលទាំងអស់ជាថាមពលអគ្គិសនី $E = E_{C,\max} = \dfrac{Q_0^2}{2C}$
+		\item នៅពេល $q = 0$ នោះ $i = \pm I_{\max}$ ៖ ថាមពលទាំងអស់ជាថាមពលម៉ាញេទិក $E = E_{L,\max} = \dfrac{1}{2}LI_{\max}^2$
+	\end{itemize}
+}
+

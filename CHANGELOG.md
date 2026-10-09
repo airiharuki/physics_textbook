@@ -156,13 +156,27 @@ RL circuit current growth and decay curves complete with vector plots and full d
   - ករណីបើកកុងតាក់ $S_1$ / បិទកុងតាក់ $S_2$ (៤.២) — full Kirchhoff loop derivation $Ri + L di/dt = 0$, separation of variables, integration helper box, and boxed solution $i(t) = I_m e^{-t/\tau_{RL}}$ (២២) with symbol glossary
   - ក្រាបបកស្រាយពេលផ្ទេរចរន្ត (៤.២) — numerical data table and vector TikZ exponential decay curve beside រូបទី៣៧ (`ក្រាបនៃសៀគ្វី RL ពេលផ្ទេរចរន្តចេញពីប៊ូប៊ីន`)
 
+## [v1.0.0-alpha.14] — 2026-10-09
+
+The LC circuit breathes to life: capacitor charging, Kirchhoff discharge derivation, second-order ODE, stacked vector oscillation curves in TikZ, and total electromagnetic energy conservation. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 3 continued (LC circuit & electromagnetic oscillations):**
+  - **សៀគ្វី $LC$ ពេលផ្ទុកថាមពល (៥.១):** SPDT switch connection to terminal $a$ shown in vector CircuitikZ (រូបទី៣៩), charging capacitor to $Q_0 = C\mathcal{E}$ (២៣), electrostatic energy storage $E_E = \frac{1}{2}C\mathcal{E}^2$ (២៤), and initial conditions box for $t = 0$.
+  - **សៀគ្វី $LC$ ពេលផ្ទេរថាមពល (៥.២):** SPDT switch connection to terminal $b$ isolating the closed $LC$ loop (រូបទី៤០), Kirchhoff loop derivation $-v_C + v_L = 0$ with discharging condition $i = -dq/dt$, second-order ODE $\frac{d^2q}{dt^2} + \frac{1}{LC}q = 0$ (២៥), harmonic oscillator analogy, general charge solution $q(t) = q_{\max}\cos(\omega t + \varphi)$ (២៦), and instantaneous current expression $i(t) = -\omega q_{\max}\sin(\omega t + \varphi) = -I_{\max}\sin(\omega t + \varphi)$ (២៧).
+  - **Stacked Vector Oscillation Graph (រូបទី៤១):** Custom dual-subplot TikZ figure plotting charge $q(t)$ in `brownheader` and current $i(t)$ in `primary`, complete with quarter-period vertical alignment dashed lines ($T/2, T, 3T/2, 2T$) illustrating phase quadrature.
+  - **Natural Period / Time Constant:** boxed $\tau_{LC} = T = 2\pi\sqrt{LC}$ (២៨) with parameter glossary.
+  - **ថាមពលនៃសៀគ្វី $LC$ (Energy of an LC circuit):** total electromagnetic energy formula $E = E_L + E_C = \frac{1}{2}Li^2 + \frac{1}{2}Cv^2$ (២៩), dedicated `\formulabox` for quantities and SI units, and `\defbox` on total energy conservation in an ideal $LC$ oscillator ($E = \frac{1}{2}LI_{\max}^2 = \frac{Q_0^2}{2C} = \text{ថេរ}$).
+
 ### Changed
 
-- `main.pdf` rebuilt: **78 pages**, clean under XeLaTeX
+- `main.pdf` rebuilt: **82 pages**, clean under XeLaTeX.
 
 ## [Unreleased]
 
-Next up: LC circuit and electromagnetic oscillations.
+Next up: RLC damped oscillations and resonance.
+
 
 ## [v1.0.0-alpha.1] — 2026-09-25
 
