@@ -171,11 +171,27 @@ The LC circuit breathes to life: capacitor charging, Kirchhoff discharge derivat
 
 ### Changed
 
-- `main.pdf` rebuilt: **82 pages**, clean under XeLaTeX.
+## [v1.0.0-alpha.15] — 2026-10-12
+
+Lesson 4 opens its doors: the War of Currents (Edison vs. Westinghouse), AC vs. DC, and long-distance power transmission via transformers. Plus Moul font polishing for LC energy box titles. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 4 (ចរន្តឆ្លាស់ / Alternating Current) — opened:**
+  - `\khmerlesson` heading + `\tanbgdivider` floral divider.
+  - Historical introduction on DC vs. AC: Thomas Edison and George Westinghouse debate (១៨៨០), sinusoidal waveform advantages, and transformers (`ត្រង់ស្វូ`) for high-voltage long-distance transmission.
+  - Image `img/alternator.png` staged via Git LFS.
+
+### Changed
+
+- **Typesetting fix:** switched `\formulabox` title for the LC circuit energy summary to `\khmermoul` (`fonttitle=\normalfont`) to bypass the Ang TaPich shaping bug on `កន្សោម`.
+- **Docs:** updated `AGENTS.md` and `README.md` with TeX Live 2026 notes, circuitikz guidelines, and cache cleaning instructions.
+- `main.pdf` rebuilt: **83 pages**, clean under XeLaTeX.
 
 ## [Unreleased]
 
-Next up: RLC damped oscillations and resonance.
+Next up: AC circuit parameters, effective values (RMS), and sinusoidal waveforms.
+
 
 
 ## [v1.0.0-alpha.1] — 2026-09-25

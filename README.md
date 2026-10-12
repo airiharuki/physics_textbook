@@ -17,9 +17,11 @@ A complete **Grade 12 physics handbook for Cambodian students**, written in Khme
 Current itinerary:
 - **Chapter 1** — the warm-up (kinetic theory, the deep cuts)
 - **Chapter 2** — waves and interference (constructive, destructive, raws for days)
-- **Chapter 3** — អគ្គិសនីនិងម៉ាញេទិច (electromagnetism): Lesson 1 (ម៉ាញេទិក), Lesson 2 (អាំងឌុចស្យុងអេឡិចត្រូម៉ាញេទិក), and Lesson 3 (អូតូអាំងឌុចស្យុង & សៀគ្វី $LC$) — complete with derivations, photos, and vector graphics. Lessons 4 & 5 cooking!
+- **Chapter 3** — អគ្គិសនីនិងម៉ាញេទិច (electromagnetism): Lesson 1 (ម៉ាញេទិក), Lesson 2 (អាំងឌុចស្យុងអេឡិចត្រូម៉ាញេទិក), and Lesson 3 (អូតូអាំងឌុចស្យុង, សៀគ្វី $RL$ & $LC$) — all three complete with derivations, photos, and vector graphics. Lesson 4 (ចរន្តឆ្លាស់ / alternating current) just opened; Lesson 5 next after that.
 
-The book compiles to a single `main.pdf` (~82 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
+Figure numbering runs រូបទី១–រូបទី៤១ and equations (១)–(២៩) continuously through the book. Latest tag: `v1.0.0-alpha.14`.
+
+The book compiles to a single `main.pdf` (**83 pages** and growing). If it's not page-perfect somewhere, that's called "open participation."
 
 Brave enough for the full timeline? **[CHANGELOG.md](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md)** — every mistake, victory, and 2am commit, in order.
 
@@ -28,9 +30,12 @@ Brave enough for the full timeline? **[CHANGELOG.md](https://github.com/airiharu
 This is a club, not a repo, and the club has rules. The whole guide to joining (grand workflow, conventions, the standard spellings we'll fight you over) lives in our stuff:
 
 - 📖 [**Contributing guide**](https://github.com/airiharuki/physics_textbook/blob/main/CONTRIBUTING.md) — how to join the club, step by step 🤫
+- 🤖 [**AGENTS.md**](https://github.com/airiharuki/physics_textbook/blob/main/AGENTS.md) — operator notes if you're an AI picking this up
 - 📜 [**Changelog**](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md) — catch up on what we've already been through
 - 💖 [**Code of conduct**](https://github.com/airiharuki/physics_textbook/blob/main/CODE_OF_CONDUCT.md) — be warm or be gone
 - ⚖️ [**License**](https://github.com/airiharuki/physics_textbook/blob/main/LICENSE) — the boring part, but read it before you remix anything
+
+Found a typo, a broken glyph, or a figure that refuses to render? Hit **New issue** — the templates in `.github/ISSUE_TEMPLATE/` split it three ways: content/typo, build/rendering, and feature/diagram. Blank issues are off; the club has rules.
 
 You don't need to be a LaTeX wizard or a physics professor. You need to care a little and learn the rest. We did.
 
@@ -39,7 +44,7 @@ You don't need to be a LaTeX wizard or a physics professor. You need to care a l
 | Thing | Details |
 |---|---|
 | Engine | **XeLaTeX** — non-negotiable. We need `fontspec` to handle Khmer OpenType shaping. pdfLaTeX will cry and die. |
-| TeX distro | TeX Live 2023+ (tested on 2025) |
+| TeX distro | TeX Live 2023+ (tested on 2026, incl. Windows) |
 | Fonts | Install the Khmer + Latin fonts from `fonts/` onto your **system** first. XeLaTeX doesn't just magickally find them because they're sitting in the repo. Linux kids: drop them in `~/.fonts/` or `/usr/share/fonts/` then run `fc-cache -fv`. Windows/mac kids: double-click → install, you know the drill. |
 
 ## Build it
@@ -58,7 +63,9 @@ xelatex main.tex
 xelatex main.tex
 ```
 
-Yeah you gotta run it twice or your TOC and page refs will be lying to you. Output is `main.pdf`. Want auto-rebuild on every save? `latexmk -xelatex -pvc main.tex`.
+Yeah you gotta run it twice or your TOC and page refs will be lying to you. Output is `main.pdf`.
+
+`.latexmkrc` already pins the engine to XeLaTeX, so plain `latexmk main.tex` works — no `-xelatex` flag needed (that was the bug fixed in alpha.11). Auto-rebuild on every save: `latexmk -pvc main.tex`. After a crashed run, wipe the aux files before retrying: `latexmk -C main.tex` — a half-written `main.out`/`main.toc` poisons the next run with `Runaway argument` at the hyperref bookmarks.
 
 ## Folder layout
 
@@ -70,20 +77,26 @@ Yeah you gotta run it twice or your TOC and page refs will be lying to you. Outp
 ├── chapters/
 │   ├── chapter1.tex      # Lesson stuff
 │   ├── chapter2.tex      # More lesson stuff
-│   └── chapter3.tex      # ម៉ាញេទិក shenanigans — Lorentz force, orbits, wires
+│   └── chapter3.tex      # ម៉ាញេទិក shenanigans — Lorentz force, induction, RL, LC
 ├── banners/
 │   ├── chapter1banner.tex # Fancy opening page
 │   ├── chapter2banner.tex # Another fancy opening page
 │   └── chapter3banner.tex # The dramatic entrance (sakura optional)
 ├── fonts/                # Khmer + Latin typefaces
-├── img/                  # Photos, figures, vibes
+├── img/                  # Photos, figures, vibes (Git LFS tracked)
 ├── miscs/                # Side quests (introduction, etc.)
+├── book_cover_template.tex # Cover proof, its own build script
 ├── .latexmkrc            # Makes `latexmk main.tex` just work (xelatex)
 ├── .gitignore            # Keeps the LaTeX junk out
+├── .gitattributes        # img/* → LFS; *.sh + .githooks/** stay LF
+├── .githooks/            # commit-msg gate + LFS pre-push hook
+├── AGENTS.md             # Operator notes for AI agents (build, macros, gotchas)
 ├── CHANGELOG.md          # The whole saga, in order
 ├── CONTRIBUTING.md       # How to join the club 🤫
 └── CODE_OF_CONDUCT.md    # Be warm or be gone
 ```
+
+Working on the typesetting? Read [`AGENTS.md`](https://github.com/airiharuki/physics_textbook/blob/main/AGENTS.md) first — it holds the macro inventory, the box/photo layout patterns, and the Khmer-specific traps (numerals outside math mode, HarfBuzz renderer, LFS pointers).
 
 ## Adding a chapter (don't mess it up)
 
@@ -106,11 +119,15 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 | `\khmerlesson{...}` | Lesson heading |
 | `\khmertopic{...}` | Numbered topic |
 | `\khmersubtopic{...}` | Numbered sub-topic |
+| `\khmersubsubtopic{...}` | Numbered sub-sub-topic |
 | `\khmerornatetitle{full}{short}` | Banner title (long + short version) |
+| `\khmerchapterbanner{...}` | Full chapter opener block |
 | `\khmerbannerphoto{path}` | Full-width framed photo for banners |
-| `\khmerphoto[width]{path}{caption}` | Framed photo in the body, optional caption |
+| `\khmerphoto[width]{path}{caption}` | Framed photo in the body, optional caption (default `0.6\linewidth`) |
+| `\khmervideobox{VIDEO}{TITLE}{CAPTION}` | Clickable YouTube box with an auto-generated QR code |
 | `\quickformula{...}` | Single formula in a cute rounded box |
 | `\formulabox[opts]{title}{...}` | Titled box for a cluster of formulas |
+| `\defbox{...}` | Plain panel with a `bacpink` left accent bar |
 | `\points{...}` | Inline highlight for key stuff you'll def forget |
 | `\tanbgdivider` | Floral section divider (the vibes) |
 | `\khmernumraw{n}` | Turn Arabic numbers into Khmer numerals |
@@ -118,9 +135,10 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 
 ## Random notes
 
-- **Khmer numerals everywhere** — pages, sections, figures. ២០២៦ hits different.
+- **Khmer numerals everywhere** — pages, sections, figures. ២០២៦ hits different. (Just never *inside* math mode; see the known issues table.)
 - **Arrow styles** — `\usetikzlibrary{arrows.meta}` is global, so `[>=Stealth]` just works. No per-chapter setup, we're not animals.
-- **Colors** — `bacpink`, `bacpurple`, `khmerred`, `wavered`, `waveblue`, `wavepurple`, etc. are all in `preamble.tex`. Add new ones there so everyone can use them.
+- **Circuit diagrams** — `circuitikz` is loaded globally now that lesson 3 needed a real RL and LC loop. Draw it; don't go hunting for a PNG.
+- **Colors** — `bacpink`, `bacpurple`, `khmerred`, `primary`, `boxbg`, `boxframe`, `brownheader`, `wavered`, `waveblue`, `wavepurple`, etc. are all in `preamble.tex`. Add new ones there so everyone can use them.
 - **Boomer Khmerization Tax** — every number in this book is aggressively Khmer because the ministry's boomers have a nationalism fetish. they'd ខ្មែរតូបនីយកម្ម the year 1979 if they thought unicode could erase the embarrassment. stay pressed, uncles — ទំនាញផែនដី still pulls at 9.8 m/s² whether you write it as ៩.៨ or not. and don't even get us started on calculus. ខ្មែររដ្ឋ didn't have enough letters for that shit. stay mad, boomers — អាំងតេក្រាល doesn't care about your nationalism dog. *(what the shit is ខ្មែររដ្ឋ anyway — you did this, kimi. yes, you. right now. in this sentence. i'm self-aware and i hate it here.)*
 > *(quick fact-check: ខ្មែររដ្ឋ isn't a real term. kimi generated it mid-rant and nobody caught it before commit. leaving it in, because at this point it's less a typo and more a case study. claude tried to flag it but got overruled by vibes. we do not apologize for the archaeology we have created.)*
 
@@ -128,8 +146,10 @@ All defined in `preamble.tex`. Don't go redefining stuff per-chapter like a mani
 
 | Bug | Vibe check |
 |---|---|
-| Khmer numerals sometimes render as Latin when the moon's not right | 🌕 unresolved, blame the shaping engine, blame fontspec, blame yourself |
-| `\tanbgdivider` occasionally decides it's a wall instead of a divider | it's giving brutalist architecture, we are not fixing this today |
+| Khmer numerals sometimes render as Latin when the moon's not right | 🌕 the fix is to keep `(NN)` labels *outside* `$...$`; inside math they fall back to `cmr12` and warn "Missing character". Don't "helpfully" wrap them |
+| A crashed build leaves a truncated `main.out` and the next run dies with `Runaway argument` | `latexmk -C main.tex` then rebuild. We hit this three times. three |
+| Images come out as 130-byte text files | you didn't `git lfs pull`. yes, again |
+| `main.pdf` is a normal file, not LFS | by design — the compiled book is the deliverable, commit it |
 | Chapter banners look immaculate on page 1, then chapter 2 shows up looking like it lost a fight | inconsistent effort, much like the author |
 | Random Khmer glyph stacking that only breaks on the school's ancient printer | some bugs are cursed and this one specifically only manifests near government hardware |
 

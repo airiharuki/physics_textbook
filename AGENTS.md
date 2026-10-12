@@ -19,12 +19,12 @@ Grade 12 physics handbook for Cambodian students. Single XeLaTeX document → `m
 - Fonts: Khmer fonts in `fonts/` loaded via `fontspec` with HarfBuzz renderer; `khmerpagenum` = Romnea, `khmerheader` = Ang TaPich, `khmermoul` = Moul. Latin fallback `\englishfont` = Nunito.
 - Colors: `primary`, `boxbg`, `boxframe`, `brownheader`, `bacpurple`, `khmerred` — all in preamble. Reuse these for any new box/figure style.
 - Macros to use (defined in preamble): `\khmerphoto[opts]{img}{caption}` (framed body photo), `\khmervideobox` / `\khmerphoto` for images, `\formulabox[opts]{title}{...}` for titled boxes, `\defbox{...}` for plain panels, `\khmertopic`, `\khmersubtopic`, `\khmerlesson`, `\khmerchapter`.
-- circuitikz is NOT in preamble (it was removed once in favor of the photo). If a circuit-diagram TikZ is required, re-add `\usepackage[american]{circuitikz}`.
+- `circuitikz` IS loaded (`\usepackage[american]{circuitikz}`, `[line width=1.1pt, scale=0.72, transform shape]` is the house style for drawn circuits — RL loop, LC loop with SPDT). Also loaded: `qrcode` (used by `\khmervideobox`). Don't re-add or remove these casually — they were toggled twice during lesson 3 and `qrcode` got clobbered once.
 
 ## Conventions (enforced here, not typical defaults)
 
 - **XeLaTeX only.** pdfLaTeX will break Khmer shaping.
-- Equation/figure numbers are continuous through the book, run ១…១៤+ as of lesson 3. Continue that sequence, do not restart per lesson.
+- Equation/figure numbers are continuous through the book. As of the end of lesson 3 they stand at figures រូបទី១–រូបទី៤១ and equations (១)–(២៩). Continue that sequence; do not restart per lesson, and do not trust the numbers in pasted OCR — they are local to the source and always collide.
 - Khmer numerals `(៥)` in equations **must live outside math mode** — inside `$...$` they fall back to `cmr12` and produce "Missing character" output. Follow `\end{flalign*} ... \begin{center} $\boxed{...}$ \quad (N)` pattern from lesson 2.
 - Validaccent bar boxes: `\formulabox[breakable=false]{title}{...}` — sharp corners, 3pt primary left bar, inline primary title with hairline rule. Don't re-add frame/colframe overrides.
 - Side-by-side text/figure: `\noindent \begin{minipage}[t]{0.58\textwidth}...\end{minipage}\hfill\begin{minipage}[t]{0.40\textwidth}...\end{minipage}` — same column widths everywhere.
@@ -40,3 +40,6 @@ Grade 12 physics handbook for Cambodian students. Single XeLaTeX document → `m
 - Font slots use `Script=Khmer, Renderer=HarfBuzz`; switching the Renderer (e.g. to `Default`) can reintroduce missing-character glitches.
 - The theme from `sakuranotes.sty` was not adopted directly; its box aesthetic was ported into `\formulabox` instead. Do not add it as-is to the document.
 - All OCR-pasted lesson text needs a cleanup pass before insertion: strip `[cite: N]`, normalize `ម៉ាញេទិក`, and continue the figure/equation numbering.
+- **Verify every build, don't assume.** The house check is: `exit=0`, `errors: 0` (`^!` in `main.log`), `missing chars: 0`, and read the "Output written" page count. Underfull/overfull hboxes do occur (2 pre-existing, in lesson-2 topic titles) — a couple is not a regression, a jump is.
+- Lesson 3 (of 5) is done; lesson 4 (ចរន្តឆ្លាស់ / alternating current) has only its `\khmerlesson` heading in the source as of alpha.14 — everything after it is unwritten, so figure/equation numbering past (២៩)/រូបទី៤១ is still open.
+- `git status` noise to expect: `chapter3.tex` may show a whole-file diff of ~2250 lines. That is a CRLF↔LF flip, not real edits. Check with `git diff --ignore-cr-at-eol --numstat` before you conclude someone rewrote the chapter.
