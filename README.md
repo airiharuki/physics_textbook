@@ -17,9 +17,9 @@ A complete **Grade 12 physics handbook for Cambodian students**, written in Khme
 Current itinerary:
 - **Chapter 1** — the warm-up (kinetic theory, the deep cuts)
 - **Chapter 2** — waves and interference (constructive, destructive, raws for days)
-- **Chapter 3** — ម៉ាញេទិក (magnetism): fields around straight wires, loops and solenoid coils, the Lorentz force, charged-particle orbits, force on current-carrying wires, and the showdown between two parallel wires
+- **Chapter 3** — អគ្គិសនីនិងម៉ាញេទិច (electromagnetism): Lesson 1 (ម៉ាញេទិក), Lesson 2 (អាំងឌុចស្យុងអេឡិចត្រូម៉ាញេទិក), and Lesson 3 (អូតូអាំងឌុចស្យុង & សៀគ្វី $LC$) — complete with derivations, photos, and vector graphics. Lessons 4 & 5 cooking!
 
-The book compiles to a single `main.pdf` (~54 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
+The book compiles to a single `main.pdf` (~82 pages and growing). If it's not page-perfect somewhere, that's called "open participation."
 
 Brave enough for the full timeline? **[CHANGELOG.md](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md)** — every mistake, victory, and 2am commit, in order.
 

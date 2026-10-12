@@ -222,6 +222,6 @@ Lesson 2 lands in full — and for the first time every single picture in the bo
 
 ---
 
-*The book that launches: 54 pages, chapters 1 & 2 complete, chapter 3 at 1 of 5 lessons. Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
+*The handbook as of v1.0.0-alpha.14: 82 pages, chapters 1 & 2 complete, chapter 3 at 3 of 5 lessons finished (magnetism, electromagnetic induction, self-inductance & LC circuits). Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: 67 pages, chapter 3 at 2 of 5 lessons finished plus lesson 3 started — mutual inductance, the full `M` glossary and all. Next up: self-inductance, magnetic energy, the `RL` and `LC` circuits.* 🌸
+*Currently in the pipeline: chapter 3 lesson 4 (ចរន្តឆ្លាស់ / alternating currents & RLC series circuits). Next up: impedance, power factor, resonance, and AC phasor diagrams.* 🌸
