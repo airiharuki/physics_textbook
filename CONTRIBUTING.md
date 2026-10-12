@@ -106,7 +106,21 @@ build.cmd                   # Windows
 
 - The "Known issues" table in the README is 100% real. Pick a bug, kill a bug.
 - Open any `chapters/` file and fix whatever makes you twitch.
-- For anything bigger than a sentence, open an issue first so we can agree on the shape of it.
+- For anything bigger than a sentence, open an issue first using our templates so we can agree on the shape of it.
+
+## Reporting issues & proposing ideas 📋
+
+Found an error, a broken build, or have a brilliant idea for a diagram? Don't hesitate to open an issue! We have **issue templates** in place on GitHub to make reporting fast, structured, and painless.
+
+When you click **[New Issue](https://github.com/airiharuki/physics_textbook/issues/new/choose)**, pick the template that matches your situation:
+
+| Template | Best for... | What it asks for |
+|---|---|---|
+| 📝 **Content Error / Typo** | Physics formula mistakes, Khmer typos, incorrect units, or notation slip-ups | Chapter/lesson, PDF page number, current LaTeX vs. suggested correction, source citation, and standard spelling checks |
+| 🚨 **Build or Typesetting Bug** | XeLaTeX build failures, missing font glyphs, broken Khmer shaping, Git LFS pointer files, or minipage layout overflow | OS, TeX Live/XeLaTeX version, build method, terminal logs/screenshots, and gotcha checklist |
+| 💡 **Content or Diagram Proposal** | Proposing a new lesson section, vector TikZ diagram, high-res photo, or QR video box (`\khmervideobox`) | Target chapter/lesson, proposed topic, asset type, and draft formulas or TikZ sketches |
+
+Using these templates gives us the exact context (page numbers, LaTeX snippets, system logs) needed to jump straight to fixing it without endless back-and-forth guessing. And as always: keep the secret club rule close to heart! 🤫🌸
 
 ## Conventions (we beg you)
 
