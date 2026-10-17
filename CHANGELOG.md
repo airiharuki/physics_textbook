@@ -188,9 +188,28 @@ Lesson 4 opens its doors: the War of Currents (Edison vs. Westinghouse), AC vs. 
 - **Docs:** updated `AGENTS.md` and `README.md` with TeX Live 2026 notes, circuitikz guidelines, and cache cleaning instructions.
 - `main.pdf` rebuilt: **83 pages**, clean under XeLaTeX.
 
+## [v1.0.0-alpha.16] — 2026-10-17
+
+Diode rectifiers take the stage: alternator motor principle with slip rings, AC sinusoidal current definition, half-wave diode rectifier circuit with oscilloscope wave comparison, and full Graetz bridge rectifier with galvanometer pulsating DC graphs in pure vector TikZ. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 4 (ចរន្តឆ្លាស់ / Alternating Current) — continued:**
+  - **គោលការណ៍នៃជនិតាចរន្តឆ្លាស់ (Alternator Principle):** Rotating rectangular coil in uniform magnetic field, slip rings and carbon brushes (កងរអិល និងសរសៃជក់), sinusoidal AC generation, framed figure រូបទី៤២ (`img/motor2.0.png`).
+  - **និយមន័យនៃចរន្តឆ្លាស់ (Definition of AC):** Periodic direction-reversing current, period $T$, frequency $f = 1/T$, and sinusoidal current equation $i = I_{\max}\cos(\omega t)$ (៣០) with parameter definitions.
+  - **តម្រង់ចរន្តដោយឌីយ៉ូត (Diode Rectification):** Semi-conductor PN junction diode principle, forward bias vs. reverse bias, and circuit symbol with anode/cathode definitions.
+  - **សំទួយចរន្តកន្លះខួប (Half-wave Rectification):** Single-diode rectifier circuit and dual-channel oscilloscope waveform comparison (channels $Y_A$ and $Y_B$) beside រូបទី៤៣ and រូបទី៤៤, average current formula $I_{\mathrm{rav}} = \frac{I_{\max}}{\pi} = 0.318\,I_{\max}$ (៣១) in a titled `formulabox`.
+  - **សំទួយចរន្តពេញមួយខួប (Full-wave Bridge Rectification):** Graetz 4-diode diamond bridge rectifier circuit (រូបទី៤៦.ក) and galvanometer full-wave pulsating DC waveform graph (រូបទី៤៦.ខ) crafted in native vector TikZ, featuring alternating AC rail indicators, center Galvanometer unidirectional flow, average DC dashed line $I_{\mathrm{rav}}$, and electric charge shaded integral callouts.
+  - New image: `img/motor2.0.png` tracked via Git LFS.
+
+### Changed
+
+- Rebuilt `main.pdf`: **87 pages**, 0 errors, 0 missing characters under XeLaTeX with HarfBuzz renderer.
+- Continuous numbering progressed to **រូបទី៤៦** (Figure 46) and **សមីការ (៣១)** (Equation 31).
+
 ## [Unreleased]
 
-Next up: AC circuit parameters, effective values (RMS), and sinusoidal waveforms.
+Next up: AC circuit parameters, effective values (RMS), impedance, and sinusoidal waveforms.
 
 
 
@@ -238,6 +257,6 @@ Lesson 2 lands in full — and for the first time every single picture in the bo
 
 ---
 
-*The handbook as of v1.0.0-alpha.14: 82 pages, chapters 1 & 2 complete, chapter 3 at 3 of 5 lessons finished (magnetism, electromagnetic induction, self-inductance & LC circuits). Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
+*The handbook as of v1.0.0-alpha.16: 87 pages, chapters 1 & 2 complete, chapter 3 at 3 of 5 lessons finished and lesson 4 well underway (alternator principle, AC definition, half-wave and full-wave diode rectifiers). Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: chapter 3 lesson 4 (ចរន្តឆ្លាស់ / alternating currents & RLC series circuits). Next up: impedance, power factor, resonance, and AC phasor diagrams.* 🌸
+*Currently in the pipeline: chapter 3 lesson 4 (ចរន្តឆ្លាស់ / alternating currents & RLC series circuits). Next up: effective values (RMS), impedance, power factor, resonance, and AC phasor diagrams.* 🌸

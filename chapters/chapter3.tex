@@ -2265,5 +2265,407 @@ $\blacktriangleright$ \textbf{\textcolor{khmerred}{\large ថាមពលនៃ�
 \vspace{0.3em}
 នៅក្នុងឆ្នាំ ១៨៨០ មានវិស្វករអគ្គិសនីពីររូបនៅក្នុងសហរដ្ឋអាមេរិក គឺលោក ថូម៉ាស់ អេឌីសុន ({\englishfont Thomas Edison}) និងលោក ចច វ៉េសទីងហោស៍ ({\englishfont George Westinghouse}) បានពិភាក្សាគ្នារកវិធីដ៏ល្អបំផុតចំពោះការផលិតថាមពលអគ្គិសនី និងការផ្គត់ផ្គង់ថាមពលអគ្គិសនីនៃប្រភពអគ្គិសនីទាំងពីរប្រភេទនេះ។ បន្ទាប់ពីធ្វើការពិភាក្សាដេញដោលគ្នារួចមក ប្រភពអគ្គិសនីចរន្តឆ្លាស់ គឺជាជម្រើសដ៏ល្អបំផុតនៅក្នុងការផ្គត់ផ្គង់ទៅដល់អ្នកប្រើប្រាស់ ពីព្រោះតង់ស្យុង និងចរន្តដែលផលិតបានគឺមានតម្លៃប្រែប្រួលតាមពេល មានទម្រង់ជាអនុគមន៍ស៊ីនុយសូអុីត។ លោក ចច វ៉េសទីងហោស៍ បានលើកឡើងថា យើងអាចប្រើប្រាស់ត្រង់ស្វូជាមួយនឹងប្រភពអគ្គិសនីចរន្តឆ្លាស់ ដែលជាឧបករណ៍សម្រាប់ទម្លាក់ ឬដំឡើងតង់ស្យុង (ដែលនឹងសិក្សានៅក្នុងមេរៀននេះ) ដែលមិនអាចប្រើជាមួយចរន្តជាប់បានទេ គឺអាចធ្វើឱ្យយើងអាចដឹកជញ្ជូនថាមពលអគ្គិសនីនៅចម្ងាយឆ្ងាយ (ពីកន្លែងផលិត ទៅកន្លែងប្រើប្រាស់)។\\
 
-\textbf{Editor's Note:  } ពេលនេះយើងមកដល់មេរៀនពិបាកជាងគេហើយ ស៊ូៗណ៎ា! {\englishfont <3}
+\khmertopic{១. ការផលិតកម្លាំងអគ្គិសនីចរន្តឆ្លាស់ស៊ីនុយសូអុីត}
 
+\noindent
+ស៊ុមខ្សែចម្លងមួយមានផ្ទៃ ($\vec{A}$) និងរុំដោយរបុំខ្សែចម្លងមាន $N$ ស្ពៀ ត្រូវបានដាក់នៅក្នុងដែនម៉ាញេទិកឯកសណ្ឋាន ($\vec{B}$) និងវិលដោយប្រេកង់មុំ ($\omega = 2\pi f$) ដូចបង្ហាញក្នុងរូបទី៤២ ៖
+
+\vspace{0.4em}
+\begin{center}
+	\khmerphoto[0.72\linewidth]{img/motor2.0.png}{រូបទី៤២៖ ស៊ុមវិលនៅក្នុងដែនម៉ាញេទិក}
+\end{center}
+
+\vspace{0.4em}
+\noindent
+តាមច្បាប់ផារ៉ាដេ កម្លាំងអគ្គិសនីចលករអាំងឌ្វីដែលផលិតដោយស៊ុមវិលគឺ ៖
+\begin{equation*}
+	e = -N\dfrac{d\Phi_B}{dt}
+\end{equation*}
+
+\noindent
+ដោយ ៖ $\Phi_B = BA\cos(\theta) = BA\cos(\omega t)$ \quad (ព្រោះ $\theta = \omega t$)
+
+\vspace{0.3em}
+\noindent
+យើងបាន ៖
+\begin{align*}
+	e &= -N\dfrac{d}{dt}\Big(BA\cos(\omega t)\Big) \\[0.4em]
+	&= -NBA\Big(-\omega\sin(\omega t)\Big) \\[0.4em]
+	&= NBA\omega\sin(\omega t)
+\end{align*}
+
+\vspace{0.2em}
+\noindent
+ដូចនេះ កម្លាំងអគ្គិសនីចលករឆ្លាស់ស៊ីនុយសូអុីតដែលផលិតដោយស៊ុមវិលគឺ ៖
+\begin{center}
+	$\boxed{e = NBA\omega\sin(\omega t) \quad \text{ឬ} \quad e = e_{\max}\sin(\omega t)}$ \quad (៣០)
+\end{center}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $e$ ៖ កម្លាំងអគ្គិសនីចលករខណៈ $(\mathrm{V})$
+		\item $N$ ៖ ចំនួនរបុំនៃស៊ុម (ជុំ)
+		\item $B$ ៖ ដែនម៉ាញេទិកឯកសណ្ឋាន $(\mathrm{T})$
+		\item $A$ ៖ ផ្ទៃនៃស៊ុមខ្សែចម្លង $(\mathrm{m}^2)$
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $\omega = 2\pi f = \dfrac{2\pi}{T}$ ៖ ប្រេកង់មុំ ឬពុលសាសុង $(\mathrm{rad/s})$
+		\item $e_{\max} = NBA\omega$ ៖ តម្លៃអតិបរមានៃកម្លាំងអគ្គិសនីចលករ $(\mathrm{V})$
+	\end{itemize}
+\end{minipage}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ចំណាំ ៖}} បើសិនជាស៊ុមនេះត្រូវបានរុំដោយខ្សែចម្លងគ្មានរេស៊ីស្តង់ $(r = 0)$ កម្លាំងអគ្គិសនីចលករនេះអាចផ្ដល់ជាតង់ស្យុងឆ្លាស់រវាងគោលទាំងពីរ ៖
+	\begin{center}
+		$\boxed{v = e = V_{\max}\sin(\omega t)}$ \quad (៣១)
+	\end{center}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $V_{\max}$ ៖ តង់ស្យុងអតិបរមា $(\mathrm{V})$
+		\item $\omega = 2\pi f = \frac{2\pi}{T}$ ៖ ពុលសាសុង ឬប្រេកង់មុំនៃចរន្តឆ្លាស់ $(\mathrm{rad/s})$
+	\end{itemize}
+}
+
+\vspace{0.5em}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=0.9, transform shape]
+		% Circuit wire
+		\draw[black, line width=1.4pt] (-1.8, 0) -- (1.8, 0);
+		% AC Source symbol circle
+		\draw[primary!80!black, fill=sakurapetal!45, line width=1.4pt] (0,0) circle (0.65cm);
+		% Sine wave inside circle
+		\draw[brownheader, line width=1.8pt, smooth]
+			plot[domain=-0.42:0.42, samples=50] (\x, {0.26*sin((\x/0.42)*180)});
+	\end{tikzpicture}
+	\par\vspace{0.2cm}
+	{\khmerpagenum\small\color{brownheader} ក. និមិត្តសញ្ញានៃប្រភពចរន្តឆ្លាស់}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.58\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=0.85, transform shape]
+		% Axes
+		\draw[->, >=stealth, line width=0.8pt] (-0.3, 0) -- (5.6, 0) node[right] {\small $t$};
+		\draw[->, >=stealth, line width=0.8pt] (0, -1.3) -- (0, 1.5) node[above] {\small $v$};
+
+		% Label V_max and horizontal dashed line
+		\node[left=2pt] at (0, 0.9) {\footnotesize $V_{\max}$};
+		\draw[line width=0.8pt] (-0.06, 0.9) -- (0.06, 0.9);
+		\draw[densely dashed, gray!60, line width=0.6pt] (0, 0.9) -- (0.6, 0.9);
+
+		% Sine curve: v(t) = V_max * sin((x/2.4)*360)
+		\draw[waveblue, line width=1.5pt, smooth]
+			plot[domain=0:5.2, samples=120] (\x, {0.9*sin((\x/2.4)*360)});
+
+		% Period T between first peak (x=0.6) and second peak (x=3.0)
+		\draw[line width=0.6pt] (0.6, 0.9) -- (0.6, 1.35);
+		\draw[line width=0.6pt] (3.0, 0.9) -- (3.0, 1.35);
+		\draw[<->, >=stealth, line width=0.7pt] (0.6, 1.25) -- (3.0, 1.25)
+			node[midway, fill=white, inner sep=1pt] {\small $T$};
+	\end{tikzpicture}
+	\par\vspace{0.2cm}
+	{\khmerpagenum\small\color{brownheader} ខ. ក្រាបនៃតង់ស្យុងជាអនុគមន៍នៃពេល}
+\end{minipage}
+\par\vspace{0.15cm}
+{\centering\khmerpagenum\small\color{brownheader} រូបទី៤៣៖ និមិត្តសញ្ញា និងក្រាបនៃតង់ស្យុងចរន្តឆ្លាស់ស៊ីនុយសូអុីត\par}
+
+\khmersubtopic{១.១. ដ្យាក្រាមផាស (\englishfont Phasor Diagram)}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	ដើម្បីបកស្រាយពីតង់ស្យុង ឬចរន្តដែលប្រែប្រួលតាមពេលមានរាងស៊ីនុយសូអុីត គេត្រូវប្រើប្រាស់ដ្យាក្រាមផាស ឬសំណង់ហ្វ្រេណែល ដែលយើងបានប្រើប្រាស់នៅក្នុងមេរៀនរលករួចមកហើយ។ នៅក្នុងដ្យាក្រាមនេះ ត្រូវបានគូសតង់ស្យុងអតិបរមា ឬចរន្ត និងមុំ (ផាស) អនុគមន៍ធៀបនឹងអ័ក្សដេកវិជ្ជមាន (ត្រូវនឹងមុំសូន្យដឺក្រេ) ដូចបង្ហាញក្នុងរូបទី៤៤ ៖
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[scale=0.85, transform shape]
+		% Axes
+		\draw[->, >=stealth, line width=0.8pt] (-0.3, 0) -- (4.2, 0);
+		\draw[->, >=stealth, line width=0.8pt] (0, -0.4) -- (0, 3.2);
+
+		% Phasor vector V_max at angle 32 degrees
+		\draw[->, >=stealth, line width=1.6pt, color=orange!90!black] (0,0) -- (32:3.5)
+			node[above right=1pt, black] {\small $V_{\max}$};
+
+		% Angle arc omega*t
+		\draw[line width=0.6pt] (0.9, 0) arc (0:32:0.9);
+		\node at (16:1.3) {\small $\omega t$};
+
+		% Angular velocity omega rotation arc
+		\draw[->, >=stealth, line width=0.7pt] (25:3.8) arc (25:65:3.8)
+			node[midway, right=3pt] {\small $\omega$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៤៤៖ ដ្យាក្រាមផាសនៃតង់ស្យុង $v = V_{\max}\sin(\omega t)$}
+\end{minipage}
+
+\khmersubtopic{១.២. សំទួយចរន្តឆ្លាស់ (\englishfont Rectified Alternating Current)}
+ជាទូទៅ គេប្រើប្រាស់កាល់វ៉ាណូម៉ែត្រដើម្បីវាស់ចរន្តដែលមានតម្លៃតូចនៅក្នុងសៀគ្វីចរន្តជាប់។ ប្រសិនបើប្រើប្រាស់កាល់វ៉ាណូម៉ែត្រទៅវាស់ចរន្តស៊ីនុយសូអុីត (ចរន្តឆ្លាស់) ទ្រនិចកាល់វ៉ាណូម៉ែត្រនឹងងាកទៅមកៗជុំវិញទីតាំងលំនឹង។ ដូចនេះគេបានប្រើវិធីសាស្ត្រមួយដោយប្រើកាល់វ៉ាណូម៉ែត្រហើយងាយស្រួលនៅក្នុងការកំណត់តម្លៃចរន្តដែលទ្រនិចដែលវាចង្អុលនៅលើអេក្រង់ គេត្រូវប្រើប្រាស់ប្រ៊ីឌីយ៉ូត (ឧបករណ៍ដែលអនុញ្ញាតឲ្យចរន្តរត់តាមទិសដៅមួយ) ដើម្បីបំប្លែងពីចរន្តឆ្លាស់ទៅជាចរន្តជាប់ ដែលត្រូវបានគេឲ្យឈ្មោះថា \textbf{សំទួយចរន្ត}។ សំទួយចរន្តត្រូវបានគេចែកចេញជាពីរប្រភេទគឺ សំទួយចរន្តកន្លះខួប និងសំទួយចរន្តពេញមួយខួប។
+
+\khmersubsubtopic{ក. សំទួយចរន្តកន្លះខួប (\englishfont Half-wave Rectified Current)}
+គេបានតម្លើងសៀគ្វីមួយដូចរូបទី៤៥.ខ ដែលប្រើប្រាស់ឌីយ៉ូតមួយគ្រាប់សម្រាប់កំណត់ទិសដៅនៃចរន្តស៊ីនុយសូអុីតដែលផ្តល់ឱ្យសៀគ្វីចរន្តឆ្លាស់ ដែលមានទម្រង់ជារលកពេញ (រូបទី៤៥.ក) ។ ចរន្តដែលបានរត់នៅក្នុងរេស៊ីស្តរ គឺមានតែតាមទិសដៅវិជ្ជមានដែលកំណត់ដោយរាងកន្លះខួបនៃរលក (ដូចរូបទី៤៥.គ) ។ ទង្វើបែបនេះ ហៅថាសំទួយចរន្តកន្លះខួប ({\englishfont Half-Wave Rectification})។
+
+\vspace{0.3em}
+\begin{center}
+\begin{tikzpicture}[scale=1.02, transform shape]
+	% ==========================================================
+	% PART A: Full AC Waveform (2 cycles)
+	% ==========================================================
+	\begin{scope}[shift={(0,0)}]
+		% Baseline axis
+		\draw[line width=1.1pt, black!75] (-0.2, 0) -- (3.4, 0);
+
+		% Shading positive lobes
+		\fill[waveblue!18] (0,0) -- plot[domain=0:0.8, samples=40] (\x, {1.15*sin((\x/0.8)*180)}) -- (0.8,0) -- cycle;
+		\fill[waveblue!18] (1.6,0) -- plot[domain=1.6:2.4, samples=40] (\x, {1.15*sin(((\x-1.6)/0.8)*180)}) -- (2.4,0) -- cycle;
+
+		% Shading negative lobes
+		\fill[waveblue!10] (0.8,0) -- plot[domain=0.8:1.6, samples=40] (\x, {1.15*sin((\x/0.8)*180)}) -- (1.6,0) -- cycle;
+		\fill[waveblue!10] (2.4,0) -- plot[domain=2.4:3.2, samples=40] (\x, {1.15*sin(((\x-1.6)/0.8)*180)}) -- (3.2,0) -- cycle;
+
+		% Continuous AC sine curve
+		\draw[waveblue, line width=1.8pt, smooth]
+			plot[domain=0:3.2, samples=120] (\x, {1.15*sin((\x/0.8)*180)});
+
+		% Signs + and - inside lobes
+		\node[font=\bfseries\small, color=black!85] at (0.4, 0.45) {+};
+		\node[font=\bfseries\small, color=black!85] at (2.0, 0.45) {+};
+		\node[font=\bfseries\small, color=black!85] at (1.2, -0.45) {--};
+		\node[font=\bfseries\small, color=black!85] at (2.8, -0.45) {--};
+	\end{scope}
+
+	% ==========================================================
+	% PART B: Rectifier Circuit with Diode & Resistor
+	% ==========================================================
+	\begin{scope}[shift={(4.2,0)}]
+		% AC Source symbol
+		\draw[black!85, fill=waveblue!12, line width=1.1pt] (0,0) circle (0.38cm);
+		\draw[primary!90!black, line width=1.2pt, smooth]
+			plot[domain=-0.22:0.22, samples=30] (\x, {0.14*sin((\x/0.22)*180)});
+
+		% Top circuit wire
+		\draw[black!85, line width=1.1pt] (0, 0.38) -- (0, 1.25) -- (1.5, 1.25);
+
+		% Current arrow I
+		\draw[->, >=Stealth, line width=1.3pt, black!85] (0.5, 1.25) -- (0.9, 1.25);
+		\node[above=2pt] at (0.7, 1.25) {\small $I$};
+
+		% Diode
+		\draw[black!85, line width=1.1pt] (1.5, 1.25) -- (1.7, 1.25);
+		\filldraw[black!85, fill=cyan!35, line width=1.1pt, join=miter]
+			(1.7, 0.95) -- (1.7, 1.55) -- (2.3, 1.25) -- cycle;
+		\draw[black!85, line width=1.5pt] (2.3, 0.95) -- (2.3, 1.55);
+		\draw[black!85, line width=1.1pt] (2.3, 1.25) -- (4.2, 1.25);
+
+		% Diode label
+		\node[below=4pt] at (2.0, 0.95) {\footnotesize\textbf{ឌីយ៉ូត} (\englishfont Diode)};
+
+		% Wire down to resistor
+		\draw[black!85, line width=1.1pt] (4.2, 1.25) -- (4.2, 0.6);
+		% Zig-zag resistor
+		\draw[black!85, line width=1.1pt]
+			(4.2, 0.6) -- (4.0, 0.45) -- (4.4, 0.25) -- (4.0, 0.05) -- (4.4, -0.15) -- (4.0, -0.35) -- (4.4, -0.55) -- (4.2, -0.7) -- (4.2, -1.25);
+
+		% Resistor label
+		\node[left=3pt, color=waveblue, font=\bfseries] at (3.9, 0) {\small $R$};
+
+		% Bottom wire connecting back to AC source
+		\draw[black!85, line width=1.1pt] (4.2, -1.25) -- (0, -1.25) -- (0, -0.38);
+	\end{scope}
+
+	% ==========================================================
+	% PART C: Half-Wave Rectified Output
+	% ==========================================================
+	\begin{scope}[shift={(9.2,0)}]
+		% Baseline axis
+		\draw[line width=1.1pt, black!75] (-0.2, 0) -- (3.2, 0);
+
+		% Shading positive lobes
+		\fill[waveblue!18] (0,0) -- plot[domain=0:0.8, samples=40] (\x, {1.15*sin((\x/0.8)*180)}) -- (0.8,0) -- cycle;
+		\fill[waveblue!18] (1.6,0) -- plot[domain=1.6:2.4, samples=40] (\x, {1.15*sin(((\x-1.6)/0.8)*180)}) -- (2.4,0) -- cycle;
+
+		% Pulse 1
+		\draw[waveblue, line width=1.8pt, smooth]
+			plot[domain=0:0.8, samples=40] (\x, {1.15*sin((\x/0.8)*180)});
+		% Flat 1
+		\draw[waveblue, line width=1.8pt] (0.8, 0) -- (1.6, 0);
+		% Pulse 2
+		\draw[waveblue, line width=1.8pt, smooth]
+			plot[domain=1.6:2.4, samples=40] (\x, {1.15*sin(((\x-1.6)/0.8)*180)});
+		% Flat 2
+		\draw[waveblue, line width=1.8pt] (2.4, 0) -- (3.0, 0);
+
+		% Signs + inside positive lobes
+		\node[font=\bfseries\small, color=black!85] at (0.4, 0.45) {+};
+		\node[font=\bfseries\small, color=black!85] at (2.0, 0.45) {+};
+	\end{scope}
+\end{tikzpicture}
+\par\vspace{0.2cm}
+{\khmerpagenum\small\color{brownheader} រូបទី៤៥៖ ក. ទម្រង់រលកពេញខួបនៃចរន្តឆ្លាស់ \quad ខ. សៀគ្វីដើម្បីបង្កើតចរន្តកន្លះខួប \quad គ. ទម្រង់នៃចរន្តកន្លះខួប\par}
+\end{center}
+
+\khmersubsubtopic{ខ. សំទួយចរន្តពេញមួយខួប (\englishfont Full-wave Rectified Current)}
+
+នៅក្នុងរូបទី៤៦.ក ខាងក្រោមគឺជាសៀគ្វីមួយដែលគេរៀបចំឡើង ដើម្បីធ្វើឲ្យចរន្តដែលរត់នៅក្នុងកាល់វ៉ាណូម៉ែត្រមានទិសពីក្រោមឡើងលើ (មានទិសដៅមួយច្បាស់លាស់) ដោយប្រើប្រាស់ឌីយ៉ូតដែលអនុញ្ញាតឲ្យចរន្តរត់ពាក់កណ្ដាលខួបនៅផ្នែកខាងឆ្វេងនៃសៀគ្វី គឺរត់តាមទិសដៅវិជ្ជមាននៃចរន្តឆ្លាស់ និងពាក់កណ្ដាលខួបនៃទិសដៅនៃចរន្តឆ្លាស់ត្រូវបានបង្កើតដោយសៀគ្វីផ្នែកស្ដាំ (ឬច្រាសមកវិញ) ដែលបង្កើតបានជាសញ្ញានៃកំពូលរលកបន្តបន្ទាប់គ្នា ចំពោះខួបនៃរលកចរន្តបន្តបន្ទាប់ទៀត (ដូចរូបទី៤៦.ខ) ។ គំរូចរន្តដែលទទួលបានបែបនេះ ត្រូវបានឲ្យឈ្មោះថា \textbf{សំទួយចរន្តពេញមួយខួប} ។
+
+\vspace{0.4em}
+\begin{center}
+\begin{tikzpicture}[scale=0.92, transform shape]
+	% ==========================================================
+	% PART A: Bridge Rectifier Circuit (សៀគ្វីនៃសំទួយចរន្តមួយខួប)
+	% ==========================================================
+	\begin{scope}[shift={(0,0)}]
+		% AC Source at top
+		\draw[black!85, fill=orange!22, line width=1.1pt] (0, 2.3) circle (0.35cm);
+		\draw[primary!90!black, line width=1.2pt, smooth]
+			plot[domain=-0.2:0.2, samples=25] (\x, {2.3 + 0.12*sin((\x/0.2)*180)});
+
+		% AC Source label (placed top-left with angled pointer)
+		\node[above=6pt, align=center] at (-1.3, 2.75) {\footnotesize\textbf{ប្រភពនៃចរន្តឆ្លាស់}};
+		\draw[->, >=stealth, line width=0.6pt] (-0.8, 2.85) -- (-0.35, 2.48);
+
+		% Top horizontal rails
+		\draw[black!85, line width=1.1pt] (-0.35, 2.3) -- (-2.2, 2.3);
+		\draw[black!85, line width=1.1pt] (0.35, 2.3) -- (2.2, 2.3);
+
+		% Label for AC direction on top right (placed top-right with angled pointer)
+		\node[above=6pt, align=center] at (1.4, 2.75) {\footnotesize\textbf{ទិសដៅនៃចរន្តឆ្លាស់}};
+		\draw[->, >=stealth, line width=0.6pt] (1.3, 2.85) -- (1.3, 2.52);
+
+		% Double alternating arrows on top rails
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (-1.5, 2.15) -- (-1.0, 2.15);
+		\draw[<-, >=Stealth, line width=1.2pt, magenta] (-1.5, 2.45) -- (-1.0, 2.45);
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (1.0, 2.15) -- (1.5, 2.15);
+		\draw[<-, >=Stealth, line width=1.2pt, magenta] (1.0, 2.45) -- (1.5, 2.45);
+
+		% Outer vertical rails
+		\draw[black!85, line width=1.1pt] (-2.2, 2.3) -- (-2.2, -0.2) -- (-1.8, -0.2);
+		\draw[black!85, line width=1.1pt] (2.2, 2.3) -- (2.2, -0.2) -- (1.8, -0.2);
+
+		% Alternating arrows on vertical rails
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (-2.4, 1.4) -- (-2.4, 0.8);
+		\draw[<-, >=Stealth, line width=1.2pt, magenta] (-2.0, 1.4) -- (-2.0, 0.8);
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (2.0, 1.4) -- (2.0, 0.8);
+		\draw[<-, >=Stealth, line width=1.2pt, magenta] (2.4, 1.4) -- (2.4, 0.8);
+
+		% Diamond Bridge Nodes:
+		% Left: (-1.8, -0.2), Right: (1.8, -0.2)
+		% Top: (0, 1.3), Bottom: (0, -1.7)
+		\draw[black!85, line width=1.1pt] (-1.8, -0.2) -- (0, 1.3) -- (1.8, -0.2) -- (0, -1.7) -- cycle;
+
+		% Center vertical branch with Galvanometer G
+		\draw[black!85, line width=1.1pt] (0, -1.7) -- (0, -0.55);
+		\draw[black!85, fill=teal!20, line width=1.1pt] (0, -0.2) circle (0.35cm);
+		\node at (0, -0.2) {\small\textbf{G}};
+		\draw[black!85, line width=1.1pt] (0, 0.15) -- (0, 1.3);
+
+		% Unidirectional upward arrows through G branch
+		\draw[->, >=Stealth, line width=1.3pt, magenta] (0, -1.35) -- (0, -0.75);
+		\draw[->, >=Stealth, line width=1.3pt, magenta] (0, 0.35) -- (0, 0.95);
+
+		% 4 Bridge Diodes (filled purple with cathode bar):
+		% Top-Left: conducts Top (0,1.3) -> Left (-1.8,-0.2), angle = 220 deg
+		\begin{scope}[shift={(-0.9, 0.55)}, rotate=220]
+			\filldraw[black!85, fill=purple!35, line width=0.9pt, join=miter]
+				(-0.24, -0.22) -- (-0.24, 0.22) -- (0.24, 0) -- cycle;
+			\draw[black!85, line width=1.3pt] (0.24, -0.22) -- (0.24, 0.22);
+		\end{scope}
+
+		% Top-Right: conducts Top (0,1.3) -> Right (1.8,-0.2), angle = -40 deg
+		\begin{scope}[shift={(0.9, 0.55)}, rotate=-40]
+			\filldraw[black!85, fill=purple!35, line width=0.9pt, join=miter]
+				(-0.24, -0.22) -- (-0.24, 0.22) -- (0.24, 0) -- cycle;
+			\draw[black!85, line width=1.3pt] (0.24, -0.22) -- (0.24, 0.22);
+		\end{scope}
+
+		% Bottom-Left: conducts Left (-1.8,-0.2) -> Bottom (0,-1.7), angle = -40 deg
+		\begin{scope}[shift={(-0.9, -0.95)}, rotate=-40]
+			\filldraw[black!85, fill=purple!35, line width=0.9pt, join=miter]
+				(-0.24, -0.22) -- (-0.24, 0.22) -- (0.24, 0) -- cycle;
+			\draw[black!85, line width=1.3pt] (0.24, -0.22) -- (0.24, 0.22);
+		\end{scope}
+
+		% Bottom-Right: conducts Right (1.8,-0.2) -> Bottom (0,-1.7), angle = 220 deg
+		\begin{scope}[shift={(0.9, -0.95)}, rotate=220]
+			\filldraw[black!85, fill=purple!35, line width=0.9pt, join=miter]
+				(-0.24, -0.22) -- (-0.24, 0.22) -- (0.24, 0) -- cycle;
+			\draw[black!85, line width=1.3pt] (0.24, -0.22) -- (0.24, 0.22);
+		\end{scope}
+
+		% Conduction arrows along diamond arms
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (-0.45, 0.92) -- (-0.75, 0.67);
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (0.45, 0.92) -- (0.75, 0.67);
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (-1.35, -0.58) -- (-1.05, -0.83);
+		\draw[->, >=Stealth, line width=1.2pt, magenta] (1.35, -0.58) -- (1.05, -0.83);
+
+		% Bottom label for Diodes
+		\node[below=4pt, align=center] at (-1.2, -1.95) {\footnotesize\textbf{ឌីយ៉ូត}\\[-2pt]\scriptsize\textbf{សម្រាប់កំណត់ទិសដៅនៃចរន្តរត់}};
+		\draw[->, >=stealth, line width=0.6pt] (-1.2, -1.9) -- (-0.9, -1.25);
+	\end{scope}
+
+	% ==========================================================
+	% PART B: Full-wave Rectified Galvanometer Current Graph
+	% ==========================================================
+	\begin{scope}[shift={(5.2, -0.2)}]
+		% Axes
+		\draw[->, >=stealth, line width=0.9pt] (-0.3, -1.0) -- (6.0, -1.0) node[right] {\small $t$};
+		\draw[->, >=stealth, line width=0.9pt] (0, -1.3) -- (0, 1.8) node[above] {\small $i$};
+		\node[below left=1pt] at (0, -1.0) {\small $O$};
+
+		% Shaded charge area under curve
+		\fill[purple!15] (0, -1.0) -- (0, 0.9)
+			-- plot[domain=0:0.75, samples=25] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)})
+			-- plot[domain=0.75:2.25, samples=40] (\x, {-1.0 - 1.9*cos((\x/1.5)*180)})
+			-- plot[domain=2.25:3.75, samples=40] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)})
+			-- plot[domain=3.75:5.25, samples=40] (\x, {-1.0 - 1.9*cos((\x/1.5)*180)})
+			-- plot[domain=5.25:5.55, samples=15] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)})
+			-- (5.55, -1.0) -- cycle;
+
+		% Rectified waveform curve in purple
+		\draw[purple!85!black, line width=1.5pt, smooth]
+			plot[domain=0:0.75, samples=25] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)})
+			plot[domain=0.75:2.25, samples=40] (\x, {-1.0 - 1.9*cos((\x/1.5)*180)})
+			plot[domain=2.25:3.75, samples=40] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)})
+			plot[domain=3.75:5.25, samples=40] (\x, {-1.0 - 1.9*cos((\x/1.5)*180)})
+			plot[domain=5.25:5.55, samples=15] (\x, {-1.0 + 1.9*cos((\x/1.5)*180)});
+
+		% Right dashed boundary of interval
+		\draw[line width=0.8pt, dashed, gray!70] (5.55, -1.0) -- (5.55, {-1.0 + 1.9*cos((5.55/1.5)*180)});
+
+		% I_max tick & label
+		\draw[line width=0.8pt] (-0.06, 0.9) -- (0.06, 0.9);
+		\node[left=2pt] at (0, 0.9) {\small $I_{\max}$};
+
+		% Average current I_rav level (dashed horizontal line at ~ 0.637 * 1.9 = 1.21 from bottom -> y = 0.21)
+		\draw[line width=1.0pt, dashed, black!75] (0, 0.21) -- (5.55, 0.21);
+		\draw[line width=0.8pt] (-0.06, 0.21) -- (0.06, 0.21);
+		\node[left=2pt] at (0, 0.21) {\small $I_{\mathrm{rav}}$};
+
+		% Galvanometer G label above peaks (peaks are at x = 1.5, 3.0, 4.5)
+		\node[above=2pt] at (3.0, 1.7) {\small\textbf{G}};
+		\draw[line width=0.6pt, gray!80] (3.0, 1.7) -- (1.5, 0.95);
+		\draw[line width=0.6pt, gray!80] (3.0, 1.7) -- (3.0, 0.95);
+		\draw[line width=0.6pt, gray!80] (3.0, 1.7) -- (4.5, 0.95);
+
+		\node[above=8pt, align=center] at (3.0, 1.85) {\footnotesize\textbf{ទម្រង់នៃសំទួយចរន្តដែលបាន}\\[-2pt]\footnotesize\textbf{បង្ហាញដោយកាល់វ៉ាណូម៉ែត្រ}};
+
+		% Callout text for charge area
+		\draw[->, >=stealth, line width=0.8pt, dashed, waveblue] (2.0, -1.7) to[bend left=12] (2.0, -0.4);
+		\node[below=2pt, align=center] at (2.8, -1.7) {\scriptsize\textbf{ផ្ទៃដែលបង្ហាញបរិមាណបន្ទុកសរុបដែលរត់}\\[-2pt]\scriptsize\textbf{ឆ្លងកាត់កាល់វ៉ាណូម៉ែត្រក្នុងរយៈពេលណាមួយ}};
+	\end{scope}
+\end{tikzpicture}
+\par\vspace{0.25cm}
+{\khmerpagenum\small\color{brownheader} រូបទី៤៦៖ ក. សៀគ្វីនៃសំទួយចរន្តមួយខួប \quad ខ. ក្រាបនៃចរន្តជាអនុគមន៍នៃពេល ដែលរត់នៅក្នុងកាល់វ៉ាណូម៉ែត្រ\par}
+\end{center}

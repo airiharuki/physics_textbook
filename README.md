@@ -19,9 +19,9 @@ Current itinerary:
 - **Chapter 2** — waves and interference (constructive, destructive, raws for days)
 - **Chapter 3** — អគ្គិសនីនិងម៉ាញេទិច (electromagnetism): Lesson 1 (ម៉ាញេទិក), Lesson 2 (អាំងឌុចស្យុងអេឡិចត្រូម៉ាញេទិក), and Lesson 3 (អូតូអាំងឌុចស្យុង, សៀគ្វី $RL$ & $LC$) — all three complete with derivations, photos, and vector graphics. Lesson 4 (ចរន្តឆ្លាស់ / alternating current) just opened; Lesson 5 next after that.
 
-Figure numbering runs រូបទី១–រូបទី៤១ and equations (១)–(២៩) continuously through the book. Latest tag: `v1.0.0-alpha.14`.
+Figure numbering runs រូបទី១–រូបទី៤៦ and equations (១)–(៣១) continuously through the book. Latest tag: `v1.0.0-alpha.16`.
 
-The book compiles to a single `main.pdf` (**83 pages** and growing). If it's not page-perfect somewhere, that's called "open participation."
+The book compiles to a single `main.pdf` (**87 pages** and growing). If it's not page-perfect somewhere, that's called "open participation."
 
 Brave enough for the full timeline? **[CHANGELOG.md](https://github.com/airiharuki/physics_textbook/blob/main/CHANGELOG.md)** — every mistake, victory, and 2am commit, in order.
 
