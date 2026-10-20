@@ -8,6 +8,38 @@ Next up: AC circuit parameters, impedance ($Z$), power factor ($\cos\varphi$), r
 
 ---
 
+## [v1.0.0-alpha.18] — 2026-10-20
+
+Single-component AC circuits debut: systematic KVL derivations, impedance definitions, and vector TikZ diagrams (schematics, waveforms, and Fresnel phasor diagrams) for purely resistive ($R$), purely inductive ($L$), and purely capacitive ($C$) alternating current circuits. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 4 (ចរន្តឆ្លាស់ / Alternating Current) — continued:**
+  - **២. អនុវត្ត​ច្បាប់​អូម សំណង់​ប្រេណែល និង​គម្លាត​ផាស (Ohm's Law, Fresnel Construction & Phase Difference in AC Circuits):**
+    - **២.១. សៀគ្វីរេស៊ីស្តង់សុទ្ធ $R$ (Purely Resistive AC Circuit):**
+      - KVL derivation: $v(t) - v_R(t) = 0 \implies i_R(t) = \frac{V_{\max}}{R}\sin(\omega t)$.
+      - Boxed formula: $i_R = I_{\max(R)}\sin(\omega t)$ (៣៥) with full parameter glossaries ($Z_R = R$, $\omega = 2\pi f$).
+      - Vector diagrams (រូបទី៤៨, រូបទី៤៩): Circuit schematic in CircuitikZ, in-phase waveforms $v(t)$ and $i_R(t)$, and parallel Fresnel phasor representation $\vec{V} \parallel \vec{I}$.
+      - Exact note on energy non-storage and phase conclusion ($\Delta\varphi = 0$, $I_R = V/R$).
+    - **២.២. សៀគ្វីប៊ូប៊ីនឬអាំងឌុចទ័រសុទ្ធ $L$ (Purely Inductive AC Circuit):**
+      - Step-by-step KVL & self-inductance derivation: $v(t) - v_L(t) = 0 \implies L\frac{di_L}{dt} = V_{\max}\sin(\omega t) \implies i_L(t) = I_{\max(L)}\sin(\omega t - \pi/2)$.
+      - Boxed formula: $i_L = I_{\max(L)}\sin(\omega t - \pi/2)$ (៣៦) with amplitude $I_{\max(L)} = V_{\max}/Z_L$, inductive reactance $X_L = Z_L = L\omega$, and angular frequency $\omega$.
+      - Vector diagrams (រូបទី៥០): Inductor AC loop circuit schematic (រូបទី៥០.ក), wave dynamics showing voltage leading current by $\pi/2$ (រូបទី៥០.ខ), and Fresnel phasor diagram $\vec{V}_{\max} \perp \vec{I}_{\max(L)}$ with rotation sense $\omega$ (រូបទី៥០.គ).
+      - Phase conclusion box ($\Delta\varphi = +\pi/2$, voltage leads current by $90^\circ$, $I_L = V/(L\omega)$).
+    - **២.៣. សៀគ្វីកុងដង់សាទ័រសុទ្ធ $C$ (Purely Capacitive AC Circuit):**
+      - Step-by-step KVL & capacitive charge derivative derivation: $v(t) - v_C(t) = 0 \implies q(t) = C v_C(t) \implies i_C(t) = \frac{dq}{dt} = \omega C V_{\max}\cos(\omega t) = I_{\max(C)}\sin(\omega t + \pi/2)$.
+      - Boxed formula: $i_C = I_{\max(C)}\sin(\omega t + \pi/2)$ (៣៧) with capacitive impedance $Z_C = \frac{1}{C\omega}$ ($X_C$) and capacitance $C$.
+      - Vector diagrams (រូបទី៥១): Capacitor AC loop circuit schematic with plates, charges $q$ and $-q$, and terminals $a, b$ (រូបទី៥១.ក); waveforms showing current leading voltage by $T/4$ (រូបទី៥១.ខ); and Fresnel phasor diagram with $\vec{I}_{\max}$ leading $\vec{V}_{\max}$ by $90^\circ$ and clean vertical projections $v_C, i_C$ (រូបទី៥១.គ).
+      - Phase conclusion box ($\Delta\varphi = -\pi/2$, current leads voltage by $90^\circ$ / voltage lags current by $\pi/2$, $I_C = C\omega V$).
+
+### Changed
+
+- Corrected textbook source typos: component confusion (bobbin/coil $\to$ capacitor), subscript error ($i_{\mathrm{L}\max} \to I_{\max(C)}$), and OCR phrasing.
+- Rebuilt `main.pdf`: **95 pages**, 0 errors, 0 missing characters under XeLaTeX with HarfBuzz renderer.
+- Continuous numbering progressed to **រូបទី៥១** (Figure 51) and **សមីការ (៣៧)** (Equation 37).
+
+---
+
 ## [v1.0.0-alpha.17] — 2026-10-19
 
 Root-Mean-Square (RMS) effective values arrive: systematic derivation for RMS current $I_{\mathrm{rms}}$, RMS voltage $V_{\mathrm{rms}}$, pure vector TikZ curves for sinusoidal AC and squared current waveforms with shaded integral lobes and descriptive callouts. 🌸

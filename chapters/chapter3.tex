@@ -2384,7 +2384,7 @@ $\blacktriangleright$ \textbf{\textcolor{khmerred}{\large ថាមពលនៃ�
 \begin{minipage}[t]{0.56\textwidth}
 	\vspace{0pt}
 	\raggedright
-	ដើម្បីបកស្រាយពីតង់ស្យុង ឬចរន្តដែលប្រែប្រួលតាមពេលមានរាងស៊ីនុយសូអុីត គេត្រូវប្រើប្រាស់ដ្យាក្រាមផាស ឬសំណង់ហ្វ្រេណែល ដែលយើងបានប្រើប្រាស់នៅក្នុងមេរៀនរលករួចមកហើយ។ នៅក្នុងដ្យាក្រាមនេះ ត្រូវបានគូសតង់ស្យុងអតិបរមា ឬចរន្ត និងមុំ (ផាស) អនុគមន៍ធៀបនឹងអ័ក្សដេកវិជ្ជមាន (ត្រូវនឹងមុំសូន្យដឺក្រេ) ដូចបង្ហាញក្នុងរូបទី៤៤ ៖
+	ដើម្បីបកស្រាយពីតង់ស្យុង ឬចរន្តដែលប្រែប្រួលតាមពេលមានរាងស៊ីនុយសូអុីត គេត្រូវប្រើប្រាស់ដ្យាក្រាមផាស ឬសំណង់ប្រេណែល ដែលយើងបានប្រើប្រាស់នៅក្នុងមេរៀនរលករួចមកហើយ។ នៅក្នុងដ្យាក្រាមនេះ ត្រូវបានគូសតង់ស្យុងអតិបរមា ឬចរន្ត និងមុំ (ផាស) អនុគមន៍ធៀបនឹងអ័ក្សដេកវិជ្ជមាន (ត្រូវនឹងមុំសូន្យដឺក្រេ) ដូចបង្ហាញក្នុងរូបទី៤៤ ៖
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.42\textwidth}
@@ -2397,15 +2397,15 @@ $\blacktriangleright$ \textbf{\textcolor{khmerred}{\large ថាមពលនៃ�
 
 		% Phasor vector V_max at angle 32 degrees
 		\draw[->, >=stealth, line width=1.6pt, color=orange!90!black] (0,0) -- (32:3.5)
-			node[above right=1pt, black] {\small $V_{\max}$};
+			node[above=3pt, black] {\small $V_{\max}$};
 
 		% Angle arc omega*t
 		\draw[line width=0.6pt] (0.9, 0) arc (0:32:0.9);
 		\node at (16:1.3) {\small $\omega t$};
 
 		% Angular velocity omega rotation arc
-		\draw[->, >=stealth, line width=0.7pt] (25:3.8) arc (25:65:3.8)
-			node[midway, right=3pt] {\small $\omega$};
+		\draw[->, >=stealth, line width=0.7pt] (48:3.6) arc (48:82:3.6)
+			node[midway, above right=1pt] {\small $\omega$};
 	\end{tikzpicture}
 	\par\vspace{0.15cm}
 	{\khmerpagenum\small\color{brownheader} រូបទី៤៤៖ ដ្យាក្រាមផាសនៃតង់ស្យុង $v = V_{\max}\sin(\omega t)$}
@@ -2839,4 +2839,546 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 
 
 \khmertopic{២. អនុវត្ត​ច្បាប់​អូម សំណង់​ប្រេណែល និង​គម្លាត​ផាស}
+
+
+
+\khmersubtopic{២.១. សៀគ្វីរេស៊ីស្តង់សុទ្ធ $R$ ({\englishfont Purely Resistive AC Circuit})}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	តភ្ជាប់រេស៊ីស្តង់សុទ្ធ $R$ ទៅនឹងប្រភពតង់ស្យុងឆ្លាស់ស៊ីនុយសូអុីត $v(t) = V_{\max}\sin(\omega t)$ ដូចបង្ហាញក្នុងរូបទី៤៨ ។
+
+	\vspace{0.4em}
+	តាមច្បាប់គៀឆុក ({\englishfont Kirchhoff's Voltage Law}) ផលបូកពីជគណិតនៃតង់ស្យុងក្នុងរង្វិលជុំបិទស្មើនឹងសូន្យ ៖
+	\[ v(t) - v_R(t) = 0 \]
+	ដែល $v_R(t) = R \, i_R(t)$ ជាតង់ស្យុងនៅអង្កាត់រេស៊ីស្តរ (ច្បាប់អូម) ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		\draw (0,0) to[sinusoidal voltage source, l_=$v(t)$] (0,2.6)
+			-- (2.6,2.6)
+			to[R, l=$R$, color=bacpink] (2.6,0)
+			-- (0,0);
+		\draw[->, >=Stealth, bacpurple, line width=1.3pt] (0.9,3.0) -- (1.7,3.0)
+			node[midway, above=1pt] {$i_R(t)$};
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៤៨៖ សៀគ្វីចរន្តឆ្លាស់មានតែរេស៊ីស្តង់ $R$\par}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+\textbf{ជំហានស្រាយរកសមីការចរន្ត $i_R(t)$ ៖}
+
+\begin{enumerate}[leftmargin=2em, itemsep=4pt]
+	\item \textbf{ទាញរកកន្សោមចរន្តខណៈ ៖}
+	\[ R \, i_R(t) = v(t) \quad \Longrightarrow \quad i_R(t) = \dfrac{v(t)}{R} \]
+
+	\item \textbf{ជំនួស $v(t) = V_{\max}\sin(\omega t)$ ៖}
+	\[ i_R(t) = \dfrac{V_{\max}\sin(\omega t)}{R} = \left(\dfrac{V_{\max}}{R}\right)\sin(\omega t) \]
+
+	\item \textbf{កំណត់ចរន្តអតិបរមាក្នុងរេស៊ីស្តរ $I_{\max(R)}$ ៖}
+	\[ I_{\max(R)} = \dfrac{V_{\max}}{R} \]
+\end{enumerate}
+
+\noindent
+ដូចនេះ យើងបានសមីការចរន្តខណៈ និងអថេរ ៖
+\begin{center}
+	$\boxed{i_R = I_{\max(R)}\sin(\omega t)}$ \quad (៣៥)
+\end{center}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $i_R$ ៖ ចរន្តខណៈរត់នៅក្នុងរេស៊ីស្តរ $(\mathrm{A})$
+		\item $I_{\max(R)} = \dfrac{V_{\max}}{R}$ ៖ ចរន្តអតិបរមារត់នៅក្នុងរេស៊ីស្តរ $(\mathrm{A})$
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $Z_R = R$ ៖ អាំងប៉េដង់នៃរេស៊ីស្តង់ $(\Omega)$
+		\item $\omega = 2\pi f = \dfrac{2\pi}{T}$ ៖ ពុលសាសុង ឬប្រេកង់មុំនៃចរន្តឆ្លាស់ $(\mathrm{rad/s})$
+	\end{itemize}
+\end{minipage}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{wavered}{ចំណាំ៖}} អាំងប៉េដង់នៃរេស៊ីស្តង់មានតម្លៃស្មើនឹងតម្លៃនៃរេស៊ីស្តង់ ($Z_R = R$) ព្រោះវាមិនបានស្តុកថាមពលទេ វាមានផាសនៃតង់ស្យុងស្របផាសជាមួយនិងចរន្ត ។ ដោយផ្អែកលើច្បាប់អូម អនុវត្តចំពោះសៀគ្វីដែលមានតែរេស៊ីស្តង់សុទ្ធ យើងទាញបាន $Z_R = R$ ។
+}
+
+\vspace{0.4em}
+\noindent
+\defbox{
+\raggedright
+\textbf{\textcolor{brownheader}{សន្និដ្ឋានអំពីផាស ({\englishfont Phase Relationship}) ៖}}
+\par\vspace{3pt}
+តាមកន្សោមតង់ស្យុងនៃប្រភព និងចរន្តដែលរត់នៅក្នុងរេស៊ីស្តរ យើងឃើញថាវាមានផាសដូចគ្នា មានន័យថាតង់ស្យុងនៃប្រភពស្របផាសនឹងចរន្ត (ដូចរូបទី៤៩.ក) ដូចនេះតង់ស្យុងនៃប្រភព និងចរន្តដែលរត់នៅក្នុងរេស៊ីស្តរ មានតម្លៃអតិបរមាដំណាលគ្នា (ដូចរូបទី៤៩.ខ) ។
+\begin{itemize}[itemsep=2pt, topsep=2pt, parsep=0pt, leftmargin=1.5em]
+	\item ផលសងផាសរវាងតង់ស្យុង និងចរន្ត ៖ $\Delta\varphi = \varphi_v - \varphi_i = 0$
+	\item តង់ស្យុង $v(t)$ និងចរន្ត $i_R(t)$ \textbf{ស្របផាសគ្នា} ({\englishfont In Phase}) ជានិច្ច ។
+	\item តាមតម្លៃប្រសិទ្ធ ៖ $I_R = \dfrac{V}{R} = \dfrac{V}{Z_R}$ \quad (ដោយ $I_R = \dfrac{I_{\max(R)}}{\sqrt{2}}$ និង $V = \dfrac{V_{\max}}{\sqrt{2}}$)
+\end{itemize}
+}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, line width=0.85pt] (-0.3, 0) -- (7.0, 0) node[right] {\small $\omega t$};
+		\draw[->, line width=0.85pt] (0, -1.9) -- (0, 2.1) node[above] {\small $v,\, i_R$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Ticks on omega t axis
+		\foreach \x/\lab in {1.5708/{\pi/2}, 3.1416/{\pi}, 4.7124/{3\pi/2}, 6.2832/{2\pi}}{
+			\draw[line width=0.6pt] (\x, -0.06) -- (\x, 0.06);
+			\node[below=3pt] at (\x, 0) {\footnotesize $\lab$};
+		}
+
+		% v(t) in waveblue
+		\draw[waveblue, line width=1.5pt, smooth, domain=0:6.2832, samples=100]
+			plot (\x, {1.6*sin(\x r)});
+		% i_R(t) in bacpink
+		\draw[bacpink, line width=1.5pt, dashed, smooth, domain=0:6.2832, samples=100]
+			plot (\x, {1.0*sin(\x r)});
+
+		% Peak guides (both reach their maximum at the same instant)
+		\draw[dotted, gray, line width=0.7pt] (1.5708, 0) -- (1.5708, 1.6);
+		\draw[dotted, gray, line width=0.7pt] (0, 1.6) -- (1.5708, 1.6);
+		\draw[dotted, gray, line width=0.7pt] (0, 1.0) -- (1.5708, 1.0);
+		\filldraw[black] (1.5708, 1.6) circle (1.5pt);
+		\filldraw[black] (1.5708, 1.0) circle (1.5pt);
+		\node[left=2pt] at (0, 1.6) {\small $V_{\max}$};
+		\node[left=2pt] at (0, 1.0) {\small $I_{\max(R)}$};
+
+		% Curve labels at the lower troughs
+		\node[waveblue, font=\small\bfseries] at (4.9, -1.85) {$v(t)$};
+		\node[bacpink, font=\small\bfseries] at (4.5, -1.1) {$i_R(t)$};
+	\end{tikzpicture}
+	\par\vspace{0.1cm}
+	{\khmerpagenum\small\color{brownheader} ក. ក្រាបនៃ $v(t)$ និង $i_R(t)$ (ស្របផាស)\par}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, gray, line width=0.7pt] (-0.5, 0) -- (3.6, 0) node[right] {\small $x$};
+		\draw[->, gray, line width=0.7pt] (0, -0.5) -- (0, 2.7) node[above] {\small $y$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Both phasors share the same direction (angle omega t = 22 deg)
+		\draw[->, waveblue, line width=1.8pt] (0, 0) -- (22:3.3)
+			node[above=2pt] {\small $\vec{V}_{\max}$};
+		\draw[->, bacpink, line width=1.8pt] (0, 0) -- (22:2.0)
+			node[below right=1pt] {\small $\vec{I}_{\max(R)}$};
+
+		% Angle omega t
+		\draw[line width=0.6pt] (0.9, 0) arc (0:22:0.9);
+		\node at (11:1.25) {\small $\omega t$};
+
+		% Rotation sense arc (placed well above V_max: radius 3.3, angles 42 to 72 deg so omega and V_max never overlap)
+		\draw[->, line width=0.7pt] (42:3.3) arc (42:72:3.3)
+			node[midway, above right=1pt] {\small $\omega$};
+	\end{tikzpicture}
+	\par\vspace{0.1cm}
+	{\khmerpagenum\small\color{brownheader} ខ. ដ្យាក្រាមសំណង់ប្រេណែល $\vec{V} \parallel \vec{I}$\par}
+\end{minipage}
+\par\vspace{0.2cm}
+{\centering\khmerpagenum\small\color{brownheader} រូបទី៤៩៖ ក្រាបស៊ីនុយសូអុីត និងដ្យាក្រាមប្រេណែលនៃសៀគ្វី $R$ (ស្របផាសគ្នា)\par}
+
+\khmersubtopic{២.២. សៀគ្វីប៊ូប៊ីនឬអាំងឌុចទ័រសុទ្ធ $L$ ({\englishfont Purely Inductive AC Circuit})}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	តភ្ជាប់ប៊ូប៊ីនសុទ្ធ (អាំងឌុចទ័រគ្មានរេស៊ីស្តង់ក្នុង $r = 0$) ដែលមានអាំងឌុចតង់ $L$ ទៅនឹងប្រភពតង់ស្យុងឆ្លាស់ស៊ីនុយសូអុីត $v(t) = V_{\max}\sin(\omega t)$ ដូចបង្ហាញក្នុងរូបទី៥០.ក ។
+
+	\vspace{0.4em}
+	តាមច្បាប់គៀឆុកចំពោះតង់ស្យុងក្នុងរង្វិលជុំបិទ ផលបូកពីជគណិតនៃតង់ស្យុងស្មើនឹងសូន្យ ៖
+	\[ v(t) - v_L(t) = 0 \quad \Longrightarrow \quad v_L(t) = v(t) = V_{\max}\sin(\omega t) \]
+	ដែល $v_L(t) = L\dfrac{di_L}{dt}$ ជាផលសងប៉ូតង់ស្យែល (តង់ស្យុងស្វ័យអាំងឌ្វី) នៅអង្កាត់ប៊ូប៊ីន ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{circuitikz}[line width=1.1pt, scale=0.72, transform shape]
+		% AC Source
+		\draw (0,0) to[sinusoidal voltage source, l_=$v(t)$] (0,2.6)
+			-- (3.2,2.6)
+			-- (3.2,0);
+		% Inductor at bottom
+		\draw (0,0) to[L, l_=$L$, color=teal!70!black] (3.2,0);
+		% Nodes a and b
+		\filldraw[black] (0.5,0) circle (1.8pt) node[below=2pt] {$a$};
+		\filldraw[black] (2.7,0) circle (1.8pt) node[below=2pt] {$b$};
+		% Current arrow above L
+		\draw[->, >=Stealth, bacpurple, line width=1.3pt] (0.9,0.75) -- (2.3,0.75)
+			node[midway, above=1pt] {$i_L$};
+		% Dimension / voltage indicator v_L
+		\draw[|<->|, >=stealth, line width=0.6pt, gray!80] (0.5,-0.65) -- (2.7,-0.65)
+			node[midway, fill=white, inner sep=1pt] {\small $v_L$};
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៥០.ក៖ សៀគ្វីនៃប្រភពចរន្តឆ្លាស់ និងអាំងឌុចទ័រ\par}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+\textbf{ជំហានស្រាយរកសមីការចរន្ត $i_L(t)$ តាមច្បាប់គៀឆុក ៖}
+
+\begin{enumerate}[leftmargin=2em, itemsep=4pt]
+	\item \textbf{អនុវត្តច្បាប់គៀឆុក និងទំនាក់ទំនងតង់ស្យុងប៊ូប៊ីន ៖}
+	\[ v(t) - v_L(t) = 0 \quad \Longrightarrow \quad v_L(t) = L\dfrac{di_L}{dt} = V_{\max}\sin(\omega t) \]
+
+	\item \textbf{ទាញរកឌីផេរ៉ង់ស្យែលនៃចរន្ត $di_L$ ៖}
+	\[ di_L = \dfrac{v_L(t)}{L} dt = \dfrac{V_{\max}}{L}\sin(\omega t) dt \]
+
+	\item \textbf{ធ្វើអាំងតេក្រាលទាំងសងខាងដើម្បីទាញរកកន្សោមចរន្តខណៈ $i_L(t)$ ៖}
+	\[ \int di_L = \int \dfrac{V_{\max}}{L}\sin(\omega t) dt = -\dfrac{V_{\max}}{L\omega}\cos(\omega t) \]
+
+	\item \textbf{បំលែងអនុគមន៍កូស៊ីនុសទៅជាស៊ីនុស ដោយប្រើរូបមន្ត $-\cos(\omega t) = \sin\left(\omega t - \dfrac{\pi}{2}\right)$ ៖}
+	\[ i_L(t) = \dfrac{V_{\max}}{L\omega}\sin\left(\omega t - \dfrac{\pi}{2}\right) \]
+
+	\item \textbf{កំណត់តម្លៃអតិបរមានៃចរន្ត (អំព្លីទុតចរន្ត $I_{\max(L)}$) ៖}
+	\[ I_{\max(L)} = \dfrac{V_{\max}}{L\omega} = \dfrac{V_{\max}}{Z_L} \]
+\end{enumerate}
+
+\noindent
+ដូចនេះ យើងបានសមីការចរន្តខណៈ និងអថេរ ៖
+\begin{center}
+	$\boxed{i_L = I_{\max(L)}\sin\left(\omega t - \frac{\pi}{2}\right)}$ \quad (៣៦)
+\end{center}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $i_L$ ៖ ចរន្តខណៈរត់នៅក្នុងប៊ូប៊ីន $(\mathrm{A})$
+		\item $I_{\max(L)} = \dfrac{V_{\max}}{Z_L}$ ៖ ចរន្តអតិបរមាឆ្លងកាត់ប៊ូប៊ីន $(\mathrm{A})$
+		\item $V_{\max}$ ៖ តង់ស្យុងអតិបរមានៃប្រភព $(\mathrm{V})$
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $Z_L = L\omega$ ៖ អាំងប៉េដង់នៃប៊ូប៊ីន ឬរេអាក់តង់នៃអាំងឌុចទ័រ $X_L$ $(\Omega)$
+		\item $\omega = 2\pi f = \dfrac{2\pi}{T}$ ៖ ពុលសាសុង ឬប្រេកង់មុំនៃចរន្តឆ្លាស់ $(\mathrm{rad/s})$
+	\end{itemize}
+\end{minipage}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{wavered}{ចំណាំ ៖}} អាំងប៉េដង់នៃប៊ូប៊ីន (ឬ អាំងឌុចទ័រ) $Z_L$ (ឬ រេអាក់តង់នៃអាំងឌុចទ័រ $X_L$) មានតម្លៃស្មើនឹង $L\omega$ ព្រោះវាបានស្តុកថាមពលម៉ាញេទិក បង្ហាញដោយវត្តមាននៃដែនម៉ាញេទិកបង្កើតដោយអាំងឌុចទ័រ វាមានផាសនៃតង់ស្យុងលឿនជាងផាសនៃចរន្តនៅក្នុងសៀគ្វី ។ ដោយផ្អែកលើច្បាប់អូម អនុវត្តចំពោះសៀគ្វីដែលមានតែអាំងឌុចទ័រសុទ្ធ យើងទាញបាន $Z_L = L\omega$ ។
+}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, line width=0.85pt] (-0.3, 0) -- (7.0, 0) node[right] {\small $\omega t$};
+		\draw[->, line width=0.85pt] (0, -1.9) -- (0, 2.1) node[above] {\small $v,\, i_L$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Ticks on omega t axis
+		\foreach \x/\lab in {1.5708/{\pi/2}, 3.1416/{\pi}, 4.7124/{3\pi/2}, 6.2832/{2\pi}}{
+			\draw[line width=0.6pt] (\x, -0.06) -- (\x, 0.06);
+			\node[below=3pt] at (\x, 0) {\footnotesize $\lab$};
+		}
+
+		% v(t) = V_max sin(omega t) in waveblue
+		\draw[waveblue, line width=1.5pt, smooth, domain=0:6.2832, samples=100]
+			plot (\x, {1.6*sin(\x r)});
+		% i_L(t) = I_max(L) sin(omega t - pi/2) = -I_max(L) cos(omega t) in teal
+		\draw[teal!80!black, line width=1.5pt, dashed, smooth, domain=0:6.2832, samples=100]
+			plot (\x, {-1.1*cos(\x r)});
+
+		% Guides showing v leads i by pi/2 (v peaks at pi/2, i peaks at pi)
+		\draw[dotted, gray, line width=0.7pt] (1.5708, 0) -- (1.5708, 1.6);
+		\draw[dotted, gray, line width=0.7pt] (0, 1.6) -- (1.5708, 1.6);
+		\filldraw[black] (1.5708, 1.6) circle (1.5pt);
+		\node[left=2pt] at (0, 1.6) {\small $V_{\max}$};
+
+		\draw[dotted, gray, line width=0.7pt] (3.1416, 0) -- (3.1416, 1.1);
+		\draw[dotted, gray, line width=0.7pt] (0, 1.1) -- (3.1416, 1.1);
+		\filldraw[black] (3.1416, 1.1) circle (1.5pt);
+		\node[left=2pt] at (0, 1.1) {\small $I_{\max(L)}$};
+
+		% Curve labels
+		\node[waveblue, font=\small\bfseries] at (1.8, 1.85) {$v(t)$};
+		\node[teal!80!black, font=\small\bfseries] at (3.4, 1.35) {$i_L(t)$};
+	\end{tikzpicture}
+	\par\vspace{0.1cm}
+	{\khmerpagenum\small\color{brownheader} ខ. ក្រាបនៃតង់ស្យុង និងចរន្តជាអនុគមន៍នៃពេល\par}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, gray, line width=0.7pt] (-0.5, 0) -- (3.6, 0) node[right] {\small $x$};
+		\draw[->, gray, line width=0.7pt] (0, -1.8) -- (0, 2.7) node[above] {\small $y$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Standard Fresnel representation: I_L horizontal, V_L leads by +pi/2 (vertically up)
+		\draw[->, teal!80!black, line width=1.8pt] (0, 0) -- (2.4, 0)
+			node[below=2pt] {\small $\vec{I}_{\max(L)}$};
+		\draw[->, waveblue, line width=1.8pt] (0, 0) -- (0, 2.2)
+			node[above right=1pt] {\small $\vec{V}_{\max}$};
+
+		% Right angle marker showing pi/2 phase difference
+		\draw[line width=0.7pt] (0, 0.35) -- (0.35, 0.35) -- (0.35, 0);
+		\node at (0.6, 0.6) {\footnotesize $\frac{\pi}{2}$};
+
+		% Rotation sense arc
+		\draw[->, line width=0.7pt] (15:2.9) arc (15:55:2.9)
+			node[midway, above right=1pt] {\small $\omega$};
+	\end{tikzpicture}
+	\par\vspace{0.1cm}
+	{\khmerpagenum\small\color{brownheader} គ. ដ្យាក្រាមផាសនៃចរន្ត និងតង់ស្យុង\par}
+\end{minipage}
+\par\vspace{0.2cm}
+{\centering\khmerpagenum\small\color{brownheader} រូបទី៥០៖ ខ. ក្រាបនៃតង់ស្យុងនិងចរន្តជាអនុគមន៍នៃពេល \quad (គ) ដ្យាក្រាមផាសនៃចរន្ត និងតង់ស្យុង\par}
+
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{សន្និដ្ឋានអំពីផាស ({\englishfont Phase Relationship}) ៖}}
+	\par\vspace{2pt}
+	ចំពោះសៀគ្វីដែលមានតែអាំងឌុចទ័រសុទ្ធ $L$ ៖
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item ផលសងផាសរវាងតង់ស្យុង និងចរន្ត ៖ $\Delta\varphi = \varphi_v - \varphi_i = 0 - \left(-\dfrac{\pi}{2}\right) = +\dfrac{\pi}{2}$
+		\item តង់ស្យុង $v(t)$ \textbf{លឿនផាសជាង} ចរន្ត $i_L(t)$ នូវមុំ $\dfrac{\pi}{2}$ (ឬចរន្ត $i_L(t)$ យឺតផាសជាងតង់ស្យុង $v(t)$ នូវមុំ $\dfrac{\pi}{2}$) ។
+		\item តាមតម្លៃប្រសិទ្ធ ៖ $I_L = \dfrac{V}{Z_L} = \dfrac{V}{L\omega}$ \quad (ដោយ $I_L = \dfrac{I_{\max(L)}}{\sqrt{2}}$ និង $V = \dfrac{V_{\max}}{\sqrt{2}}$)
+	\end{itemize}
+}
+
+\khmersubtopic{២.៣. សៀគ្វីកុងដង់សាទ័រសុទ្ធ $C$ ({\englishfont Purely Capacitive AC Circuit})}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	តភ្ជាប់កុងដង់សាទ័រសុទ្ធដែលមានកាប៉ាស៊ីតេ $C$ ទៅនឹងប្រភពតង់ស្យុងឆ្លាស់ស៊ីនុយសូអុីត $v(t) = V_{\max}\sin(\omega t)$ ដូចបង្ហាញក្នុងរូបទី៥១.ក ។
+
+	\vspace{0.4em}
+	តាមច្បាប់គៀឆុកចំពោះតង់ស្យុងក្នុងរង្វិលជុំបិទ ផលបូកពីជគណិតនៃតង់ស្យុងស្មើនឹងសូន្យ ៖
+	\[ v(t) - v_C(t) = 0 \quad \Longrightarrow \quad v_C(t) = v(t) = V_{\max}\sin(\omega t) \]
+	ដែល $q(t) = C v_C(t)$ ជាបន្ទុកអគ្គិសនីនៅលើបន្ទះកុងដង់សាទ័រ ហើយចរន្តអគ្គិសនីខណៈឆ្លងកាត់កុងដង់សាទ័រគឺ $i_C(t) = \dfrac{dq}{dt} = C\dfrac{dv_C}{dt}$ ។
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[line width=1.1pt, scale=0.82, transform shape]
+		% Top wire with AC Source
+		\draw[black!85, fill=sakurapetal!45, line width=1.1pt] (0, 1.8) circle (0.42cm);
+		\draw[brownheader, line width=1.3pt, smooth]
+			plot[domain=-0.22:0.22, samples=25] (\x, {1.8 + 0.14*sin((\x/0.22)*180)});
+		\draw[black!85, line width=1.1pt] (0.42, 1.8) -- (2.3, 1.8) -- (2.3, 0) -- (1.5, 0);
+		\draw[black!85, line width=1.1pt] (-0.42, 1.8) -- (-2.3, 1.8) -- (-2.3, 0) -- (-1.5, 0);
+
+		% Bottom wires to terminals
+		\draw[black!85, line width=1.1pt] (-1.5, 0) -- (-0.55, 0);
+		\draw[black!85, line width=1.1pt] (0.55, 0) -- (1.5, 0);
+		\filldraw[black] (-1.4, 0) circle (1.8pt) node[below=3pt] {$a$};
+		\filldraw[black] (1.4, 0) circle (1.8pt) node[below=3pt] {$b$};
+
+		% Current arrows
+		\draw[->, >=Stealth, bacpurple, line width=1.3pt] (-2.1, 0.4) -- (-1.5, 0.4)
+			node[midway, above=1pt] {$i$};
+		\draw[->, >=Stealth, bacpurple, line width=1.3pt] (1.5, 0.4) -- (2.1, 0.4)
+			node[midway, above=1pt] {$i$};
+
+		% Capacitor plates (well separated to give room for q and -q)
+		\filldraw[fill=orange!30, line width=1.2pt] (-0.55, -0.65) rectangle (-0.38, 0.65);
+		\filldraw[fill=orange!30, line width=1.2pt] (0.38, -0.65) rectangle (0.55, 0.65);
+
+		% Charges on plates
+		\node[above=3pt] at (-0.465, 0.65) {\small $q$};
+		\node[above=3pt] at (0.465, 0.65) {\small $-q$};
+
+		% Label C
+		\node[below=3pt] at (0, -0.65) {\bfseries\small $C$};
+
+		% Voltage indicator v_C with extension drop lines
+		\draw[dotted, gray!60, line width=0.5pt] (-1.4, 0) -- (-1.4, -1.25);
+		\draw[dotted, gray!60, line width=0.5pt] (1.4, 0) -- (1.4, -1.25);
+		\draw[|<->|, >=stealth, line width=0.6pt, gray!80] (-1.4, -1.25) -- (1.4, -1.25)
+			node[midway, fill=white, inner sep=1.5pt] {\small $v_C$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៥១.ក៖ សៀគ្វីនៃប្រភពចរន្តឆ្លាស់ និងកុងដង់សាទ័រ\par}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+\textbf{ជំហានស្រាយរកសមីការចរន្ត $i_C(t)$ តាមច្បាប់គៀឆុក ៖}
+
+\begin{enumerate}[leftmargin=2em, itemsep=4pt]
+	\item \textbf{អនុវត្តច្បាប់គៀឆុក និងទំនាក់ទំនងបន្ទុកកុងដង់សាទ័រ ៖}
+	\[ v(t) - v_C(t) = 0 \quad \Longrightarrow \quad v_C(t) = V_{\max}\sin(\omega t) \]
+	បន្ទុកនៅលើបន្ទះកុងដង់សាទ័រនៅខណៈ $t$ គឺ ៖
+	\[ q(t) = C v_C(t) = C V_{\max}\sin(\omega t) \]
+
+	\item \textbf{ទាញរកកន្សោមចរន្តខណៈ $i_C(t)$ តាមរយៈដេរីវេនៃបន្ទុក ៖}
+	\[ i_C(t) = \dfrac{dq}{dt} = \dfrac{d}{dt}\Big(C V_{\max}\sin(\omega t)\Big) \]
+
+	\item \textbf{គណនាដេរីវេ ៖}
+	\[ i_C(t) = C V_{\max}\dfrac{d}{dt}\big(\sin(\omega t)\big) = \omega C V_{\max}\cos(\omega t) \]
+
+	\item \textbf{សរសេរក្នុងទម្រង់ច្បាប់អូម និងបំប្លែងអនុគមន៍ត្រីកោណមាត្រ ៖}
+	ដោយ $\omega C V_{\max} = \dfrac{V_{\max}}{\frac{1}{C\omega}} = \dfrac{V_{\max}}{Z_C}$ \quad និង \quad $\cos(\omega t) = \sin\left(\omega t + \dfrac{\pi}{2}\right)$ ៖
+	\[ i_C(t) = \dfrac{V_{\max}}{Z_C}\sin\left(\omega t + \dfrac{\pi}{2}\right) \]
+
+	\item \textbf{កំណត់តម្លៃអតិបរមានៃចរន្ត (អំព្លីទុតចរន្ត $I_{\max(C)}$) ៖}
+	\[ I_{\max(C)} = \dfrac{V_{\max}}{Z_C} = \dfrac{V_{\max}}{\frac{1}{C\omega}} = \omega C V_{\max} \]
+\end{enumerate}
+
+\noindent
+ដូចនេះ យើងបានសមីការចរន្តខណៈ និងអថេរ ៖
+\begin{center}
+	$\boxed{i_C = I_{\max(C)}\sin\left(\omega t + \frac{\pi}{2}\right)}$ \quad (៣៧)
+\end{center}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $i_C$ ៖ ចរន្តខណៈរត់នៅក្នុងកុងដង់សាទ័រ $(\mathrm{A})$
+		\item $I_{\max(C)} = \dfrac{V_{\max}}{Z_C}$ ៖ ចរន្តអតិបរមាឆ្លងកាត់កុងដង់សាទ័រ $(\mathrm{A})$
+		\item $V_{\max}$ ៖ តង់ស្យុងអតិបរមានៃប្រភព $(\mathrm{V})$
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item $Z_C = \dfrac{1}{C\omega}$ ៖ អាំងប៉េដង់នៃកុងដង់សាទ័រ ឬរេអាក់តង់កាប៉ាស៊ីទីវ $X_C$ $(\Omega)$
+		\item $\omega = 2\pi f = \dfrac{2\pi}{T}$ ៖ ពុលសាសុង ឬប្រេកង់មុំនៃចរន្តឆ្លាស់ $(\mathrm{rad/s})$
+		\item $C$ ៖ កាប៉ាស៊ីតេនៃកុងដង់សាទ័រ $(\mathrm{F})$
+	\end{itemize}
+\end{minipage}
+
+\vspace{0.4em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{wavered}{ចំណាំ ៖}} អាំងប៉េដង់នៃកុងដង់សាទ័រ $Z_C$ (ឬ រេអាក់តង់នៃកុងដង់សាទ័រ $X_C$) មានតម្លៃស្មើនឹង $\dfrac{1}{C\omega}$ ព្រោះវាបានស្តុកថាមពលអគ្គិសនី បង្ហាញដោយវត្តមាននៃផលសងប៉ូតង់ស្យែលរវាងបន្ទះទាំងពីរនៃកុងដង់សាទ័រ វាមានផាសនៃតង់ស្យុងយឺតជាងផាសនៃចរន្តនៅក្នុងសៀគ្វី ។ ដោយផ្អែកលើច្បាប់អូម អនុវត្តចំពោះសៀគ្វីដែលមានតែកុងដង់សាទ័រសុទ្ធ យើងទាញបាន $Z_C = \dfrac{1}{C\omega}$ ។
+}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, line width=0.85pt] (-0.3, 0) -- (6.6, 0) node[right] {\small $t$};
+		\draw[->, line width=0.85pt] (0, -1.9) -- (0, 2.3) node[above] {\small $v_C,\, i_C$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Curves: Period T = 4.0 units
+		% v_C(t) = V_max sin(omega t) in waveblue
+		\draw[waveblue, line width=1.5pt, smooth, domain=0:5.8, samples=100]
+			plot (\x, {1.0*sin((\x/4)*360)});
+		% i_C(t) = I_max cos(omega t) in purple
+		\draw[purple!85!black, line width=1.5pt, smooth, domain=0:5.8, samples=100]
+			plot (\x, {1.6*cos((\x/4)*360)});
+
+		% Guides & Ticks
+		\draw[line width=0.8pt] (-0.06, 1.6) -- (0.06, 1.6);
+		\node[left=2pt] at (0, 1.6) {\small $I_{\max}$};
+
+		\draw[line width=0.8pt] (-0.06, 1.0) -- (0.06, 1.0);
+		\node[left=2pt] at (0, 1.0) {\small $V_{\max}$};
+
+		% Peak at t = T
+		\draw[dashed, gray!70, line width=0.7pt] (4.0, 0) -- (4.0, 1.6);
+		\draw[line width=0.8pt] (4.0, -0.06) -- (4.0, 0.06);
+		\node[below=2pt] at (4.0, 0) {\small $T$};
+
+		% Curve labels
+		\node[purple!85!black, font=\small\bfseries] at (4.0, 1.85) {$i_C$};
+		\node[waveblue, font=\small\bfseries] at (5.4, 0.7) {$v_C$};
+
+		% Callout arrow to first peak of i_C
+		\draw[->, >=stealth, line width=0.8pt, gray!80] (2.2, 2.3) -- (0.1, 1.65);
+		\node[above right=-4pt, align=left] at (1.0, 2.25) {\footnotesize\textbf{ចរន្តលឿនជាងតង់ស្យុង $1/4$ នៃមួយខួប}};
+	\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+		% Axes
+		\draw[->, gray, line width=0.7pt] (-1.8, 0) -- (3.3, 0) node[right] {\small $x$};
+		\draw[->, gray, line width=0.7pt] (0, -1.2) -- (0, 3.0) node[above] {\small $v_C,\, i_C$};
+		\node[below left=1pt] at (0, 0) {\small $O$};
+
+		% Phasor vectors
+		\draw[->, waveblue, line width=1.8pt] (0, 0) -- (25:2.6) coordinate (Vmax);
+		\node[above right=-1pt, waveblue] at (Vmax) {\small $\vec{V}_{\max}$};
+
+		\draw[->, purple!85!black, line width=1.8pt] (0, 0) -- (115:2.2) coordinate (Imax);
+		\node[above left=1pt, purple!85!black] at (Imax) {\small $\vec{I}_{\max}$};
+
+		% Projections on vertical axis
+		\draw[dashed, gray!70, line width=0.6pt] (Vmax) -- (0, {2.6*sin(25)});
+		\node[above right=-2pt] at (0, {2.6*sin(25)}) {\footnotesize $v_C$};
+
+		\draw[dashed, gray!70, line width=0.6pt] (Imax) -- (0, {2.2*sin(115)});
+		\node[right=2pt] at (0, {2.2*sin(115)}) {\footnotesize $i_C$};
+
+		% Angle omega t for V_max
+		\draw[line width=0.6pt] (0.8, 0) arc (0:25:0.8);
+		\node at (12:1.15) {\footnotesize $\omega t$};
+
+		% Right angle marker between V_max (25 deg) and I_max (115 deg)
+		\draw[line width=0.6pt] (25:0.35) -- ++(115:0.35) -- ++(205:0.35);
+
+		% Rotation arc omega
+		\draw[->, line width=0.7pt] (45:2.7) arc (45:80:2.7)
+			node[midway, above right=1pt] {\small $\omega$};
+
+		% Header label placed nicely above
+		\node[above=8pt, align=center] at (0, 3.1) {\footnotesize\textbf{ចរន្តលឿនផាសជាងតង់ស្យុង $90^\circ$}};
+	\end{tikzpicture}
+\end{minipage}
+\par\vspace{0.2cm}
+{\centering\khmerpagenum\small\color{brownheader} រូបទី៥១៖ ខ. ក្រាបនៃតង់ស្យុងនិងចរន្តជាអនុគមន៍នៃពេល \quad (គ) ដ្យាក្រាមផាសនៃចរន្ត និងតង់ស្យុង\par}
+
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{សន្និដ្ឋានអំពីផាស ({\englishfont Phase Relationship}) ៖}}
+	\par\vspace{2pt}
+	តាមកន្សោមតង់ស្យុងនៃប្រភព និងចរន្តដែលឆ្លងកាត់កុងដង់សាទ័រ យើងឃើញថាវាមានផាសខុសគ្នា មានន័យថាតង់ស្យុងនៃប្រភពយឺតផាសជាងចរន្តចំនួន $\dfrac{\pi}{2}$ ឬ $90^\circ$ (ដូចរូបទី៥១.គ) ដូចនេះតង់ស្យុងនៃប្រភពមានតម្លៃអតិបរមាក្រោយចរន្តចំនួន $1/4$ នៃមួយខួប (ឬមួយជុំ) (ដូចរូបទី៥១.ខ) ៖
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item ផលសងផាសរវាងតង់ស្យុង និងចរន្ត ៖ $\Delta\varphi = \varphi_v - \varphi_i = 0 - \dfrac{\pi}{2} = -\dfrac{\pi}{2}$
+		\item តង់ស្យុង $v(t)$ \textbf{យឺតផាសជាង} ចរន្ត $i_C(t)$ នូវមុំ $\dfrac{\pi}{2}$ (ឬចរន្ត $i_C(t)$ \textbf{លឿនផាសជាង} តង់ស្យុង $v(t)$ នូវមុំ $\dfrac{\pi}{2}$ ឬ $90^\circ$) ។
+		\item តាមតម្លៃប្រសិទ្ធ ៖ $I_C = \dfrac{V}{Z_C} = C\omega V$ \quad (ដោយ $I_C = \dfrac{I_{\max(C)}}{\sqrt{2}}$ និង $V = \dfrac{V_{\max}}{\sqrt{2}}$)
+	\end{itemize}
+}
+
+
+
 
