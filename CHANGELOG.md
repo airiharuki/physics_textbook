@@ -4,7 +4,41 @@ All notable changes, compiled honestly from the git history of this repo. Versio
 
 ## [Unreleased]
 
-Next up: AC circuit parameters, impedance ($Z$), power factor ($\cos\varphi$), resonance, and AC phasor diagrams.
+Next up: Complete series $RLC$ circuit, resonance frequency, power in AC circuits ($P = UI\cos\varphi$), and transformer theory.
+
+---
+
+## [v1.0.0-alpha.19] — 2026-10-20
+
+Triple-digit milestone reached (101 pages!): Series two-component AC circuits debut — series $RL$, series $RC$, and series $LC$ circuits with systematic KVL derivations, impedance formulas, Fresnel phasor constructions in native TikZ, phase angle dynamics, power factor expressions, and an Editor's Note on the historical War of the Currents. 🌸
+
+### Added
+
+- **Chapter 3 · Lesson 4 (ចរន្តឆ្លាស់ / Alternating Current) — continued:**
+  - **Editor's Note (The War of the Currents):** Historical context on the Edison vs. Westinghouse AC/DC rivalry with an outbound reference link to energy.gov.
+  - **២.៤. សៀគ្វី $RL$ តជាស៊េរី (Series $RL$ AC Circuit):**
+    - KVL instantaneous voltage equation $v(t) = v_R(t) + v_L(t)$ and Fresnel vector triangle $\vec{V} = \vec{V}_R + \vec{V}_L$.
+    - Impedance derivation: boxed $Z_{RL} = \sqrt{R^2 + (L\omega)^2}$ (៣៨) with unit definitions $(\Omega)$.
+    - Phase angle $\varphi$ and power factor: boxed $\tan\varphi = \frac{L\omega}{R} > 0$ with $0 < \varphi < \frac{\pi}{2}$ (៣៩) and $\cos\varphi = \frac{R}{Z}$.
+    - Vector graphics (**រូបទី៥២**): Native CircuitikZ series $RL$ schematic (រូបទី៥២.ក) and right-triangle Fresnel phasor diagram (រូបទី៥២.ខ).
+    - Note panel on inductive phase lead ($v$ leads $i$).
+  - **២.៥. សៀគ្វី $RC$ តជាស៊េរី (Series $RC$ AC Circuit):**
+    - KVL relation $v(t) = v_R(t) + v_C(t)$ and Fresnel vector triangle $\vec{V} = \vec{V}_R + \vec{V}_C$.
+    - Impedance derivation: boxed $Z_{RC} = \sqrt{R^2 + \left(\frac{1}{C\omega}\right)^2}$ (៤០) with unit definitions $(\Omega)$.
+    - Phase angle $\varphi$ and power factor: boxed $\tan\varphi = -\frac{1}{RC\omega} < 0$ with $-\frac{\pi}{2} < \varphi < 0$ (៤១) and $\cos\varphi = \frac{R}{Z}$.
+    - Vector graphics (**រូបទី៥៣**): Native CircuitikZ series $RC$ schematic (រូបទី៥៣.ក) and downward Fresnel phasor triangle (រូបទី៥៣.ខ).
+    - Note panel on capacitive phase lag ($v$ lags $i$).
+  - **២.៦. សៀគ្វី $LC$ តជាស៊េរី (Series $LC$ AC Circuit):**
+    - Antiphase KVL dynamics: $\vec{V}_L$ and $\vec{V}_C$ aligned along the vertical axis with opposite directions (phase difference $\pi$).
+    - Impedance derivation: boxed $Z_{LC} = |Z_L - Z_C| = \left|L\omega - \frac{1}{C\omega}\right|$ (៤២).
+    - Phase angle analysis: $\varphi = +\frac{\pi}{2}$ when $Z_L > Z_C$ (inductive); $\varphi = -\frac{\pi}{2}$ when $Z_L < Z_C$ (capacitive); boxed trigonometric identities $\cos\varphi = 0$, $|\sin\varphi| = 1$, $|\tan\varphi| \to \infty$ (៤៣).
+    - Vector graphics (**រូបទី៥៤**): Native CircuitikZ series $LC$ schematic (រូបទី៥៤.ក) and collinear Fresnel cancellation diagram (រូបទី៥៤.ខ).
+    - Note panel on electrical resonance in $LC$ circuit: $Z_{LC} = 0\,\Omega$, $V = 0\,\text{V}$, and natural resonant angular frequency $\omega_0 = \frac{1}{\sqrt{LC}}$.
+
+### Changed
+
+- Rebuilt `main.pdf`: **101 pages** (crossing the 100-page milestone!), 0 errors, 0 missing characters under XeLaTeX with HarfBuzz renderer.
+- Continuous numbering progressed to **រូបទី៥៤** (Figure 54) and **សមីការ (៤៣)** (Equation 43).
 
 ---
 
