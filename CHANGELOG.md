@@ -4,7 +4,29 @@ All notable changes, compiled honestly from the git history of this repo. Versio
 
 ## [Unreleased]
 
-Next up: Complete series $RLC$ circuit, resonance frequency, power in AC circuits ($P = UI\cos\varphi$), and transformer theory.
+Next up: power in AC circuits ($P = UI\cos\varphi$), transformer theory, and the closing review of lesson 4.
+
+---
+
+## [v1.0.0-alpha.20] - 2026-10-22
+
+Series $RLC$ and the whole parallel family land in one go (**118 pages**, +17 since alpha.19): parallel $RL$, $RC$, $LC$ and the final-boss parallel $RLC$ circuit, capped with a duality box that sets series against parallel side by side. Chapter 3 is nearly finished.
+
+### Added
+
+- **Chapter 3 - Lesson 4 (Alternating Current) - continued:**
+  - **§4 Series $RLC$ circuit:** KVL with all three components, Fresnel phasor construction, impedance $Z = \sqrt{R^2 + (L\omega - \frac{1}{C\omega})^2}$, phase-angle analysis, and the resonance condition $\omega_0 = \frac{1}{\sqrt{LC}}$.
+  - **§5 Parallel AC circuits** (equations up to (៥៤), figures up to រូបទី៦០.ខ):
+    - **§5.1 Parallel $RL$**, **§5.2 Parallel $RC$**, **§5.3 Parallel $LC$:** KCL branch currents, current-phasor triangles, admittance-style impedance derivations, phase relations, and the idealised $LC$ tank ($I \to 0$ at resonance).
+    - **§5.4 Parallel $RLC$:** KCL node equation and `circuitikz` schematic (រូបទី៦០.ក), branch currents $i_R, i_L, i_C$, Fresnel current diagram (រូបទី៦០.ខ), boxed impedance (៥២), boxed phase relations $\tan\varphi$, $\cos\varphi$, $\sin\varphi$ (៥៣), three-case frequency analysis (capacitive / inductive / antiresonance), and boxed resonance and quality factor $Q = R\sqrt{C/L}$ (៥៤), plus a tank-current note box.
+  - **Duality box (series vs parallel $RLC$):** nine-row comparison table covering the shared variable, Kirchhoff law, phasor triangle, impedance/admittance, phase functions, resonance condition and values, $Q$ and amplification, and practical role (acceptor vs rejector).
+- **`\mathbox` macro (`preamble.tex`):** soft panel with a 3pt `bacpurple` accent bar for derivative and integral context notes, so calculus asides get their own box instead of hiding in the prose.
+
+### Changed
+
+- **Duality box table layout:** wider label column so Khmer labels no longer break mid-word, thin row separators and more row height, two-line cells for the $Q$ row (formula, then amplification note), the identical resonance condition merged into one centred cell, and the table now spans the box content width exactly.
+- **`.gitignore` overhaul:** grouped into IDE, TeX/LaTeX build artifacts, and scratch sections; now covers VS Code/Visual Studio files, `.claude/`, SyncTeX busy-lock files, bibliography/index/list temporaries, TikZ/PGF externalised outputs, and preview-image patterns (`tmp-*`, `temp-*`, `page_*.png`, `final_page*.png`).
+- Rebuilt `main.pdf`: **118 pages**, 0 errors, 0 missing characters under XeLaTeX with HarfBuzz renderer.
 
 ---
 
@@ -362,6 +384,6 @@ The first tagged drop. A beta PDF went out into the world. 🌸
 
 ---
 
-*The handbook as of v1.0.0-alpha.17: 88 pages, chapters 1 & 2 complete, chapter 3 at 3 of 5 lessons finished and lesson 4 well underway (alternator principle, AC definition, half-wave and full-wave diode rectifiers, RMS values). Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
+*The handbook as of v1.0.0-alpha.20: 118 pages, chapters 1 & 2 complete, chapter 3 at 3 of 5 lessons finished and lesson 4 nearly done (alternator principle, AC definition, rectifiers, RMS values, single-component, series, and parallel RLC circuits). Built by one human, three AIs, and a level of sleep deprivation that should probably be studied by a university.* ☠️🌸
 
-*Currently in the pipeline: chapter 3 lesson 4 (ចរន្តឆ្លាស់ / alternating currents & RLC series circuits). Next up: AC circuit parameters, impedance, power factor, resonance, and AC phasor diagrams.* 🌸
+*Currently in the pipeline: chapter 3 lesson 4 (ចរន្តឆ្លាស់ / alternating currents & RLC series circuits). Next up: power in AC circuits, transformers, and the closing review.* 🌸

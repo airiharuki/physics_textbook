@@ -1,30 +1,100 @@
-# IntelliJ IDEA
+# ==========================================================
+# IDEs & Code Editors
+# ==========================================================
+# JetBrains (Rider, IDEA, CLion, WebStorm, etc.)
 .idea/
+.rider/
 *.iml
 *.iws
+*.ipr
 out/
 
-# JetBrains Rider
-.rider/
+# Visual Studio & VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# LaTeX build artifacts
+# AI tools & agent scratch
+.claude/
+
+# ==========================================================
+# TeX & LaTeX Build Artifacts
+# ==========================================================
+# Core engine temp files
 *.aux
 *.log
 *.out
 *.toc
-*.synctex.gz
-*.fdb_latexmk
-*.fls
 *.xdv
+*.fls
+*.fdb_latexmk
+
+# SyncTeX (all states, including busy lock files)
+*.synctex
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+
+# Bibliography & indices
 *.bbl
 *.blg
+*.bcf
+*.run.xml
+*.idx
+*.ind
+*.ilg
+
+# Presentation & lists
+*.nav
+*.snm
+*.vrb
+*.lot
+*.lof
+*.maf
+*.mtc*
+
+# TikZ / PGF / Gnuplot temporary externalized outputs
+*.dpth
+*.md5
+*.table
+*.gnuplot
+_minted*/
+
+# Temporary scratch & preview images
+tmp-*
+temp-*
+*.tmp
+page_*.png
+page_test*.png
+page_verify*.png
+final_page*.png
+
+# ==========================================================
+# Local templates & temporary scripts
+# ==========================================================
 commitmsg.txt
 .mcp.json
 book_cover_template.pdf
 book_cover_template.tex
 build - cover.sh
 
-
-# OS junk
+# ==========================================================
+# Operating System Junk
+# ==========================================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+

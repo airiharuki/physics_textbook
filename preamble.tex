@@ -561,6 +561,20 @@
     #1
 }
 
+% --- Math / Calculus Context Box: soft panel with 3pt bacpurple accent bar,
+%     clean header for derivatives, integrals, and mathematical notes ---
+\newtcolorbox{mathbox}[2][]{
+    enhanced, breakable,
+    colback=boxbg, frame hidden, boxrule=0pt,
+    sharp corners,
+    borderline west={3pt}{0pt}{bacpurple},
+    left=14pt, right=12pt, top=8pt, bottom=9pt,
+    title={\khmerheader\large\color{bacpurple} $\blacktriangleright$ \textbf{ជំនួយគណិតវិទ្យា ៖} #2},
+    attach title to upper,
+    after title={\par\vskip3pt{\color{bacpurple!40}\hrule height0.5pt}\vskip6pt},
+    #1
+}
+
 % ---------------------------------------------------------
 % VIDEO BOX - clickable YouTube link + scannable QR code,
 % styled to match \formulabox exactly (same colors, frame
