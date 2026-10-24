@@ -64,6 +64,7 @@ out/
 _minted*/
 
 # Temporary scratch & preview images
+scratch/
 tmp-*
 temp-*
 *.tmp

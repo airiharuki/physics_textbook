@@ -3880,8 +3880,7 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 តាមទ្រឹស្តីបទពីតាគ័រក្នុងត្រីកោណកែងនៃដ្យាក្រាមសំណង់ប្រេណែល (ដូចរូបទី៥៦.ខ)៖
 \begin{align*}
 	V_{\max}^2 &= V_{R\max}^2 + (V_{L\max} - V_{C\max})^2 \\
-	(Z I_{\max})^2 &= (R I_{\max})^2 + \left(Z_L I_{\max} - Z_C I_{\max}\right)^2 \\
-	(Z I_{\max})^2 &= \left[ R^2 + (Z_L - Z_C)^2 \right] I_{\max}^2 \\
+	(Z I_{\max})^2 &= (R I_{\max})^2 + \left(Z_L I_{\max} - Z_C I_{\max}\right)^2 = \left[ R^2 + (Z_L - Z_C)^2 \right] I_{\max}^2 \\
 	Z^2 &= R^2 + (Z_L - Z_C)^2
 \end{align*}
 
@@ -3890,60 +3889,77 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 	$\boxed{Z = \sqrt{R^2 + (Z_L - Z_C)^2} = \sqrt{R^2 + \left(L\omega - \dfrac{1}{C\omega}\right)^2}}$ \quad (៤៤)
 \end{center}
 
-\vspace{0.4em}
+\vspace{0.2em}
 \noindent
-\textbf{ទំនាក់ទំនងអនុគមន៍ត្រីកោណមាត្រនៃមុំផាស $\varphi$៖}
-
-\noindent
-ក្នុងត្រីកោណកែងនៃដ្យាក្រាមសំណង់ប្រេណែល (រូបទី៥៦.ខ) មុំផាស $\varphi$ កំណត់ដោយ៖
-\begin{itemize}[itemsep=3pt, topsep=2pt, leftmargin=1.6em]
-	\item \textbf{តង់សង់ផាស៖}
-	\[ \tan\varphi = \dfrac{\text{ជ្រុងឈម}}{\text{ជ្រុងជាប់}} = \dfrac{V_{L\max} - V_{C\max}}{V_{R\max}} = \dfrac{Z_L - Z_C}{R} = \dfrac{L\omega - \dfrac{1}{C\omega}}{R} \]
-	\item \textbf{កូស៊ីនុសផាស៖}
-	\[ \cos\varphi = \dfrac{\text{ជ្រុងជាប់}}{\text{អ៊ីប៉ូតេនុស}} = \dfrac{V_{R\max}}{V_{\max}} = \dfrac{R}{Z} = \dfrac{R}{\sqrt{R^2 + \left(L\omega - \dfrac{1}{C\omega}\right)^2}} \]
-	\item \textbf{ស៊ីនុសផាស៖}
-	\[ \sin\varphi = \dfrac{\text{ជ្រុងឈម}}{\text{អ៊ីប៉ូតេនុស}} = \dfrac{V_{L\max} - V_{C\max}}{V_{\max}} = \dfrac{Z_L - Z_C}{Z} = \dfrac{L\omega - \dfrac{1}{C\omega}}{Z} \]
+\textbf{ទំនាក់ទំនងអនុគមន៍ត្រីកោណមាត្រនៃមុំផាស $\varphi$ (ក្នុងត្រីកោណកែងនៃរូបទី៥៦.ខ)៖}
+\begin{itemize}[itemsep=1pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+	\item \textbf{តង់សង់ផាស៖} $\tan\varphi = \dfrac{\text{ជ្រុងឈម}}{\text{ជ្រុងជាប់}} = \dfrac{V_{L\max} - V_{C\max}}{V_{R\max}} = \dfrac{Z_L - Z_C}{R} = \dfrac{L\omega - \frac{1}{C\omega}}{R}$
+	\item \textbf{កូស៊ីនុសផាស៖} $\cos\varphi = \dfrac{\text{ជ្រុងជាប់}}{\text{អ៊ីប៉ូតេនុស}} = \dfrac{V_{R\max}}{V_{\max}} = \dfrac{R}{Z}$
+	\item \textbf{ស៊ីនុសផាស៖} $\sin\varphi = \dfrac{\text{ជ្រុងឈម}}{\text{អ៊ីប៉ូតេនុស}} = \dfrac{V_{L\max} - V_{C\max}}{V_{\max}} = \dfrac{Z_L - Z_C}{Z} = \dfrac{L\omega - \frac{1}{C\omega}}{Z}$
 \end{itemize}
 
 \begin{center}
 	$\boxed{\tan\varphi = \dfrac{L\omega - \dfrac{1}{C\omega}}{R}} \qquad \boxed{\cos\varphi = \dfrac{R}{Z}} \qquad \boxed{\sin\varphi = \dfrac{L\omega - \dfrac{1}{C\omega}}{Z}}$ \quad (៤៥)
 \end{center}
 
-\vspace{0.3em}
-\defbox{
+\vspace{0.2em}
+\noindent
+\textbf{\textcolor{brownheader}{ការវិភាគលក្ខណៈសៀគ្វីតាមតម្លៃមុំផាស $\varphi$ ({\englishfont Circuit Behavior})៖}}
+\par\vspace{1pt}
+\noindent
+លក្ខណៈបំពេញមុខងាររបស់សៀគ្វី $RLC$ អាស្រ័យលើផលធៀបរវាង $Z_L$ និង $Z_C$៖
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=1.5pt, topsep=1.5pt, parsep=0pt, leftmargin=1.4em]
+	\item \textbf{បើ $Z_L > Z_C$ ($L\omega > \frac{1}{C\omega}$)៖} $\tan\varphi > 0 \implies \varphi > 0$ — សៀគ្វីមាន\textbf{អាំងឌុចតង់} ({\englishfont Inductive}) ដោយតង់ស្យុង $v(t)$ \textbf{លឿនផាសជាង} ចរន្ត $i(t)$ នូវមុំ $\varphi$ ($0 < \varphi < \dfrac{\pi}{2}$)។
+	\item \textbf{បើ $Z_L < Z_C$ ($L\omega < \frac{1}{C\omega}$)៖} $\tan\varphi < 0 \implies \varphi < 0$ — សៀគ្វីមាន\textbf{កាប៉ាសុីតេ} ({\englishfont Capacitive}) ដោយតង់ស្យុង $v(t)$ \textbf{យឺតផាសជាង} ចរន្ត $i(t)$ នូវមុំ $|\varphi|$ ($-\dfrac{\pi}{2} < \varphi < 0$)។
+	\item \textbf{បើ $Z_L = Z_C$ ($L\omega = \frac{1}{C\omega}$)៖} $\tan\varphi = 0 \implies \varphi = 0$ — សៀគ្វីមានលក្ខណៈ\textbf{រេស៊ីស្តង់សុទ្ធ} និងកើតមាន\textbf{បាតុភូតរ៉េសូណង់} ({\englishfont Resonance}) ដូចលម្អិតក្នុងប្រអប់ទំព័របន្ទាប់។
+\end{enumerate}
+
+\clearpage
+
+\begin{formulabox}[breakable=false, top=6pt, bottom=6pt, left=10pt, right=10pt]{បាតុភូតរ៉េសូណង់ក្នុងសៀគ្វី $RLC$ ជាស៊េរី ({\englishfont Series Electrical Resonance})}
 	\raggedright
-	\textbf{\textcolor{brownheader}{ការវិភាគលក្ខណៈសៀគ្វីតាមតម្លៃមុំផាស $\varphi$ ({\englishfont Circuit Behavior})៖}}
-	\par\vspace{2pt}
-	លក្ខណៈបំពេញមុខងាររបស់សៀគ្វី $RLC$ អាស្រ័យលើផលធៀបរវាងអាំប៉េដង់ $Z_L$ និង $Z_C$៖
-	\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=1pt, parsep=0pt, leftmargin=1.6em]
-		\item \textbf{បើ $Z_L > Z_C$ ($L\omega > \dfrac{1}{C\omega}$)៖} នាំឱ្យ $\tan\varphi > 0 \implies \varphi > 0$
-		\begin{itemize}[itemsep=1pt, topsep=1pt, leftmargin=1.2em]
-			\item សៀគ្វីមាន\textbf{អាំងឌុចតង់ឬប៊ូប៊ីន} ({\englishfont Inductive Circuit})។
-			\item តង់ស្យុងសរុប $v(t)$ \textbf{លឿនផាសជាង} ចរន្ត $i(t)$ នូវមុំ $\varphi$ (ដោយ $0 < \varphi < \dfrac{\pi}{2}$)។
-		\end{itemize}
-		\item \textbf{បើ $Z_L < Z_C$ ($L\omega < \dfrac{1}{C\omega}$)៖} នាំឱ្យ $\tan\varphi < 0 \implies \varphi < 0$
-		\begin{itemize}[itemsep=1pt, topsep=1pt, leftmargin=1.2em]
-			\item សៀគ្វីមាន\textbf{កាប៉ាសុីតេ} ({\englishfont Capacitive Circuit})។
-			\item តង់ស្យុងសរុប $v(t)$ \textbf{យឺតផាសជាង} ចរន្ត $i(t)$ នូវមុំ $|\varphi|$ (ដោយ $-\dfrac{\pi}{2} < \varphi < 0$)។
-		\end{itemize}
-		\item \textbf{បើ $Z_L = Z_C$ ($L\omega = \dfrac{1}{C\omega}$)៖} នាំឱ្យ $\tan\varphi = 0 \implies \varphi = 0$
-		\begin{itemize}[itemsep=1pt, topsep=1pt, leftmargin=1.2em]
-			\item សៀគ្វីមាន\textbf{រេសុីស្តង់} ({\englishfont Resistive Circuit}) ឬស្ថិតក្នុង\textbf{បាតុភូតរ៉េសូណង់អគ្គិសនី} ({\englishfont Electrical Resonance})។
-			\item តង់ស្យុងសរុប $v(t)$ និងចរន្ត $i(t)$ \textbf{ស្របផាសគ្នា} ($\varphi = 0$)។
-			\item អាំប៉េដង់សៀគ្វីធ្លាក់ចុះដល់កម្រិតអប្បបរមា៖ $Z_{\min} = R$ ។
-			\item អាំងតង់ស៊ីតេចរន្តឡើងដល់តម្លៃអតិបរមា៖ $I_{\max} = \dfrac{V_{\max}}{R}$ (ឬ $I = \dfrac{V}{R}$)។
-			\item ប្រេកង់រ៉េសូណង់៖ $\omega_0 = \dfrac{1}{\sqrt{LC}} \iff f_0 = \dfrac{1}{2\pi\sqrt{LC}}$ ។
-		\end{itemize}
-	\end{enumerate}
-}
+	យើងមានកន្សោមចរន្តអតិបរមា (អំភ្លីទុតនៃចរន្ត) ទូទៅនៃសៀគ្វី $RLC$ ជាស៊េរីគឺ៖
+	\[ I_{\max} = \dfrac{V_{\max}}{Z} = \dfrac{V_{\max}}{\sqrt{R^2 + \left(L\omega - \dfrac{1}{C\omega}\right)^2}} \]
+	\par\vspace{1pt}
+	នៅពេលដែល $Z = \sqrt{R^2 + \left(L\omega - \dfrac{1}{C\omega}\right)^2}$ មានតម្លៃអប្បបរមា លុះត្រាតែ $L\omega - \dfrac{1}{C\omega} = 0$ ធ្វើឱ្យចរន្តអតិបរមានៃសៀគ្វីស្ថិតនៅត្រង់ទីតាំងខ្ពស់បំផុត ហើយបានធ្វើឱ្យសៀគ្វីនៃចរន្តឆ្លាស់មានប្រេកង់មុំជាក់លាក់មួយ ហៅថា\textbf{ប្រេកង់មុំរ៉េសូណង់} $\omega = \dfrac{1}{\sqrt{LC}}$ និងបង្កើតបានជា\textbf{បាតុភូតរ៉េសូណង់}។ ដែលប្រេកង់នេះមានតម្លៃត្រូវគ្នាទៅនឹងប្រេកង់មុំធម្មជាតិនៃសៀគ្វីរ៉េសូណង់ ដែលមានតម្លៃ៖
+	\begin{center}
+		$\boxed{\omega_0 = \dfrac{1}{\sqrt{LC}}} \qquad \iff \qquad \boxed{f_0 = \dfrac{1}{2\pi\sqrt{LC}}}$
+	\end{center}
+	\par\vspace{1pt}
+	\noindent\textbf{\textcolor{brownheader}{លក្ខខណ្ឌដែលធ្វើឱ្យកើតមានបាតុភូតរ៉េសូណង់នៅក្នុងដំណើរការនៃសៀគ្វី $RLC$ ($Z_L = Z_C$)៖}}
+	\begin{itemize}[itemsep=1.5pt, topsep=1.5pt, parsep=0pt, leftmargin=1.4em]
+		\item ចរន្ត និងតង់ស្យុងស្របផាសគ្នា៖ $\varphi = 0\,\text{rad}$
+		\item អាំប៉េដង់នៃសៀគ្វីមានតម្លៃអប្បបរមា៖ $Z_{\min} = R$
+		\item ចរន្តប្រសិទ្ធ (និងចរន្តអតិបរមា) នៃសៀគ្វីមានតម្លៃអតិបរមា៖ $I_{\max} = \dfrac{V_{\max}}{R} \quad \left(I = \dfrac{V}{R}\right)$
+		\item កត្តាអានុភាពឡើងដល់កម្រិតខ្ពស់បំផុត៖ $\cos\varphi = 1$
+	\end{itemize}
+\end{formulabox}
+
+\vspace{0.4em}
 
 \khmertopic{៥. បង្កុំតជាខ្នែងនៃសៀគ្វី (\englishfont Parallel AC Circuit)}
 
-\defbox{
+\vspace{0.2em}
+\noindent
+\begin{tcolorbox}[
+	enhanced,
+	colback=boxbg,
+	colframe=bacpink!70,
+	boxrule=0.8pt,
+	sharp corners,
+	borderline west={3pt}{0pt}{bacpink},
+	width=\linewidth,
+	halign=left,
+	left=12pt, right=12pt, top=6pt, bottom=6pt,
+	fontupper=\small
+]
 	\textbf{ចំណាំ៖} នៅក្នុងកម្មវិធីសិក្សារដ្ឋនៅកម្រិតថ្នាក់ទី១២ មិនបានសិក្សាទាក់ទងនិងលក្ខខណ្ឌតជាខ្នែងទេ។
 	ក៏ប៉ុន្តែក្នុងកាប្រឡងអាហារូបករណ៍និងការប្រឡងផ្សេងៗ ក៏ដូចជាកម្មវិធីនៅសកលវិទ្យាល័យភាគច្រើនតែងតែសង្កេតឃើញនៅវត្តមាននៃបង្គុំសៀគ្វីចរន្តឆ្លាស់ប្រភេទទាំងនោះ។\\
 	\textbf{បញ្ជាក់ (TL;DR)៖ ចំណុចទី៥ នេះអាចធ្វីការរំលងបាន។}
-}
+\end{tcolorbox}
+
+\clearpage
+
 
 \khmersubtopic{៥.១. សៀគ្វី $RL$ ជាខ្នែង ({\englishfont Parallel $RL$ Circuit})}
 
@@ -4520,21 +4536,21 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 
 \vspace{0.2em}
 \noindent
-ដូចនេះ អាំប៉េដង់សមមូល $Z$ នៃសៀគ្វី $RLC$ ជាខ្នែង គឺ ៖
+ដូចនេះ អាំប៉េដង់សមមូល $Z$ នៃសៀគ្វី $RLC$ ជាខ្នែង គឺ៖
 \begin{center}
 	$\boxed{\dfrac{1}{Z} = \sqrt{\dfrac{1}{R^2} + \left(C\omega - \dfrac{1}{L\omega}\right)^2} \iff Z = \dfrac{R}{\sqrt{1 + R^2\left(C\omega - \dfrac{1}{L\omega}\right)^2}}}$ \quad (៥២)
 \end{center}
 
 \vspace{0.2em}
 \noindent
-\textbf{ទំនាក់ទំនងអនុគមន៍ត្រីកោណមាត្រនៃមុំផាស $\varphi$ ៖}
+\textbf{ទំនាក់ទំនងអនុគមន៍ត្រីកោណមាត្រនៃមុំផាស $\varphi$៖}
 
 \noindent
-ក្នុងត្រីកោណកែងនៃដ្យាក្រាមសំណង់ប្រេណែល (រូបទី៦០.ខ) ដោយ $i(t) = I_{\max}\sin(\omega t + \varphi)$ មុំផាស $\varphi$ កំណត់ដោយ ៖
+ក្នុងត្រីកោណកែងនៃដ្យាក្រាមសំណង់ប្រេណែល (រូបទី៦០.ខ) ដោយ $i(t) = I_{\max}\sin(\omega t + \varphi)$ មុំផាស $\varphi$ កំណត់ដោយ៖
 \begin{itemize}[itemsep=1.5pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
-	\item \textbf{តង់សង់ផាស ៖} $\tan\varphi = \dfrac{I_{C\max} - I_{L\max}}{I_{R\max}} = R\left(C\omega - \dfrac{1}{L\omega}\right)$
-	\item \textbf{កូស៊ីនុសផាស ៖} $\cos\varphi = \dfrac{I_{R\max}}{I_{\max}} = \dfrac{Z}{R} = \dfrac{1}{\sqrt{1 + R^2\left(C\omega - \dfrac{1}{L\omega}\right)^2}}$
-	\item \textbf{ស៊ីនុសផាស ៖} $\sin\varphi = \dfrac{I_{C\max} - I_{L\max}}{I_{\max}} = Z\left(C\omega - \dfrac{1}{L\omega}\right)$
+	\item \textbf{តង់សង់ផាស៖} $\tan\varphi = \dfrac{I_{C\max} - I_{L\max}}{I_{R\max}} = R\left(C\omega - \dfrac{1}{L\omega}\right)$
+	\item \textbf{កូស៊ីនុសផាស៖} $\cos\varphi = \dfrac{I_{R\max}}{I_{\max}} = \dfrac{Z}{R} = \dfrac{1}{\sqrt{1 + R^2\left(C\omega - \dfrac{1}{L\omega}\right)^2}}$
+	\item \textbf{ស៊ីនុសផាស៖} $\sin\varphi = \dfrac{I_{C\max} - I_{L\max}}{I_{\max}} = Z\left(C\omega - \dfrac{1}{L\omega}\right)$
 \end{itemize}
 
 \begin{center}
@@ -4543,28 +4559,28 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 
 \pagebreak
 \noindent
-\textbf{ការវិភាគលក្ខណៈសៀគ្វីតាមតម្លៃប្រេកង់ និងមុំផាស $\varphi$ ៖}
+\textbf{ការវិភាគលក្ខណៈសៀគ្វីតាមតម្លៃប្រេកង់ និងមុំផាស $\varphi$៖}
 
 \noindent
-លក្ខណៈដំណើរការរបស់សៀគ្វី $RLC$ ជាខ្នែង អាស្រ័យលើតម្លៃប្រៀបធៀបរវាង $Z_L$ និង $Z_C$ (ឬ $B_L$ និង $B_C$) ៖
+លក្ខណៈដំណើរការរបស់សៀគ្វី $RLC$ ជាខ្នែង អាស្រ័យលើតម្លៃប្រៀបធៀបរវាង $Z_L$ និង $Z_C$ (ឬ $B_L$ និង $B_C$)៖
 \begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=1pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
-	\item \textbf{ករណី $Z_C < Z_L$ ($C\omega > \dfrac{1}{L\omega}$ ឬ $f > f_0$) ៖} នាំឱ្យ $\tan\varphi > 0 \implies 0 < \varphi < \dfrac{\pi}{2}$។
+	\item \textbf{ករណី $Z_C < Z_L$ ($C\omega > \dfrac{1}{L\omega}$ ឬ $f > f_0$)៖} នាំឱ្យ $\tan\varphi > 0 \implies 0 < \varphi < \dfrac{\pi}{2}$។
 	\begin{itemize}[itemsep=0.5pt, topsep=0.5pt, leftmargin=1.2em]
 		\item សៀគ្វីមាន\textbf{លក្ខណៈកាប៉ាស៊ីទីវ} ({\englishfont Capacitive Circuit}) ព្រោះ $I_{C\max} > I_{L\max}$។
-		\item ចរន្តសរុប $i(t)$ \textbf{លឿនផាសជាង} តង់ស្យុងរួម $v(t)$ នូវមុំ $\varphi$ ៖ $i(t) = I_{\max}\sin(\omega t + \varphi)$។
+		\item ចរន្តសរុប $i(t)$ \textbf{លឿនផាសជាង} តង់ស្យុងរួម $v(t)$ នូវមុំ $\varphi$៖ $i(t) = I_{\max}\sin(\omega t + \varphi)$។
 	\end{itemize}
-	\item \textbf{ករណី $Z_C > Z_L$ ($C\omega < \dfrac{1}{L\omega}$ ឬ $f < f_0$) ៖} នាំឱ្យ $\tan\varphi < 0 \implies -\dfrac{\pi}{2} < \varphi < 0$។
+	\item \textbf{ករណី $Z_C > Z_L$ ($C\omega < \dfrac{1}{L\omega}$ ឬ $f < f_0$)៖} នាំឱ្យ $\tan\varphi < 0 \implies -\dfrac{\pi}{2} < \varphi < 0$។
 	\begin{itemize}[itemsep=0.5pt, topsep=0.5pt, leftmargin=1.2em]
 		\item សៀគ្វីមាន\textbf{លក្ខណៈអាំងឌុចទីវ} ({\englishfont Inductive Circuit}) ព្រោះ $I_{L\max} > I_{C\max}$។
-		\item ចរន្តសរុប $i(t)$ \textbf{យឺតផាសជាង} តង់ស្យុងរួម $v(t)$ នូវមុំ $|\varphi|$ ៖ $i(t) = I_{\max}\sin(\omega t - |\varphi|)$។
+		\item ចរន្តសរុប $i(t)$ \textbf{យឺតផាសជាង} តង់ស្យុងរួម $v(t)$ នូវមុំ $|\varphi|$៖ $i(t) = I_{\max}\sin(\omega t - |\varphi|)$។
 	\end{itemize}
-	\item \textbf{ករណី $Z_C = Z_L$ ($C\omega = \dfrac{1}{L\omega} \iff LC\omega_0^2 = 1$) ៖} នេះជាលក្ខខណ្ឌ\textbf{បាតុភូតរ៉េសូណង់ខ្នែង} ឬ \textbf{រ៉េសូណង់ចរន្ត} ({\englishfont Parallel Resonance / Antiresonance}) ៖
+	\item \textbf{ករណី $Z_C = Z_L$ ($C\omega = \dfrac{1}{L\omega} \iff LC\omega_0^2 = 1$)៖} នេះជាលក្ខខណ្ឌ\textbf{បាតុភូតរ៉េសូណង់ខ្នែង} ឬ \textbf{រ៉េសូណង់ចរន្ត} ({\englishfont Parallel Resonance / Antiresonance})៖
 	\begin{itemize}[itemsep=0.5pt, topsep=0.5pt, leftmargin=1.2em]
-		\item ប្រេកង់មុំ និងប្រេកង់រ៉េសូណង់ ៖ $\omega_0 = \dfrac{1}{\sqrt{LC}} \iff f_0 = \dfrac{1}{2\pi\sqrt{LC}}$។
-		\item មុំផាស $\varphi = 0 \implies \tan\varphi = 0$ ៖ ចរន្តសរុប $i(t)$ និងតង់ស្យុង $v(t)$ \textbf{ស្របផាសគ្នា}។
-		\item អាំប៉េដង់សៀគ្វីឡើងដល់កម្រិត\textbf{អតិបរមា} ៖ $Z_{\max} = R$ (ព្រោះសមាសភាគរេអាក់តង់នៃខ្នែង $LC$ ទូទាត់គ្នាសូន្យ)។
-		\item ចរន្តស្រូបពីប្រភពធ្លាក់ចុះដល់កម្រិត\textbf{អប្បបរមា} ៖ $I_{\min} = \dfrac{V}{Z_{\max}} = \dfrac{V}{R} = I_R$។
-		\item \textbf{ចរន្តអាង និងកត្តាគុណភាព $Q$ ៖} ក្នុងរង្វិលជុំបិទ $LC$ មានចរន្តយោលខ្លាំង $I_{\text{tank}} = I_{L\max} = I_{C\max} = Q \cdot I_{\min}$ ដោយ $Q = R C \omega_0 = R\sqrt{\dfrac{C}{L}}$ ជាកត្តាគុណភាព (បាតុភូតពង្រីកចរន្ត)។
+		\item ប្រេកង់មុំ និងប្រេកង់រ៉េសូណង់៖ $\omega_0 = \dfrac{1}{\sqrt{LC}} \iff f_0 = \dfrac{1}{2\pi\sqrt{LC}}$។
+		\item មុំផាស $\varphi = 0 \implies \tan\varphi = 0$៖ ចរន្តសរុប $i(t)$ និងតង់ស្យុង $v(t)$ \textbf{ស្របផាសគ្នា}។
+		\item អាំប៉េដង់សៀគ្វីឡើងដល់កម្រិត\textbf{អតិបរមា}៖ $Z_{\max} = R$ (ព្រោះសមាសភាគរេអាក់តង់នៃខ្នែង $LC$ ទូទាត់គ្នាសូន្យ)។
+		\item ចរន្តស្រូបពីប្រភពធ្លាក់ចុះដល់កម្រិត\textbf{អប្បបរមា}៖ $I_{\min} = \dfrac{V}{Z_{\max}} = \dfrac{V}{R} = I_R$។
+		\item \textbf{ចរន្តផ្ទុក និងកត្តាគុណភាព $Q$៖} ក្នុងរង្វិលជុំបិទ $LC$ មានចរន្តយោលខ្លាំង $I_{\text{tank}} = I_{L\max} = I_{C\max} = Q \cdot I_{\min}$ ដោយ $Q = R C \omega_0 = R\sqrt{\dfrac{C}{L}}$ ជាកត្តាគុណភាព (បាតុភូតពង្រីកចរន្ត)។
 	\end{itemize}
 \end{enumerate}
 
@@ -4588,23 +4604,23 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 	fontupper=\small
 ]
 	\raggedright
-	\textbf{\textcolor{brownheader}{គំនិតគ្រឹះ ៖ ចរន្តអាង និងកត្តាគុណភាព $Q$ នៃសៀគ្វីខ្នែង ៖}}
+	\textbf{\textcolor{brownheader}{គំនិតគ្រឹះ៖ ចរន្តផ្ទុក និងកត្តាគុណភាព $Q$ នៃសៀគ្វីខ្នែង៖}}
 	\par\vspace{2pt}
 	\begin{itemize}[itemsep=1pt, topsep=1pt, parsep=0pt, leftmargin=1.2em]
-		\item \textbf{ចរន្តអាង ({\englishfont Tank Current}) ៖} ពេលរ៉េសូណង់ ចរន្តប្រភពធ្លាក់ដល់អប្បបរមា $I_{\min} = V/R$ ដើម្បីប៉ះប៉ូវថាមពលកម្ដៅក្នុង $R$។ ក្នុងរង្វិលជុំបិទ $LC$ មានចរន្តយោលខ្លាំង $I_{\text{tank}} = Q \cdot I_{\min}$ ផ្លាស់ប្តូរថាមពលរវាង $L$ និង $C$។
-		\item \textbf{កត្តាគុណភាព $Q$ ៖} $Q = R\sqrt{C/L}$ សមាមាត្រនឹង $R$ (ផ្ទុយពីស៊េរីដែល $Q \propto 1/R$)។ កាលណា $R \to \infty$ ($LC$ សុទ្ធ) នាំឱ្យ $Q \to \infty$ និង $I \to 0$ ដូចផ្នែក ៥.៣។
+		\item \textbf{ចរន្តផ្ទុក ({\englishfont Tank Current})៖} ពេលរ៉េសូណង់ ចរន្តប្រភពធ្លាក់ដល់អប្បបរមា $I_{\min} = V/R$ ដើម្បីប៉ះប៉ូវថាមពលកម្ដៅក្នុង $R$។ ក្នុងរង្វិលជុំបិទ $LC$ មានចរន្តយោលខ្លាំង $I_{\text{tank}} = Q \cdot I_{\min}$ ផ្លាស់ប្តូរថាមពលរវាង $L$ និង $C$។
+		\item \textbf{កត្តាគុណភាព $Q$៖} $Q = R\sqrt{C/L}$ សមាមាត្រនឹង $R$ (ផ្ទុយពីស៊េរីដែល $Q \propto 1/R$)។ កាលណា $R \to \infty$ ($LC$ សុទ្ធ) នាំឱ្យ $Q \to \infty$ និង $I \to 0$ ដូចផ្នែក ៥.៣។
 	\end{itemize}
 \end{tcolorbox}
 \end{center}
 
 \pagebreak
-\begin{formulabox}[breakable=false, top=6pt, bottom=6pt]{ប្រអប់សំយោគ ៖ ភាពស៊ីមេទ្រី (Duality) រវាងសៀគ្វី $RLC$ ស៊េរី និងខ្នែង}
+\begin{formulabox}[breakable=false, top=6pt, bottom=6pt]{ប្រអប់សំយោគ៖ ភាពស៊ីមេទ្រី (Duality) រវាងសៀគ្វី $RLC$ ស៊េរី និងខ្នែង}
 	\raggedright
 	\small
-	ក្នុងរូបវិទ្យានិងវិស្វកម្មអគ្គិសនី សៀគ្វីស៊េរី និងសៀគ្វីខ្នែងមានទំនាក់ទំនងស៊ីមេទ្រីបែបឆ្លុះបញ្ចាំង ({\englishfont Dual Pairs}) ដ៏ល្អឥតខ្ចោះ ៖
+	ក្នុងរូបវិទ្យានិងវិស្វកម្មអគ្គិសនី សៀគ្វីស៊េរី និងសៀគ្វីខ្នែងមានទំនាក់ទំនងស៊ីមេទ្រី៖
 	\begin{itemize}[itemsep=1.5pt, topsep=1pt, parsep=0pt, leftmargin=1.3em]
-		\item \textbf{អថេរគោល និងច្បាប់គៀឆុក ៖} ក្នុងស៊េរី ចរន្ត $i$ រួម $\implies$ ប្រើច្បាប់តង់ស្យុង (KVL)។ ក្នុងខ្នែង តង់ស្យុង $v$ រួម $\implies$ ប្រើច្បាប់ចរន្ត (KCL)។
-		\item \textbf{ការត្រឡប់សញ្ញាផាស ៖} ក្នុងស៊េរី $\vec{V}_L$ ចង្អុលឡើង ($+\pi/2$) នាំឱ្យ $\tan\varphi = \dfrac{X_L - X_C}{R}$ ($L$ នាំមុខ)។ ផ្ទុយទៅវិញ ក្នុងខ្នែង $\vec{I}_C$ ចង្អុលឡើង ($+\pi/2$) នាំឱ្យ $\tan\varphi = R\left(C\omega - \dfrac{1}{L\omega}\right)$ ($C$ នាំមុខវិញ)។
+		\item \textbf{អថេរគោល និងច្បាប់គៀឆុក៖} ក្នុងស៊េរី ចរន្ត $i$ រួម $\implies$ ប្រើច្បាប់តង់ស្យុង (KVL)។ ក្នុងខ្នែង តង់ស្យុង $v$ រួម $\implies$ ប្រើច្បាប់ចរន្ត (KCL)។
+		\item \textbf{ការត្រឡប់សញ្ញាផាស៖} ក្នុងស៊េរី $\vec{V}_L$ ចង្អុលឡើង ($+\pi/2$) នាំឱ្យ $\tan\varphi = \dfrac{X_L - X_C}{R}$ ($L$ នាំមុខ)។ ផ្ទុយទៅវិញ ក្នុងខ្នែង $\vec{I}_C$ ចង្អុលឡើង ($+\pi/2$) នាំឱ្យ $\tan\varphi = R\left(C\omega - \dfrac{1}{L\omega}\right)$ ($C$ នាំមុខវិញ)។
 	\end{itemize}
 
 	\vspace{0.4em}
@@ -4620,7 +4636,7 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 		\hline
 		\textbf{អថេររួម} & ចរន្តរួម $i(t) = I_{\max}\sin(\omega t)$ & តង់ស្យុងរួម $v(t) = V_{\max}\sin(\omega t)$ \\
 		\hline
-		\textbf{ច្បាប់គៀឆុក} & KVL ៖ $v = v_R + v_L + v_C$ & KCL ៖ $i = i_R + i_L + i_C$ \\
+		\textbf{ច្បាប់គៀឆុក} & KVL៖ $v = v_R + v_L + v_C$ & KCL៖ $i = i_R + i_L + i_C$ \\
 		\hline
 		\textbf{ដ្យាក្រាមប្រេណែល} & ត្រីកោណតង់ស្យុង \newline ($\vec{V}_R \parallel \vec{I}$, $\vec{V}_L \uparrow$, $\vec{V}_C \downarrow$) & ត្រីកោណចរន្ត \newline ($\vec{I}_R \parallel \vec{V}$, $\vec{I}_C \uparrow$, $\vec{I}_L \downarrow$) \\
 		\hline
@@ -4632,14 +4648,621 @@ $\vcenter{\hbox{\large\kstarfour}}$ \textbf{ធ្វើដូចគ្នាន
 		\hline
 		\textbf{ពេលរ៉េសូណង់} & $Z_{\min} = R \implies I_{\max} = \dfrac{V}{R}$ & $Z_{\max} = R \implies I_{\min} = \dfrac{V}{R}$ \\
 		\hline
-		\textbf{កត្តា $Q$ និងការពង្រីក} & $Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}}$ \newline ពង្រីកតង់ស្យុង ៖ $V_L = V_C = QV$ & $Q = R\sqrt{\dfrac{C}{L}}$ \newline ពង្រីកចរន្ត ៖ $I_L = I_C = QI$ \\
+		\textbf{កត្តា $Q$ និងការពង្រីក} & $Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}}$ \newline ពង្រីកតង់ស្យុង៖ $V_L = V_C = QV$ & $Q = R\sqrt{\dfrac{C}{L}}$ \newline ពង្រីកចរន្ត៖ $I_L = I_C = QI$ \\
 		\hline
-		\textbf{មុខងារក្នុងការអនុវត្ត} & សៀគ្វីសម្រាំងយកប្រេកង់ ({\englishfont Acceptor}) & សៀគ្វីច្រានចោលប្រេកង់ ({\englishfont Rejector / Tank}) \\
+		\textbf{មុខងារក្នុងការអនុវត្ត} & សៀគ្វីទទួលយកប្រេកង់ ({\englishfont Acceptor}) & សៀគ្វីច្រានចោលប្រេកង់ ({\englishfont Rejector / Tank}) \\
 		\hline
 	\end{tabularx}%
 	\endgroup
 \end{formulabox}
 
+\khmertopic{៦. អានុភាពមធ្យមនៃសៀគ្វី $RLC$ និងកត្តាអានុភាពនៃសៀគ្វីចរន្តឆ្លាស់ ({\englishfont Average Power \& Power Factor})}
+
+\vspace{0.2em}
+\noindent
+អានុភាពមធ្យមនៃកំណាត់សៀគ្វី $RLC$ គឺជាផលចែករវាងថាមពលអគ្គិសនីសរុបដែលសៀគ្វីប្រើប្រាស់ក្នុងមួយខួប (ឬក្នុងមួយរយៈពេល) និងរយៈពេលនោះ។ វាត្រូវបានកំណត់ដោយរូបមន្ត៖
+
+\begin{center}
+	$\boxed{P = \dfrac{1}{2} V_{\max} I_{\max} \cos\varphi = V_{\mathrm{rms}} I_{\mathrm{rms}} \cos\varphi}$ \quad (៥៥)
+\end{center}
+
+\noindent
+ដែល៖
+\begin{itemize}[itemsep=2pt, topsep=2pt, leftmargin=1.6em]
+	\item $P$ (ឬ $P_{\mathrm{avg}}$)៖ អានុភាពមធ្យម ឬអានុភាពសកម្ម ({\englishfont Real / Active Power}) គិតជាវ៉ាត់ ($\text{W}$)
+	\item $V_{\mathrm{rms}} = \dfrac{V_{\max}}{\sqrt{2}}$៖ តង់ស្យុងប្រសិទ្ធនៃប្រភព ({\englishfont RMS Voltage}) គិតជាវ៉ុល ($\text{V}$)
+	\item $I_{\mathrm{rms}} = \dfrac{I_{\max}}{\sqrt{2}}$៖ អាំងតង់ស៊ីតេចរន្តប្រសិទ្ធ ({\englishfont RMS Current}) គិតជាអំពែ ($\text{A}$)
+	\item $V_{\max}$ និង $I_{\max}$៖ តង់ស្យុងអតិបរមា ($\text{V}$) និងចរន្តអតិបរមា ($\text{A}$)
+	\item $\cos\varphi = \dfrac{R}{Z}$៖ \textbf{កត្តាអានុភាព} ({\englishfont Power Factor}) នៃសៀគ្វី (គ្មានខ្នាត ដោយ $0 \le \cos\varphi \le 1$)
+\end{itemize}
+
+\vspace{0.2em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ប្រអប់ជំនួយគណិតវិទ្យា៖ ហេតុអ្វីបានជាមានកត្តា $\cos\varphi$ និងមេគុណ $\frac{1}{2}$?}}
+	\par\vspace{3pt}
+	តាមនិយមន័យ អានុភាពខណៈគឺ $p(t) = v(t) \cdot i(t) = V_{\max}\sin(\omega t) \cdot I_{\max}\sin(\omega t - \varphi)$ ។\\
+	អនុវត្តរូបមន្តត្រីកោណមាត្រ $\sin A \sin B = \dfrac{1}{2}\left[\cos(A - B) - \cos(A + B)\right]$៖
+	\[ p(t) = \underbrace{\dfrac{1}{2} V_{\max} I_{\max} \cos\varphi}_{\text{ផ្នែកថេរធៀបនឹងពេល (អានុភាពមធ្យម)}} \;-\; \underbrace{\dfrac{1}{2} V_{\max} I_{\max} \cos(2\omega t - \varphi)}_{\text{ផ្នែកលំយោលប្រេកង់ } 2\omega \text{ (មធ្យមស្មើ } 0 \text{ ក្នុងមួយខួប)}} \]
+	ដូចនេះ តម្លៃមធ្យមនៃអានុភាពក្នុងមួយខួប គឺនៅសល់ត្រឹមតែផ្នែកថេរ $P = \dfrac{1}{2} V_{\max} I_{\max} \cos\varphi = V_{\mathrm{rms}} I_{\mathrm{rms}} \cos\varphi$ ។
+}
+
+\vspace{0.6em}
+\noindent
+\textbf{ការគណនាអានុភាពមធ្យមតាមគ្រឿងបង្គុំនីមួយៗ៖}
+
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=5pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{អានុភាពមធ្យមនៃរេស៊ីស្តង់ $R$៖}\\
+	ដោយសារតង់ស្យុង និងចរន្តនៃគោលរេស៊ីស្តង់ស្របផាសនឹងគ្នា ($\varphi = 0\,\mathrm{rad}$)៖
+	\[ \text{នាំឱ្យ៖} \quad \cos\varphi = \cos(0) = 1 \]
+	ដូចនេះ អានុភាពមធ្យមលើរេស៊ីស្តង់ គឺ៖
+	\begin{center}
+		$\boxed{P_R = \dfrac{1}{2} V_{R\max} I_{\max} = V_{R\mathrm{rms}} I_{\mathrm{rms}} = R I_{\mathrm{rms}}^2 = \dfrac{1}{2} R I_{\max}^2}$ \quad (៥៦)
+	\end{center}
+	រេស៊ីស្តង់ជាគ្រឿងបង្គុំតែមួយគត់ដែល\textbf{ស៊ីអានុភាពពិតប្រាកដ} ដោយបម្លែងថាមពលអគ្គិសនីទាំងអស់ទៅជាកម្ដៅ (តាមច្បាប់ស៊ូល)។
+
+	\item \textbf{អានុភាពមធ្យមនៃប៊ូប៊ីនសុទ្ធ $L$៖}\\
+	ដោយសារតង់ស្យុងនៃគោលប៊ូប៊ីនសុទ្ធលឿនផាសជាងចរន្តនូវមុំ $\varphi = +\dfrac{\pi}{2}\,\mathrm{rad}$៖
+	\[ \text{នាំឱ្យ៖} \quad \cos\varphi = \cos\left(+\dfrac{\pi}{2}\right) = 0 \]
+	ដូចនេះ អានុភាពមធ្យមលើប៊ូប៊ីនសុទ្ធ គឺ៖
+	\begin{center}
+		$\boxed{P_L = V_{L\mathrm{rms}} I_{\mathrm{rms}} \cos\left(+\dfrac{\pi}{2}\right) = 0\,\text{W}}$ \quad (៥៧)
+	\end{center}
+
+	\item \textbf{អានុភាពមធ្យមនៃកុងដង់សាទ័រសុទ្ធ $C$៖}\\
+	ដោយសារតង់ស្យុងនៃគោលកុងដង់សាទ័រសុទ្ធយឺតផាសជាងចរន្តនូវមុំ $\varphi = -\dfrac{\pi}{2}\,\mathrm{rad}$៖
+	\[ \text{នាំឱ្យ៖} \quad \cos\varphi = \cos\left(-\dfrac{\pi}{2}\right) = 0 \]
+	ដូចនេះ អានុភាពមធ្យមលើកុងដង់សាទ័រសុទ្ធ គឺ៖
+	\begin{center}
+		$\boxed{P_C = V_{C\mathrm{rms}} I_{\mathrm{rms}} \cos\left(-\dfrac{\pi}{2}\right) = 0\,\text{W}}$ \quad (៥៨)
+	\end{center}
+\end{enumerate}
+
+\vspace{0.3em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{សន្និដ្ឋានអំពីថាមពល និងកត្តាអានុភាពក្នុងសៀគ្វី $RLC$៖}}
+	\par\vspace{2pt}
+	\begin{itemize}[itemsep=3pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item \textbf{ការរក្សាថាមពល៖} នៅពេលសៀគ្វី $RLC$ ដំណើរការដោយប្រភពចរន្តឆ្លាស់ ថាមពលអគ្គិសនីត្រូវបានបែងចែកជាពីរផ្នែក៖ ផ្នែកមួយត្រូវផ្ទុកបណ្ដោះអាសន្នទៅវិញទៅមកក្នុងកុងដង់សាទ័រ (ដែនអគ្គិសនី) និងប៊ូប៊ីន (ដែនម៉ាញេទិក) ហើយផ្នែកមួយទៀតត្រូវស៊ី និងខាតបង់ជាកម្ដៅដោយរេស៊ីស្តង់។
+		\item នៅខណៈណាមួយនៃដំណើរការសៀគ្វី ផលបូកថាមពលដែលផ្ទុកក្នុង $L$ និង $C$ មានតម្លៃថេរ។ ដូច្នេះ \textbf{ថាមពលអគ្គិសនីសរុបដែលប្រភពបានបញ្ចេញ គឺស្មើនឹងថាមពលដែលស៊ីដោយរេស៊ីស្តង់ $R$ នៃសៀគ្វីទាំងស្រុង}៖
+		\[ P_{\text{total}} = P_R = R I_{\mathrm{rms}}^2 \]
+		\item \textbf{ករណីរ៉េសូណង់អគ្គិសនី ($Z_L = Z_C$)៖} នាំឱ្យ $Z = R$ និង $\cos\varphi = 1$។ សៀគ្វីស្រូបអានុភាពពីប្រភពបានអតិបរមា៖
+		\[ P_{\max} = V_{\mathrm{rms}} I_{\mathrm{rms}} = \dfrac{V_{\mathrm{rms}}^2}{R} \]
+	\end{itemize}
+}
+
+\khmertopic{៧. ត្រង់ស្វូម៉ាទ័រ ({\englishfont Transformer})}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+	\vspace{0pt}
+	\raggedright
+	\textbf{ត្រង់ស្វូម៉ាទ័រ} (ឬហៅកាត់ថា \textbf{ត្រង់ស្វូ}) គឺជាឧបករណ៍អគ្គិសនីអសកម្មសម្រាប់ដំឡើង ឬទម្លាក់តង់ស្យុងឆ្លាស់ ដោយរក្សាប្រេកង់ឱ្យនៅដដែល តាមរយៈគោលការណ៍អាំងឌុចស្យុងទៅវិញទៅមកនៃដែនម៉ាញេទិក ({\englishfont Mutual Induction})។
+
+	\vspace{0.4em}
+	\textbf{រចនាសម្ព័ន្ធរបស់ត្រង់ស្វូបង្កឡើងពី៖}
+	\begin{itemize}[itemsep=3pt, topsep=2pt, leftmargin=1.4em]
+		\item \textbf{ស្នូលដែក ({\englishfont Iron Core})៖} ផ្សំឡើងពីបន្ទះដែកថែបទន់ស្ដើងៗស្រោបដោយអ៊ីសូឡង់ផ្គុំចូលគ្នា ដើម្បីកាត់បន្ថយចរន្តអេឌី ({\englishfont Eddy Current}) និងជួយប្រមូលផ្ដុំភ្លុចម៉ាញេទិក $\Phi_B$ ឱ្យឆ្លងកាត់ស្ទើរតែទាំងស្រុង។
+		\item \textbf{របុំទី១ ឬរបុំបឋម ({\englishfont Primary Coil})៖} មានចំនួនស្ពៀ $N_1$ ភ្ជាប់ទៅនឹងប្រភពតង់ស្យុងឆ្លាស់ចូល $V_1$។
+		\item \textbf{របុំទី២ ឬរបុំមធ្យម ({\englishfont Secondary Coil})៖} មានចំនួនស្ពៀ $N_2$ ភ្ជាប់ទៅកាន់បន្ទុកប្រើប្រាស់ ដើម្បីបញ្ចេញតង់ស្យុង $V_2$។
+	\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{0pt}
+	\centering
+	\khmerphoto[0.92\linewidth]{img/transformer.png}{រូបទី៥៨៖ រចនាសម្ព័ន្ធទូទៅនៃត្រង់ស្វូម៉ាទ័រ}
+\end{minipage}
+
+\vspace{0.6em}
+\noindent
+\khmersubtopic{៧.១. គោលការណ៍ដំណើរការនៃត្រង់ស្វូម៉ាទ័រ៖}
+
+\noindent
+នៅពេលប្រភពតង់ស្យុងឆ្លាស់ $v_1(t) = V_{\max(1)}\sin(\omega t)$ ត្រូវបានភ្ជាប់ទៅនឹងរបុំទី១ ចរន្តឆ្លាស់ $i_1(t)$ បង្កើតបានជាដែនម៉ាញេទិកប្រែប្រួលក្នុងស្នូលដែក។ ភ្លុចម៉ាញេទិកប្រែប្រួល $\Phi_B$ នេះត្រូវបញ្ជូនតាមស្នូលដែកឆ្លងកាត់របុំទី២។
+
+\vspace{0.3em}
+\noindent
+តាមច្បាប់ហ្វារ៉ាដេយនៃអាំងឌុចស្យុងអេឡិចត្រូម៉ាញេទិក បម្រែបម្រួលភ្លុចម៉ាញេទិកបង្កើតឱ្យមានកម្លាំងអគ្គិសនីចលករអាំងឌ្វី ($e$) លើរបុំនីមួយៗ៖
+\begin{itemize}[itemsep=2pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{កម្លាំងអគ្គិសនីចលករនៅរបុំទី១៖}
+	\[ e_1 = -N_1 \dfrac{d\Phi_B}{dt} \qquad (\text{A}) \]
+	\item \textbf{កម្លាំងអគ្គិសនីចលករនៅរបុំទី២៖}
+	\[ e_2 = -N_2 \dfrac{d\Phi_B}{dt} \qquad (\text{B}) \]
+\end{itemize}
+
+\noindent
+ធ្វើផលធៀបរវាងសមីការ $(\text{B})$ និង $(\text{A})$ យើងបាន៖
+\[ \dfrac{e_2}{e_1} = \dfrac{-N_2 \dfrac{d\Phi_B}{dt}}{-N_1 \dfrac{d\Phi_B}{dt}} \implies \dfrac{e_2}{e_1} = \dfrac{N_2}{N_1} \]
+
+\vspace{0.3em}
+\noindent
+ចំពោះត្រង់ស្វូម៉ាទ័រល្អឥតខ្ចោះ ({\englishfont Ideal Transformer}) ដោយមិនគិតរេស៊ីស្តង់នៃខ្សែរុំ និងការលេចធ្លាយភ្លុចម៉ាញេទិក តង់ស្យុងរវាងគោលរបុំនីមួយៗស្មើនឹងកម្លាំងអគ្គិសនីចលករអាំងឌ្វី ($v_1 = e_1$ និង $v_2 = e_2$)៖
+\[ \dfrac{V_{\max(2)}\sin(\omega t)}{V_{\max(1)}\sin(\omega t)} = \dfrac{N_2}{N_1} \]
+
+\begin{center}
+	$\boxed{\dfrac{V_{\max(2)}}{V_{\max(1)}} = \dfrac{N_2}{N_1}}$ \quad (៥៩)
+\end{center}
+
+\noindent
+ដោយសារតម្លៃប្រសិទ្ធ $V = \dfrac{V_{\max}}{\sqrt{2}} \iff V_{\max} = \sqrt{2}V$ យើងទាញបានផលធៀបបម្លែងតង់ស្យុងប្រសិទ្ធ៖
+\[ \dfrac{\sqrt{2}V_2}{\sqrt{2}V_1} = \dfrac{N_2}{N_1} \]
+
+\begin{center}
+	$\boxed{\dfrac{V_2}{V_1} = \dfrac{N_2}{N_1} = k}$ \quad (៦០)
+\end{center}
+ដែល $k$ ហៅថា \textbf{ផលធៀបបម្លែងនៃត្រង់ស្វូម៉ាទ័រ} ({\englishfont Transformation Ratio})។
+
+\vspace{0.5em}
+\noindent
+\khmersubtopic{៧.២. ចំណាត់ថ្នាក់នៃត្រង់ស្វូម៉ាទ័រ៖}
+
+\noindent
+ផ្អែកលើផលធៀបបម្លែង $k = \dfrac{N_2}{N_1}$ ត្រង់ស្វូម៉ាទ័រត្រូវបែងចែកជាពីរប្រភេទ៖
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=4pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{ត្រង់ស្វូដំឡើងតង់ស្យុង ឬស៊ួកទ័រ ({\englishfont Step-up Transformer})៖}
+	\[ \dfrac{N_2}{N_1} > 1 \iff N_2 > N_1 \quad \Longrightarrow \quad k > 1 \quad \text{និង} \quad V_2 > V_1 \]
+	មានចំនួនស្ពៀរបុំទី២ ច្រើនជាងរបុំទី១ ប្រើប្រាស់សម្រាប់ដំឡើងតង់ស្យុងឱ្យខ្ពស់ (ដូចជានៅស្ថានីយផលិតអគ្គិសនីមុនពេលបញ្ជូនតាមខ្សែបណ្ដាញតង់ស្យុងខ្ពស់)។
+
+	\item \textbf{ត្រង់ស្វូទម្លាក់តង់ស្យុង ឬស៊ូទ័រ ({\englishfont Step-down Transformer})៖}
+	\[ \dfrac{N_2}{N_1} < 1 \iff N_2 < N_1 \quad \Longrightarrow \quad k < 1 \quad \text{និង} \quad V_2 < V_1 \]
+	មានចំនួនស្ពៀរបុំទី២ តិចជាងរបុំទី១ ប្រើប្រាស់សម្រាប់ទម្លាក់តង់ស្យុងឱ្យទាបមកកម្រិតសុវត្ថិភាព (ដូចជាត្រង់ស្វូតាមដងផ្លូវទម្លាក់មក $230\,\text{V}$ និងក្នុងឆ្នាំងសាកទូរស័ព្ទ)។
+\end{enumerate}
+
+\vspace{0.3em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ការរក្សាអានុភាព និងទំនាក់ទំនងចរន្តក្នុងត្រង់ស្វូ ({\englishfont Power \& Current Relation})៖}}
+	\par\vspace{2pt}
+	ចំពោះត្រង់ស្វូម៉ាទ័រល្អប្រសើរ (ទិន្នផល $100\%$ គ្មានការខាតបង់ថាមពល) អានុភាពចូលនៅរបុំទី១ ស្មើនឹងអានុភាពចេញនៅរបុំទី២៖
+	\[ P_1 = P_2 \iff V_1 I_1 \cos\varphi_1 = V_2 I_2 \cos\varphi_2 \]
+	បើបន្ទុកមានកត្តាអានុភាពដូចគ្នា ($\cos\varphi_1 \approx \cos\varphi_2$) នាំឱ្យ៖
+	\[ V_1 I_1 = V_2 I_2 \iff \dfrac{V_2}{V_1} = \dfrac{I_1}{I_2} \]
+	ដូចនេះ រូបមន្តទូទៅពេញលេញនៃត្រង់ស្វូម៉ាទ័រ គឺ៖
+	\begin{center}
+		$\boxed{k = \dfrac{V_2}{V_1} = \dfrac{N_2}{N_1} = \dfrac{I_1}{I_2}}$
+	\end{center}
+	\textbf{ចំណាំសំខាន់៖} ត្រង់ស្វូអាចដំឡើងតែតង់ស្យុងប៉ុណ្ណោះ តែ\textbf{មិនអាចបង្កើតថាមពលបន្ថែមបានទេ}។ នៅពេលតង់ស្យុងកើនឡើង ($V_2 > V_1$) ចរន្តត្រូវតែថយចុះ ($I_2 < I_1$) ជាចាំបាច់ដើម្បីរក្សាអានុភាព។
+}
+
+\khmersubtopic{៧.៣. កំហាតថាមពល និងទិន្នផលនៃត្រង់ស្វូម៉ាទ័រ ({\englishfont Energy Losses and Efficiency of Transformer})}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+    \vspace{0pt}
+    \raggedright
+    នៅក្នុងការអនុវត្តជាក់ស្ដែង ត្រង់ស្វូម៉ាទ័រមិនមែនជាឧបករណ៍ល្អឥតខ្ចោះឡើយ។ គេសង្កេតឃើញថាត្រង់ស្វូតែក្ដៅ និងបញ្ចេញកម្ដៅទៅក្នុងបរិយាកាសជុំវិញ។
+
+    \vspace{0.4em}
+    \textbf{មូលហេតុចម្បងដែលនាំឱ្យបាត់បង់ថាមពល ៖}
+    \begin{itemize}[itemsep=2pt, topsep=1pt, leftmargin=1.5em]
+		\item \textbf{កំហាតស៊ូលក្នុងខ្សែរុំ ($P_J = R I^2$) ៖} បណ្ដាលមកពីចរន្តអគ្គិសនីឆ្លងកាត់ខ្សែស្ពាន់នៃរបុំទាំងពីរដែលមានរេស៊ីស្តង់ $R$ ដោយបម្លែងថាមពលអគ្គិសនីមួយផ្នែកទៅជាកម្ដៅ។
+        \item \textbf{កំហាតក្នុងស្នូលដែក (ចរន្តអេឌី) ៖} បម្រែបម្រួលភ្លុចម៉ាញេទិកឆ្លងកាត់ស្នូលដែក បង្កើតឱ្យមាន\textbf{ចរន្តអេឌី} ({\englishfont Eddy Current}) ដែលមានទិសដៅវិលវល់នៅក្នុងដុំលោហៈ បង្កជាកម្ដៅ និងការខាតបង់ថាមពល។
+    \end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+    \vspace{0pt}
+    \centering
+    \begin{circuitikz}[line width=1.1pt, scale=0.78, transform shape]
+        % Primary terminals and coil
+        \draw (0,2.1) node[above] {\small $A_1$} to[short, o-] (0.8,2.1)
+        to[cute inductor] (0.8,0.3) to[short, -o] (0,0.3) node[below] {\small $B_1$};
+
+        % Iron core lines
+        \draw[line width=1.3pt] (1.1,2.1) -- (1.1,0.3);
+        \draw[line width=1.3pt] (1.3,2.1) -- (1.3,0.3);
+
+        % Secondary terminals and coil
+        \draw (1.6,2.1) to[cute inductor] (1.6,0.3)
+        to[short, -o] (2.4,0.3) node[below] {\small $B_2$};
+        \draw (1.6,2.1) to[short, -o] (2.4,2.1) node[above] {\small $A_2$};
+
+        % Labels
+        \node at (0.4,1.2) [left] {\small $N_1$};
+        \node at (2.0,1.2) [right] {\small $N_2$};
+        \draw[->, >=Stealth, bacpurple, line width=1.2pt] (0.2,2.35) -- (0.7,2.35) node[midway, above] {\footnotesize $I_1$};
+        \draw[->, >=Stealth, bacpurple, line width=1.2pt] (1.7,2.35) -- (2.2,2.35) node[midway, above] {\footnotesize $I_2$};
+
+        % Power flow arrows
+        \draw[->, >=Stealth, thick, primary] (-0.8,1.2) -- (-0.3,1.2) node[midway, above] {\small $P_1$};
+        \draw[->, >=Stealth, thick, primary] (2.7,1.2) -- (3.2,1.2) node[midway, above] {\small $P_2$};
+        \draw[->, >=Stealth, very thick, red!85!black] (1.2,0.3) -- (1.2,-0.55)
+        node[below=1pt] {\footnotesize $P_J$ \scriptsize (កម្ដៅខាតបង់)};
+    \end{circuitikz}
+    \par\vspace{0.12cm}
+    {\khmerpagenum\footnotesize\color{brownheader} រូបទី៥៩៖ តុល្យភាពអានុភាព និងកំហាតកម្ដៅក្នុងត្រង់ស្វូ\par}
+\end{minipage}
+
+\vspace{0.5em}
+\noindent
+\textbf{១. តុល្យភាពអានុភាព ៖}
+
+\noindent
+ដោយសារមានការខាតបង់ថាមពលជាកម្ដៅ អានុភាពចូលនៅរបុំទី១ ($P_1 = V_1 I_1$) ធំជាងអានុភាពចេញនៅរបុំទី២ ($P_2 = V_2 I_2$) ជានិច្ច ៖
+\begin{center}
+    $\boxed{P_1 = P_2 + P_J} \iff \boxed{V_1 I_1 = V_2 I_2 + P_J}$ \quad (៦១)
+\end{center}
+ដែល $P_J = R I^2$ ជាអានុភាពកម្ដៅខាតបង់សរុប (គិតជាវ៉ាត់ $\text{W}$)។
+
+\vspace{0.4em}
+\noindent
+\textbf{២. ទិន្នផលនៃត្រង់ស្វូម៉ាទ័រ ៖}
+
+\noindent
+\textbf{ទិន្នផល} $\eta$ (ឬ $Rd$) នៃត្រង់ស្វូម៉ាទ័រ គឺជាផលធៀបរវាងអានុភាពចេញមានប្រយោជន៍ ($P_2$) និងអានុភាពសរុបដែលស្រូបពីប្រភពចូល ($P_1$) ៖
+\begin{center}
+    $\boxed{\eta = \dfrac{P_2}{P_1} = \dfrac{V_2 I_2}{V_1 I_1}}$ \quad ឬ \quad $\boxed{\eta = \dfrac{P_2}{P_1} \times 100\%}$ \quad (៦២)
+\end{center}
+
+\begin{itemize}[itemsep=2.5pt, topsep=1.5pt, leftmargin=1.6em]
+	\item \textbf{ចំពោះត្រង់ស្វូជាក់ស្ដែង ៖} ដោយសារតែងមានកំហាតកម្ដៅ ($P_J > 0$) នាំឱ្យទិន្នផលតែងតែតូចជាង $1$ ជានិច្ច ៖
+    \[ \eta < 1 \iff \eta < 100\% \]
+    (ក្នុងឧស្សាហកម្ម ត្រង់ស្វូម៉ាទ័រទំនើបមានប្រសិទ្ធភាពខ្ពស់បំផុត ចន្លោះពី $95\%$ ដល់ $99\%$)។
+
+    \item \textbf{ចំពោះត្រង់ស្វូអុីដេអាល់ (គ្មានកំហាតថាមពល $P_J = 0$) ៖} ទិន្នផលពេញលេញ $\eta = 100\% \iff \eta = 1$ ៖
+    \[ P_1 = P_2 \iff V_1 I_1 = V_2 I_2 \]
+    ទាញបានផលធៀបបម្លែងចរន្ត និងតង់ស្យុង ៖
+    \begin{center}
+        $\boxed{\dfrac{V_2}{V_1} = \dfrac{I_1}{I_2} = \dfrac{N_2}{N_1} = k}$ \quad (៦៣)
+    \end{center}
+\end{itemize}
+
+\vspace{0.3em}
+\defbox{
+    \raggedright
+    \textbf{\textcolor{brownheader}{វិធានការបច្ចេកទេសដើម្បីកាត់បន្ថយកំហាតថាមពលក្នុងត្រង់ស្វូម៉ាទ័រ ៖}}
+    \par\vspace{3pt}
+    ដើម្បីកាត់បន្ថយការខាតបង់ និងបង្កើនទិន្នផលត្រង់ស្វូម៉ាទ័រឱ្យដល់កម្រិតខ្ពស់បំផុត វិស្វករអនុវត្តវិធានការសំខាន់ពីរ ៖
+    \begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=2pt, parsep=0pt, leftmargin=1.6em]
+		\item \textbf{កាត់បន្ថយការខាតបង់ថាមពលអគ្គិសនីក្នុងខ្សែរុំ ($P_J$) ៖} គេប្រើប្រាស់ខ្សែចម្លងស្ពាន់សុទ្ធដែលមានរេស៊ីស្តង់តូចមកធ្វើជារបុំទាំងពីរ ដោយជ្រើសយក\textbf{ខ្សែដែលមានមុខកាត់ធំ} (តាមរូបមន្ត $R = \rho \dfrac{l}{A}$ កាលណា $A$ ធំ នាំឱ្យ $R$ តូច) ធ្វើឱ្យកម្ដៅខាតបង់ $P_J = R I^2$ ថយចុះមកកម្រិតអប្បបរមា។
+        \item \textbf{កាត់បន្ថយការខាតបង់ថាមពលក្នុងស្នូលដែក (កាត់បន្ថយចរន្តអេឌី) ៖} គេមិនប្រើស្នូលដែកជាដុំរឹងសុទ្ធឡើយ ផ្ទុយទៅវិញ គេយក\textbf{បន្ទះដែកថែបទន់ស្ដើងៗជាច្រើនមកដាក់ផ្គុំភ្ជាប់គ្នាដោយស្រោបខណ្ឌដាច់ពីគ្នាដោយស្រទាប់អ៊ីសូឡង់} ធ្វើជាស្នូល ដើម្បីកាត់ផ្ដាច់គន្លង និងកាត់បន្ថយការបង្កើតចរន្តអេឌីនៅក្នុងបន្ទះលោហៈ ជួយកាត់បន្ថយកម្ដៅបានយ៉ាងច្រើនបំផុត។
+    \end{enumerate}
+}
 
 
 
+\clearpage
+\khmerlesson{មេរៀនទី៥៖ រលកអេឡិចត្រូម៉ាញេទិក ({\englishfont Electromagnetic Waves})}
+\tanbgdivider
+
+\noindent
+នៅក្នុងជីវភាពរស់នៅប្រចាំថ្ងៃ យើងប្រើប្រាស់រលកអេឡិចត្រូម៉ាញេទិកគ្រប់ពេលវេលាដោយមិនដឹងខ្លួន ចាប់តាំងពីពន្លឺព្រះអាទិត្យដែលបំភ្លឺផែនដី រលកសញ្ញាទូរស័ព្ទដៃ រលក Wi-Fi រហូតដល់រលកវិទ្យុ និងទូរទស្សន៍។ រលកអេឡិចត្រូម៉ាញេទិក គឺជាការរួមផ្សំគ្នាយ៉ាងអស្ចារ្យរវាងដែនអគ្គិសនី និងដែនម៉ាញេទិក ដែលអាចសាយភាយបានទាំងក្នុងមជ្ឈដ្ឋានរូបធាតុ និងក្នុងសុញ្ញាកាស ដោយមិនត្រូវការរូបធាតុទ្រទ្រង់ឡើយ។
+
+\vspace{0.4em}
+\khmertopic{១. ធម្មជាតិនៃរលកអេឡិចត្រូម៉ាញេទិក ({\englishfont Nature of Electromagnetic Waves})}
+
+\vspace{0.2em}
+\noindent
+\khmersubtopic{១.១. គោលការណ៍ម៉ាកស្វែល ({\englishfont Maxwell's Principle}) ៖}
+
+\noindent
+នៅឆ្នាំ ១៨៦៤ រូបវិទូជនជាតិស្កុតឡែន ជេមស៍ ឃ្លើក ម៉ាកស្វែល ({\englishfont James Clerk Maxwell}) បានបូកសរុប និងអភិវឌ្ឍទ្រឹស្ដីអេឡិចត្រូម៉ាញេទិកយ៉ាងពេញលេញ ដោយចង្អុលបង្ហាញនូវគោលការណ៍គ្រឹះពីរ ៖
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{ដែនម៉ាញេទិកប្រែប្រួលតាមពេល} បង្កើតឱ្យមាន\textbf{ដែនអគ្គិសនីអាំងឌ្វី} វិលវល់ជុំវិញវា (ផ្អែកលើច្បាប់ហ្វារ៉ាដេយនៃអាំងឌុចស្យុង)។
+	\item \textbf{ដែនអគ្គិសនីប្រែប្រួលតាមពេល} បង្កើតឱ្យមាន\textbf{ដែនម៉ាញេទិកអាំងឌ្វី} វិលវល់ជុំវិញវា (ទ្រឹស្ដីចរន្តបម្លាស់ទីរបស់ម៉ាកស្វែល)។
+\end{enumerate}
+ដំណើរការបង្កើតគ្នាទៅវិញទៅមកនេះ មិននៅស្ងៀមមួយកន្លែងឡើយ តែវាបង្កើតជាដែនអេឡិចត្រូម៉ាញេទិកមួយដែល\textbf{សាយភាយចេញទៅគ្រប់ទិសទីក្នុងលំហ} ក្រោមទម្រង់ជារលក ដែលគេហៅថា \textbf{រលកអេឡិចត្រូម៉ាញេទិក} ({\englishfont Electromagnetic Wave})។
+
+\vspace{0.4em}
+\noindent
+\khmersubtopic{១.២. លក្ខណៈជារលកទទឹង និងទិសដៅលំយោល ({\englishfont Transverse Wave Nature}) ៖}
+
+\noindent
+រលកអេឡិចត្រូម៉ាញេទិកមានលក្ខណៈជា\textbf{រលកទទឹង} ({\englishfont Transverse Wave}) ជានិច្ច ព្រោះ ៖
+\begin{itemize}[itemsep=3pt, topsep=2pt, leftmargin=1.6em]
+	\item វ៉ិចទ័រដែនអគ្គិសនី $\vec{E}$ និងវ៉ិចទ័រដែនម៉ាញេទិក $\vec{B}$ លំយោលក្នុងទិសដៅកែងគ្នាជានិច្ច ៖
+	\[ \vec{E} \perp \vec{B} \]
+	\item វ៉ិចទ័រទាំងពីរនេះ កែងនឹងទិសដៅសាយភាយនៃរលក $\vec{v}$ (ឬ $\vec{c}$) ជានិច្ច ៖
+	\[ \vec{E} \perp \vec{c} \quad \text{និង} \quad \vec{B} \perp \vec{c} \]
+	\item ដែនទាំងពីរ\textbf{លំយោលស្របផាសនឹងគ្នា} ជានិច្ច (កាលណា $E$ ឡើងដល់តម្លៃអតិបរមា $B$ ក៏ឡើងដល់តម្លៃអតិបរមាដែរ)។
+	\item ទិសដៅនៃវ៉ិចទ័រទាំងបី $(\vec{E}, \vec{B}, \vec{c})$ បង្កើតបានជា\textbf{ត្រីយ៉ាដកែងស្ដាំ} ({\englishfont Right-handed Triad}) តាមវិធានដៃស្ដាំ $\vec{E} \times \vec{B} \parallel \vec{c}$។
+\end{itemize}
+
+\vspace{0.3em}
+\begin{center}
+	\begin{tikzpicture}[x={(0.88cm,0cm)}, y={(0.38cm,0.28cm)}, z={(0cm,0.85cm)}, scale=0.95, transform shape, line width=0.8pt]
+		\def\ampl{1.6}
+
+		% Main coordinate axes
+		\draw[->, >=Stealth, line width=1.1pt] (0,0,0) -- (10.5,0,0) node[right] {\small $x$ (ទិសដៅសាយភាយ $\vec{c}$)};
+		\draw[->, >=Stealth, line width=1.1pt] (0,0,0) -- (0,0,2.4) node[above] {\small $z$ (ដែនអគ្គិសនី $\vec{E}$)};
+		\draw[->, >=Stealth, line width=1.1pt] (0,0,0) -- (0,3.2,0) node[above right] {\small $y$ (ដែនម៉ាញេទិក $\vec{B}$)};
+
+		% Electric field wave (E) in z direction (bacpurple)
+		\draw[line width=1.4pt, bacpurple, samples=120, domain=0:9.425]
+			plot (\x, 0, {\ampl*sin(\x*0.667 r)});
+
+		% Magnetic field wave (B) in y direction (teal)
+		\draw[line width=1.4pt, teal!80!black, samples=120, domain=0:9.425]
+			plot (\x, {\ampl*sin(\x*0.667 r)}, 0);
+
+		% Discrete field vector arrows
+		\foreach \x in {0.5, 1.0, 1.5, 2.356, 3.0, 3.5, 4.0, 5.2, 5.7, 6.2, 7.069, 7.7, 8.2, 8.7} {
+			% E-vector (vertical)
+			\draw[->, >=Stealth, bacpurple, line width=0.85pt] (\x,0,0) -- (\x, 0, {\ampl*sin(\x*0.667 r)});
+			% B-vector (horizontal)
+			\draw[->, >=Stealth, teal!80!black, line width=0.85pt] (\x,0,0) -- (\x, {\ampl*sin(\x*0.667 r)}, 0);
+		}
+
+		% Labels for E and B at peaks
+		\node[bacpurple, font=\small\bfseries] at (2.356, 0, 2.0) {$\vec{E}$};
+		\node[teal!80!black, font=\small\bfseries] at (2.356, 2.05, 0) {$\vec{B}$};
+
+		% Wavelength indicator
+		\draw[<->, >=Stealth, line width=1.0pt, primary] (0, 0, -1.9) -- (9.425, 0, -1.9)
+			node[midway, fill=white, inner sep=2pt] {\small ប្រវែងរលក $\lambda = c T$};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៦០៖ គំរូ 3D នៃរលកអេឡិចត្រូម៉ាញេទិកទទឹង ($\vec{E} \perp \vec{B} \perp \vec{c}$ និង $\vec{E}$ ស្របផាសនឹង $\vec{B}$)\par}
+\end{center}
+
+\vspace{0.4em}
+\noindent
+\khmersubtopic{១.៣. ល្បឿនសាយភាយ និងប្រវែងរលក ({\englishfont Propagation Speed and Wavelength}) ៖}
+
+\noindent
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=4pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{ល្បឿនសាយភាយក្នុងសុញ្ញាកាស ($c$) ៖}\\
+	នៅក្នុងសុញ្ញាកាស រលកអេឡិចត្រូម៉ាញេទិកទាំងអស់សាយភាយដោយល្បឿនថេរដ៏ធំបំផុត ស្មើនឹងល្បឿនពន្លឺ ៖
+	\[ c = \dfrac{1}{\sqrt{\varepsilon_0 \mu_0}} \approx 3 \times 10^8\,\text{m/s} \quad (299\,792\,458\,\text{m/s}) \]
+	ដែល $\varepsilon_0 = 8.85 \times 10^{-12}\,\text{F/m}$ ជាពែរមីទីវីតេអគ្គិសនីនៃសុញ្ញាកាស និង $\mu_0 = 4\pi \times 10^{-7}\,\text{H/m}$ ជាពែរមេអាប៊ីលីតេម៉ាញេទិកនៃសុញ្ញាកាស។
+
+	\vspace{0.2em}
+	ទំនាក់ទំនងគ្រឹះរវាងល្បឿនពន្លឺ $c$, ប្រវែងរលកក្នុងសុញ្ញាកាស $\lambda$, ប្រេកង់ $f$ និងខួប $T$ គឺ ៖
+	\begin{center}
+		$\boxed{c = \lambda f = \dfrac{\lambda}{T}} \iff \boxed{\lambda = \dfrac{c}{f} = c T}$ \quad (៦៤)
+	\end{center}
+
+	\item \textbf{ល្បឿនសាយភាយក្នុងមជ្ឈដ្ឋានរូបធាតុ ($v$) ៖}\\
+	នៅពេលឆ្លងកាត់មជ្ឈដ្ឋានថ្លាណាមួយ (ដូចជាទឹក កញ្ចក់ ខ្យល់) រលកអេឡិចត្រូម៉ាញេទិកសាយភាយដោយល្បឿន $v$ តូចជាងល្បឿនក្នុងសុញ្ញាកាស $c$ ជានិច្ច ($v < c$) ៖
+	\begin{center}
+		$\boxed{v = \dfrac{c}{n} = \lambda_m f}$ \quad (៦៥)
+	\end{center}
+	ដែល $n$ ហៅថា \textbf{សន្ទស្សន៍ចំណាំងបែរនៃមជ្ឈដ្ឋាន} ($n \ge 1$, ចំពោះសុញ្ញាកាស $n = 1$) និង $\lambda_m$ ជាប្រវែងរលកក្នុងមជ្ឈដ្ឋាននោះ។
+\end{enumerate}
+
+\vspace{0.3em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ចំណាំសំខាន់អំពីការឆ្លងកាត់មជ្ឈដ្ឋានខុសគ្នា ៖}}
+	\par\vspace{2pt}
+	នៅពេលរលកអេឡិចត្រូម៉ាញេទិកឆ្លងកាត់ពីមជ្ឈដ្ឋានមួយទៅកាន់មជ្ឈដ្ឋានមួយទៀត ៖
+	\begin{itemize}[itemsep=2pt, topsep=1pt, parsep=0pt, leftmargin=1.5em]
+		\item \textbf{ប្រេកង់ $f$ (និងខួប $T$) នៅដដែលជានិច្ច} (មិនប្រែប្រួលឡើយ) ព្រោះប្រេកង់អាស្រ័យតែនឹងប្រភពបង្កាត់រលកប៉ុណ្ណោះ។
+		\item \textbf{ល្បឿន $v$ និងប្រវែងរលក $\lambda$ ថយចុះ $n$ ដង} ៖
+		\[ v = \dfrac{c}{n} \quad \text{និង} \quad \lambda_m = \dfrac{\lambda}{n} \]
+	\end{itemize}
+}
+
+\vspace{0.6em}
+\khmertopic{២. ស្បិចនៃរលកអេឡិចត្រូម៉ាញេទិក ({\englishfont The Electromagnetic Spectrum})}
+
+\noindent
+\textbf{ស្បិចនៃរលកអេឡិចត្រូម៉ាញេទិក} គឺជាការរៀបចំជាលំដាប់នៃរលកអេឡិចត្រូម៉ាញេទិកគ្រប់ប្រភេទ ទៅតាមលំដាប់នៃប្រវែងរលក $\lambda$ ឬប្រេកង់ $f$ របស់វា។ ក្នុងសុញ្ញាកាស រលកអេឡិចត្រូម៉ាញេទិកទាំងអស់មានល្បឿនស្មើគ្នាគឺ $c \approx 3 \times 10^8\,\text{m/s}$ ដូច្នេះប្រវែងរលក និងប្រេកង់មានសមាមាត្រច្រាសគ្នា ($c = \lambda f$) ៖
+\begin{itemize}[itemsep=2pt, topsep=1pt, leftmargin=1.6em]
+	\item \textbf{ប្រវែងរលក $\lambda$ កាន់តែធំ $\iff$ ប្រេកង់ $f$ កាន់តែតូច $\iff$ ថាមពល $E = hf$ កាន់តែទាប}។
+	\item \textbf{ប្រវែងរលក $\lambda$ កាន់តែខ្លី $\iff$ ប្រេកង់ $f$ កាន់តែធំ $\iff$ ថាមពល $E = hf$ កាន់តែខ្ពស់}។
+\end{itemize}
+
+\vspace{0.3em}
+\noindent
+គេបែងចែកស្បិចនៃរលកអេឡិចត្រូម៉ាញេទិកជា ៧ តំបន់សំខាន់ៗ (រៀបតាមលំដាប់ពីប្រវែងរលកវែង ទៅប្រវែងរលកខ្លីបំផុត) ៖
+
+\vspace{0.3em}
+\begin{center}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{2.6cm}|p{2.6cm}|p{2.8cm}|p{7.2cm}|}
+	\hline
+	\rowcolor{primary!15}
+	\textbf{\textcolor{brownheader}{ប្រភេទរលក}} & 
+	\textbf{\textcolor{brownheader}{ប្រវែងរលក ($\lambda$)}} & 
+	\textbf{\textcolor{brownheader}{ប្រេកង់ ($f$)}} & 
+	\textbf{\textcolor{brownheader}{ប្រភព និងការអនុវត្តសំខាន់ៗ}} \\
+	\hline
+	\textbf{១. រលកវិទ្យុ}\newline({\englishfont Radio Waves}) & 
+	$> 0.1\,\text{m}$\newline($1\,\text{mm} - 100\,\text{km}$) & 
+	$< 3 \times 10^9\,\text{Hz}$\newline($< 3\,\text{GHz}$) & 
+	- បង្កើតដោយចរន្តឆ្លាស់ក្នុងអង់តែន\newline
+	- វិទ្យុ AM/FM, ទូរទស្សន៍, ទំនាក់ទំនងចម្ងាយឆ្ងាយ \\
+	\hline
+	\textbf{២. មីក្រូរលក}\newline({\englishfont Microwaves}) & 
+	$1\,\text{mm} - 0.1\,\text{m}$ & 
+	$3\,\text{GHz} - 300\,\text{GHz}$ & 
+	- បង្កើតដោយបំពង់អេឡិចត្រូនិចពិសេស\newline
+	- ឡមីក្រូវ៉េវ, រ៉ាដាអាកាសចរណ៍, Wi-Fi, 4G/5G \\
+	\hline
+	\textbf{៣. អាំងហ្វ្រាក្រហម}\newline({\englishfont Infrared / IR}) & 
+	$700\,\text{nm} - 1\,\text{mm}$ & 
+	$300\,\text{GHz} - 4.3 \times 10^{14}\,\text{Hz}$ & 
+	- ភាយចេញពីរូបធាតុដែលមានកម្ដៅ\newline
+	- តេឡេបញ្ជា, កាមេរ៉ាវាស់កម្ដៅពេលយប់, វេជ្ជសាស្ត្រ \\
+	\hline
+	\textbf{៤. ពន្លឺមើលឃើញ}\newline({\englishfont Visible Light}) & 
+	$400\,\text{nm} - 700\,\text{nm}$\newline($0.4 - 0.7\,\mu\text{m}$) & 
+	$4.3 \times 10^{14} - 7.5 \times 10^{14}\,\text{Hz}$ & 
+	- ភាយចេញពីព្រះអាទិត្យ, អំពូលភ្លើង\newline
+	- ភ្នែកមនុស្សមើលឃើញ (ស្វាយ $\to$ ក្រហម), រស្មីសំយោគ \\
+	\hline
+	\textbf{៥. អ៊ុលត្រាវីយូឡេ}\newline({\englishfont Ultraviolet / UV}) & 
+	$10\,\text{nm} - 400\,\text{nm}$ & 
+	$7.5 \times 10^{14} - 3 \times 10^{16}\,\text{Hz}$ & 
+	- ភាយពីព្រះអាទិត្យ, ធ្នូភ្លើងផ្សារ\newline
+	- សម្លាប់មេរោគ, ពិនិត្យក្រដាសប្រាក់, ស្រូបដោយអូហ្សូន \\
+	\hline
+	\textbf{៦. កាំរស្មីអ៊ិច}\newline({\englishfont X-Rays}) & 
+	$0.01\,\text{nm} - 10\,\text{nm}$ & 
+	$3 \times 10^{16} - 3 \times 10^{19}\,\text{Hz}$ & 
+	- អេឡិចត្រុងល្បឿនលឿនបុកផ្ទាំងលោហៈធ្ងន់\newline
+	- ថតឆ្លុះឆ្អឹងក្នុងវេជ្ជសាស្ត្រ, ម៉ាស៊ីនស្កេនអាកាសយានដ្ឋាន \\
+	\hline
+	\textbf{៧. កាំរស្មីហ្គាម៉ា}\newline({\englishfont Gamma Rays / $\gamma$}) & 
+	$< 0.01\,\text{nm}$\newline($< 10^{-11}\,\text{m}$) & 
+	$> 3 \times 10^{19}\,\text{Hz}$ & 
+	- បញ្ចេញពីប្រតិកម្មបំបែកនុយក្លេអ៊ែរ\newline
+	- ព្យាបាលជំងឺមហារីក (វិទ្យុសកម្ម), សម្លាប់មេរោគឧបករណ៍ \\
+	\hline
+\end{tabular}
+\par\vspace{0.15cm}
+{\khmerpagenum\small\color{brownheader} តារាងទី១៖ ការបែងចែកស្បិចនៃរលកអេឡិចត្រូម៉ាញេទិក និងការអនុវត្តក្នុងបច្ចេកវិទ្យា\par}
+\end{center}
+
+\vspace{0.3em}
+\defbox{
+	\raggedright
+	\textbf{\textcolor{brownheader}{ច្បាប់ដេកឡូស៊ីក៖ ពណ៌នៃពន្លឺមើលឃើញ ({\englishfont Visible Colors}) ៖}}
+	\par\vspace{4pt}
+	ពន្លឺមើលឃើញចែកចេញជា ៦ ពណ៌គោល (រៀបតាមលំដាប់ប្រវែងរលកកើនឡើងពីខ្លីទៅវែង) ៖
+	\par\vspace{2pt}
+	\centering
+	\small
+	\textbf{ស្វាយ} ($\approx 400\,\text{nm}$) $\;\to\;$ 
+	\textbf{ខៀវ} $\;\to\;$ 
+	\textbf{បៃតង} $\;\to\;$ 
+	\textbf{លឿង} $\;\to\;$ 
+	\textbf{ទឹកក្រូច} $\;\to\;$ 
+	\textbf{ក្រហម} ($\approx 700\,\text{nm}$)
+	\par\vspace{4pt}
+	\raggedright
+	\normalsize
+	ពន្លឺពណ៌ស្វាយមានប្រេកង់ខ្ពស់ជាងគេ និងងាកខ្លាំងជាងគេពេលឆ្លងកាត់ព្រីស ចំណែកពន្លឺពណ៌ក្រហមមានប្រវែងរលកវែងជាងគេ និងងាកតិចជាងគេ។
+}
+
+\vspace{0.6em}
+\khmertopic{៣. ការបញ្ជូន និងការទទួលរលកវិទ្យុ ({\englishfont Radio Transmission and Reception})}
+
+\vspace{0.2em}
+\noindent
+\khmersubtopic{៣.១. គោលការណ៍បញ្ជូន និងទទួលរលកវិទ្យុ ៖}
+
+\noindent
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{ការបញ្ចេញរលក (ការបញ្ជូន) ៖} នៅពេលបន្ទុកអគ្គិសនីផ្លាស់ទីដោយមានសំទុះ (ឬលំយោលទៅមកដោយប្រេកង់ខ្ពស់) នៅក្នុងខ្សែចម្លងចំហ ឬ\textbf{អង់តែនបញ្ជូន} ({\englishfont Transmitting Antenna}) វានឹងបង្កើតដែនអេឡិចត្រូម៉ាញេទិកប្រែប្រួល ហើយសាយភាយចេញទៅក្នុងលំហជារលកវិទ្យុ។
+	\item \textbf{ការស្រូបរលក (ការទទួល) ៖} នៅពេលរលកវិទ្យុសាយភាយមកដល់\textbf{អង់តែនទទួល} ({\englishfont Receiving Antenna}) ដែនអគ្គិសនីនៃរលកនឹងធ្វើឱ្យអេឡិចត្រុងសេរីក្នុងអង់តែនទទួលលំយោលទៅមក បង្កើតបានជាកម្លាំងអគ្គិសនីចលករអាំងឌ្វីឆ្លាស់ ដែលមានប្រេកង់ស្មើនឹងប្រេកង់នៃរលកវិទ្យុដែលមកប៉ះ។
+\end{enumerate}
+
+\vspace{0.4em}
+\noindent
+\khmersubtopic{៣.២. ម៉ូឌុយឡាស្យុងរលកវិទ្យុ ({\englishfont Radio Modulation}) ៖}
+
+\noindent
+សញ្ញាសំឡេង (រលកសូរសំឡេងដែលបម្លែងជាសញ្ញាអគ្គិសនី) មានប្រេកង់ទាបខ្លាំង ($20\,\text{Hz} - 20\,\text{kHz}$) ហៅថា \textbf{សញ្ញាម៉ូឌុយឡូ} ({\englishfont Modulating Signal})។ សញ្ញាប្រេកង់ទាបនេះ មិនអាចសាយភាយទៅឆ្ងាយបានឡើយ ព្រោះវាត្រូវរងការស្រូបបាត់បង់ថាមពលយ៉ាងលឿន និងទាមទារអង់តែនដែលមានប្រវែងវែងរាប់សិបគីឡូម៉ែត្រ។
+
+\par\vspace{3pt}\noindent
+ដើម្បីបញ្ជូនសំឡេងទៅកាន់ចម្ងាយឆ្ងាយ គេត្រូវយកសញ្ញាសំឡេងទៅផ្គួបជាមួយនឹងរលកអេឡិចត្រូម៉ាញេទិកប្រេកង់ខ្ពស់ ($> 100\,\text{kHz}$) ដែលហៅថា \textbf{រលកផ្ទុក} ({\englishfont Carrier Wave})។ ដំណើរការផ្គួបនេះហៅថា \textbf{ម៉ូឌុយឡាស្យុង} ({\englishfont Modulation})។
+
+\begin{itemize}[itemsep=3pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{ម៉ូឌុយឡាស្យុងអំព្លីទុត (AM - {\englishfont Amplitude Modulation}) ៖}\\
+	គេធ្វើឱ្យ\textbf{អំព្លីទុតនៃរលកផ្ទុកប្រែប្រួល} ទៅតាមចង្វាក់នៃសញ្ញាសំឡេង ចំណែកប្រេកង់នៃរលកផ្ទុកនៅរក្សាថេរដដែល។
+	\item \textbf{ម៉ូឌុយឡាស្យុងប្រេកង់ (FM - {\englishfont Frequency Modulation}) ៖}\\
+	គេធ្វើឱ្យ\textbf{ប្រេកង់នៃរលកផ្ទុកប្រែប្រួល} ទៅតាមចង្វាក់នៃសញ្ញាសំឡេង ចំណែកអំព្លីទុតនៃរលកផ្ទុកនៅរក្សាថេរដដែល។ ប្រព័ន្ធ FM ផ្ដល់គុណភាពសំឡេងច្បាស់ល្អ និងមិនងាយរងការរំខានដោយរន្ទះ ឬដែនម៉ាញេទិកខាងក្រៅឡើយ។
+\end{itemize}
+
+\vspace{0.3em}
+\begin{center}
+	\begin{tikzpicture}[x=1.0cm, y=0.7cm, scale=0.92, transform shape, line width=0.8pt]
+		% 1. Audio Signal (Low frequency)
+		\draw[->, >=Stealth, line width=0.8pt] (0, 3) -- (11.5, 3) node[right] {\footnotesize $t$};
+		\draw[->, >=Stealth, line width=0.8pt] (0, 1.8) -- (0, 4.2) node[above] {\footnotesize $s(t)$};
+		\draw[line width=1.3pt, primary, samples=100, domain=0:11]
+			plot (\x, {3 + 0.9*sin(\x*1.0 r)});
+		\node[anchor=west, font=\footnotesize\bfseries, primary] at (11.0, 3.8) {សញ្ញាសំឡេង (ប្រេកង់ទាប)};
+
+		% 2. Carrier Wave (High frequency)
+		\draw[->, >=Stealth, line width=0.8pt] (0, 0) -- (11.5, 0) node[right] {\footnotesize $t$};
+		\draw[->, >=Stealth, line width=0.8pt] (0, -1.2) -- (0, 1.2) node[above] {\footnotesize $c(t)$};
+		\draw[line width=1.1pt, teal!80!black, samples=200, domain=0:11]
+			plot (\x, {0.9*sin(\x*9.0 r)});
+		\node[anchor=west, font=\footnotesize\bfseries, teal!80!black] at (11.0, 0.8) {រលកផ្ទុក (ប្រេកង់ខ្ពស់)};
+
+		% 3. AM Modulated Wave
+		\draw[->, >=Stealth, line width=0.8pt] (0, -3.2) -- (11.5, -3.2) node[right] {\footnotesize $t$};
+		\draw[->, >=Stealth, line width=0.8pt] (0, -4.7) -- (0, -1.7) node[above] {\footnotesize $u_{\text{AM}}(t)$};
+		% Upper envelope (dashed)
+		\draw[line width=0.7pt, dashed, primary!70!black, samples=100, domain=0:11]
+			plot (\x, {-3.2 + 0.5 + 0.4*sin(\x*1.0 r) + 0.5});
+		% Lower envelope (dashed)
+		\draw[line width=0.7pt, dashed, primary!70!black, samples=100, domain=0:11]
+			plot (\x, {-3.2 - (0.5 + 0.4*sin(\x*1.0 r) + 0.5)});
+		% AM Waveform
+		\draw[line width=1.1pt, bacpurple, samples=260, domain=0:11]
+			plot (\x, {-3.2 + (0.9 + 0.45*sin(\x*1.0 r))*sin(\x*9.0 r)});
+		\node[anchor=west, font=\footnotesize\bfseries, bacpurple] at (11.0, -2.4) {រលកម៉ូឌុយឡាស្យុង AM};
+	\end{tikzpicture}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៦១៖ ទម្រង់រលកសញ្ញាសំឡេង រលកផ្ទុកប្រេកង់ខ្ពស់ និងរលកម៉ូឌុយឡាស្យុងអំព្លីទុត (AM)\par}
+\end{center}
+
+\vspace{0.4em}
+\noindent
+\khmersubtopic{៣.៣. ដេម៉ូឌុយឡាស្យុង និងការសម្រួលប៉ុស្តិ៍ ({\englishfont Demodulation and Tuning}) ៖}
+
+\noindent
+នៅក្នុងឧបករណ៍ទទួលវិទ្យុ ({\englishfont Radio Receiver}) ដំណើរការទទួល និងទាញយកសំឡេងដើមមកវិញរួមមាន ៖
+\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=2pt, leftmargin=1.6em]
+	\item \textbf{សៀគ្វីសម្រួលប៉ុស្តិ៍ (សៀគ្វីរ៉េសូណង់ $LC$) ៖}\\
+	ដើម្បីជ្រើសរើសយកតែប៉ុស្តិ៍វិទ្យុណាមួយដែលចង់ស្ដាប់ គេប្រើសៀគ្វី $LC$ ស្របគ្នាដែលមានកុងដង់សាទ័រប្រែប្រួល $C$។ គេបង្វិលសម្រួលតម្លៃកាប៉ាស៊ីតេ $C$ ឱ្យប្រេកង់ផ្ទាល់នៃសៀគ្វី $f_0$ ស្មើនឹងប្រេកង់រលកផ្ទុក $f$ នៃស្ថានីយនោះ (បាតុភូតរ៉េសូណង់អគ្គិសនី) ៖
+	\begin{center}
+		$\boxed{f_0 = \dfrac{1}{2\pi \sqrt{L C}}}$ \quad (៦៦)
+	\end{center}
+
+	\item \textbf{ដេម៉ូឌុយឡាស្យុង ឬការញែកសញ្ញា ({\englishfont Demodulation / Detection}) ៖}\\
+	រលកដែលជ្រើសរើសបានជារលក AM។ ដើម្បីទាញយកសញ្ញាសំឡេងដើមមកវិញ គេបញ្ជូនរលក AM ឆ្លងកាត់ ៖
+	\begin{itemize}[itemsep=2pt, topsep=1pt, leftmargin=1.5em]
+		\item \textbf{ឌីយ៉ូត (សៀគ្វីតម្រង់) ៖} កាត់ចោលខ្នែងអវិជ្ជមាននៃរលក AM ដោយអនុញ្ញាតឱ្យតែពាក់កណ្តាលខ្នែងវិជ្ជមានឆ្លងកាត់ប៉ុណ្ណោះ។
+		\item \textbf{តម្រងកម្រងប៉ាស្យុងទាប (សៀគ្វី $RC$ ស្រប) ៖} កុងដង់សាទ័រ $C$ ស្រូបបង្ហូររលកផ្ទុកប្រេកង់ខ្ពស់ចោលទៅដី ហើយរក្សាទុកតែស្រោមរលកប្រេកង់ទាប (សញ្ញាសំឡេងដើម) បញ្ជូនទៅកាន់ឧបករណ៍បំពងសំឡេង (កាស ឬ Speaker)។
+	\end{itemize}
+\end{enumerate}
+
+\vspace{0.3em}
+\begin{center}
+	\begin{circuitikz}[line width=1.0pt, scale=0.88, transform shape]
+		% Antenna
+		\draw (0, 2.5) -- (0, 3.5) node[above] {\small អង់តែន};
+		\draw (0, 3.5) -- (-0.3, 3.8);
+		\draw (0, 3.5) -- (0.3, 3.8);
+		\draw (0, 2.5) -- (2, 2.5);
+
+		% Tuning parallel LC loop
+		\draw (2, 2.5) -- (2, 1.8) to[L, l_=$L$] (2, 0.2) -- (2, -0.5);
+		\draw (2, 2.5) -- (3.6, 2.5) to[vC, l_=$C$] (3.6, -0.5) -- (2, -0.5);
+		\node[above, font=\footnotesize\bfseries, primary] at (2.8, 2.6) {សៀគ្វីសម្រួលប៉ុស្តិ៍};
+
+		% Connection to ground
+		\draw (2, -0.5) to[ground] (2, -1.2);
+
+		% Diode detector
+		\draw (3.6, 2.5) -- (5.2, 2.5) to[D*, l=\small ឌីយ៉ូត] (7.0, 2.5);
+
+		% RC low-pass filter
+		\draw (7.0, 2.5) -- (8.5, 2.5);
+		\draw (7.5, 2.5) to[C, l=$C_1$] (7.5, -0.5);
+		\draw (8.5, 2.5) to[R, l=$R$] (8.5, -0.5);
+		\draw (7.5, -0.5) -- (8.5, -0.5) -- (3.6, -0.5);
+		\node[above, font=\footnotesize\bfseries, teal!80!black] at (8.0, 2.6) {តម្រងកម្រង};
+
+		% Earphone / Output
+		\draw (8.5, 2.5) -- (10.0, 2.5) to[loudspeaker, l=\small កាស] (10.0, -0.5) -- (8.5, -0.5);
+	\end{circuitikz}
+	\par\vspace{0.15cm}
+	{\khmerpagenum\small\color{brownheader} រូបទី៦២៖ គំនូរបំព្រួញនៃសៀគ្វីទទួលវិទ្យុអេឡិចត្រូនិក (សម្រួលប៉ុស្តិ៍ ញែកសញ្ញា និងបំពងសំឡេង)\par}
+\end{center}
+
+\vspace{0.3em}
+\begin{formulabox}[breakable=false]{រូបមន្តសង្ខេបមេរៀនទី៥ ៖ រលកអេឡិចត្រូម៉ាញេទិក}
+	\begin{enumerate}[label=\textbf{\arabic*.} ,itemsep=3pt, topsep=2pt, leftmargin=1.5em]
+		\item \textbf{ល្បឿន និងប្រវែងរលកក្នុងសុញ្ញាកាស ៖}
+		\[ c = \lambda f = \dfrac{\lambda}{T} \approx 3 \times 10^8\,\text{m/s} \iff \lambda = \dfrac{c}{f} = c T \]
+		\item \textbf{ល្បឿន និងប្រវែងរលកក្នុងមជ្ឈដ្ឋាន ($n \ge 1$) ៖}
+		\[ v = \dfrac{c}{n} = \lambda_m f \iff \lambda_m = \dfrac{\lambda}{n} \quad (\text{ប្រេកង់ } f \text{ ថេរជានិច្ច}) \]
+		\item \textbf{ប្រេកង់រ៉េសូណង់នៃសៀគ្វីសម្រួលប៉ុស្តិ៍ ($LC$) ៖}
+		\[ f_0 = \dfrac{1}{2\pi \sqrt{LC}} \iff T_0 = 2\pi \sqrt{LC} \]
+		\item \textbf{ប្រវែងរលកដែលស្ថានីយទទួលស្រូបបាន ៖}
+		\[ \lambda = c T_0 = 2\pi c \sqrt{LC} \]
+	\end{enumerate}
+\end{formulabox}

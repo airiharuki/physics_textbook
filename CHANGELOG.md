@@ -4,29 +4,49 @@ All notable changes, compiled honestly from the git history of this repo. Versio
 
 ## [Unreleased]
 
-Next up: power in AC circuits ($P = UI\cos\varphi$), transformer theory, and the closing review of lesson 4.
+Next up: Chapter 4 (Atomic and Nuclear Physics / រូបវិទ្យាអាតូម និងនុយក្លេអ៊ែរ) and final handbook polish.
 
 ---
 
-## [v1.0.0-alpha.20] - 2026-10-22
+## [v1.0.0-alpha.20] - 2026-10-24
 
-Series $RLC$ and the whole parallel family land in one go (**118 pages**, +17 since alpha.19): parallel $RL$, $RC$, $LC$ and the final-boss parallel $RLC$ circuit, capped with a duality box that sets series against parallel side by side. Chapter 3 is nearly finished.
+**Chapter 3 Complete Milestone (135 pages, +34 since alpha.19):** Grand alpha finale! Complete series & parallel $RLC$ circuit families, duality comparison, AC power dynamics, transformer theory, and Lesson 5 (Electromagnetic Waves) authored from scratch to finish, completing all 5 lessons of Chapter 3 (Electricity and Magnetism). ⚡📡🌸
 
 ### Added
 
-- **Chapter 3 - Lesson 4 (Alternating Current) - continued:**
-  - **§4 Series $RLC$ circuit:** KVL with all three components, Fresnel phasor construction, impedance $Z = \sqrt{R^2 + (L\omega - \frac{1}{C\omega})^2}$, phase-angle analysis, and the resonance condition $\omega_0 = \frac{1}{\sqrt{LC}}$.
-  - **§5 Parallel AC circuits** (equations up to (៥៤), figures up to រូបទី៦០.ខ):
-    - **§5.1 Parallel $RL$**, **§5.2 Parallel $RC$**, **§5.3 Parallel $LC$:** KCL branch currents, current-phasor triangles, admittance-style impedance derivations, phase relations, and the idealised $LC$ tank ($I \to 0$ at resonance).
-    - **§5.4 Parallel $RLC$:** KCL node equation and `circuitikz` schematic (រូបទី៦០.ក), branch currents $i_R, i_L, i_C$, Fresnel current diagram (រូបទី៦០.ខ), boxed impedance (៥២), boxed phase relations $\tan\varphi$, $\cos\varphi$, $\sin\varphi$ (៥៣), three-case frequency analysis (capacitive / inductive / antiresonance), and boxed resonance and quality factor $Q = R\sqrt{C/L}$ (៥៤), plus a tank-current note box.
-  - **Duality box (series vs parallel $RLC$):** nine-row comparison table covering the shared variable, Kirchhoff law, phasor triangle, impedance/admittance, phase functions, resonance condition and values, $Q$ and amplification, and practical role (acceptor vs rejector).
-- **`\mathbox` macro (`preamble.tex`):** soft panel with a 3pt `bacpurple` accent bar for derivative and integral context notes, so calculus asides get their own box instead of hiding in the prose.
+- **Chapter 3 - Lesson 4 (ចរន្តឆ្លាស់ / Alternating Current) — Finale:**
+  - **§4 Series $RLC$ circuit:** KVL with all three components, Fresnel phasor construction, impedance $Z = \sqrt{R^2 + (L\omega - \frac{1}{C\omega})^2}$, phase-angle analysis, and resonance condition $\omega_0 = \frac{1}{\sqrt{LC}}$.
+  - **§5 Parallel AC circuits:**
+    - **§5.1 Parallel $RL$**, **§5.2 Parallel $RC$**, **§5.3 Parallel $LC$:** KCL branch currents, current-phasor triangles, admittance-style impedance derivations, phase relations, and idealised $LC$ tank ($I \to 0$ at resonance).
+    - **§5.4 Parallel $RLC$:** KCL node equation and `circuitikz` schematic (**រូបទី៦០.ក**), branch currents $i_R, i_L, i_C$, Fresnel current diagram (**រូបទី៦០.ខ**), boxed impedance (៥២), boxed phase relations $\tan\varphi$, $\cos\varphi$, $\sin\varphi$ (៥៣), three-case frequency analysis (capacitive / inductive / antiresonance), and boxed resonance and quality factor $Q = R\sqrt{C/L}$ (៥៤), plus tank-current note box.
+  - **Duality box (series vs parallel $RLC$):** nine-row comparison table covering shared variable, Kirchhoff law, phasor triangle, impedance/admittance, phase functions, resonance condition, $Q$ and amplification, and practical role (acceptor vs rejector).
+  - **§6 Power in AC Circuits (អានុភាពក្នុងសៀគ្វីចរន្តឆ្លាស់):** Instantaneous power $p(t)$, active/average power $P = V I \cos\varphi$ (៤៤), power factor $\cos\varphi$ dynamics (៤៥), apparent power $S = VI$, reactive power $Q = VI\sin\varphi$, and power at resonance ($P_{\max} = \frac{V^2}{R}$).
+  - **§7 Transformers (ត្រង់ស្វូម៉ាទ័រ):**
+    - **§7.1 Principles & Structure:** Mutual electromagnetic induction, soft laminated iron core, primary/secondary windings, native Circuitikz transformer schematic (**រូបទី៥៨**).
+    - **§7.2 Transformation Ratio:** Boxed transformation equation $\frac{V_2}{V_1} = \frac{N_2}{N_1} = k$ (៦២), classification of step-up ($k > 1$) and step-down ($k < 1$) transformers.
+    - **§7.3 Energy Losses & Efficiency:** Joule heating in windings ($P_J = R I^2$), eddy currents in solid core, hysteresis loss; mitigation via high-purity thick copper wire and laminated insulated silicon-steel sheets; efficiency formula $\eta = \frac{P_2}{P_1} = \frac{P_2}{P_2 + P_{\text{loss}}}$; ideal transformer relation $\frac{V_2}{V_1} = \frac{I_1}{I_2} = \frac{N_2}{N_1} = k$ (៦៣); Circuitikz power loss diagram (**រូបទី៥៩**).
+  - **`\mathbox` macro (`preamble.tex`):** soft panel with a 3pt `bacpurple` accent bar for derivative and integral context notes.
+- **Chapter 3 - Lesson 5 (រលកអេឡិចត្រូម៉ាញេទិក / Electromagnetic Waves) — Complete:**
+  - **§1 Nature of Electromagnetic Waves (ធម្មជាតិនៃរលកអេឡិចត្រូម៉ាញេទិក):**
+    - **§1.1 Maxwell's Principle:** Mutually regenerating time-varying $\vec{E}$ and $\vec{B}$ fields propagating through space.
+    - **§1.2 Transverse Wave Nature:** Perpendicular oscillation $\vec{E} \perp \vec{B} \perp \vec{c}$, in-phase vibration, right-handed triad $\vec{E} \times \vec{B} \parallel \vec{c}$.
+    - **3D TikZ Vector Diagram (រូបទី៦០):** Full-width 3D vector plot displaying orthogonal electric ($\vec{E}$, bacpurple) and magnetic ($\vec{B}$, teal) wave crests, vector arrows, and spatial wavelength span $\lambda$.
+    - **§1.3 Speed and Wavelength:** Vacuum speed $c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} \approx 3 \times 10^8\,\text{m/s}$ and $c = \lambda f = \lambda/T$ (៦៤); speed in refractive media $v = c/n = \lambda_m f$ (៦៥); `\defbox` on invariant frequency $f$ vs. reduced speed and wavelength.
+  - **§2 Electromagnetic Spectrum (ស្បិចនៃរលកអេឡិចត្រូម៉ាញេទិក):**
+    - Comprehensive 7-band comparison table (**តារាងទី១**): Radio waves, Microwaves, Infrared, Visible light, Ultraviolet, X-rays, and Gamma rays with frequency ranges, wavelength ranges, sources, and technological applications.
+    - Summary panel on visible spectrum color sequence (Violet $\approx 400\,\text{nm} \to$ Red $\approx 700\,\text{nm}$) and prism dispersion.
+  - **§3 Radio Transmission & Reception (ការបញ្ជូន និងការទទួលរលកវិទ្យុ):**
+    - **§3.1 Principles:** Open dipole transmitting antenna (accelerating charges radiate EM waves) and receiving antenna (induced oscillating EMF).
+    - **§3.2 Modulation:** Modulating AF audio signal vs. RF carrier wave; Amplitude Modulation (AM) vs. Frequency Modulation (FM); custom TikZ waveform comparison plot (**រូបទី៦១**).
+    - **§3.3 Demodulation and Tuning:** Resonant $LC$ tank tuning circuit $f_0 = \frac{1}{2\pi\sqrt{LC}}$ (៦៦); diode detector (rectification) and parallel $RC$ low-pass filter; Circuitikz radio receiver schematic (**រូបទី៦២**).
+  - **Lesson 5 Summary Box:** Consolidated formula panel (`\begin{formulabox}`) compiling vacuum relations, medium relations, $LC$ resonance frequency, and reception wavelength $\lambda = 2\pi c \sqrt{LC}$.
 
 ### Changed
 
-- **Duality box table layout:** wider label column so Khmer labels no longer break mid-word, thin row separators and more row height, two-line cells for the $Q$ row (formula, then amplification note), the identical resonance condition merged into one centred cell, and the table now spans the box content width exactly.
-- **`.gitignore` overhaul:** grouped into IDE, TeX/LaTeX build artifacts, and scratch sections; now covers VS Code/Visual Studio files, `.claude/`, SyncTeX busy-lock files, bibliography/index/list temporaries, TikZ/PGF externalised outputs, and preview-image patterns (`tmp-*`, `temp-*`, `page_*.png`, `final_page*.png`).
-- Rebuilt `main.pdf`: **118 pages**, 0 errors, 0 missing characters under XeLaTeX with HarfBuzz renderer.
+- **Duality box table layout:** wider label column, thin row separators, two-line cells for the $Q$ row, merged resonance condition cell spanning box content width exactly.
+- **`.gitignore` overhaul:** added `scratch/`, covered VS Code/Visual Studio files, `.claude/`, SyncTeX busy-lock files, build temporaries, TikZ/PGF outputs, and preview images.
+- Rebuilt `main.pdf`: **135 pages** (milestone expansion), 0 errors, 0 missing characters, 0 new overfull hboxes under XeLaTeX with HarfBuzz renderer.
+- Continuous numbering throughout Chapter 3 reached **Figure រូបទី៦២** and **Equation (៦៦)**.
 
 ---
 
